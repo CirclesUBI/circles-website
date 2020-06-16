@@ -1,3 +1,4 @@
+publish_mode: editorial_workflow
 backend:
   name: github
   repo: CirclesUBI/circles-website
