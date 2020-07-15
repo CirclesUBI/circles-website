@@ -1,0 +1,24 @@
+body {
+  margin: 20px;
+  margin-top: 40px;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+}
+
+a {
+  color: #333;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  margin: 10px;
+}
+
+.logo {
+  width: 100px;
+}
