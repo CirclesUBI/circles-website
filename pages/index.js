@@ -1,65 +1,122 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import {
+  Anchor,
+  Box,
+  Footer,
+  Heading,
+  Image,
+  Main,
+  Paragraph,
+  FormField,
+  Text,
+  TextInput,
+  TextArea,
+  Button,
+} from 'grommet';
+import { Container, Row, Col, ScreenClassRender } from 'react-grid-system';
+import { Link as ScrollLink } from 'react-scroll';
+
+import styles from '../styles/Home.module.css';
+import Gr from '../components/Gr';
+import Menu from '../components/Menu';
 
 export default function Home() {
+  const handleSetActiveSection = null;
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Circles UBI</title>
+        <title>Circles UBI | Basic Income on the Blockchain</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to Circles UBI
-        </h1>
+      <Gr>
+        <ScreenClassRender
+          render={(screenClass) => {
+            const large = ['xxl', 'xl', 'lg'].includes(screenClass);
+            return (
+              <div className={styles.home}>
+                <Container style={{ maxWidth: 1280 }}>
+                  <Row style={{ alignItems: 'center' }}>
+                    <Col lg={2}>
+                      <Box pad={{ top: 'small' }}>
+                        <Image src="/images/logo.svg" />
+                      </Box>
+                    </Col>
+                    <Col lg={8}>
+                      <Menu
+                        activeSection="donate"
+                        setActiveSection={handleSetActiveSection}
+                        large={large}
+                      />
+                    </Col>
+                    <Col lg={2}></Col>
+                  </Row>
+                  <Row>
+                    <Box pad={{ top: 'large' }}>
+                      <Image src="/images/circlestitle-big.svg" width="100%" />
+                    </Box>
+                  </Row>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+                  <Row>
+                    <Box
+                      direction="row"
+                      justify="center"
+                      width="100%"
+                      pad="xlarge"
+                    >
+                      <Box>
+                        <Text
+                          size="large"
+                          color="light-1"
+                          margin={{ bottom: 'large' }}
+                          textAlign="center"
+                        >
+                          <b>
+                            <em>A Basic Income on the Blockchain</em>
+                          </b>
+                        </Text>
+                        <Button
+                          primary
+                          size="large"
+                          width="auto"
+                          fill={false}
+                          label="Get Circles"
+                          onClick={() => null}
+                          margin={{ bottom: 'large' }}
+                        />
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                        <Box margin={{ bottom: 'xlarge' }}>
+                          <Text
+                            color="light-1"
+                            textAlign="center"
+                            margin={{ bottom: 'medium' }}
+                          >
+                            Learn more
+                          </Text>
+                          <Image src="/images/arrows-down.svg" />
+                        </Box>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                        <Box pad="xlarge">
+                          <Image src="images/people.svg" />
+                        </Box>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+                        <Heading level={2} textAlign="center">
+                          BUILD A LOCAL ECONOMY TOGETHER
+                        </Heading>
+                        <Text textAlign="center">
+                          Circles is a basic income by the community, for the
+                          community.
+                        </Text>
+                      </Box>
+                    </Box>
+                  </Row>
+                </Container>
+              </div>
+            );
+          }}
+        />
+      </Gr>
     </div>
-  )
+  );
 }
