@@ -97,14 +97,14 @@ export default function Home() {
                           <Image src="/images/arrows-down.svg" />
                         </Box>
 
-                        <Box pad="xlarge">
+                        <Box pad={{ top: 'xlarge', bottom: 'medium' }}>
                           <Image src="images/people.svg" />
                         </Box>
 
-                        <Heading level={2} textAlign="center">
+                        <Heading level={1} textAlign="center" color="dark-1">
                           BUILD A LOCAL ECONOMY TOGETHER
                         </Heading>
-                        <Text textAlign="center">
+                        <Text textAlign="center" weight="bold">
                           Circles is a basic income by the community, for the
                           community.
                         </Text>

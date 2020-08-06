@@ -50,7 +50,7 @@ const theme = deepFreeze(
       },
       colors: colors,
       font: {
-        family: "'Sarabun', sans-serif;",
+        family: "'NotoSans-Regular', sans-serif;",
         size: '16px',
       },
       edgeSize: {
@@ -82,14 +82,38 @@ const theme = deepFreeze(
       xsmall: { size: '10px', height: 1.5 },
       small: { size: '14px', height: 1.43 },
       medium: { size: '18px', height: 1.375 },
-      large: { size: '22px', height: 1.167 },
-      xlarge: { size: '26px', height: 1.1875 },
-      xxlarge: { size: '30x', height: 1.125 },
+      large: { size: '24px', height: 1.167 },
+      xlarge: { size: '28px', height: 1.1875 },
+      xxlarge: { size: '32x', height: 1.125 },
     },
     heading: {
       weight: 800,
       font: {
-        family: "'Inknut Antiqua', serif",
+        family: "'OstrichSansHeavy', sans",
+      },
+      level: {
+        1: {
+          small: {
+            size: '42px',
+            height: '40px',
+            maxWidth: '816px',
+          },
+          medium: {
+            size: '60px',
+            height: '56px',
+            maxWidth: '1200px',
+          },
+          large: {
+            size: '82px',
+            height: '88px',
+            maxWidth: '1968px',
+          },
+          xlarge: {
+            size: '114px',
+            height: '120px',
+            maxWidth: '2736px',
+          },
+        },
       },
     },
     icon: {

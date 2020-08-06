@@ -14,3 +14,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: NotoSans-Regular;
+  src: url(/fonts/NotoSans-Regular.woff);
+}
+
+@font-face {
+  font-family: NotoSans-Bold;
+  src: url(/fonts/NotoSans-Bold.woff);
+}
+
+@font-face {
+  font-family: NotoSans-BoldItalic;
+  src: url(/fonts/NotoSans-BoldItalic.woff);
+}
+
+@font-face {
+  font-family: OstrichSansHeavy;
+  src: url(/fonts/OstrichSansHeavy.woff);
+}
