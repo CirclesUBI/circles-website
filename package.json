@@ -10,6 +10,7 @@
   "dependencies": {
     "grommet": "^2.14.0",
     "next": "9.5.1",
+    "next-i18next": "^6.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-grid-system": "^7.0.3",

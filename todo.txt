@@ -1,0 +1,12 @@
+Circles website
+
+X- Fonts
+X- Widgets
+X- Button
+X- Footer
+X- Links & scroll
+
+- Slider
+- Menu
+- FAQ and other pages
+- Intl

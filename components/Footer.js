@@ -12,6 +12,8 @@ import {
 } from 'grommet';
 import { Row, Col } from 'react-grid-system';
 
+import { withTranslation } from '../i18n';
+
 const footerLinks = [
   {
     label: 'Rocket Chat',
@@ -39,7 +41,7 @@ const footerLinks = [
   },
 ];
 
-const Footer = ({ large }) => {
+const Footer = ({ t, large }) => {
   const [emailValue, setEmailValue] = useState({});
   return (
     <Row
@@ -71,7 +73,7 @@ const Footer = ({ large }) => {
       <Col lg={6}>
         <Box pad="xlarge" gap="medium">
           <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
-            Newsletter
+            {t('newsletterTitle')}
           </Text>
           <Text color="light-1">
             ‍Sign up and receive news about Circles directly to your email
@@ -141,4 +143,4 @@ const Footer = ({ large }) => {
   );
 };
 
-export default Footer;
+export default withTranslation('footer')(Footer);
