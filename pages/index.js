@@ -13,13 +13,21 @@ import {
   TextArea,
   Button,
 } from 'grommet';
-import { Container, Row, Col, ScreenClassRender } from 'react-grid-system';
+import {
+  Container,
+  Row,
+  Col,
+  ScreenClassRender,
+  setConfiguration,
+} from 'react-grid-system';
 import { Link as ScrollLink } from 'react-scroll';
 
 import styles from '../styles/Home.module.css';
 import Gr from '../components/Gr';
 import Menu from '../components/Menu';
 import Widget from '../components/Widget';
+
+setConfiguration({ gutterWidth: 0 });
 
 export default function Home() {
   const handleSetActiveSection = null;
@@ -141,7 +149,7 @@ export default function Home() {
                   </Box>
 
                   <Box
-                    margin="large"
+                    margin={{ top: 'large', bottom: 'large' }}
                     style={{
                       backgroundImage: `url('/images/turkuaz-cloud-left.svg'), url('/images/turkuaz-cloud-right.svg')`,
                       backgroundRepeat: 'no-repeat, no-repeat',
@@ -155,7 +163,7 @@ export default function Home() {
                   </Box>
 
                   <Box
-                    margin="large"
+                    margin={{ top: 'large', bottom: 'large' }}
                     style={{
                       backgroundImage: `url('/images/orange-cloud-left.svg'), url('/images/orange-cloud-right.svg')`,
                       backgroundRepeat: 'no-repeat, no-repeat',
@@ -166,33 +174,34 @@ export default function Home() {
                     <Heading level={1} textAlign="center" color="dark-1">
                       COMMUNITY
                     </Heading>
-
-                    <Row>
-                      <Col md={4}>
-                        <Widget
-                          title="Chat"
-                          content="Explore the Circles community to meet other folks building local economy together."
-                          imageLink="/images/chat.svg"
-                          imageHeight="180px"
-                        />
-                      </Col>
-                      <Col md={4}>
-                        <Widget
-                          title="Learn"
-                          content="Read the Circles Handbook to learn more about how Circles works."
-                          imageLink="/images/learn.svg"
-                          imageHeight="180px"
-                        />
-                      </Col>
-                      <Col md={4}>
-                        <Widget
-                          title="Build"
-                          content="Join the open source community working to develop Circles on Github."
-                          imageLink="/images/build.svg"
-                          imageHeight="180px"
-                        />
-                      </Col>
-                    </Row>
+                    <Box margin={{ left: 'large', right: 'large' }}>
+                      <Row>
+                        <Col md={4}>
+                          <Widget
+                            title="Chat"
+                            content="Explore the Circles community to meet other folks building local economy together."
+                            imageLink="/images/chat.svg"
+                            imageHeight="180px"
+                          />
+                        </Col>
+                        <Col md={4}>
+                          <Widget
+                            title="Learn"
+                            content="Read the Circles Handbook to learn more about how Circles works."
+                            imageLink="/images/learn.svg"
+                            imageHeight="180px"
+                          />
+                        </Col>
+                        <Col md={4}>
+                          <Widget
+                            title="Build"
+                            content="Join the open source community working to develop Circles on Github."
+                            imageLink="/images/build.svg"
+                            imageHeight="180px"
+                          />
+                        </Col>
+                      </Row>
+                    </Box>
                   </Box>
 
                   <Box margin="large">
