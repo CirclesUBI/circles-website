@@ -75,9 +75,7 @@ const Footer = ({ t, large }) => {
           <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
             {t('newsletterTitle')}
           </Text>
-          <Text color="light-1">
-            ‍Sign up and receive news about Circles directly to your email
-          </Text>
+          <Text color="light-1">‍{t('newsletterText')}</Text>
           <Form
             onSubmit={({ value }) => console.log(value)}
             value={emailValue}
@@ -86,7 +84,7 @@ const Footer = ({ t, large }) => {
             <FormField color="light-1" name="email">
               <TextInput
                 name="email"
-                placeholder="Enter your email"
+                placeholder={t('newsletterInputPlaceholder')}
                 style={{ color: '#fff' }}
               />
             </FormField>
@@ -94,7 +92,7 @@ const Footer = ({ t, large }) => {
               primary
               color="light-1"
               type="submit"
-              label="Sign up"
+              label={t('newsletterSignup')}
               style={{
                 borderRadius: 8,
                 marginTop: 12,

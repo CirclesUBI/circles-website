@@ -1,3 +1,6 @@
 {
-  "newsletterTitle": "Newsletter"
+  "newsletterTitle": "Newsletter",
+  "newsletterText": "Sign up and receive news about Circles directly to your email",
+  "newsletterInputPlaceholder": "Enter your email",
+  "newsletterSignup": "Sign up"
 }
