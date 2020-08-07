@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Head from 'next/head';
 import {
   Anchor,
@@ -26,11 +27,12 @@ import styles from '../styles/Home.module.css';
 import Gr from '../components/Gr';
 import Menu from '../components/Menu';
 import Widget from '../components/Widget';
+import PhoneImage from '../components/PhoneImage';
 
 setConfiguration({ gutterWidth: 0 });
 
 export default function Home() {
-  const handleSetActiveSection = null;
+  const [emailValue, setEmailValue] = useState('');
 
   return (
     <div>
@@ -55,7 +57,7 @@ export default function Home() {
                     <Col lg={8}>
                       <Menu
                         activeSection="donate"
-                        setActiveSection={handleSetActiveSection}
+                        // setActiveSection={handleSetActiveSection}
                         large={large}
                       />
                     </Col>
@@ -109,7 +111,7 @@ export default function Home() {
                       <Image src="/images/arrows-down.svg" />
                     </Box>
 
-                    <Box pad={{ top: 'xlarge', bottom: 'medium' }}>
+                    <Box pad={{ top: 'xlarge', bottom: 'medium' }} id="about">
                       <Image src="images/people.svg" />
                     </Box>
 
@@ -156,10 +158,41 @@ export default function Home() {
                       backgroundPosition: 'top left, top right',
                       backgroundSize: '320px auto',
                     }}
+                    id="how-it-works"
                   >
-                    <Heading level={1} textAlign="center" color="dark-1">
+                    <Heading
+                      level={1}
+                      textAlign="center"
+                      color="dark-1"
+                      margin={{ top: '98px' }}
+                    >
                       HOW IT WORKS
                     </Heading>
+                    <Box direction="row" align="start">
+                      <PhoneImage
+                        count="1"
+                        caption="Sign up at Circles.Garden"
+                        imageLink="/images/slider-1.png"
+                      />
+
+                      <PhoneImage
+                        count="2"
+                        caption="Ask for Trust from Three People"
+                        imageLink="/images/slider-2.png"
+                      />
+
+                      <PhoneImage
+                        count="3"
+                        caption="Receive your Circles basic income"
+                        imageLink="/images/slider-3.png"
+                      />
+
+                      <PhoneImage
+                        count="4"
+                        caption="Use in the Marketplace and locally!"
+                        imageLink="/images/slider-4.png"
+                      />
+                    </Box>
                   </Box>
 
                   <Box
@@ -170,8 +203,14 @@ export default function Home() {
                       backgroundPosition: 'top left, top right',
                       backgroundSize: '320px auto',
                     }}
+                    id="community"
                   >
-                    <Heading level={1} textAlign="center" color="dark-1">
+                    <Heading
+                      level={1}
+                      textAlign="center"
+                      color="dark-1"
+                      margin={{ top: '90px' }}
+                    >
                       COMMUNITY
                     </Heading>
                     <Box margin={{ left: 'large', right: 'large' }}>
@@ -237,6 +276,78 @@ export default function Home() {
                       }
                     />
                   </Box>
+
+                  <Row
+                    style={{
+                      background: 'rgb(102,15,51)',
+                      background:
+                        'linear-gradient(135deg, rgba(102,15,51,1) 0%, rgba(204,30,102,1) 100%)',
+                    }}
+                  >
+                    <Col lg={3}>
+                      <Box pad="xlarge" gap="medium">
+                        <Text color="light-1" size="large">
+                          Follow us
+                        </Text>
+                        <Anchor href="/xxx" target="_blank" color="light-1">
+                          Rocket Chat
+                        </Anchor>
+                        <Anchor href="/twittr" target="_blank" color="light-1">
+                          Twitter
+                        </Anchor>
+                        <Anchor
+                          href="/facebook"
+                          target="_blank"
+                          color="light-1"
+                        >
+                          Facebook
+                        </Anchor>
+                        <Anchor
+                          href="mailto:hello@joincircles.net"
+                          color="light-1"
+                        >
+                          Email us
+                        </Anchor>
+                      </Box>
+                    </Col>
+                    <Col lg={6}>
+                      <Box pad="xlarge" gap="medium">
+                        <Text color="light-1" size="large">
+                          Newsletter
+                        </Text>
+                        <Text color="light-1">
+                          ‍Sign up and receive news about Circles directly to
+                          your email
+                        </Text>
+
+                        <FormField color="light-1">
+                          <TextInput
+                            placeholder="Enter your email"
+                            value={emailValue}
+                            onChange={(event) =>
+                              setEmailValue(event.target.value)
+                            }
+                            style={{ color: '#fff' }}
+                          />
+                        </FormField>
+                      </Box>
+                    </Col>
+                    <Col lg={3}>
+                      <Box pad="xlarge" gap="medium">
+                        <Anchor href="/contact" color="light-1">
+                          Contact
+                        </Anchor>
+
+                        <Anchor href="/donate" color="light-1">
+                          Donate
+                        </Anchor>
+
+                        <Anchor href="/privacy" color="light-1">
+                          Privacy / Legal
+                        </Anchor>
+                      </Box>
+                    </Col>
+                  </Row>
                 </Container>
               </div>
             );

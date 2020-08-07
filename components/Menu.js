@@ -1,10 +1,34 @@
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { Anchor, Box, Menu as GrMenu, Text } from 'grommet';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
-const menu = ['Wallet', 'About', 'How it Works', 'Community', 'FAQ', 'Donate'];
+const menu = [
+  {
+    label: 'Wallet',
+    value: 'wallet',
+    isExternal: true,
+    isRoute: false,
+    href: 'https://circles.garden',
+  },
+  {
+    label: 'About',
+    value: 'about',
+    isExternal: false,
+    isRoute: false,
+  },
+  {
+    label: 'How It Works',
+    value: 'how-it-works',
+    isExternal: false,
+    isRoute: false,
+  },
+  { label: 'Community', value: 'community', isExternal: false, isRoute: false },
+  { label: 'FAQ', value: 'faq', isExternal: false, isRoute: true },
+  { label: 'Donate', value: 'donate', isExternal: false, isRoute: true },
+];
 
-const Menu = ({ setActiveSection, activeSection, large, ...otherProps }) => {
+const Menu = ({ activeSection, large, ...otherProps }) => {
   return (
     <Box
       width={!large ? '100%' : 'small '}
@@ -13,51 +37,36 @@ const Menu = ({ setActiveSection, activeSection, large, ...otherProps }) => {
       {...otherProps}
     >
       {large ? (
-        <Box direction="row" justify="center">
-          {menu.map((item, index) => {
-            const isActive = item === activeSection;
-            return (
-              <Link
-                key={item}
+        <Box direction="row" justify="center" gap="large">
+          {menu.map((item, index) =>
+            item.isExternal ? (
+              <Anchor
+                key={item.value}
+                label={item.label}
+                href={item.href}
+                target="_blank"
+                color="light-1"
+              />
+            ) : item.isRoute ? (
+              <Link key={item.value} href={item.value}>
+                <Anchor as="span" label={item.label} color="light-1" />
+              </Link>
+            ) : (
+              <ScrollLink
+                key={item.value}
                 activeClass="menuitem-active"
                 className="menuitem"
-                to={item}
+                to={item.value}
                 spy
                 hashSpy
                 smooth
                 duration={500}
-                onSetActive={(item) => setActiveSection(item)}
-                style={{
-                  display: 'block',
-                  textDecoration: 'none',
-                  paddingTop: 6,
-                  paddingBottom: 6,
-                }}
+                // onSetActive={(item) => setActiveSection(item)}
               >
-                <Anchor
-                  color="light-2"
-                  weight={isActive ? 'bold' : 'normal'}
-                  as="span"
-                  margin="medium"
-                  style={{ fontWeight: isActive ? 800 : 400 }}
-                >
-                  {item}
-                </Anchor>
-              </Link>
-            );
-          })}
-          {/* <Link
-            as="span"
-            to="contact"
-            smooth
-            duration={500}
-            style={{ marginTop: 24 }}
-          >
-            <Anchor>Contact</Anchor>
-          </Link>
-          <Anchor target="_blank" href="https://github.com/eminx/cocoso">
-            Source Code
-          </Anchor> */}
+                <Anchor color="light-1" as="span" label={item.label} />
+              </ScrollLink>
+            )
+          )}
         </Box>
       ) : (
         <Box pad="xsmall" width="100%">
