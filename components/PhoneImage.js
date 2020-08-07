@@ -44,11 +44,11 @@ const PhoneImage = ({ imageLink, count, caption }) => {
         height="60px"
         margin={{ bottom: 'medium' }}
       >
-        <Text size="large" textAlign="center">
+        <Text size="large" textAlign="center" weight="bold">
           {count}
         </Text>
       </Box>
-      <Box>
+      <Box style={{ maxWidth: 240 }}>
         <Text weight="bold" size="small" textAlign="center">
           {caption}
         </Text>

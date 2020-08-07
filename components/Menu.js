@@ -24,8 +24,8 @@ const menu = [
     isRoute: false,
   },
   { label: 'Community', value: 'community', isExternal: false, isRoute: false },
-  { label: 'FAQ', value: 'faq', isExternal: false, isRoute: true },
-  { label: 'Donate', value: 'donate', isExternal: false, isRoute: true },
+  { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
+  { label: 'Donate', value: '/donate', isExternal: false, isRoute: true },
 ];
 
 const Menu = ({ activeSection, large, ...otherProps }) => {
@@ -87,7 +87,6 @@ const Menu = ({ activeSection, large, ...otherProps }) => {
 };
 
 Menu.propTypes = {
-  setActiveSection: PropTypes.func.isRequired,
   large: PropTypes.bool.isRequired,
 };
 
