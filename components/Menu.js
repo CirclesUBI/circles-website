@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import PropTypes from 'prop-types';
-import { Anchor, Box, Menu as GrMenu, Text } from 'grommet';
+import { Anchor, Box, DropButton, Image } from 'grommet';
+import { Menu as MenuIcon } from 'grommet-icons';
 import { Link as ScrollLink } from 'react-scroll';
 
-const menu = [
+const menuLinks = [
   {
     label: 'Wallet',
     value: 'wallet',
@@ -28,66 +28,96 @@ const menu = [
   { label: 'Donate', value: '/donate', isExternal: false, isRoute: true },
 ];
 
+const socialMenuLinks = [
+  {
+    icon: '/images/tg.svg',
+    link: 'https://t.me/CirclesUBI',
+  },
+  {
+    icon: '/images/tw.svg',
+    link: 'https://twitter.com/CirclesUBI',
+  },
+  {
+    icon: '/images/fb.svg',
+    link: 'https://facebook.com/CirclesUBI',
+  },
+  {
+    icon: '/images/em.svg',
+    link: 'mailto:hello@joincircles.net',
+  },
+];
+
+const MenuContent = ({ large }) => (
+  <Box direction={large ? 'row' : 'column'} justify="center" gap="large">
+    {menuLinks.map((item, index) =>
+      item.isExternal ? (
+        <Anchor
+          key={item.value}
+          label={item.label}
+          href={item.href}
+          target="_blank"
+          color="light-1"
+        />
+      ) : item.isRoute ? (
+        <Link key={item.value} href={item.value}>
+          <Anchor as="span" label={item.label} color="light-1" />
+        </Link>
+      ) : (
+        <ScrollLink
+          key={item.value}
+          activeClass="menuitem-active"
+          className="menuitem"
+          to={item.value}
+          spy
+          hashSpy
+          smooth
+          duration={500}
+          // onSetActive={(item) => setActiveSection(item)}
+        >
+          <Anchor color="light-1" as="span" label={item.label} />
+        </ScrollLink>
+      )
+    )}
+  </Box>
+);
+
+export const SocialMenu = ({ ...otherProps }) => (
+  <Box
+    pad="small"
+    direction="row"
+    gap="medium"
+    align="center"
+    justify="center"
+    style={{ backgroundColor: 'rgba(255, 255, 255, .2)' }}
+    {...otherProps}
+  >
+    {socialMenuLinks.map((item) => (
+      <Anchor href={item.link}>
+        <Image src={item.icon} />
+      </Anchor>
+    ))}
+  </Box>
+);
+
 const Menu = ({ activeSection, large, ...otherProps }) => {
   return (
-    <Box
-      width={!large ? '100%' : 'small '}
-      background={large ? 'none' : 'white'}
-      pad="medium"
-      {...otherProps}
-    >
+    <Box width={!large ? '100%' : 'small '} pad="medium" {...otherProps}>
       {large ? (
-        <Box direction="row" justify="center" gap="large">
-          {menu.map((item, index) =>
-            item.isExternal ? (
-              <Anchor
-                key={item.value}
-                label={item.label}
-                href={item.href}
-                target="_blank"
-                color="light-1"
-              />
-            ) : item.isRoute ? (
-              <Link key={item.value} href={item.value}>
-                <Anchor as="span" label={item.label} color="light-1" />
-              </Link>
-            ) : (
-              <ScrollLink
-                key={item.value}
-                activeClass="menuitem-active"
-                className="menuitem"
-                to={item.value}
-                spy
-                hashSpy
-                smooth
-                duration={500}
-                // onSetActive={(item) => setActiveSection(item)}
-              >
-                <Anchor color="light-1" as="span" label={item.label} />
-              </ScrollLink>
-            )
-          )}
-        </Box>
+        <MenuContent large />
       ) : (
-        <Box pad="xsmall" width="100%">
-          <GrMenu
-            alignSelf="center"
-            tabIndex="0"
-            label={<Text>Menu</Text>}
-            items={menu.map((item) => ({
-              label: item,
-              href: `#${item}`,
-              size: 'large',
-            }))}
-          />
-        </Box>
+        <DropButton
+          label={<MenuIcon color="light-1" />}
+          dropAlign={{ top: 'bottom', right: 'right' }}
+          dropContent={
+            <Box background="brand" pad="large">
+              <MenuContent large={false} />
+              <SocialMenu margin={{ top: 'large' }} />
+            </Box>
+          }
+        />
       )}
     </Box>
   );
-};
-
-Menu.propTypes = {
-  large: PropTypes.bool.isRequired,
 };
 
 export default Menu;

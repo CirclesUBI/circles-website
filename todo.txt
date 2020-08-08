@@ -8,5 +8,5 @@ X- Links & scroll
 
 - Slider
 - Menu
-- FAQ and other pages
+- FAQ and other static pages
 - Intl

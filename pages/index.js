@@ -13,7 +13,6 @@ export default function Home() {
     <div className={styles.home}>
       <Head>
         <title>Circles UBI | Basic Income on the Blockchain</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
