@@ -92,7 +92,7 @@ export const SocialMenu = ({ ...otherProps }) => (
     {...otherProps}
   >
     {socialMenuLinks.map((item) => (
-      <Anchor href={item.link}>
+      <Anchor href={item.link} key={item.link}>
         <Image src={item.icon} />
       </Anchor>
     ))}

@@ -20,7 +20,7 @@ const Layout = (props) => (
         return (
           <Container style={{ maxWidth: 1280 }}>
             <Header large={large} />
-            {props.children}
+            {props.children(large)}
             <Footer />
           </Container>
         );
