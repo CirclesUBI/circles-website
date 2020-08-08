@@ -6,6 +6,7 @@ X- Button
 X- Footer
 X- Links & scroll
 X- Menu
-- Slider
+X- Slider
+
 - FAQ and other static pages
 - Intl
