@@ -68,8 +68,6 @@ export default function Home() {
               <Box margin={{ bottom: 'xlarge' }} align="center">
                 <ScrollLink
                   to="about"
-                  spy
-                  hashSpy
                   smooth
                   duration={500}
                   style={{ marginBottom: 20 }}
