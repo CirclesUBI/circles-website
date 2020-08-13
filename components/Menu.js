@@ -88,6 +88,7 @@ export const SocialMenu = ({ ...otherProps }) => (
     gap="medium"
     align="center"
     justify="center"
+    width="medium"
     style={{ backgroundColor: 'rgba(255, 255, 255, .2)' }}
     {...otherProps}
   >
