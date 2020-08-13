@@ -30,7 +30,7 @@ export default function Home() {
         {(large) => (
           <Box>
             <Row>
-              <Box pad={{ top: 'large' }}>
+              <Box pad={{ top: 'large' }} width="100%">
                 <Image src="/images/circlestitle-big.svg" width="100%" />
               </Box>
             </Row>
