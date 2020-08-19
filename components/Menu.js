@@ -113,7 +113,7 @@ const Menu = ({ activeSection, large, ...otherProps }) => {
         <DropButton
           label={<MenuIcon color="light-1" />}
           dropAlign={{ top: 'bottom', right: 'right' }}
-          pad="xsmall"
+          alignSelf="end"
           dropContent={
             <Box background="brand" pad="large">
               <MenuContent large={false} />
