@@ -96,25 +96,31 @@ function Home() {
             <Box margin={{ left: 'large', right: 'large' }}>
               <Row>
                 <Col md={4}>
-                  <Widget
-                    title="Unconditional"
-                    content="Anyone who joins Circles recieves a basic income regularly, without conditions."
-                    imageLink="/images/unconditional.svg"
-                  />
+                  <Box>
+                    <Widget
+                      title="Unconditional"
+                      content="Anyone who joins Circles recieves a basic income regularly, without conditions."
+                      imageLink="/images/unconditional.svg"
+                    />
+                  </Box>
                 </Col>
                 <Col md={4}>
-                  <Widget
-                    title="People Powered"
-                    content="The more connected your community is, the more valuable your Circles become."
-                    imageLink="/images/people-powered.svg"
-                  />
+                  <Box>
+                    <Widget
+                      title="People Powered"
+                      content="The more connected your community is, the more valuable your Circles become."
+                      imageLink="/images/people-powered.svg"
+                    />
+                  </Box>
                 </Col>
                 <Col md={4}>
-                  <Widget
-                    title="Decentralized"
-                    content="A worldwide basic income built from the bottom up, and issued without central leadership."
-                    imageLink="/images/decentralized.svg"
-                  />
+                  <Box>
+                    <Widget
+                      title="Decentralized"
+                      content="A worldwide basic income built from the bottom up, and issued without central leadership."
+                      imageLink="/images/decentralized.svg"
+                    />
+                  </Box>
                 </Col>
               </Row>
             </Box>
