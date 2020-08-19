@@ -14,7 +14,7 @@ const Widget = ({
       elevation="small"
       align="start"
       margin="large"
-      style={{ borderRadius: 8, maxWidth: '300px' }}
+      style={{ borderRadius: 8, maxWidth: '360px' }}
       alignSelf="center"
     >
       <Image

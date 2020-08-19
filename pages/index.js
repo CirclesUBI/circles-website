@@ -117,7 +117,7 @@ function Home() {
                   <Box>
                     <Widget
                       title="Decentralized"
-                      content="A worldwide basic income built from the bottom up, and issued without central leadership."
+                      content="A worldwide basic income built bottom up, and issued without central leadership."
                       imageLink="/images/decentralized.svg"
                     />
                   </Box>
