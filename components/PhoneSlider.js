@@ -57,23 +57,24 @@ const sliderSettings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  lazyLoad: false,
 };
 
 const PhoneSlider = ({ large }) => {
-  if (large) {
-    return (
-      <Box direction="row" align="start" justify="center" gap="medium">
-        {sliderContent.map((slider) => (
-          <SliderImage
-            key={slider.caption}
-            count={slider.count}
-            caption={slider.caption}
-            imageLink={slider.imageLink}
-          />
-        ))}
-      </Box>
-    );
-  }
+  // if (large) {
+  //   return (
+  //     <Box direction="row" align="start" justify="center" gap="medium">
+  //       {sliderContent.map((slider) => (
+  //         <SliderImage
+  //           key={slider.caption}
+  //           count={slider.count}
+  //           caption={slider.caption}
+  //           imageLink={slider.imageLink}
+  //         />
+  //       ))}
+  //     </Box>
+  //   );
+  // }
 
   return (
     <Box width="medium" alignSelf="center">

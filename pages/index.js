@@ -8,7 +8,9 @@ import Layout from '../components/Layout';
 import Widget from '../components/Widget';
 import PhoneSlider from '../components/PhoneSlider';
 
-export default function Home() {
+import { withTranslation } from '../i18n';
+
+function Home() {
   return (
     <div className={styles.home}>
       <Head>
@@ -16,7 +18,7 @@ export default function Home() {
         <link
           rel="stylesheet"
           type="text/css"
-          charset="UTF-8"
+          charSet="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
         <link
@@ -228,3 +230,9 @@ export default function Home() {
     </div>
   );
 }
+
+Home.getInitialProps = async () => ({
+  namespacesRequired: ['common', 'footer'],
+});
+
+export default withTranslation('home')(Home);
