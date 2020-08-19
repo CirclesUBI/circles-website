@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Box, Text, Image } from 'grommet';
 import Slider from 'react-slick';
 
@@ -116,30 +116,34 @@ const sliderSettings = {
 };
 
 const PhoneSlider = ({ large }) => {
-  const spreadImages = () => {
-    return sliderContent.map((slider) => (
-      <SliderImage
-        key={slider.caption}
-        count={slider.count}
-        caption={slider.caption}
-        imageLink={slider.imageLink}
-      />
-    ));
-  };
-
   if (large) {
     return (
       <Box direction="row" align="start" justify="center" gap="medium">
-        {spreadImages()}
+        <SpreadImages sliderContent={sliderContent} />
       </Box>
     );
   }
 
   return (
     <Box width="medium" alignSelf="center">
-      <Slider {...sliderSettings}>{spreadImages()}</Slider>
+      <Slider {...sliderSettings}>
+        <SpreadImages sliderContent={sliderContent} />
+      </Slider>
     </Box>
   );
 };
+
+const SpreadImages = ({ sliderContent }) => (
+  <Fragment>
+    {sliderContent.map((slider) => (
+      <SliderImage
+        key={slider.caption}
+        count={slider.count}
+        caption={slider.caption}
+        imageLink={slider.imageLink}
+      />
+    ))}
+  </Fragment>
+);
 
 export default PhoneSlider;

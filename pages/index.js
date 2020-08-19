@@ -136,7 +136,7 @@ export default function Home() {
                 HOW IT WORKS
               </Heading>
 
-              {/* <PhoneSlider large={large} /> */}
+              <PhoneSlider large={large} />
             </Box>
 
             <Box
