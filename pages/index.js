@@ -168,28 +168,34 @@ function Home() {
               <Box margin={{ left: 'large', right: 'large' }}>
                 <Row>
                   <Col md={4}>
-                    <Widget
-                      title="Chat"
-                      content="Explore the Circles community to meet other folks building local economy together."
-                      imageLink="/images/chat.svg"
-                      imageHeight="180px"
-                    />
+                    <Box>
+                      <Widget
+                        title="Chat"
+                        content="Explore the Circles community to meet other folks building local economy together."
+                        imageLink="/images/chat.svg"
+                        imageHeight="180px"
+                      />
+                    </Box>
                   </Col>
                   <Col md={4}>
-                    <Widget
-                      title="Learn"
-                      content="Read the Circles Handbook to learn more about how Circles works."
-                      imageLink="/images/learn.svg"
-                      imageHeight="180px"
-                    />
+                    <Box>
+                      <Widget
+                        title="Learn"
+                        content="Read the Circles Handbook to learn more about how Circles works."
+                        imageLink="/images/learn.svg"
+                        imageHeight="180px"
+                      />
+                    </Box>
                   </Col>
                   <Col md={4}>
-                    <Widget
-                      title="Build"
-                      content="Join the open source community working to develop Circles on Github."
-                      imageLink="/images/build.svg"
-                      imageHeight="180px"
-                    />
+                    <Box>
+                      <Widget
+                        title="Build"
+                        content="Join the open source community working to develop Circles on Github."
+                        imageLink="/images/build.svg"
+                        imageHeight="180px"
+                      />
+                    </Box>
                   </Col>
                 </Row>
               </Box>
