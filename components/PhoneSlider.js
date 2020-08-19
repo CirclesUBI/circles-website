@@ -6,22 +6,22 @@ const sliderContent = [
   {
     count: '1',
     caption: 'Sign up at Circles.Garden',
-    imageLink: '/images/slider-1.png',
+    imageLink: '/images/1_Login.svg',
   },
   {
     count: '2',
     caption: 'Ask for Trust from Three People',
-    imageLink: '/images/slider-2.png',
+    imageLink: '/images/2_Profile.svg',
   },
   {
     count: '3',
     caption: 'Receive your Circles basic income',
-    imageLink: '/images/slider-3.png',
+    imageLink: '/images/3_Home.svg',
   },
   {
     count: '4',
     caption: 'Use Circles in the Marketplace and locally!',
-    imageLink: '/images/slider-4.png',
+    imageLink: '/images/4_Marketplace.svg',
   },
 ];
 
@@ -82,20 +82,14 @@ const ImagePhoneBgrd = ({ imageLink, count, caption }) => {
 };
 
 const SliderImage = ({ imageLink, count, caption }) => (
-  <Box
-    align="center"
-    pad="medium"
-    // margin="large"
-    // flex={{ grow: 0, shrink: 0 }}
-    // wrap
-  >
+  <Box align="center" pad="medium">
     <Box margin={{ bottom: 'medium' }} height="medium">
       <Image src={imageLink} height="100%" fit="contain" />
     </Box>
     <Box
       background="dark-1"
       style={{ borderRadius: '50%' }}
-      pad="medium"
+      pad="16px"
       width="60px"
       height="60px"
       margin={{ bottom: 'medium' }}
