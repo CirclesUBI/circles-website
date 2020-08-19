@@ -12,7 +12,7 @@ import {
 } from 'grommet';
 import { Row, Col } from 'react-grid-system';
 
-import { withTranslation } from '../i18n';
+// import { withTranslation } from '../i18n';
 
 const footerLinks = [
   {
@@ -73,9 +73,9 @@ const Footer = ({ t, large }) => {
       <Col lg={6}>
         <Box pad="xlarge" gap="medium">
           <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
-            {t('newsletterTitle')}
+            {/* {t('newsletterTitle')} */}title
           </Text>
-          <Text color="light-1">‍{t('newsletterText')}</Text>
+          {/* <Text color="light-1">‍{t('newsletterText')}</Text> */}
           <Form
             onSubmit={({ value }) => console.log(value)}
             value={emailValue}
@@ -84,7 +84,7 @@ const Footer = ({ t, large }) => {
             <FormField color="light-1" name="email">
               <TextInput
                 name="email"
-                placeholder={t('newsletterInputPlaceholder')}
+                // placeholder={t('newsletterInputPlaceholder')}
                 style={{ color: '#fff' }}
               />
             </FormField>
@@ -92,7 +92,7 @@ const Footer = ({ t, large }) => {
               primary
               color="light-1"
               type="submit"
-              label={t('newsletterSignup')}
+              // label={t('newsletterSignup')}
               style={{
                 borderRadius: 8,
                 marginTop: 12,
@@ -141,4 +141,4 @@ const Footer = ({ t, large }) => {
   );
 };
 
-export default withTranslation('footer')(Footer);
+export default Footer;

@@ -102,13 +102,18 @@ export const SocialMenu = ({ ...otherProps }) => (
 
 const Menu = ({ activeSection, large, ...otherProps }) => {
   return (
-    <Box width={!large ? '100%' : 'small '} pad="medium" {...otherProps}>
+    <Box
+      width={!large ? '100%' : 'small '}
+      pad={{ right: 'none' }}
+      {...otherProps}
+    >
       {large ? (
         <MenuContent large />
       ) : (
         <DropButton
           label={<MenuIcon color="light-1" />}
           dropAlign={{ top: 'bottom', right: 'right' }}
+          pad="xsmall"
           dropContent={
             <Box background="brand" pad="large">
               <MenuContent large={false} />
