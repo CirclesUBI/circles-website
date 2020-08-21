@@ -5,10 +5,10 @@ import Menu, { SocialMenu } from './Menu';
 
 const Header = ({ large }) => {
   return (
-    <Row style={{ alignItems: 'center' }}>
+    <Row style={{ alignItems: 'center', paddingTop: 12 }}>
       <Col xs={3} md={2}>
-        <Box width="60px" pad={{ left: 'small' }}>
-          <Image src="/images/logo.svg" />
+        <Box pad={{ left: 'large' }}>
+          <Image style={{ width: 60, height: 60 }} src="/images/logo.svg" />
         </Box>
       </Col>
       <Col xs={6} md={8}>
