@@ -7,7 +7,7 @@ const Header = ({ large }) => {
   return (
     <Row style={{ alignItems: 'center' }}>
       <Col xs={3} md={2}>
-        <Box width="72px" pad={{ left: 'medium' }}>
+        <Box width="60px" pad={{ left: 'small' }}>
           <Image src="/images/logo.svg" />
         </Box>
       </Col>

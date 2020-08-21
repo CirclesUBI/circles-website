@@ -48,7 +48,7 @@ const socialMenuLinks = [
 ];
 
 const MenuContent = ({ large }) => (
-  <Box direction={large ? 'row' : 'column'} justify="center" gap="large">
+  <Box direction={large ? 'row' : 'column'} justify="center" gap="50px">
     {menuLinks.map((item, index) =>
       item.isExternal ? (
         <Anchor
@@ -82,21 +82,22 @@ const MenuContent = ({ large }) => (
 );
 
 export const SocialMenu = ({ ...otherProps }) => (
-  <Box
-    pad="small"
-    direction="row"
-    gap="medium"
-    align="center"
-    justify="center"
-    width="medium"
-    style={{ backgroundColor: 'rgba(255, 255, 255, .2)' }}
-    {...otherProps}
-  >
-    {socialMenuLinks.map((item) => (
-      <Anchor href={item.link} key={item.link}>
-        <Image src={item.icon} />
-      </Anchor>
-    ))}
+  <Box direction="row" justify="end" {...otherProps}>
+    <Box
+      pad="10px"
+      gap="14px"
+      direction="row"
+      justify="end"
+      flex={{ grow: 0 }}
+      basis="auto"
+      style={{ width: 'auto', backgroundColor: 'rgba(255, 255, 255, .2)' }}
+    >
+      {socialMenuLinks.map((item) => (
+        <Anchor href={item.link} key={item.link} style={{ height: 24 }}>
+          <Image width="24px" src={item.icon} />
+        </Anchor>
+      ))}
+    </Box>
   </Box>
 );
 
