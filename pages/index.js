@@ -32,8 +32,10 @@ function Home() {
         {(large) => (
           <Box>
             <Row>
-              <Box pad={{ top: 'large' }} width="100%">
-                <Image src="/images/circlestitle-big.svg" width="100%" />
+              <Box width="100%" pad="large">
+                <Box pad={{ top: 'large' }} width="large" alignSelf="center">
+                  <Image src="/images/circlestitle-big.svg" width="100%" />
+                </Box>
               </Box>
             </Row>
 
