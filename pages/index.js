@@ -10,7 +10,7 @@ import PhoneSlider from '../components/PhoneSlider';
 
 import { withTranslation } from '../i18n';
 
-function Home() {
+function Home({ t }) {
   return (
     <div className={styles.home}>
       <Head>
