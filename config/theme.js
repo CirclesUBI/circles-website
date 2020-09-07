@@ -16,7 +16,7 @@ const colors = {
     dark: '#52b7f9',
     light: '#4a984a',
   },
-  focus: 'brand',
+  focus: 'none',
   'accent-1': '#367bd5',
   'accent-2': '#5ec660',
   'accent-3': '#d4293d',

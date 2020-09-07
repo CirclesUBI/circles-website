@@ -23,25 +23,45 @@ function FAQ({ t }) {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const items = t('items', { returnObjects: true });
-  const questionsIndex = items.map((item) => item.question);
 
   let suggestions = [];
   if (inputValue.length > 3) {
-    questionsIndex.forEach((q) => {
-      if (q.toLowerCase().includes(inputValue.toLowerCase())) {
-        suggestions.push(q);
+    items.forEach((item, index) => {
+      if (item.question.toLowerCase().includes(inputValue.toLowerCase())) {
+        suggestions.push({
+          label: (
+            <ScrollLink
+              onClick={() => handleSelect(index)}
+              to={item.question}
+              smooth
+              duration={300}
+            >
+              <Box pad="small">{item.question}</Box>
+            </ScrollLink>
+          ),
+          value: item.question,
+          topic: item.topic,
+          index,
+        });
       }
     });
   }
 
+  const handleSelect = (index) => {
+    setSelectedIndex(index);
+    setInputValue('');
+  };
+
   const onSelect = (event) => {
-    questionsIndex.forEach((q, index) => {
-      if (q === event.suggestion) {
-        setSelectedIndex(index);
-        scroller.scrollTo(q);
-        setInputValue('');
-      }
-    });
+    console.log('onselect', event);
+  };
+
+  const handlePanelSelect = (index) => {
+    if (index === selectedIndex) {
+      setSelectedIndex(null);
+      return;
+    }
+    setSelectedIndex(index);
   };
 
   return (
@@ -71,8 +91,11 @@ function FAQ({ t }) {
                   <FormField>
                     <TextInput
                       value={inputValue}
-                      onChange={(event) => setInputValue(event.target.value)}
-                      onSelect={onSelect}
+                      onChange={(event) => {
+                        setSelectedIndex(null);
+                        setInputValue(event.target.value);
+                      }}
+                      onSuggestionSelect={onSelect}
                       suggestions={suggestions}
                       placeholder="Describe your issue"
                       type="search"
@@ -91,22 +114,33 @@ function FAQ({ t }) {
                 >
                   <Accordion activeIndex={selectedIndex}>
                     {items.map((item, index) => (
-                      <AccordionPanel
-                        key={item.question}
-                        id={item.question}
-                        onClick={() => setSelectedIndex(index)}
-                        label={
-                          <Element name={item.question}>
-                            <Box pad="medium">
-                              <Text weight="bold">{item.question}</Text>
-                            </Box>
-                          </Element>
-                        }
-                      >
-                        <Box pad={{ horizontal: 'medium', bottom: 'medium' }}>
-                          {item.answer}
-                        </Box>
-                      </AccordionPanel>
+                      <Box>
+                        {(index === 0 ||
+                          item.topic !== items[index - 1].topic) && (
+                          <Text
+                            margin={{ top: 'xlarge', bottom: 'medium' }}
+                            size="large"
+                          >
+                            {item.topic}
+                          </Text>
+                        )}
+                        <AccordionPanel
+                          key={item.question}
+                          id={item.question}
+                          onClick={() => handlePanelSelect(index)}
+                          label={
+                            <Element name={item.question}>
+                              <Box pad="medium">
+                                <Text weight="bold">{item.question}</Text>
+                              </Box>
+                            </Element>
+                          }
+                        >
+                          <Box pad={{ horizontal: 'medium', bottom: 'medium' }}>
+                            {item.answer}
+                          </Box>
+                        </AccordionPanel>
+                      </Box>
                     ))}
                   </Accordion>
                 </Box>
