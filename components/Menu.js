@@ -39,6 +39,13 @@ const notHomeMenuLinks = [
     isExternal: false,
     isRoute: true,
   },
+  {
+    label: 'Wallet',
+    value: 'wallet',
+    isExternal: true,
+    isRoute: false,
+    href: 'https://circles.garden',
+  },
   ...pageLinks,
 ];
 
