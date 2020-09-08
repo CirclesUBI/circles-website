@@ -3,7 +3,12 @@ import { Anchor, Box, DropButton, Image } from 'grommet';
 import { Menu as MenuIcon } from 'grommet-icons';
 import { Link as ScrollLink } from 'react-scroll';
 
-const menuLinks = [
+const pageLinks = [
+  { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
+  { label: 'Donate', value: '/donate', isExternal: false, isRoute: true },
+];
+
+const homeMenuLinks = [
   {
     label: 'Wallet',
     value: 'wallet',
@@ -24,8 +29,17 @@ const menuLinks = [
     isRoute: false,
   },
   { label: 'Community', value: 'community', isExternal: false, isRoute: false },
-  { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
-  { label: 'Donate', value: '/donate', isExternal: false, isRoute: true },
+  ...pageLinks,
+];
+
+const notHomeMenuLinks = [
+  {
+    label: 'Home',
+    value: '/',
+    isExternal: false,
+    isRoute: true,
+  },
+  ...pageLinks,
 ];
 
 const socialMenuLinks = [
@@ -47,39 +61,48 @@ const socialMenuLinks = [
   },
 ];
 
-const MenuContent = ({ large }) => (
-  <Box direction={large ? 'row' : 'column'} justify="center" gap="50px">
-    {menuLinks.map((item, index) =>
-      item.isExternal ? (
-        <Anchor
-          key={item.value}
-          label={item.label}
-          href={item.href}
-          target="_blank"
-          color="light-1"
-        />
-      ) : item.isRoute ? (
-        <Link key={item.value} href={item.value}>
-          <Anchor as="span" label={item.label} color="light-1" />
-        </Link>
-      ) : (
-        <ScrollLink
-          key={item.value}
-          activeClass="menuitem-active"
-          className="menuitem"
-          to={item.value}
-          spy
-          hashSpy
-          smooth
-          duration={500}
-          // onSetActive={(item) => setActiveSection(item)}
-        >
-          <Anchor color="light-1" as="span" label={item.label} />
-        </ScrollLink>
-      )
-    )}
-  </Box>
-);
+const MenuContent = ({ large }) => {
+  let pathname;
+  if (process.browser) {
+    pathname = location.pathname;
+  }
+
+  const menu = pathname && pathname === '/' ? homeMenuLinks : notHomeMenuLinks;
+
+  return (
+    <Box direction={large ? 'row' : 'column'} justify="center" gap="50px">
+      {menu.map((item, index) =>
+        item.isExternal ? (
+          <Anchor
+            key={item.value}
+            label={item.label}
+            href={item.href}
+            target="_blank"
+            color="light-1"
+          />
+        ) : item.isRoute ? (
+          <Link key={item.value} href={item.value}>
+            <Anchor as="span" label={item.label} color="light-1" />
+          </Link>
+        ) : (
+          <ScrollLink
+            key={item.value}
+            activeClass="menuitem-active"
+            className="menuitem"
+            to={item.value}
+            spy
+            hashSpy
+            smooth
+            duration={500}
+            // onSetActive={(item) => setActiveSection(item)}
+          >
+            <Anchor color="light-1" as="span" label={item.label} />
+          </ScrollLink>
+        )
+      )}
+    </Box>
+  );
+};
 
 export const SocialMenu = ({ ...otherProps }) => (
   <Box direction="row" justify="end" {...otherProps}>

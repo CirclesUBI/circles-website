@@ -1,4 +1,5 @@
-import { Box, Image } from 'grommet';
+import Link from 'next/link';
+import { Box, Anchor, Image } from 'grommet';
 import { Row, Col } from 'react-grid-system';
 
 import Menu, { SocialMenu } from './Menu';
@@ -8,7 +9,12 @@ const Header = ({ large }) => {
     <Row style={{ alignItems: 'center', paddingTop: 12 }}>
       <Col xs={3} md={2}>
         <Box pad={{ left: 'large' }}>
-          <Image style={{ width: 60, height: 60 }} src="/images/logo.svg" />
+          <Link href="/">
+            <Image
+              style={{ width: 60, height: 60, cursor: 'pointer' }}
+              src="/images/logo.svg"
+            />
+          </Link>
         </Box>
       </Col>
       <Col xs={6} md={8}>
