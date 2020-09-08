@@ -14,12 +14,12 @@
     {
       "topic": "Onboarding",
       "question": "What is a Circles Safe?",
-      "answer": "Your Circles Safe is a smart contract that holds the keys to your account. /n You can add multiple devices, such as your computer or phone, to your Safe. Adding devices to your Safe can help with account recovery if you lose your seed phrase. /n You can read more about Safes here"
+      "answer": "<p>Your Circles Safe is a smart contract that holds the keys to your account.</p> <p>You can add multiple devices, such as your computer or phone, to your Safe. Adding devices to your Safe can help with account recovery if you lose your seed phrase.</p><p>You can read more about Safes here</p>"
     },
     {
       "topic": "Onboarding",
       "question": "What blockchain is Circles using?",
-      "answer": "For the public test phase, Circles is using Kovan network, which is one of the public Ethereum testnets. For our full launch later this year, we plan on using xDai network. /n You can read more about Kovan here. You can learn more about xDai here."
+      "answer": "For the public test phase, Circles is using Kovan network, which is one of the public Ethereum testnets. For our full launch later this year, we plan on using xDai network. /n You can read more about Kovan here. You can learn more about xDai <a style='text-decoration: underline;' href='https://twitter.com/grommet_io'>here</a>"
     },
     {
       "topic": "UBI",
@@ -29,7 +29,7 @@
     {
       "topic": "Security",
       "question": "How do I secure my Circles account?",
-      "answer": "There are two ways to secure your account - saving your seed phrase, and linking other devices. /n Saving your seed phrase: We recommend going to your profile page in the app and writing down your 24 word phrase, this is called your seed phrase and you should keep it somewhere safe. You can think of it like a password - we use it to generate your Circles keys. /n For security reasons, your seed phrase is normally kept hidden. You can reveal it by clicking on “Export your seed phrase” on your profile page. /n Linking devices: We also recommend adding a second device as soon as possible, for example, both your phone and your computer. Adding a device makes it easy to reconnect to your account if one device fails for any reason. You can add a device by going to your profile in the app and clicking “Add new device.”"
+      "answer": "There are two ways to secure your account - saving your seed phrase, and linking other devices. <br/>Saving your seed phrase: We recommend going to your profile page in the app and writing down your 24 word phrase, this is called your seed phrase and you should keep it somewhere safe. You can think of it like a password - we use it to generate your Circles keys. <br>For security reasons, your seed phrase is normally kept hidden. You can reveal it by clicking on “Export your seed phrase” on your profile page.  <br>Linking devices: We also recommend adding a second device as soon as possible, for example, both your phone and your computer. Adding a device makes it easy to reconnect to your account if one device fails for any reason. You can add a device by going to your profile in the app and clicking “Add new device.”"
     },
     {
       "topic": "Security",

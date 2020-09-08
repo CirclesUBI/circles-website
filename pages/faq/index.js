@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { scroller, Element, Link as ScrollLink } from 'react-scroll';
+import ReactMarkdown from 'react-markdown';
 
 import {
   Accordion,
   AccordionPanel,
+  Anchor,
   Box,
   FormField,
   Heading,
@@ -12,6 +14,7 @@ import {
   TextInput,
   Text,
   Button,
+  Markdown,
 } from 'grommet';
 import { Row, Col } from 'react-grid-system';
 
@@ -65,7 +68,7 @@ function FAQ({ t }) {
   };
 
   return (
-    <>
+    <div className="page">
       <Head>
         <title>Circles UBI | Frequently Asked Questions</title>
       </Head>
@@ -73,83 +76,102 @@ function FAQ({ t }) {
       <Layout>
         {(large) => (
           <Box>
-            <Row>
-              <Box width="100%" pad={{ top: 'large' }}>
-                <Box
-                  margin={{ left: 'medium', right: 'medium' }}
-                  width="medium"
-                  alignSelf="center"
-                >
-                  <Text
-                    weight="bold"
-                    size="large"
-                    textAlign="center"
-                    margin={{ bottom: 'medium' }}
-                  >
-                    {t('title')}
-                  </Text>
-                  <FormField>
-                    <TextInput
-                      value={inputValue}
-                      onChange={(event) => {
-                        setSelectedIndex(null);
-                        setInputValue(event.target.value);
-                      }}
-                      onSuggestionSelect={onSelect}
-                      suggestions={suggestions}
-                      placeholder="Describe your issue"
-                      type="search"
+            <Box
+              width="large"
+              alignSelf="center"
+              className="page-wrapper"
+              elevation="medium"
+            >
+              <Row>
+                <Box width="100%" pad={{ top: 'large' }}>
+                  <Box alignSelf="center">
+                    <Image
+                      src="/images/logo.svg"
+                      margin={{ bottom: 'large' }}
+                      style={{ width: 90, height: 90 }}
                     />
-                  </FormField>
+                  </Box>
+                  <Box
+                    margin={{ left: 'medium', right: 'medium' }}
+                    width="medium"
+                    alignSelf="center"
+                  >
+                    <Text
+                      weight="bold"
+                      size="large"
+                      textAlign="center"
+                      margin={{ bottom: 'medium' }}
+                    >
+                      {t('title')}
+                    </Text>
+                    <FormField>
+                      <TextInput
+                        value={inputValue}
+                        onChange={(event) => {
+                          setSelectedIndex(null);
+                          setInputValue(event.target.value);
+                        }}
+                        onSelect={onSelect}
+                        suggestions={suggestions}
+                        placeholder="Describe your issue"
+                        type="search"
+                      />
+                    </FormField>
+                  </Box>
                 </Box>
-              </Box>
-            </Row>
-            <Row>
-              <Box width="100%">
-                <Box
-                  margin={{ left: 'medium', right: 'medium' }}
-                  width="large"
-                  pad="large"
-                  alignSelf="center"
-                >
-                  <Accordion activeIndex={selectedIndex}>
-                    {items.map((item, index) => (
-                      <Box>
-                        {(index === 0 ||
-                          item.topic !== items[index - 1].topic) && (
-                          <Text
-                            margin={{ top: 'xlarge', bottom: 'medium' }}
-                            size="large"
-                          >
-                            {item.topic}
-                          </Text>
-                        )}
-                        <AccordionPanel
-                          key={item.question}
-                          id={item.question}
-                          onClick={() => handlePanelSelect(index)}
-                          label={
-                            <Element name={item.question}>
-                              <Box pad="medium">
+              </Row>
+              <Row>
+                <Box width="100%">
+                  <Box
+                    margin={{ left: 'medium', right: 'medium' }}
+                    width="large"
+                    pad="large"
+                    alignSelf="center"
+                  >
+                    <Accordion activeIndex={selectedIndex}>
+                      {items.map((item, index) => (
+                        <Box key={item.question}>
+                          {(index === 0 ||
+                            item.topic !== items[index - 1].topic) && (
+                            <Text
+                              margin={{ top: 'xlarge', bottom: 'medium' }}
+                              size="large"
+                            >
+                              {item.topic}
+                            </Text>
+                          )}
+                          <AccordionPanel
+                            id={item.question}
+                            label={
+                              <Box
+                                pad="medium"
+                                width="100%"
+                                onClick={() => handlePanelSelect(index)}
+                              >
                                 <Text weight="bold">{item.question}</Text>
                               </Box>
-                            </Element>
-                          }
-                        >
-                          <Box pad={{ horizontal: 'medium', bottom: 'medium' }}>
-                            {item.answer}
-                          </Box>
-                        </AccordionPanel>
-                      </Box>
-                    ))}
-                  </Accordion>
+                            }
+                          >
+                            <Box
+                              pad={{ horizontal: 'medium', bottom: 'medium' }}
+                            >
+                              {/* <div
+                              dangerouslySetInnerHTML={{ __html: item.answer }}
+                            /> */}
+                              <ReactMarkdown source={item.answer} />
+                            </Box>
+                          </AccordionPanel>
+                        </Box>
+                      ))}
+                    </Accordion>
+                  </Box>
                 </Box>
-              </Box>
-            </Row>
+              </Row>
+            </Box>
           </Box>
         )}
       </Layout>
-    </>
+    </div>
   );
 }
 
