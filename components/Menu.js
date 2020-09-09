@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Anchor, Box, DropButton, Image } from 'grommet';
+import { Anchor, Box, Button, DropButton, Image } from 'grommet';
 import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
 import { useState } from 'react';
@@ -118,7 +118,7 @@ const MenuContent = ({ large }) => {
   );
 };
 
-export const SocialMenu = ({ ...otherProps }) => (
+export const SocialMenu = ({ fixed, ...otherProps }) => (
   <Box direction="row" justify="end" {...otherProps}>
     <Box
       pad="10px"
@@ -127,7 +127,10 @@ export const SocialMenu = ({ ...otherProps }) => (
       justify="end"
       flex={{ grow: 0 }}
       basis="auto"
-      style={{ width: 'auto', backgroundColor: 'rgba(255, 255, 255, .2)' }}
+      style={{
+        width: 'auto',
+        backgroundColor: fixed ? 'none' : 'rgba(255, 255, 255, .2)',
+      }}
     >
       {socialMenuLinks.map((item) => (
         <Anchor href={item.link} key={item.link} style={{ height: 24 }}>
@@ -152,8 +155,8 @@ const Menu = ({ activeSection, large, fixed, ...otherProps }) => {
   return (
     <Box
       width="100%"
-      pad={{ right: 'none' }}
       style={open && !fixed ? mobileMenuStyle : {}}
+      align="center"
       {...otherProps}
     >
       {large ? (
@@ -163,17 +166,14 @@ const Menu = ({ activeSection, large, fixed, ...otherProps }) => {
           dropAlign={{ top: 'top', right: 'right' }}
           alignSelf="end"
           open={open}
+          onClick={() => setOpen(!open)}
+          pad={{ right: '0px' }}
           label={
-            <Box
-              onClick={() => setOpen(!open)}
-              pad="small"
-              alignSelf="end"
-              hoverIndicator="none"
-            >
+            <Box pad={{ top: '0' }}>
               {open ? (
-                <CloseIcon color="light-1" />
+                <CloseIcon plain={false} color="light-1" />
               ) : (
-                <MenuIcon color="light-1" />
+                <MenuIcon plain={false} color="light-1" />
               )}
             </Box>
           }
@@ -183,20 +183,22 @@ const Menu = ({ activeSection, large, fixed, ...otherProps }) => {
               pad="large"
               width="260px"
               height="calc(100vh + 30px)"
+              justify="between"
             >
               {!fixed && (
-                <Box
+                <Button
                   onClick={() => setOpen(false)}
                   alignSelf="end"
                   hoverIndicator="none"
-                >
-                  <CloseIcon color="light-1" />
-                </Box>
+                  icon={<CloseIcon color="light-1" />}
+                />
               )}
               <Box pad={{ top: 'large' }} hoverIndicator="none">
                 <MenuContent large={false} />
               </Box>
-              <SocialMenu margin={{ top: 'large' }} />
+              <Box justify="center" direction="row">
+                <SocialMenu fixed={fixed} margin={{ top: 'large' }} />
+              </Box>
             </Box>
           }
         />

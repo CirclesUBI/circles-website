@@ -81,6 +81,9 @@ const theme = deepFreeze(
         color: '#f8f8f8',
       },
     },
+    icon: {
+      focus: 'none',
+    },
     text: {
       xsmall: { size: '10px', height: 1.5 },
       small: { size: '14px', height: 1.43 },
