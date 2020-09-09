@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { scroller, Element, Link as ScrollLink } from 'react-scroll';
+import {
+  scroller,
+  Element,
+  Link as ScrollLink,
+  animateScroll,
+} from 'react-scroll';
 import ReactMarkdown from 'react-markdown';
 
 import {
@@ -38,7 +43,7 @@ function FAQ({ t }) {
               to={item.question}
               smooth
               duration={300}
-              offset={-70}
+              offset={-50}
             >
               <Box pad="small">{item.question}</Box>
             </ScrollLink>
@@ -57,7 +62,15 @@ function FAQ({ t }) {
   };
 
   const onSelect = (event) => {
-    console.log('onselect', event);
+    const suggestion = event.suggestion;
+    console.log(suggestion);
+    handleSelect(suggestion.index);
+    scroller.scrollTo(suggestion.value, {
+      duration: 300,
+      smooth: true,
+      // containerId: suggestion.value,
+      offset: -50,
+    });
   };
 
   const handlePanelSelect = (index) => {
@@ -105,19 +118,22 @@ function FAQ({ t }) {
                     >
                       {t('title')}
                     </Text>
-                    <FormField margin={{ horizontal: 'medium' }}>
-                      <TextInput
-                        value={inputValue}
-                        onChange={(event) => {
-                          setSelectedIndex(null);
-                          setInputValue(event.target.value);
-                        }}
-                        onSelect={onSelect}
-                        suggestions={suggestions}
-                        placeholder="Describe your issue"
-                        type="search"
-                      />
-                    </FormField>
+                    <Box pad={{ horizontal: 'medium' }}>
+                      <FormField>
+                        <TextInput
+                          value={inputValue}
+                          onChange={(event) => {
+                            setSelectedIndex(null);
+                            setInputValue(event.target.value);
+                          }}
+                          onSelect={onSelect}
+                          suggestions={suggestions}
+                          placeholder="Describe your issue"
+                          type="search"
+                          dropProps={{ pad: { horizontal: 'medium' } }}
+                        />
+                      </FormField>
+                    </Box>
                   </Box>
                 </Box>
               </Row>
@@ -144,13 +160,15 @@ function FAQ({ t }) {
                           <AccordionPanel
                             id={item.question}
                             label={
-                              <Box
-                                pad="medium"
-                                width="100%"
-                                onClick={() => handlePanelSelect(index)}
-                              >
-                                <Text weight="bold">{item.question}</Text>
-                              </Box>
+                              <Element name={item.question}>
+                                <Box
+                                  pad="medium"
+                                  width="100%"
+                                  onClick={() => handlePanelSelect(index)}
+                                >
+                                  <Text weight="bold">{item.question}</Text>
+                                </Box>
+                              </Element>
                             }
                           >
                             <Box
