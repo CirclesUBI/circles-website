@@ -16,6 +16,7 @@ const Widget = ({
       margin="large"
       style={{ borderRadius: 8, maxWidth: '360px' }}
       alignSelf="center"
+      background="white"
     >
       <Image
         src={imageLink}
