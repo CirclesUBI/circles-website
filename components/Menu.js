@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { Anchor, Box, DropButton, Image } from 'grommet';
-import { Menu as MenuIcon } from 'grommet-icons';
+import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink } from 'react-scroll';
+import { useState } from 'react';
 
 const pageLinks = [
   { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
@@ -77,7 +78,12 @@ const MenuContent = ({ large }) => {
   const menu = pathname && pathname === '/' ? homeMenuLinks : notHomeMenuLinks;
 
   return (
-    <Box direction={large ? 'row' : 'column'} justify="center" gap="50px">
+    <Box
+      direction={large ? 'row' : 'column'}
+      justify="center"
+      gap="large"
+      pad="small"
+    >
       {menu.map((item, index) =>
         item.isExternal ? (
           <Anchor
@@ -131,22 +137,46 @@ export const SocialMenu = ({ ...otherProps }) => (
   </Box>
 );
 
+const mobileMenuStyle = {
+  transform: 'translateY(-24px)',
+};
+
 const Menu = ({ activeSection, large, ...otherProps }) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <Box
-      width={!large ? '100%' : 'small '}
+      width="100%"
       pad={{ right: 'none' }}
+      style={open ? mobileMenuStyle : {}}
       {...otherProps}
     >
       {large ? (
         <MenuContent large />
       ) : (
         <DropButton
-          label={<MenuIcon color="light-1" />}
-          dropAlign={{ top: 'bottom', right: 'right' }}
+          label={
+            <Box onClick={() => setOpen(true)} pad="small">
+              <MenuIcon color="light-1" />
+            </Box>
+          }
+          dropAlign={{ top: 'top', right: 'right' }}
           alignSelf="end"
+          open={open}
           dropContent={
-            <Box background="brand" pad="large">
+            <Box
+              background="brand"
+              pad="large"
+              width="260px"
+              height="calc(100vh + 30px)"
+            >
+              <Box
+                onClick={() => setOpen(false)}
+                alignSelf="end"
+                pad={{ bottom: 'medium' }}
+              >
+                <CloseIcon color="light-1" />
+              </Box>
               <MenuContent large={false} />
               <SocialMenu margin={{ top: 'large' }} />
             </Box>
