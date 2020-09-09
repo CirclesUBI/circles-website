@@ -10,7 +10,7 @@ const Widget = ({
 }) => {
   return (
     <Box
-      pad="15px"
+      pad="large"
       elevation="small"
       align="start"
       margin="large"

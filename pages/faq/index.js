@@ -63,13 +63,11 @@ function FAQ({ t }) {
 
   const onSelect = (event) => {
     const suggestion = event.suggestion;
-    console.log(suggestion);
     handleSelect(suggestion.index);
     scroller.scrollTo(suggestion.value, {
       duration: 300,
-      smooth: true,
-      // containerId: suggestion.value,
       offset: -50,
+      smooth: true,
     });
   };
 
