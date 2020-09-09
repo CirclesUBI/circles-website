@@ -38,6 +38,7 @@ function FAQ({ t }) {
               to={item.question}
               smooth
               duration={300}
+              offset={-70}
             >
               <Box pad="small">{item.question}</Box>
             </ScrollLink>
@@ -104,7 +105,7 @@ function FAQ({ t }) {
                     >
                       {t('title')}
                     </Text>
-                    <FormField>
+                    <FormField margin={{ horizontal: 'medium' }}>
                       <TextInput
                         value={inputValue}
                         onChange={(event) => {

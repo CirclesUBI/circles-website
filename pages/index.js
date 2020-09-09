@@ -58,6 +58,7 @@ function Home({ t }) {
                   fill={false}
                   label="Get Circles"
                   href="https://circles.garden"
+                  target="_blank"
                   style={{
                     padding: '14px 52px',
                     borderRadius: 8,
@@ -75,6 +76,7 @@ function Home({ t }) {
                   smooth
                   duration={500}
                   style={{ marginBottom: 20 }}
+                  offset={-50}
                 >
                   <Anchor as="span" color="light-1">
                     Learn more

@@ -4,14 +4,30 @@ import { Row, Col } from 'react-grid-system';
 
 import Menu, { SocialMenu } from './Menu';
 
-const Header = ({ large }) => {
+const Header = ({ large, fixed }) => {
+  const fixedStyle = {
+    width: 30,
+    height: 30,
+    cursor: 'pointer',
+  };
+
+  const regularStyle = {
+    width: 60,
+    height: 60,
+    cursor: 'pointer',
+  };
+
   return (
-    <Row style={{ alignItems: 'center', paddingTop: 12 }}>
+    <Row
+      style={{
+        alignItems: 'center',
+      }}
+    >
       <Col xs={3} md={2}>
         <Box pad={{ left: 'large' }}>
           <Link href="/">
             <Image
-              style={{ width: 60, height: 60, cursor: 'pointer' }}
+              style={fixed ? fixedStyle : regularStyle}
               src="/images/logo.svg"
             />
           </Link>
@@ -21,7 +37,7 @@ const Header = ({ large }) => {
         {large && <Menu activeSection="donate" large />}
       </Col>
       <Col xs={3} md={2}>
-        {large ? <SocialMenu /> : <Menu large={false} />}
+        {large ? <SocialMenu /> : <Menu fixed={fixed} large={false} />}
       </Col>
     </Row>
   );

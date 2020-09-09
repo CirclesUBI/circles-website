@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Anchor, Box, DropButton, Image } from 'grommet';
 import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, Events } from 'react-scroll';
 import { useState } from 'react';
 
 const pageLinks = [
@@ -107,6 +107,7 @@ const MenuContent = ({ large }) => {
             hashSpy
             smooth
             duration={500}
+            offset={-50}
             // onSetActive={(item) => setActiveSection(item)}
           >
             <Anchor color="light-1" as="span" label={item.label} />
@@ -141,43 +142,60 @@ const mobileMenuStyle = {
   transform: 'translateY(-24px)',
 };
 
-const Menu = ({ activeSection, large, ...otherProps }) => {
+const Menu = ({ activeSection, large, fixed, ...otherProps }) => {
   const [open, setOpen] = useState(false);
+
+  Events.scrollEvent.register('begin', function (to, element) {
+    setOpen(false);
+  });
 
   return (
     <Box
       width="100%"
       pad={{ right: 'none' }}
-      style={open ? mobileMenuStyle : {}}
+      style={open && !fixed ? mobileMenuStyle : {}}
       {...otherProps}
     >
       {large ? (
         <MenuContent large />
       ) : (
         <DropButton
-          label={
-            <Box onClick={() => setOpen(true)} pad="small">
-              <MenuIcon color="light-1" />
-            </Box>
-          }
           dropAlign={{ top: 'top', right: 'right' }}
           alignSelf="end"
           open={open}
+          label={
+            <Box
+              onClick={() => setOpen(!open)}
+              pad="small"
+              alignSelf="end"
+              hoverIndicator="none"
+            >
+              {open ? (
+                <CloseIcon color="light-1" />
+              ) : (
+                <MenuIcon color="light-1" />
+              )}
+            </Box>
+          }
           dropContent={
             <Box
-              background="brand"
+              background="dark-1"
               pad="large"
               width="260px"
               height="calc(100vh + 30px)"
             >
-              <Box
-                onClick={() => setOpen(false)}
-                alignSelf="end"
-                pad={{ bottom: 'medium' }}
-              >
-                <CloseIcon color="light-1" />
+              {!fixed && (
+                <Box
+                  onClick={() => setOpen(false)}
+                  alignSelf="end"
+                  hoverIndicator="none"
+                >
+                  <CloseIcon color="light-1" />
+                </Box>
+              )}
+              <Box pad={{ top: 'large' }} hoverIndicator="none">
+                <MenuContent large={false} />
               </Box>
-              <MenuContent large={false} />
               <SocialMenu margin={{ top: 'large' }} />
             </Box>
           }

@@ -5,7 +5,8 @@ const mainColor = '#660F33';
 
 const colors = {
   background: 'hsla(88, 62%, 90%, 0.1)',
-  brand: '#660F33',
+  brand: '#CC1E66',
+  brand2: '#D12D5F',
   gradient:
     'linear-gradient(135deg, rgba(102,15,51,1) 0%, rgba(204,30,102,1) 100%)',
   active: {
@@ -26,9 +27,9 @@ const colors = {
   'neutral-3': '#607D8B',
   'neutral-4': '#9cb6d7',
   'neutral-5': '#FF9800',
-  'dark-1': 'rgba(0, 0, 0, .8)',
-  'dark-2': 'rgba(20, 20, 20, .8)',
-  'dark-3': 'rgba(50, 50, 50, .8)',
+  // 'dark-1': 'rgba(0, 0, 0, .8)',
+  // 'dark-2': 'rgba(20, 20, 20, .8)',
+  // 'dark-3': 'rgba(50, 50, 50, .8)',
 };
 
 var baseSpacing = 16;
