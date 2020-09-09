@@ -39,7 +39,7 @@ function Home({ t }) {
               </Box>
             </Row>
 
-            <Box width="100%" pad="xlarge">
+            <Box width="100%" pad="large">
               <Text
                 size="large"
                 color="light-1"
@@ -50,7 +50,7 @@ function Home({ t }) {
                   <em>A Basic Income on the Blockchain</em>
                 </b>
               </Text>
-              <Box margin={{ bottom: 'large' }} alignSelf="center">
+              <Box margin={{ vertical: 'large' }} alignSelf="center">
                 <Button
                   color="dark-2"
                   plain
