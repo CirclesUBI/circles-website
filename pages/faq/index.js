@@ -20,7 +20,7 @@ import {
   TextInput,
   Text,
   Button,
-  Markdown,
+  Paragraph,
 } from 'grommet';
 import { Row, Col } from 'react-grid-system';
 
@@ -79,6 +79,8 @@ function FAQ({ t }) {
     }
     setSelectedIndex(index);
   };
+
+  const isClient = typeof window !== 'undefined';
 
   return (
     <div className="page">
@@ -144,41 +146,52 @@ function FAQ({ t }) {
                     pad="large"
                     alignSelf="center"
                   >
-                    <Accordion activeIndex={selectedIndex}>
-                      {items.map((item, index) => (
-                        <Box key={item.question}>
-                          {(index === 0 ||
-                            item.topic !== items[index - 1].topic) && (
-                            <Text
-                              margin={{ top: 'xlarge', bottom: 'medium' }}
-                              size="large"
+                    {isClient && (
+                      <Accordion activeIndex={selectedIndex}>
+                        {items.map((item, index) => (
+                          <Box key={item.question}>
+                            {(index === 0 ||
+                              item.topic !== items[index - 1].topic) && (
+                              <Text
+                                margin={{ top: 'xlarge', bottom: 'medium' }}
+                                size="large"
+                              >
+                                {item.topic}
+                              </Text>
+                            )}
+                            <AccordionPanel
+                              id={item.question}
+                              label={
+                                <Element name={item.question}>
+                                  <Box
+                                    pad="medium"
+                                    width="100%"
+                                    onClick={() => handlePanelSelect(index)}
+                                  >
+                                    <Text weight="bold">{item.question}</Text>
+                                  </Box>
+                                </Element>
+                              }
                             >
-                              {item.topic}
-                            </Text>
-                          )}
-                          <AccordionPanel
-                            id={item.question}
-                            label={
-                              <Element name={item.question}>
-                                <Box
-                                  pad="medium"
-                                  width="100%"
-                                  onClick={() => handlePanelSelect(index)}
-                                >
-                                  <Text weight="bold">{item.question}</Text>
-                                </Box>
-                              </Element>
-                            }
-                          >
-                            <Box
-                              pad={{ horizontal: 'medium', bottom: 'medium' }}
-                            >
-                              {renderHTML(item.answer)}
-                            </Box>
-                          </AccordionPanel>
-                        </Box>
-                      ))}
-                    </Accordion>
+                              <Box
+                                pad={{ horizontal: 'medium', bottom: 'medium' }}
+                              >
+                                {item.answer.map((paragraph) => (
+                                  <Paragraph
+                                    key={
+                                      paragraph && paragraph.subString(0, 10)
+                                    }
+                                    size="small"
+                                  >
+                                    {renderHTML(paragraph)}
+                                  </Paragraph>
+                                ))}
+                              </Box>
+                            </AccordionPanel>
+                          </Box>
+                        ))}
+                      </Accordion>
+                    )}
                   </Box>
                 </Box>
               </Row>
@@ -189,6 +202,10 @@ function FAQ({ t }) {
     </div>
   );
 }
+
+// function AnswerParagraph ({paragraph}) {
+//   const answerParagraph = t('')
+// }
 
 FAQ.getInitialProps = async () => ({
   namespacesRequired: ['faq'],
