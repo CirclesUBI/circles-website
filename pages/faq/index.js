@@ -6,7 +6,8 @@ import {
   Link as ScrollLink,
   animateScroll,
 } from 'react-scroll';
-import ReactMarkdown from 'react-markdown';
+
+import renderHTML from 'react-render-html';
 
 import {
   Accordion,
@@ -172,10 +173,7 @@ function FAQ({ t }) {
                             <Box
                               pad={{ horizontal: 'medium', bottom: 'medium' }}
                             >
-                              {/* <div
-                              dangerouslySetInnerHTML={{ __html: item.answer }}
-                            /> */}
-                              <ReactMarkdown source={item.answer} />
+                              {renderHTML(item.answer)}
                             </Box>
                           </AccordionPanel>
                         </Box>
