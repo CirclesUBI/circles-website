@@ -6,22 +6,22 @@ const sliderContent = [
   {
     count: '1',
     caption: 'Sign up at Circles.Garden',
-    imageLink: '/images/1_Login.svg',
+    imageLink: '/images/slider-1.png',
   },
   {
     count: '2',
     caption: 'Ask for Trust from Three People',
-    imageLink: '/images/2_Profile.svg',
+    imageLink: '/images/slider-2.png',
   },
   {
     count: '3',
     caption: 'Receive your Circles basic income',
-    imageLink: '/images/3_Home.svg',
+    imageLink: '/images/slider-3.png',
   },
   {
     count: '4',
     caption: 'Use Circles in the Marketplace and locally!',
-    imageLink: '/images/4_Marketplace.svg',
+    imageLink: '/images/slider-4.png',
   },
 ];
 
