@@ -1,28 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
-import {
-  scroller,
-  Element,
-  Link as ScrollLink,
-  animateScroll,
-} from 'react-scroll';
-
+import { scroller, Element, Link as ScrollLink } from 'react-scroll';
 import renderHTML from 'react-render-html';
 
 import {
   Accordion,
   AccordionPanel,
-  Anchor,
   Box,
   FormField,
-  Heading,
   Image,
   TextInput,
   Text,
-  Button,
   Paragraph,
 } from 'grommet';
-import { Row, Col } from 'react-grid-system';
+import { Row } from 'react-grid-system';
 
 import Layout from '../../components/Layout';
 import { withTranslation } from '../../i18n';
@@ -30,6 +21,16 @@ import { withTranslation } from '../../i18n';
 function FAQ({ t }) {
   const [inputValue, setInputValue] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(null);
+
+  useEffect(() => {
+    scroller.scrollTo('page-wrapper', {
+      duration: 200,
+      smooth: true,
+    });
+    inputRef.current.focus();
+  }, []);
+
+  const inputRef = useRef();
 
   const items = t('items', { returnObjects: true });
 
@@ -97,7 +98,7 @@ function FAQ({ t }) {
               className="page-wrapper"
               elevation="medium"
             >
-              <Row>
+              <Element name="page-wrapper">
                 <Box width="100%" pad={{ top: 'large' }}>
                   <Box alignSelf="center">
                     <Image
@@ -122,6 +123,7 @@ function FAQ({ t }) {
                     <Box pad={{ horizontal: 'medium' }}>
                       <FormField>
                         <TextInput
+                          ref={inputRef}
                           value={inputValue}
                           onChange={(event) => {
                             setSelectedIndex(null);
@@ -137,7 +139,7 @@ function FAQ({ t }) {
                     </Box>
                   </Box>
                 </Box>
-              </Row>
+              </Element>
               <Row>
                 <Box width="100%">
                   <Box
@@ -174,7 +176,10 @@ function FAQ({ t }) {
                               }
                             >
                               <Box
-                                pad={{ horizontal: 'medium', bottom: 'medium' }}
+                                pad={{
+                                  horizontal: 'medium',
+                                  bottom: 'medium',
+                                }}
                               >
                                 {item.answer.map((paragraph) => (
                                   <Paragraph
@@ -203,10 +208,6 @@ function FAQ({ t }) {
     </div>
   );
 }
-
-// function AnswerParagraph ({paragraph}) {
-//   const answerParagraph = t('')
-// }
 
 FAQ.getInitialProps = async () => ({
   namespacesRequired: ['faq'],
