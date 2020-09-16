@@ -18,6 +18,7 @@ const fixedHeaderStyle = {
   position: 'fixed',
   top: 0,
   width: '100%',
+  maxWidth: 1280,
   zIndex: 99,
 };
 
