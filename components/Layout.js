@@ -20,6 +20,7 @@ const fixedHeaderStyle = {
   width: '100%',
   maxWidth: 1280,
   zIndex: 99,
+  paddingRight: 0,
 };
 
 const Layout = (props) => {

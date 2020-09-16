@@ -185,7 +185,9 @@ const Menu = ({ activeSection, large, fixed, ...otherProps }) => {
               height="calc(100vh + 30px)"
               justify="between"
             >
-              {!fixed && (
+              {fixed ? (
+                <div />
+              ) : (
                 <Button
                   onClick={() => setOpen(false)}
                   alignSelf="end"
