@@ -24,7 +24,11 @@ const Widget = ({
         height={imageHeight}
         margin={{ bottom: 'large' }}
       />
-      <Text weight="bold" margin={{ bottom: 'medium' }}>
+      <Text
+        weight="bold"
+        margin={{ bottom: 'medium' }}
+        style={{ maxWidth: 1280 }}
+      >
         {title}
       </Text>
       <Text size="small">{content}</Text>
