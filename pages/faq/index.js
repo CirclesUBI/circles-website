@@ -179,8 +179,9 @@ function FAQ({ t }) {
                                 {item.answer.map((paragraph) => (
                                   <Paragraph
                                     key={
-                                      paragraph && paragraph.subString(0, 10)
+                                      paragraph && paragraph.substring(0, 20)
                                     }
+                                    className="faq-answer-anchor"
                                     size="small"
                                   >
                                     {renderHTML(paragraph)}
