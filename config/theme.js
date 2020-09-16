@@ -173,9 +173,18 @@ const theme = deepFreeze(
       },
     },
     paragraph: {
+      small: {
+        size: '14px',
+        height: '18px',
+      },
       medium: {
         size: '18px',
         height: '26px',
+      },
+      extend: {
+        marginTop: 8,
+        marginBottom: 8,
+        maxWidth: 480,
       },
     },
   })
