@@ -28,7 +28,7 @@ const teamMembers = [
     image: 'images/team/adz.png',
   },
   {
-    name: 'Martin Köppelman',
+    name: 'Martin Köppelmann',
     image: 'images/team/martink.png',
   },
   {
