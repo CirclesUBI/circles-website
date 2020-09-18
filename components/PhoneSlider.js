@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, Image } from 'grommet';
+import { Box, Heading, Text, Image } from 'grommet';
 import Slider from 'react-slick';
 
 const SliderImage = ({ imageLink, count, caption }) => (
@@ -7,14 +7,14 @@ const SliderImage = ({ imageLink, count, caption }) => (
     <Box
       background="dark-1"
       style={{ borderRadius: '50%' }}
-      pad="16px"
-      width="60px"
-      height="60px"
+      pad="14px"
+      width="72px"
+      height="72px"
       margin={{ bottom: 'medium' }}
     >
-      <Text size="large" textAlign="center" weight="bold">
+      <Heading margin="none" textAlign="center">
         {count}
-      </Text>
+      </Heading>
     </Box>
     <Box
       style={{ maxWidth: 240 }}

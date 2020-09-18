@@ -205,10 +205,8 @@ function Home({ t }) {
             <Box
               margin={{ top: 'large', bottom: 'large' }}
               style={{
-                // backgroundImage: `url('/images/turkuaz-cloud-left.svg'), url('/images/turkuaz-cloud-right.svg')`,
-                backgroundRepeat: 'no-repeat, no-repeat',
-                backgroundPosition: 'top left, top right',
-                backgroundSize: '320px auto',
+                background:
+                  'linear-gradient(180deg, #fff, rgb(120,230,200), #fff',
               }}
               id="how-it-works"
             >
@@ -227,16 +225,7 @@ function Home({ t }) {
               <PhoneSlider sliderContent={sliderContent} large={large} />
             </Box>
 
-            <Box
-              margin={{ top: 'large', bottom: 'large' }}
-              style={{
-                // backgroundImage: `url('/images/orange-cloud-left.svg'), url('/images/orange-cloud-right.svg')`,
-                backgroundRepeat: 'no-repeat, no-repeat',
-                backgroundPosition: 'top left, top right',
-                backgroundSize: '320px auto',
-              }}
-              id="community"
-            >
+            <Box id="community" margin={{ top: 'large', bottom: 'large' }}>
               <Heading
                 level={1}
                 textAlign="center"
@@ -318,14 +307,11 @@ function Home({ t }) {
             </Box>
 
             <Box
-              margin={{ top: 'large', bottom: 'large' }}
-              style={{
-                // backgroundImage: `url('/images/orange-cloud-left.svg'), url('/images/orange-cloud-right.svg')`,
-                backgroundRepeat: 'no-repeat, no-repeat',
-                backgroundPosition: 'top left, top right',
-                backgroundSize: '320px auto',
-              }}
               id="team"
+              margin={{ top: 'large' }}
+              style={{
+                background: `linear-gradient(180deg, #fff 0%, rgb(243, 208, 223) 20%, #fff 40%, #fff 50%, rgb(243, 208, 223)) 100%`,
+              }}
             >
               <Heading
                 level={1}
@@ -338,7 +324,7 @@ function Home({ t }) {
               <Text textAlign="center" margin={{ bottom: 'medium' }}>
                 <em>{t('team-subtitle')}</em>
               </Text>
-              <Box margin={{ left: 'large', right: 'large' }}>
+              <Box margin={{ left: 'large', right: 'large', bottom: 'large' }}>
                 <Row>
                   {teamMembers.map((member) => (
                     <Col md={4} key={member.name}>
@@ -365,7 +351,16 @@ function Home({ t }) {
                 </Row>
               </Box>
 
-              <Box>
+              <Box
+                pad="medium"
+                width="100%"
+                style={{
+                  backgroundImage: `url('/images/team-back-left.svg'), url('/images/team-back-right.svg')`,
+                  backgroundRepeat: 'no-repeat, no-repeat',
+                  backgroundPosition: 'bottom left, bottom right',
+                  backgroundSize: '50% 50%',
+                }}
+              >
                 <Text
                   textAlign="center"
                   margin={{ top: 'xlarge', bottom: 'large' }}
@@ -373,7 +368,12 @@ function Home({ t }) {
                   <em>{t('team-extra-subtitle')}</em>
                 </Text>
 
-                <Box size="large" alignSelf="center" direction="row">
+                <Box
+                  size="large"
+                  alignSelf="center"
+                  direction="row"
+                  margin={{ bottom: 'large' }}
+                >
                   <Box pad={{ horizontal: 'large' }} gap="small">
                     {contributors
                       .filter((c, i) => i < contributors.length / 2)
