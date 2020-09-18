@@ -172,7 +172,7 @@ function Home({ t }) {
 
             <Box margin={{ left: 'large', right: 'large' }}>
               <Row>
-                <Col md={4}>
+                <Col lg={4}>
                   <Box>
                     <Widget
                       title={t('about-widget-1-title')}
@@ -181,7 +181,7 @@ function Home({ t }) {
                     />
                   </Box>
                 </Col>
-                <Col md={4}>
+                <Col lg={4}>
                   <Box>
                     <Widget
                       title={t('about-widget-2-title')}
@@ -190,7 +190,7 @@ function Home({ t }) {
                     />
                   </Box>
                 </Col>
-                <Col md={4}>
+                <Col lg={4}>
                   <Box>
                     <Widget
                       title={t('about-widget-3-title')}
@@ -239,7 +239,7 @@ function Home({ t }) {
               </Text>
               <Box margin={{ left: 'large', right: 'large' }}>
                 <Row>
-                  <Col md={4}>
+                  <Col lg={4}>
                     <Box>
                       <Widget
                         title={t('community-widget-2-title')}
@@ -249,7 +249,7 @@ function Home({ t }) {
                       />
                     </Box>
                   </Col>
-                  <Col md={4}>
+                  <Col lg={4}>
                     <Box>
                       <Widget
                         title={t('community-widget-1-title')}
@@ -260,7 +260,7 @@ function Home({ t }) {
                     </Box>
                   </Col>
 
-                  <Col md={4}>
+                  <Col lg={4}>
                     <Box>
                       <Widget
                         title={t('community-widget-3-title')}
