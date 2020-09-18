@@ -155,7 +155,7 @@ function Home({ t }) {
             <Box
               margin={{ top: 'large', bottom: 'large' }}
               style={{
-                backgroundImage: `url('/images/turkuaz-cloud-left.svg'), url('/images/turkuaz-cloud-right.svg')`,
+                // backgroundImage: `url('/images/turkuaz-cloud-left.svg'), url('/images/turkuaz-cloud-right.svg')`,
                 backgroundRepeat: 'no-repeat, no-repeat',
                 backgroundPosition: 'top left, top right',
                 backgroundSize: '320px auto',
@@ -177,7 +177,7 @@ function Home({ t }) {
             <Box
               margin={{ top: 'large', bottom: 'large' }}
               style={{
-                backgroundImage: `url('/images/orange-cloud-left.svg'), url('/images/orange-cloud-right.svg')`,
+                // backgroundImage: `url('/images/orange-cloud-left.svg'), url('/images/orange-cloud-right.svg')`,
                 backgroundRepeat: 'no-repeat, no-repeat',
                 backgroundPosition: 'top left, top right',
                 backgroundSize: '320px auto',
@@ -256,7 +256,7 @@ function Home({ t }) {
                       {t('marketplace-button-label')}
                     </Text>
 
-                    <Box width={large ? 'medium' : '280px'}>
+                    <Box width="280px">
                       <Image src="/images/people-telegram.svg" />
                     </Box>
                   </Box>
