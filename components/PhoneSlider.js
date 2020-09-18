@@ -4,9 +4,6 @@ import Slider from 'react-slick';
 
 const SliderImage = ({ imageLink, count, caption }) => (
   <Box align="center" pad="medium">
-    <Box margin={{ bottom: 'medium' }} height="medium">
-      <Image src={imageLink} height="100%" fit="contain" />
-    </Box>
     <Box
       background="dark-1"
       style={{ borderRadius: '50%' }}
@@ -19,10 +16,16 @@ const SliderImage = ({ imageLink, count, caption }) => (
         {count}
       </Text>
     </Box>
-    <Box style={{ maxWidth: 240 }}>
+    <Box
+      style={{ maxWidth: 240 }}
+      pad={{ horizontal: 'medium', bottom: 'small' }}
+    >
       <Text weight="bold" size="small" textAlign="center">
         {caption}
       </Text>
+    </Box>
+    <Box margin={{ bottom: 'medium' }} height="medium">
+      <Image src={imageLink} height="100%" fit="contain" />
     </Box>
   </Box>
 );
