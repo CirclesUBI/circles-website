@@ -1,12 +1,14 @@
 {
-  "title": "Wie können wir Dir helfen?",
-  "placeholder": "Beschreibe dein Anliegen",
+  "meta": "Circles UBI | FAQ",
+  "title": "How can we help you?",
+  "placeholder": "Describe your issue",
   "items": [
     {
       "topic": "Onboarding",
-      "question": "Warum kann ich meinen Usernamen nicht ändern?",
+      "question": "Why can’t I change my username?",
       "answer": [
-        "Der zweite Weg für Circles dich zu identifizieren neben deiner Öffentlichen Adresse ist dein Username. Weil die Verifizierung der Identität im Circles-System sehr wichtig ist, können Usernamen nicht geändert werden. Usernamen werden nicht auf dem Blockchain, sondern auf einem Circles-Server gespeichert und geschützt. Sobald der Server nach der Testphase zurückgesetzt wird, werden auch die Usernamen gelöscht."
+        "Your Circles username is one of the main ways system that identifies you, besides your Circles public address. Because verifying identity is so important to the Circles system, usernames in Circles cannot be changed. Usernames are stored on an off-chain database on our Circles server and are kept private.",
+        "Everytime we reset the server (only during test phase of course) all usernames will be lost forever."
       ]
     },
     {

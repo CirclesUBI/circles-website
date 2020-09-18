@@ -1,89 +1,90 @@
 {
+  "meta": "Circles UBI | FAQ",
   "title": "How can we help you?",
   "placeholder": "Describe your issue",
   "items": [
     {
       "topic": "Onboarding",
-      "question": "Why can’t I change my username?",
+      "question": "Warum kann ich meinen Usernamen nicht ändern?",
       "answer": [
-        "Your Circles username is one of the main ways system that identifies you, besides your Circles public address. Because verifying identity is so important to the Circles system, usernames in Circles cannot be changed. Usernames are stored on an off-chain database on our Circles server and are kept private.",
-        "Everytime we reset the server (only during test phase of course) all usernames will be lost forever."
+        "Der zweite Weg für Circles dich zu identifizieren neben deiner Öffentlichen Adresse ist dein Username. Weil die Verifizierung der Identität im Circles-System sehr wichtig ist, können Usernamen nicht geändert werden. Usernamen werden nicht auf dem Blockchain, sondern auf einem Circles-Server gespeichert und geschützt.",
+        "Sobald der Server nach der Testphase zurückgesetzt wird, werden auch die Usernamen gelöscht."
       ]
     },
     {
       "topic": "Onboarding",
-      "question": "How do I start receiving a basic income with Circles?",
+      "question": "Was muss ich machen, um mein Circles Grundeinkommen zu erhalten?",
       "answer": [
-        "After creating a new wallet you will need 3 incoming trust connections to verify your account. You can request trust by sharing a link to your profile, or in person by having someone scan your profile QR code.",
-        "We are hosting regular meet-ups in Berlin during our test phase, where you can come meet the team and connect with other Circles users in person.",
-        "Once 3 people have trusted your profile the app will automatically deploy two smart contracts for you to use Circles: your Safe and your own Circles token. You will receive 100 Circles as an initial payout and continue to receive a regular UBI."
+        "Nach Erstellung des neuen Wallets brauchst Du drei Vertrauensverbindungen um deinen Account zu verifizieren. Du kannst Vertrauen erfragen, indem Du einen Link zu deinem Circles-Profil teilst, oder direkt vor Ort, indem Du jemanden deinen QR-code scannen lässt.",
+        "Wir veranstalten regelmäßige Treffen in Berlin während der Testphase. Du kannst dort das Team und andere Circles-User persönlich treffen und Verbindungen knüpfen.",
+        "Sobald drei Personen deinem Profil vertraut haben, wird die App automatisch zwei „Smart Contracts“ für dich aktivieren: dein Safe und dein eigener Circles-Token. Du wirst 100 Circles als eine erste Auszahlung erhalten und danach weiterhin ein regelmäßiges Grundeinkommen beziehen."
       ]
     },
     {
       "topic": "Onboarding",
-      "question": "What is a Circles Safe?",
+      "question": "Was ist „Circles Safe“?",
       "answer": [
-        "Your Circles Safe is a smart contract that holds the keys to your account.",
-        "You can add multiple devices, such as your computer or phone, to your Safe. Adding devices to your Safe can help with account recovery if you lose your seed phrase.",
-        "You can read more about Safes <a href='https://gnosis-safe.readthedocs.io' target='_blank'>here</a>."
+        "Dein Circles Safe ist ein Smart Contract der die Schlüssel zu deinem Account verwaltet.",
+        "Du kannst mehrere Geräte damit verknüpfen, deinen Computer und dein Telefon. Mehrere Geräte dem Safe hinzuzufügen kann auch dabei helfen, den Account wieder herzustellen, falls Du deine „Seed Phrase“ verlierst.",
+        "Du kannst mehr über Safes <a href='https://gnosis-safe.readthedocs.io' target='_blank'>hier</a> erfahren."
       ]
     },
     {
       "topic": "Onboarding",
-      "question": "What blockchain is Circles using?",
+      "question": "Welchen Blockchain benutzt Circles?",
       "answer": [
-        "For the public test phase, Circles is using Kovan network, which is one of the public Ethereum testnets. For our full launch later this year, we plan on using xDai network.",
-        "You can read more about Kovan <a href='https://kovan-testnet.github.io/website/' target='_blank'>here</a>. You can learn more about xDai <a href='https://www.xdaichain.com' target='_blank'>here</a>."
+        "Für die Testphase nutzt Circles das Kovan Netzwerk, welches eines der öffentlichen Ethereum Testnets ist. Für unseren offiziellen Start zu einem späteren Zeitpunkt wollen wir das xdai Netzwerk nutzen. ",
+        "Erfahre mehr über Kovan hier. Erfahre mehr über xdai <a href='https://www.xdaichain.com' target='_blank'>hier</a>."
       ]
     },
     {
       "topic": "UBI",
-      "question": "How are my Circles Produced?",
+      "question": "Wie werden meine Circles geschöpft?",
       "answer": [
-        "Your Circles tokens are created automatically by the Circles smart contracts. Every day when you open the app, it checks the smart contracts for updates. Right now, Circles are paid out at a rate of about 14 per week, inflating 7% per year.",
-        "The money is not coming from anywhere outside the contracts - for example, we do not collect and deposit Euro into the system. It’s also not being mined the way some cryptocurrencies are, where it’s paid out to the people who maintain the network. Instead, Circles is paid out to you every day as a reward for being part of the community, and becomes more valuable over time as the Circles community becomes stronger."
+        "Deine Circles Token werden automatisch durch den Circles Smart Contract geschöpft. Jeden Tag wenn Du deine App öffnest, ruft sie den Smart Contract auf für Updates. Momentan werden ungefähr 14 Circles pro Woche ausgezahlt, was einer Inflation von 7 % im Jahr entspricht.",
+        "Das Geld kommt nicht von irgendwo außerhalb des Contracts – wir nehmen keine Einzahlungen etwa in Euro in das System auf. Es gibt keine Mining wie bei anderen Kryptowährungen, es wird auch nicht ausschließlich an Leute ausgezahlt, die das Netzwerk technisch in Gang halten. Stattdessen wird Circles jeden Tag an Dich ausgezahlt als Belohnung dafür, daß Du Teil der Community bist. Es wird wertvoller je stärker die Community wird."
       ]
     },
     {
-      "topic": "Security",
-      "question": "How do I secure my Circles account?",
+      "topic": "Sicherheit",
+      "question": "Wie schütze ich meinen Circles-Account?",
       "answer": [
-        "There are two ways to secure your account - saving your seed phrase, and linking other devices.",
-        "Saving your seed phrase: We recommend going to your profile page in the app and writing down your 24 word phrase, this is called your seed phrase and you should keep it somewhere safe. You can think of it like a password - we use it to generate your Circles keys.",
-        "For security reasons, your seed phrase is normally kept hidden. You can reveal it by clicking on “Export your seed phrase” on your profile page.",
-        "Linking devices: We also recommend adding a second device as soon as possible, for example, both your phone and your computer. Adding a device makes it easy to reconnect to your account if one device fails for any reason. You can add a device by going to your profile in the app and clicking “Add new device.”"
+        "Es gibt zwei Wege, deinen Account zu sichern -die „Seed Phrase“ speichern und die Verknüpfung mit mehreren Endgeräten herzustellen.",
+        "Die Seed Phrase speichern: Wir empfehlen Dir auf dein Profil zu gehen in der App und die Seed Phrase dort abzuschreiben. Die 24 Worte nennen sich Seed Phrase und sollten irgendwo sicher verwahrt werden. Du kannst sie dir wie ein Passwort vorstellen – wir nutzen sie, um deine Circles-Schlüssel zu erstellen.",
+        "Aus Sicherheitsgründen ist deine Seed Phrase normalerweise versteckt. Du kannst sie anzeigen, indem du in deinem Profil auf „Exportiere deine Seed Phrase“ klickst",
+        "Endgeräte verknüpfen: Wir empfehlen Dir ein zweites Endgerät so schnell wie möglich zu verknüpfen, zum Beispiel dein Handy und deinen Computer. Das macht es einfacher, deinen Account wieder herzustellen, falls ein Gerät aus irgendeinem Grund ausfällt. Du kannst ein weiteres Endgerät hinzufügen, indem Du in deinem Profil in der App auf „weiteres Endgerät hinzufügen“ klickst."
       ]
     },
     {
-      "topic": "Security",
-      "question": "I logged out or lost my device - what can I do?",
+      "topic": "Sicherheit",
+      "question": "Ich habe mich ausgeloggt oder mein Gerät verloren – was kann ich tun?",
       "answer": [
-        "If you have lost one of your devices or reset your browser, you will still be able to recover your account with your seed phrase. You can go to the Circles app and click “Connect to existing account” then “Restore from seed phrase.”",
-        "If you have a second device that is currently connected to your Circles account, you can still access your account from there. You should also remove the device that was lost or logged out. You can remove lost devices from your profile page in the app.",
-        "If you do not have your seed phrase saved, and do not have access to another device where you are logged into Circles, we cannot retrieve your account. You are welcome to create a new account. Note that if your safe and Circles token were not deployed, your account was never fully created and there is nothing to restore."
+        "Falls Du eines deiner Geräte verloren oder deinen Browser zurückgesetzt hast, wirst Du immer noch in der Lage sein deinen Account wieder herzustellen mit der Seed phrase. Gehe in der Circles app auf „Verbinden mit bestehendem Account“ und dann „Wiederherstellen von seed phrase“",
+        "Falls Du ein zweites Endgerät verbunden hast, kannst Du deinen Account von dort aus noch erreichen. Du solltest das verlorene Gerät aus Sicherheitsgründen in der App entfernen, indem du im Profil auf die entsprechende Funktion klickst.",
+        "Falls Du keine Seed Phrase gespeichert hast und auch keinen Zugang zu einem zweiten Gerät hast, können wir deinen Account nicht wieder herstellen. Du kannst dann gerne einen neuen Account erstellen."
       ]
     },
     {
-      "topic": "Security",
-      "question": "What information does Circles collect about me?",
+      "topic": "Sicherheit",
+      "question": "Welche Informationen sammelt Circles über mich?",
       "answer": [
-        "The only data we store is your email address and username - and we will never share it with anyone. Your wallet’s private key lives offline on your device browser, and is not shared with us.",
-        "The data recorded by blockchains is publicly accessible, and includes the trust network and your transaction history, but it is not associated publicly with your username or email address."
+        "Die einzigen Daten die wir speichern sind deine Email-adresse und dein Nutzername – und die werden wir mit niemandem teilen. Deine Wallet-Schlüssel sind nur Offline in deinem Endgerät gespeichert, sie werden nicht mit uns geteilt.",
+        "Die Daten die auf dem Blockchain ausgetauscht werden sind öffentlich zugänglich, das schließt das Vertrauensnetzwerk und die Transaktions-Historie mit ein. Aber sie sind nicht öffentlich mit deinem Klarnamen oder einer Email-Adresse verknüpft."
       ]
     },
     {
-      "topic": "Trust Network",
-      "question": "How does trust work in Circles?",
+      "topic": "Vertrauensnetzwerk",
+      "question": "Wie funktioniert Vertrauen im Circles-System?",
       "answer": [
-        "You can send Circles to someone who trusts you. This means that sending Circles to someone is the reverse direction of trusting someone eg. “I trust you, therefore I accept your Circles” or “You trust me, therefore I can send my Circles to you.”",
-        "When you trust someone, you can also send Circles to people in their trusted network, without directly trusting those people yourself. This is called transitive trust, and allows the Circles network to grow more easily.",
-        "Example: The person might not trust you, but you happen to own someone else's token besides your own. You can still pay that person with this person’s token. <em>Example: A wants to send B 10 Circles, B does not trust A but B trusts C, A owns 10 C Token and can therefore send these 10 C Tokens to B</em>",
-        "You can own multiple different Circles tokens. You are not necessarily only sending your own tokens to someone when you send Circles. You are sending the ones you have a high enough balance of + which has a large enough trust limit.",
+        "Du kannst Circles an jede/n schicken, der/die Dir vertraut.  Das bedeutet, dass jemandem Circles schicken bedeutet gleichzeitig eine Vertrauensverbindung. „Ich vertraue Dir, darum akzeptiere ich deine Circles“ „Du vertraust mir, dafür kann ich Dir meine Circles senden“",
+        "Wenn Du jemandem vertraust, dann kannst Du deine Circles auch an Leute in seinem Vertrauensnetzwerk schicken, ohne diesen Leuten selbst zu vertrauen. Das nennt sich „transitive trust“ und erlaubt es dem Circles-Netzwerk leichter zu wachsen.",
+        "Beispiel: Die Person vertraut Dir vielleicht nicht, aber Du hast den Token von jemandem anderen außer Dir selbst. Du kannst diese Person dann mit dem Token der anderen Person bezahlen. Beispiel: A möchte B 10 Circles schicken, B hat keine Vertrauensverbindung zu A sondern zu C, A besitzt 10 Token von C und kann darum diese 10 C Token an B senden.",
+        "Du kannst beliebig viele verschiedene Token anderer Personen halten. Du musst nicht notwendigerweise nur deine eigenen Token an andere senden, wenn Du Circles schickst. Du kannst die Token senden, denen genügend vertraut wird.",
         "Lies mehr im <a href='https://github.com/CirclesUBI/docs/blob/master/Circles.md' target='_blank'>Circles whitepaper</a> über transitive transactions."
       ]
     },
     {
-      "topic": "Trust Network",
+      "topic": "Vertrauensnetzwerk",
       "question": "Warum sagt die App, dass ich keine Circles übertragen kann?",
       "answer": [
         "Manchmal gibt es keine ausreichenden Pfade über den die Token zwischen Dir und einer anderen Person geschickt werden könnten.  Vertrauensverbindungen im Circles-System kennen nicht nur eine Richtung („von“ „nach“), sondern auch ein Limit. Wenn dieses Limit erreicht ist, dann können keine Circles mehr über diesen Pfad übertragen werden, solange nicht auch Circles zurückgeflossen sind. In einer gesunden Circles-Ökonomie werden wir diese Limits nicht oft erreichen, aber manchmal kann es passieren.",
@@ -93,7 +94,7 @@
       ]
     },
     {
-      "topic": "Trust Network",
+      "topic": "Vertrauensnetzwerk",
       "question": "Wie soll ich Preise in Circles festlegen?",
       "answer": [
         "Für Empfehlungen dazu, wie Du Circles verwenden kannst, schau dir unsere <a href='https://docs.google.com/document/d/1UQ-fD5n49RLTKXwA1tjSnFNFwP_TvHTCj3yG-1hpGac/edit?usp=sharing' target='_blank'>Pricing Guidelines</a> an."
