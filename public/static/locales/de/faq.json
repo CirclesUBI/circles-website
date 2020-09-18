@@ -38,7 +38,7 @@
       ]
     },
     {
-      "topic": "UBI",
+      "topic": "Grundeinkommen",
       "question": "Wie werden meine Circles geschöpft?",
       "answer": [
         "Deine Circles Token werden automatisch durch den Circles Smart Contract geschöpft. Jeden Tag wenn Du deine App öffnest, ruft sie den Smart Contract auf für Updates. Momentan werden ungefähr 14 Circles pro Woche ausgezahlt, was einer Inflation von 7 % im Jahr entspricht.",

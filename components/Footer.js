@@ -54,7 +54,7 @@ const Footer = ({ t, large }) => {
       <Col lg={3}>
         <Box pad="xlarge" gap="medium">
           <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
-            Follow us
+            {t('follow-us')}
           </Text>
           {footerLinks.map((link) => (
             <Anchor
@@ -73,9 +73,9 @@ const Footer = ({ t, large }) => {
       <Col lg={6}>
         <Box pad="xlarge" gap="medium">
           <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
-            {t('newsletterTitle')}
+            {t('newsletter-title')}
           </Text>
-          <Text color="light-1">‍{t('newsletterText')}</Text>
+          <Text color="light-1">‍{t('newsletter-text')}</Text>
           <Form
             onSubmit={({ value }) => console.log(value)}
             value={emailValue}
@@ -84,7 +84,7 @@ const Footer = ({ t, large }) => {
             <FormField color="light-1" name="email">
               <TextInput
                 name="email"
-                placeholder={t('newsletterInputPlaceholder')}
+                placeholder={t('newsletter-input-placeholder')}
                 style={{ color: '#fff' }}
               />
             </FormField>
@@ -92,7 +92,7 @@ const Footer = ({ t, large }) => {
               primary
               color="light-1"
               type="submit"
-              label={t('newsletterSignup')}
+              label={t('newsletter-signup-button-label')}
               style={{
                 borderRadius: 8,
                 marginTop: 12,
@@ -104,35 +104,35 @@ const Footer = ({ t, large }) => {
       <Col lg={3}>
         <Box pad="xlarge" gap="medium">
           <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
-            Useful
+            {t('pages-title')}
           </Text>
           <Link href="/contact">
             <Anchor as="span" color="light-1">
-              Contact
+              {t('pages-kontakt')}
             </Anchor>
           </Link>
 
           <Link href="/donate">
             <Anchor as="span" color="light-1">
-              Donate
+              {t('pages-donate')}
             </Anchor>
           </Link>
 
           <Link href="/faq">
             <Anchor as="span" color="light-1">
-              FAQ
+              {t('pages-faq')}
             </Anchor>
           </Link>
 
           <Link href="/privacy-policy">
             <Anchor as="span" color="light-1">
-              Privacy Policy
+              {t('pages-privacy-policy')}
             </Anchor>
           </Link>
 
           <Link href="/terms">
             <Anchor as="span" color="light-1">
-              Terms of Use
+              {t('pages-terms')}
             </Anchor>
           </Link>
         </Box>

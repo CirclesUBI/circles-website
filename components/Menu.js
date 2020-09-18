@@ -4,7 +4,8 @@ import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
 import { useState } from 'react';
 
-import { i18n, withTranslation } from '../i18n';
+import { withTranslation } from '../i18n';
+import LangSwitcher from './LangSwitcher';
 
 const pageLinks = [
   { label: 'faq', value: '/faq', isExternal: false, isRoute: true },
@@ -120,7 +121,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
   );
 });
 
-export const SocialMenu = ({ fixed, ...otherProps }) => (
+export const SocialMenu = ({ large, ...otherProps }) => (
   <>
     <Box direction="row" justify="end" {...otherProps}>
       <Box
@@ -132,7 +133,7 @@ export const SocialMenu = ({ fixed, ...otherProps }) => (
         basis="auto"
         style={{
           width: 'auto',
-          backgroundColor: fixed ? 'none' : 'rgba(255, 255, 255, .2)',
+          backgroundColor: large ? 'none' : 'rgba(255, 255, 255, .2)',
         }}
       >
         {socialMenuLinks.map((item) => (
@@ -142,10 +143,6 @@ export const SocialMenu = ({ fixed, ...otherProps }) => (
         ))}
       </Box>
     </Box>
-    <Button
-      onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
-      label="Change language"
-    />
   </>
 );
 
@@ -161,58 +158,63 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
   });
 
   return (
-    <Box
-      width="100%"
-      style={open && !fixed ? mobileMenuStyle : {}}
-      align="center"
-      {...otherProps}
-    >
-      {large ? (
-        <MenuContent large />
-      ) : (
-        <DropButton
-          dropAlign={{ top: 'top', right: 'right' }}
-          alignSelf="end"
-          open={open}
-          onClick={() => setOpen(!open)}
-          pad={{ right: '0px' }}
-          label={
-            <Box pad={{ top: '0' }}>
-              {open ? (
-                <CloseIcon plain={false} color="light-1" />
-              ) : (
-                <MenuIcon plain={false} color="light-1" />
-              )}
-            </Box>
-          }
-          dropContent={
-            <Box
-              background="dark-1"
-              pad="large"
-              width="260px"
-              height="calc(100vh + 30px)"
-              justify="between"
-            >
-              {fixed ? (
-                <div />
-              ) : (
-                <Button
-                  onClick={() => setOpen(false)}
-                  alignSelf="end"
-                  hoverIndicator="none"
-                  icon={<CloseIcon color="light-1" />}
-                />
-              )}
-              <Box pad={{ top: 'large' }} hoverIndicator="none">
-                <MenuContent t={t} large={false} />
+    <Box>
+      <Box
+        width="100%"
+        style={open && !fixed ? mobileMenuStyle : {}}
+        align="center"
+        {...otherProps}
+      >
+        {large ? (
+          <MenuContent large />
+        ) : (
+          <DropButton
+            dropAlign={{ top: 'top', right: 'right' }}
+            alignSelf="end"
+            open={open}
+            onClick={() => setOpen(!open)}
+            pad={{ right: '0px' }}
+            label={
+              <Box pad={{ top: '0' }}>
+                {open ? (
+                  <CloseIcon plain={false} color="light-1" />
+                ) : (
+                  <MenuIcon plain={false} color="light-1" />
+                )}
               </Box>
-              <Box justify="center" direction="row">
-                <SocialMenu fixed={fixed} margin={{ top: 'large' }} />
+            }
+            dropContent={
+              <Box
+                background="dark-1"
+                pad="large"
+                width="260px"
+                height="calc(100vh + 30px)"
+                justify="between"
+              >
+                {fixed ? (
+                  <div />
+                ) : (
+                  <Button
+                    onClick={() => setOpen(false)}
+                    alignSelf="end"
+                    hoverIndicator="none"
+                    icon={<CloseIcon color="light-1" />}
+                  />
+                )}
+                <Box pad={{ top: 'large' }} hoverIndicator="none">
+                  <MenuContent t={t} large={false} />
+                </Box>
+                <Box align="center">
+                  <LangSwitcher />
+                  <Box justify="center" direction="row">
+                    <SocialMenu large={large} margin={{ top: 'large' }} />
+                  </Box>
+                </Box>
               </Box>
-            </Box>
-          }
-        />
-      )}
+            }
+          />
+        )}
+      </Box>
     </Box>
   );
 };

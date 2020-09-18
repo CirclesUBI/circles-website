@@ -6,11 +6,11 @@ import {
   ScreenClassRender,
   setConfiguration,
 } from 'react-grid-system';
-import { animateScroll, scrollSpy, Events } from 'react-scroll';
 
 import theme from '../config/theme';
 import Header from './Header';
 import Footer from './Footer';
+import LangSwitcher from './LangSwitcher';
 
 setConfiguration({ gutterWidth: 0 });
 
@@ -65,16 +65,20 @@ const Layout = (props) => {
             <Container style={{ maxWidth: 1280 }}>
               <Box style={{ paddingTop: 12 }}>
                 <Header large={large} />
+                {large && <LangSwitcher />}
               </Box>
               {scrollPosition > 400 && (
-                <Box
-                  style={fixedHeaderStyle}
-                  animation="fadeIn"
-                  pad="small"
-                  background="dark-1"
-                  elevation="small"
-                >
-                  <Header large={large} fixed />
+                <Box>
+                  <Box
+                    style={fixedHeaderStyle}
+                    animation="fadeIn"
+                    pad="small"
+                    background="dark-1"
+                    elevation="small"
+                  >
+                    <Header large={large} fixed />
+                  </Box>
+                  {large && <LangSwitcher />}
                 </Box>
               )}
 
