@@ -10,6 +10,51 @@ import PhoneSlider from '../components/PhoneSlider';
 
 import { withTranslation } from '../i18n';
 
+const teamMembers = [
+  {
+    name: 'Sarah Friend',
+    image: 'images/team/sarahf.png',
+  },
+  {
+    name: 'Blanka Vay',
+    image: 'images/team/blankav.png',
+  },
+  {
+    name: 'Julio Linares',
+    image: 'images/team/juliol.png',
+  },
+  {
+    name: '@adz',
+    image: 'images/team/adz.png',
+  },
+  {
+    name: 'Martin Köppelman',
+    image: 'images/team/martink.png',
+  },
+  {
+    name: 'Saraswathi Subbaraman',
+    image: 'images/team/swathi.png',
+  },
+];
+
+const contributors = [
+  'Andy Milenius',
+  'Anne Walther',
+  'Ashoka Finley',
+  'David Terry',
+  'Ed Murphy',
+  'Emin Durak',
+  'Franziska Börner-Zobel',
+  'Harriet von Frohreich',
+  'Jacob Hühn',
+  'Javier Alaves',
+  'Justyna Trivedi',
+  'Karenina Schröder',
+  'Martin Lundfall',
+  'Ronit Kory',
+  'Wouter Kampmann',
+];
+
 function Home({ t }) {
   const sliderContent = [
     {
@@ -112,11 +157,16 @@ function Home({ t }) {
                 <Image src="images/people.svg" />
               </Box>
 
-              <Heading level={1} textAlign="center" color="dark-1">
+              <Heading
+                level={1}
+                textAlign="center"
+                color="dark-1"
+                margin={{ top: 'large', bottom: 'small' }}
+              >
                 {t('about-title')}
               </Heading>
-              <Text textAlign="center" weight="bold">
-                {t('about-subtitle')}
+              <Text textAlign="center" margin={{ bottom: 'medium' }}>
+                <em>{t('about-subtitle')}</em>
               </Text>
             </Box>
 
@@ -166,10 +216,13 @@ function Home({ t }) {
                 level={1}
                 textAlign="center"
                 color="dark-1"
-                margin={{ top: '98px' }}
+                margin={{ top: 'large', bottom: 'small' }}
               >
                 {t('hiw-title')}
               </Heading>
+              <Text textAlign="center" margin={{ bottom: 'medium' }}>
+                <em>{t('hiw-subtitle')}</em>
+              </Text>
 
               <PhoneSlider sliderContent={sliderContent} large={large} />
             </Box>
@@ -188,22 +241,15 @@ function Home({ t }) {
                 level={1}
                 textAlign="center"
                 color="dark-1"
-                margin={{ top: '90px' }}
+                margin={{ top: 'large', bottom: 'small' }}
               >
                 {t('community-title')}
               </Heading>
+              <Text textAlign="center" margin={{ bottom: 'medium' }}>
+                <em>{t('community-subtitle')}</em>
+              </Text>
               <Box margin={{ left: 'large', right: 'large' }}>
                 <Row>
-                  <Col md={4}>
-                    <Box>
-                      <Widget
-                        title={t('community-widget-1-title')}
-                        content={t('community-widget-1-content')}
-                        imageLink="/images/chat.svg"
-                        imageHeight="180px"
-                      />
-                    </Box>
-                  </Col>
                   <Col md={4}>
                     <Box>
                       <Widget
@@ -214,6 +260,17 @@ function Home({ t }) {
                       />
                     </Box>
                   </Col>
+                  <Col md={4}>
+                    <Box>
+                      <Widget
+                        title={t('community-widget-1-title')}
+                        content={t('community-widget-1-content')}
+                        imageLink="/images/chat.svg"
+                        imageHeight="180px"
+                      />
+                    </Box>
+                  </Col>
+
                   <Col md={4}>
                     <Box>
                       <Widget
@@ -229,39 +286,110 @@ function Home({ t }) {
             </Box>
 
             <Box margin="large">
-              <Text textAlign="center" margin={{ top: 'large' }}>
-                {t('marketplace-content')}
-              </Text>
-              <Anchor
-                href="https://t.me/CirclesUBI"
-                target="_blank"
-                alignSelf="center"
-                margin="medium"
-                color="brand"
-                label={
-                  <Box>
-                    <Text
-                      color="brand"
-                      size="large"
-                      weight="bold"
-                      textAlign="center"
-                      style={{
-                        background:
-                          '-webkit-linear-gradient(180deg, rgba(102,15,51,1), rgba(204,30,102,1))',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        paddingBottom: 24,
-                      }}
-                    >
-                      {t('marketplace-button-label')}
-                    </Text>
+              <Box>
+                <Text
+                  color="brand"
+                  size="large"
+                  weight="bold"
+                  textAlign="center"
+                  style={{
+                    background:
+                      '-webkit-linear-gradient(180deg, rgba(102,15,51,1), rgba(204,30,102,1))',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                  margin={{ bottom: 'medium' }}
+                >
+                  {t('marketplace-button-label')}
+                </Text>
+                <Text textAlign="center" margin={{ bottom: 'medium' }}>
+                  {t('marketplace-content')}
+                </Text>
 
-                    <Box width="280px">
-                      <Image src="/images/people-telegram.svg" />
-                    </Box>
+                <Box alignSelf="center">
+                  <Button
+                    href="https://t.me/CirclesUBI"
+                    target="_blank"
+                    label={<Image src="/images/telegram-nice.svg" />}
+                    plain
+                  />
+                </Box>
+              </Box>
+            </Box>
+
+            <Box
+              margin={{ top: 'large', bottom: 'large' }}
+              style={{
+                // backgroundImage: `url('/images/orange-cloud-left.svg'), url('/images/orange-cloud-right.svg')`,
+                backgroundRepeat: 'no-repeat, no-repeat',
+                backgroundPosition: 'top left, top right',
+                backgroundSize: '320px auto',
+              }}
+              id="team"
+            >
+              <Heading
+                level={1}
+                textAlign="center"
+                color="dark-1"
+                margin={{ top: 'large', bottom: 'small' }}
+              >
+                {t('team-title')}
+              </Heading>
+              <Text textAlign="center" margin={{ bottom: 'medium' }}>
+                <em>{t('team-subtitle')}</em>
+              </Text>
+              <Box margin={{ left: 'large', right: 'large' }}>
+                <Row>
+                  {teamMembers.map((member) => (
+                    <Col md={4} key={member.name}>
+                      <Box
+                        pad="medium"
+                        gap="medium"
+                        align="center"
+                        alignSelf="center"
+                      >
+                        <Box>
+                          <Image
+                            width="220px"
+                            src={member.image}
+                            alt={member.name}
+                          />
+                        </Box>
+                        <Text>{member.name}</Text>
+                        <Text>
+                          <em>{t(`${member.name} title`)}</em>
+                        </Text>
+                      </Box>
+                    </Col>
+                  ))}
+                </Row>
+              </Box>
+
+              <Box>
+                <Text
+                  textAlign="center"
+                  margin={{ top: 'xlarge', bottom: 'large' }}
+                >
+                  <em>{t('team-extra-subtitle')}</em>
+                </Text>
+
+                <Box size="large" alignSelf="center" direction="row">
+                  <Box pad={{ horizontal: 'large' }} gap="small">
+                    {contributors
+                      .filter((c, i) => i < contributors.length / 2)
+                      .map((c) => (
+                        <Text key={c}>{c}</Text>
+                      ))}
                   </Box>
-                }
-              />
+                  <Box pad={{ horizontal: 'large' }} gap="small">
+                    {contributors
+                      .filter((c, i) => i >= contributors.length / 2)
+                      .map((c) => (
+                        <Text key={c}>{c}</Text>
+                      ))}
+                  </Box>
+                </Box>
+              </Box>
             </Box>
           </Box>
         )}

@@ -104,35 +104,35 @@ const Footer = ({ t, large }) => {
       <Col lg={3}>
         <Box pad="xlarge" gap="medium">
           <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
-            {t('pages-title')}
+            {t('links-title')}
           </Text>
           <Link href="/contact">
             <Anchor as="span" color="light-1">
-              {t('pages-kontakt')}
+              {t('links-kontakt')}
             </Anchor>
           </Link>
 
           <Link href="/donate">
             <Anchor as="span" color="light-1">
-              {t('pages-donate')}
+              {t('links-donate')}
             </Anchor>
           </Link>
 
           <Link href="/faq">
             <Anchor as="span" color="light-1">
-              {t('pages-faq')}
+              {t('links-faq')}
             </Anchor>
           </Link>
 
           <Link href="/privacy-policy">
             <Anchor as="span" color="light-1">
-              {t('pages-privacy-policy')}
+              {t('links-privacy-policy')}
             </Anchor>
           </Link>
 
           <Link href="/terms">
             <Anchor as="span" color="light-1">
-              {t('pages-terms')}
+              {t('links-terms')}
             </Anchor>
           </Link>
         </Box>

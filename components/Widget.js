@@ -18,12 +18,14 @@ const Widget = ({
       alignSelf="center"
       background="white"
     >
-      <Image
-        src={imageLink}
-        width={imageWidth}
-        height={imageHeight}
-        margin={{ bottom: 'large' }}
-      />
+      <Box margin={{ bottom: 'large' }}>
+        <Image
+          src={imageLink}
+          width={imageWidth}
+          height={imageHeight}
+          alignSelf="center"
+        />
+      </Box>
       <Text weight="bold" margin={{ bottom: 'medium' }}>
         {title}
       </Text>
