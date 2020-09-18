@@ -1,8 +1,8 @@
 import { Box, Button, Text } from 'grommet';
 import { i18n } from '../i18n';
 
-const LangSwitcher = ({ large }) => (
-  <Box alignSelf="end" pad={{ right: 'medium' }}>
+const LangSwitcher = () => (
+  <Box alignSelf="end" pad={{ right: 'small' }}>
     <Button
       onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
       label={

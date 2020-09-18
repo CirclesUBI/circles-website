@@ -133,7 +133,7 @@ export const SocialMenu = ({ large, ...otherProps }) => (
         basis="auto"
         style={{
           width: 'auto',
-          backgroundColor: large ? 'none' : 'rgba(255, 255, 255, .2)',
+          backgroundColor: large ? 'rgba(255, 255, 255, .2)' : 'none',
         }}
       >
         {socialMenuLinks.map((item) => (
