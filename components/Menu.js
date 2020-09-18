@@ -174,12 +174,14 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
             open={open}
             onClick={() => setOpen(!open)}
             pad={{ right: '0px' }}
+            hoverIndicator={false}
+            plain
             label={
-              <Box pad={{ top: '0' }}>
+              <Box pad={{ top: '0', right: 'medium' }}>
                 {open ? (
-                  <CloseIcon plain={false} color="light-1" />
+                  <CloseIcon plain color="light-1" />
                 ) : (
-                  <MenuIcon plain={false} color="light-1" />
+                  <MenuIcon plain color="light-1" />
                 )}
               </Box>
             }
@@ -198,7 +200,7 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
                     onClick={() => setOpen(false)}
                     alignSelf="end"
                     hoverIndicator="none"
-                    icon={<CloseIcon color="light-1" />}
+                    icon={<CloseIcon plain color="light-1" />}
                   />
                 )}
                 <Box pad={{ top: 'large' }} hoverIndicator="none">
