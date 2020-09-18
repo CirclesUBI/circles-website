@@ -4,7 +4,7 @@ import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
 import { useState } from 'react';
 
-import { withTranslation } from '../i18n';
+import { i18n, withTranslation } from '../i18n';
 
 const pageLinks = [
   { label: 'faq', value: '/faq', isExternal: false, isRoute: true },
@@ -121,26 +121,32 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
 });
 
 export const SocialMenu = ({ fixed, ...otherProps }) => (
-  <Box direction="row" justify="end" {...otherProps}>
-    <Box
-      pad="10px"
-      gap="14px"
-      direction="row"
-      justify="end"
-      flex={{ grow: 0 }}
-      basis="auto"
-      style={{
-        width: 'auto',
-        backgroundColor: fixed ? 'none' : 'rgba(255, 255, 255, .2)',
-      }}
-    >
-      {socialMenuLinks.map((item) => (
-        <Anchor href={item.link} key={item.link} style={{ height: 24 }}>
-          <Image width="24px" src={item.icon} />
-        </Anchor>
-      ))}
+  <>
+    <Box direction="row" justify="end" {...otherProps}>
+      <Box
+        pad="10px"
+        gap="14px"
+        direction="row"
+        justify="end"
+        flex={{ grow: 0 }}
+        basis="auto"
+        style={{
+          width: 'auto',
+          backgroundColor: fixed ? 'none' : 'rgba(255, 255, 255, .2)',
+        }}
+      >
+        {socialMenuLinks.map((item) => (
+          <Anchor href={item.link} key={item.link} style={{ height: 24 }}>
+            <Image width="24px" src={item.icon} />
+          </Anchor>
+        ))}
+      </Box>
     </Box>
-  </Box>
+    <Button
+      onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
+      label="Change language"
+    />
+  </>
 );
 
 const mobileMenuStyle = {

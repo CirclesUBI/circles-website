@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Box, Text, Image } from 'grommet';
 import Slider from 'react-slick';
 
