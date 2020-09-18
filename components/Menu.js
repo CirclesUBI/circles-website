@@ -188,7 +188,7 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
             dropContent={
               <Box
                 background="brand3"
-                pad="large"
+                pad="medium"
                 width="260px"
                 height="calc(100vh + 30px)"
                 justify="between"
@@ -201,6 +201,8 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
                     alignSelf="end"
                     hoverIndicator="none"
                     icon={<CloseIcon plain color="light-1" />}
+                    plain
+                    margin={{ top: 'medium' }}
                   />
                 )}
                 <Box pad={{ top: 'large' }} hoverIndicator="none">
