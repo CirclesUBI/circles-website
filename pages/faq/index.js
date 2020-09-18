@@ -131,7 +131,7 @@ function FAQ({ t }) {
                           }}
                           onSelect={onSelect}
                           suggestions={suggestions}
-                          placeholder="Describe your issue"
+                          placeholder={t('placeholder')}
                           type="search"
                           dropProps={{ pad: { horizontal: 'medium' } }}
                         />

@@ -11,10 +11,33 @@ import PhoneSlider from '../components/PhoneSlider';
 import { withTranslation } from '../i18n';
 
 function Home({ t }) {
+  const sliderContent = [
+    {
+      count: '1',
+      caption: t('hiw-slide-1'),
+      imageLink: '/images/slider-1.png',
+    },
+    {
+      count: '2',
+      caption: t('hiw-slide-2'),
+      imageLink: '/images/slider-2.png',
+    },
+    {
+      count: '3',
+      caption: t('hiw-slide-3'),
+      imageLink: '/images/slider-3.png',
+    },
+    {
+      count: '4',
+      caption: t('hiw-slide-4'),
+      imageLink: '/images/slider-4.png',
+    },
+  ];
+
   return (
     <div className={styles.home}>
       <Head>
-        <title>Circles UBI | Basic Income on the Blockchain</title>
+        <title>{t('meta')}</title>
         <link
           rel="stylesheet"
           type="text/css"
@@ -47,7 +70,7 @@ function Home({ t }) {
                 textAlign="center"
               >
                 <b>
-                  <em>A Basic Income on the Blockchain</em>
+                  <em>{t('slogan')}</em>
                 </b>
               </Text>
               <Box margin={{ vertical: 'large' }} alignSelf="center">
@@ -56,7 +79,7 @@ function Home({ t }) {
                   plain
                   size="large"
                   fill={false}
-                  label="Get Circles"
+                  label={t('get-circles-button-label')}
                   href="https://circles.garden"
                   target="_blank"
                   style={{
@@ -79,7 +102,7 @@ function Home({ t }) {
                   offset={-50}
                 >
                   <Anchor as="span" color="light-1">
-                    Learn more
+                    {t('more-info')}
                   </Anchor>
                 </ScrollLink>
                 <Image src="/images/arrows-down.svg" />
@@ -90,10 +113,10 @@ function Home({ t }) {
               </Box>
 
               <Heading level={1} textAlign="center" color="dark-1">
-                BUILD A LOCAL ECONOMY TOGETHER
+                {t('about-title')}
               </Heading>
               <Text textAlign="center" weight="bold">
-                Circles is a basic income by the community, for the community.
+                {t('about-subtitle')}
               </Text>
             </Box>
 
@@ -102,8 +125,8 @@ function Home({ t }) {
                 <Col md={4}>
                   <Box>
                     <Widget
-                      title="Unconditional"
-                      content="Anyone who joins Circles recieves a basic income regularly, without conditions."
+                      title={t('about-widget-1-title')}
+                      content={t('about-widget-1-content')}
                       imageLink="/images/unconditional.svg"
                     />
                   </Box>
@@ -111,8 +134,8 @@ function Home({ t }) {
                 <Col md={4}>
                   <Box>
                     <Widget
-                      title="People Powered"
-                      content="The more connected your community is, the more valuable your Circles become."
+                      title={t('about-widget-2-title')}
+                      content={t('about-widget-2-content')}
                       imageLink="/images/people-powered.svg"
                     />
                   </Box>
@@ -120,8 +143,8 @@ function Home({ t }) {
                 <Col md={4}>
                   <Box>
                     <Widget
-                      title="Decentralized"
-                      content="A worldwide basic income built bottom up, and issued without central leadership."
+                      title={t('about-widget-3-title')}
+                      content={t('about-widget-3-content')}
                       imageLink="/images/decentralized.svg"
                     />
                   </Box>
@@ -145,10 +168,10 @@ function Home({ t }) {
                 color="dark-1"
                 margin={{ top: '98px' }}
               >
-                HOW IT WORKS
+                {t('hiw-title')}
               </Heading>
 
-              <PhoneSlider large={large} />
+              <PhoneSlider sliderContent={sliderContent} large={large} />
             </Box>
 
             <Box
@@ -167,15 +190,15 @@ function Home({ t }) {
                 color="dark-1"
                 margin={{ top: '90px' }}
               >
-                COMMUNITY
+                {t('community-title')}
               </Heading>
               <Box margin={{ left: 'large', right: 'large' }}>
                 <Row>
                   <Col md={4}>
                     <Box>
                       <Widget
-                        title="Chat"
-                        content="Explore the Circles community to meet other folks building local economy together."
+                        title={t('community-widget-1-title')}
+                        content={t('community-widget-1-content')}
                         imageLink="/images/chat.svg"
                         imageHeight="180px"
                       />
@@ -184,8 +207,8 @@ function Home({ t }) {
                   <Col md={4}>
                     <Box>
                       <Widget
-                        title="Learn"
-                        content="Read the Circles Handbook to learn more about how Circles works."
+                        title={t('community-widget-2-title')}
+                        content={t('community-widget-2-content')}
                         imageLink="/images/learn.svg"
                         imageHeight="180px"
                       />
@@ -194,8 +217,8 @@ function Home({ t }) {
                   <Col md={4}>
                     <Box>
                       <Widget
-                        title="Build"
-                        content="Join the open source community working to develop Circles on Github."
+                        title={t('community-widget-3-title')}
+                        content={t('community-widget-3-content')}
                         imageLink="/images/build.svg"
                         imageHeight="180px"
                       />
@@ -207,7 +230,7 @@ function Home({ t }) {
 
             <Box margin="large">
               <Text textAlign="center" margin={{ top: 'large' }}>
-                You can also explore our peer-to-peer marketplace on Telegram
+                {t('marketplace-content')}
               </Text>
               <Anchor
                 href="https://t.me/CirclesUBI"
@@ -230,7 +253,7 @@ function Home({ t }) {
                         paddingBottom: 24,
                       }}
                     >
-                      Find us on Telegram
+                      {t('marketplace-button-label')}
                     </Text>
 
                     <Box width={large ? 'medium' : '280px'}>
@@ -248,7 +271,7 @@ function Home({ t }) {
 }
 
 Home.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'footer'],
+  namespacesRequired: ['home'],
 });
 
 export default withTranslation('home')(Home);

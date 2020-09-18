@@ -2,29 +2,6 @@ import React, { Fragment } from 'react';
 import { Box, Text, Image } from 'grommet';
 import Slider from 'react-slick';
 
-const sliderContent = [
-  {
-    count: '1',
-    caption: 'Sign up at Circles.Garden',
-    imageLink: '/images/slider-1.png',
-  },
-  {
-    count: '2',
-    caption: 'Ask for Trust from Three People',
-    imageLink: '/images/slider-2.png',
-  },
-  {
-    count: '3',
-    caption: 'Receive your Circles basic income',
-    imageLink: '/images/slider-3.png',
-  },
-  {
-    count: '4',
-    caption: 'Use Circles in the Marketplace and locally!',
-    imageLink: '/images/slider-4.png',
-  },
-];
-
 const SliderImage = ({ imageLink, count, caption }) => (
   <Box align="center" pad="medium">
     <Box margin={{ bottom: 'medium' }} height="medium">
@@ -60,7 +37,7 @@ const sliderSettings = {
   lazyLoad: false,
 };
 
-const PhoneSlider = ({ large }) => {
+const PhoneSlider = ({ sliderContent, large }) => {
   if (large) {
     return (
       <Box direction="row" align="start" justify="center" gap="medium">

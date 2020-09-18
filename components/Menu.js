@@ -4,27 +4,29 @@ import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
 import { useState } from 'react';
 
+import { withTranslation } from '../i18n';
+
 const pageLinks = [
-  { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
-  { label: 'Donate', value: '/donate', isExternal: false, isRoute: true },
+  { label: 'faq', value: '/faq', isExternal: false, isRoute: true },
+  { label: 'donate', value: '/donate', isExternal: false, isRoute: true },
 ];
 
 const homeMenuLinks = [
   {
-    label: 'Wallet',
+    label: 'wallet',
     value: 'wallet',
     isExternal: true,
     isRoute: false,
     href: 'https://circles.garden',
   },
   {
-    label: 'About',
+    label: 'about',
     value: 'about',
     isExternal: false,
     isRoute: false,
   },
   {
-    label: 'How It Works',
+    label: 'how-it-works',
     value: 'how-it-works',
     isExternal: false,
     isRoute: false,
@@ -35,7 +37,7 @@ const homeMenuLinks = [
 
 const notHomeMenuLinks = [
   {
-    label: 'Home',
+    label: 'home',
     value: '/',
     isExternal: false,
     isRoute: true,
@@ -69,7 +71,7 @@ const socialMenuLinks = [
   },
 ];
 
-const MenuContent = ({ large }) => {
+const MenuContent = ({ t, large }) => {
   let pathname;
   if (process.browser) {
     pathname = location.pathname;
@@ -88,14 +90,14 @@ const MenuContent = ({ large }) => {
         item.isExternal ? (
           <Anchor
             key={item.value}
-            label={item.label}
+            label={t(item.label)}
             href={item.href}
             target="_blank"
             color="light-1"
           />
         ) : item.isRoute ? (
           <Link key={item.value} href={item.value}>
-            <Anchor as="span" label={item.label} color="light-1" />
+            <Anchor as="span" label={t(item.label)} color="light-1" />
           </Link>
         ) : (
           <ScrollLink
@@ -110,7 +112,7 @@ const MenuContent = ({ large }) => {
             offset={-50}
             // onSetActive={(item) => setActiveSection(item)}
           >
-            <Anchor color="light-1" as="span" label={item.label} />
+            <Anchor color="light-1" as="span" label={t(item.label)} />
           </ScrollLink>
         )
       )}
@@ -145,7 +147,7 @@ const mobileMenuStyle = {
   transform: 'translateY(-24px)',
 };
 
-const Menu = ({ activeSection, large, fixed, ...otherProps }) => {
+const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
   const [open, setOpen] = useState(false);
 
   Events.scrollEvent.register('begin', function (to, element) {
@@ -196,7 +198,7 @@ const Menu = ({ activeSection, large, fixed, ...otherProps }) => {
                 />
               )}
               <Box pad={{ top: 'large' }} hoverIndicator="none">
-                <MenuContent large={false} />
+                <MenuContent t={t} large={false} />
               </Box>
               <Box justify="center" direction="row">
                 <SocialMenu fixed={fixed} margin={{ top: 'large' }} />
@@ -209,4 +211,4 @@ const Menu = ({ activeSection, large, fixed, ...otherProps }) => {
   );
 };
 
-export default Menu;
+export default withTranslation('header')(Menu);
