@@ -94,11 +94,11 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             label={t(item.label)}
             href={item.href}
             target="_blank"
-            color="light-1"
+            color="brand4"
           />
         ) : item.isRoute ? (
           <Link key={item.value} href={item.value}>
-            <Anchor as="span" label={t(item.label)} color="light-1" />
+            <Anchor as="span" label={t(item.label)} color="brand4" />
           </Link>
         ) : (
           <ScrollLink
@@ -113,7 +113,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             offset={-50}
             // onSetActive={(item) => setActiveSection(item)}
           >
-            <Anchor color="light-1" as="span" label={t(item.label)} />
+            <Anchor color="brand4" as="span" label={t(item.label)} />
           </ScrollLink>
         )
       )}
@@ -121,7 +121,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
   );
 });
 
-export const SocialMenu = ({ large, ...otherProps }) => (
+export const SocialMenu = ({ large, fixed, ...otherProps }) => (
   <>
     <Box direction="row" justify="end" {...otherProps}>
       <Box
@@ -133,7 +133,7 @@ export const SocialMenu = ({ large, ...otherProps }) => (
         basis="auto"
         style={{
           width: 'auto',
-          backgroundColor: large ? 'rgba(255, 255, 255, .2)' : 'none',
+          backgroundColor: large ? 'rgba(255, 255, 255, .2)' : '#E36567',
         }}
       >
         {socialMenuLinks.map((item) => (
@@ -187,7 +187,8 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
             }
             dropContent={
               <Box
-                background="brand3"
+                background="white"
+                color="brand4"
                 pad="medium"
                 width="260px"
                 height="calc(100vh + 30px)"
@@ -200,7 +201,7 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
                     onClick={() => setOpen(false)}
                     alignSelf="end"
                     hoverIndicator="none"
-                    icon={<CloseIcon plain color="light-1" />}
+                    icon={<CloseIcon plain color="brand4" />}
                     plain
                     margin={{ top: 'medium' }}
                   />
@@ -211,7 +212,11 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
                 <Box align="center">
                   <LangSwitcher />
                   <Box justify="center" direction="row">
-                    <SocialMenu large={large} margin={{ top: 'large' }} />
+                    <SocialMenu
+                      fixed={fixed}
+                      large={large}
+                      margin={{ top: 'large' }}
+                    />
                   </Box>
                 </Box>
               </Box>
