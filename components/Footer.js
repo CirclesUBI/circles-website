@@ -108,7 +108,7 @@ const Footer = ({ t, large }) => {
           </Text>
           <Link href="/contact">
             <Anchor as="span" color="light-1">
-              {t('links-kontakt')}
+              {t('links-contact')}
             </Anchor>
           </Link>
 
