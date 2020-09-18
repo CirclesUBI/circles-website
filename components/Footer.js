@@ -5,7 +5,6 @@ import {
   Box,
   Button,
   CheckBox,
-  Form,
   FormField,
   Image,
   Text,
@@ -42,8 +41,7 @@ const footerLinks = [
   },
 ];
 
-const Footer = ({ t, large }) => {
-  const [emailValue, setEmailValue] = useState({});
+const Footer = ({ t }) => {
   return (
     <Row
       style={{
@@ -81,12 +79,7 @@ const Footer = ({ t, large }) => {
             {t('newsletter-title')}
           </Text>
           <Text color="light-1">‍{t('newsletter-text')}</Text>
-          <form
-            action="https://joincircles.us10.list-manage.com/subscribe/post"
-            // onSubmit={({ value }) => console.log(value)}
-            // value={emailValue}
-            // onChange={(value) => setEmailValue(value)}
-          >
+          <form action="https://joincircles.us10.list-manage.com/subscribe/post">
             <input
               type="hidden"
               name="u"
@@ -134,7 +127,11 @@ const Footer = ({ t, large }) => {
           <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
             {t('links-title')}
           </Text>
-          <Link href="/contact">
+          <Anchor href="https://circles.garden" color="light-1">
+            {t('links-wallet')}
+          </Anchor>
+
+          {/* <Link href="/contact">
             <Anchor as="span" color="light-1">
               {t('links-contact')}
             </Anchor>
@@ -144,7 +141,7 @@ const Footer = ({ t, large }) => {
             <Anchor as="span" color="light-1">
               {t('links-donate')}
             </Anchor>
-          </Link>
+          </Link> */}
 
           <Link href="/faq">
             <Anchor as="span" color="light-1">
@@ -152,7 +149,7 @@ const Footer = ({ t, large }) => {
             </Anchor>
           </Link>
 
-          <Link href="/privacy-policy">
+          {/* <Link href="/privacy-policy">
             <Anchor as="span" color="light-1">
               {t('links-privacy-policy')}
             </Anchor>
@@ -162,7 +159,7 @@ const Footer = ({ t, large }) => {
             <Anchor as="span" color="light-1">
               {t('links-terms')}
             </Anchor>
-          </Link>
+          </Link> */}
         </Box>
       </Col>
     </Row>

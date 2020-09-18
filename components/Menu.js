@@ -9,7 +9,7 @@ import LangSwitcher from './LangSwitcher';
 
 const pageLinks = [
   { label: 'faq', value: '/faq', isExternal: false, isRoute: true },
-  { label: 'donate', value: '/donate', isExternal: false, isRoute: true },
+  // { label: 'donate', value: '/donate', isExternal: false, isRoute: true },
 ];
 
 const homeMenuLinks = [
