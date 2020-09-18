@@ -56,18 +56,22 @@ const notHomeMenuLinks = [
 const socialMenuLinks = [
   {
     icon: '/images/tg.svg',
+    iconp: '/images/tg-p.svg',
     link: 'https://t.me/CirclesUBI',
   },
   {
     icon: '/images/tw.svg',
+    iconp: '/images/tw-p.svg',
     link: 'https://twitter.com/CirclesUBI',
   },
   {
     icon: '/images/fb.svg',
+    iconp: '/images/fb-p.svg',
     link: 'https://facebook.com/CirclesUBI',
   },
   {
     icon: '/images/em.svg',
+    iconp: '/images/em-p.svg',
     link: 'mailto:hello@joincircles.net',
   },
 ];
@@ -94,11 +98,15 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             label={t(item.label)}
             href={item.href}
             target="_blank"
-            color="brand4"
+            color={large ? 'white' : 'brand4'}
           />
         ) : item.isRoute ? (
           <Link key={item.value} href={item.value}>
-            <Anchor as="span" label={t(item.label)} color="brand4" />
+            <Anchor
+              as="span"
+              label={t(item.label)}
+              color={large ? 'white' : 'brand4'}
+            />
           </Link>
         ) : (
           <ScrollLink
@@ -113,7 +121,11 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             offset={-50}
             // onSetActive={(item) => setActiveSection(item)}
           >
-            <Anchor color="brand4" as="span" label={t(item.label)} />
+            <Anchor
+              as="span"
+              label={t(item.label)}
+              color={large ? 'white' : 'brand4'}
+            />
           </ScrollLink>
         )
       )}
@@ -121,8 +133,8 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
   );
 });
 
-export const SocialMenu = ({ large, fixed, ...otherProps }) => (
-  <>
+export const SocialMenu = ({ mobileMenu, ...otherProps }) => {
+  return (
     <Box direction="row" justify="end" {...otherProps}>
       <Box
         pad="10px"
@@ -133,18 +145,17 @@ export const SocialMenu = ({ large, fixed, ...otherProps }) => (
         basis="auto"
         style={{
           width: 'auto',
-          backgroundColor: large ? 'rgba(255, 255, 255, .2)' : '#E36567',
         }}
       >
         {socialMenuLinks.map((item) => (
           <Anchor href={item.link} key={item.link} style={{ height: 24 }}>
-            <Image width="24px" src={item.icon} />
+            <Image width="24px" src={mobileMenu ? item.iconp : item.icon} />
           </Anchor>
         ))}
       </Box>
     </Box>
-  </>
-);
+  );
+};
 
 const mobileMenuStyle = {
   transform: 'translateY(-24px)',
@@ -188,7 +199,6 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
             dropContent={
               <Box
                 background="white"
-                color="brand4"
                 pad="medium"
                 width="260px"
                 height="calc(100vh + 30px)"
@@ -210,11 +220,11 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
                   <MenuContent t={t} large={false} />
                 </Box>
                 <Box align="center">
-                  <LangSwitcher />
+                  <LangSwitcher mobileMenu />
                   <Box justify="center" direction="row">
                     <SocialMenu
                       fixed={fixed}
-                      large={large}
+                      mobileMenu={!large}
                       margin={{ top: 'large' }}
                     />
                   </Box>
