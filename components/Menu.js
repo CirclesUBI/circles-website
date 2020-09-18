@@ -71,7 +71,7 @@ const socialMenuLinks = [
   },
 ];
 
-const MenuContent = ({ t, large }) => {
+const MenuContent = withTranslation('header')(({ t, large }) => {
   let pathname;
   if (process.browser) {
     pathname = location.pathname;
@@ -118,7 +118,7 @@ const MenuContent = ({ t, large }) => {
       )}
     </Box>
   );
-};
+});
 
 export const SocialMenu = ({ fixed, ...otherProps }) => (
   <Box direction="row" justify="end" {...otherProps}>
@@ -211,4 +211,4 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
   );
 };
 
-export default withTranslation('header')(Menu);
+export default Menu;
