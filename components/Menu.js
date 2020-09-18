@@ -185,7 +185,7 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
             }
             dropContent={
               <Box
-                background="dark-1"
+                background="brand3"
                 pad="large"
                 width="260px"
                 height="calc(100vh + 30px)"

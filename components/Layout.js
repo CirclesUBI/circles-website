@@ -73,7 +73,7 @@ const Layout = (props) => {
                     style={fixedHeaderStyle}
                     animation="fadeIn"
                     pad="small"
-                    background="dark-1"
+                    background="brand3"
                     elevation="small"
                   >
                     <Header large={large} fixed />
