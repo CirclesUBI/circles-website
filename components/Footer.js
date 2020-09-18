@@ -4,6 +4,7 @@ import {
   Anchor,
   Box,
   Button,
+  CheckBox,
   Form,
   FormField,
   Image,
@@ -80,18 +81,41 @@ const Footer = ({ t, large }) => {
             {t('newsletter-title')}
           </Text>
           <Text color="light-1">‍{t('newsletter-text')}</Text>
-          <Form
-            onSubmit={({ value }) => console.log(value)}
-            value={emailValue}
-            onChange={(value) => setEmailValue(value)}
+          <form
+            action="https://joincircles.us10.list-manage.com/subscribe/post"
+            // onSubmit={({ value }) => console.log(value)}
+            // value={emailValue}
+            // onChange={(value) => setEmailValue(value)}
           >
+            <input
+              type="hidden"
+              name="u"
+              value="ce7ac2789abf7ce01f739a2b6"
+            ></input>
+            <input type="hidden" name="id" value="35899a122a"></input>
+
             <FormField color="light-1" name="email">
               <TextInput
-                name="email"
+                id="MERGE0"
+                name="MERGE0"
                 placeholder={t('newsletter-input-placeholder')}
                 style={{ color: '#fff' }}
               />
             </FormField>
+
+            <Box margin={{ bottom: 'medium' }}>
+              <CheckBox
+                id="gdpr_45553"
+                name="gdpr[45553]"
+                value="Y"
+                label={
+                  <Text color="white" size="small">
+                    {t('newsletter-gdpr-check')}
+                  </Text>
+                }
+              />
+            </Box>
+
             <Button
               primary
               color="light-1"
@@ -102,7 +126,7 @@ const Footer = ({ t, large }) => {
                 marginTop: 12,
               }}
             />
-          </Form>
+          </form>
         </Box>
       </Col>
       <Col lg={3}>

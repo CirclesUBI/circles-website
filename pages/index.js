@@ -330,7 +330,7 @@ function Home({ t }) {
                     <Col md={4} key={member.name}>
                       <Box
                         pad="medium"
-                        gap="medium"
+                        gap="small"
                         align="center"
                         alignSelf="center"
                       >

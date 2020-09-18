@@ -158,8 +158,10 @@ const theme = deepFreeze(
       },
     },
     checkBox: {
+      color: 'white',
       border: {
         width: '2px',
+        color: 'light-2',
       },
       check: {
         radius: '4px',
