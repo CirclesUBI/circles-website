@@ -16,9 +16,9 @@ import { withTranslation } from '../i18n';
 
 const footerLinks = [
   {
-    label: 'Rocket Chat',
-    value: 'https://chat.joincircles.net',
-    imageLink: '/images/rc.svg',
+    label: 'Telegram',
+    value: 'https://t.me/CirclesUBI',
+    imageLink: '/images/tg.svg',
     blank: true,
   },
   {
@@ -64,7 +64,11 @@ const Footer = ({ t, large }) => {
               color="light-1"
               style={{ display: 'flex', alignItems: 'center' }}
             >
-              <Image src={link.imageLink} margin={{ right: 'small' }} />
+              <Image
+                width="24px"
+                src={link.imageLink}
+                margin={{ right: 'small' }}
+              />
               <Text size="small">{link.label}</Text>
             </Anchor>
           ))}
