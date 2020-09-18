@@ -1,6 +1,13 @@
 {
-  "newsletterTitle": "Newsletter",
-  "newsletterText": "Sign up and receive news about Circles directly to your email",
-  "newsletterInputPlaceholder": "Enter your email",
-  "newsletterSignup": "Sign up"
+  "follow-us": "Follow us",
+  "newsletter-title": "Newsletter",
+  "newsletter-text": "Sign up and receive news about Circles directly to your email",
+  "newsletter-input-placeholder": "Enter your email",
+  "newsletter-signup-button-label": "Sign up",
+  "useful-title": "Useful",
+  "useful-kontakt": "Contact",
+  "useful-donate": "Donate",
+  "useful-faq": "FAQ",
+  "useful-privacy-policy": "Datenschutz",
+  "useful-terms": "Nutzungsbedingungen"
 }
