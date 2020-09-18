@@ -1,10 +1,12 @@
 {
-  "name": "circles-website-2",
+  "name": "circles-website",
+  "description": "Home of Circles UBI",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
