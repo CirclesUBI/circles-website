@@ -4,10 +4,10 @@
   "newsletter-text": "Sign up and receive news about Circles directly to your email",
   "newsletter-input-placeholder": "Enter your email",
   "newsletter-signup-button-label": "Sign up",
-  "useful-title": "Useful",
-  "useful-kontakt": "Contact",
-  "useful-donate": "Donate",
-  "useful-faq": "FAQ",
-  "useful-privacy-policy": "Datenschutz",
-  "useful-terms": "Nutzungsbedingungen"
+  "pages-title": "Pages",
+  "pages-kontakt": "Contact",
+  "pages-donate": "Donate",
+  "pages-faq": "FAQ",
+  "pages-privacy-policy": "Datenschutz",
+  "pages-terms": "Nutzungsbedingungen"
 }
