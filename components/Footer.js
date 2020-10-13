@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import {
   Anchor,
@@ -6,6 +6,7 @@ import {
   Button,
   CheckBox,
   FormField,
+  Grommet,
   Image,
   Text,
   TextInput,
@@ -40,6 +41,25 @@ const footerLinks = [
     blank: false,
   },
 ];
+
+const footerTheme = {
+  global: {
+    colors: {
+      border: 'light-3',
+    },
+    focus: {
+      border: {
+        color: '#fff',
+      },
+    },
+  },
+  textInput: {
+    extend: {
+      fontStyle: 'italic',
+      fontWeight: 300,
+    },
+  },
+};
 
 const Footer = ({ t }) => {
   return (
@@ -86,16 +106,16 @@ const Footer = ({ t }) => {
               value="ce7ac2789abf7ce01f739a2b6"
             ></input>
             <input type="hidden" name="id" value="35899a122a"></input>
-
-            <FormField color="light-1" name="email">
-              <TextInput
-                id="MERGE0"
-                name="MERGE0"
-                placeholder={t('newsletter-input-placeholder')}
-                style={{ color: '#fff' }}
-              />
-            </FormField>
-
+            <Grommet theme={footerTheme}>
+              <FormField color="light-1" name="email">
+                <TextInput
+                  id="MERGE0"
+                  name="MERGE0"
+                  placeholder={t('newsletter-input-placeholder')}
+                  style={{ color: '#fff' }}
+                />
+              </FormField>
+            </Grommet>
             <Box margin={{ bottom: 'medium' }}>
               <CheckBox
                 id="gdpr_45553"
