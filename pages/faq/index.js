@@ -9,6 +9,7 @@ import {
   Box,
   FormField,
   Image,
+  Grommet,
   TextInput,
   Text,
   Paragraph,
@@ -18,6 +19,16 @@ import { Row } from 'react-grid-system';
 
 import Layout from '../../components/Layout';
 import { withTranslation } from '../../i18n';
+
+const textFieldTheme = {
+  global: {
+    focus: {
+      border: {
+        color: '#CC1E66',
+      },
+    },
+  },
+};
 
 function FAQ({ t }) {
   const [inputValue, setInputValue] = useState('');
@@ -122,21 +133,23 @@ function FAQ({ t }) {
                       {t('title')}
                     </Text>
                     <Box pad={{ horizontal: 'medium' }}>
-                      <FormField>
-                        <TextInput
-                          ref={inputRef}
-                          value={inputValue}
-                          onChange={(event) => {
-                            setSelectedIndex(null);
-                            setInputValue(event.target.value);
-                          }}
-                          onSelect={onSelect}
-                          suggestions={suggestions}
-                          placeholder={t('placeholder')}
-                          type="search"
-                          dropProps={{ pad: { horizontal: 'medium' } }}
-                        />
-                      </FormField>
+                      <Grommet theme={textFieldTheme}>
+                        <FormField>
+                          <TextInput
+                            ref={inputRef}
+                            value={inputValue}
+                            onChange={(event) => {
+                              setSelectedIndex(null);
+                              setInputValue(event.target.value);
+                            }}
+                            onSelect={onSelect}
+                            suggestions={suggestions}
+                            placeholder={t('placeholder')}
+                            type="search"
+                            dropProps={{ pad: { horizontal: 'medium' } }}
+                          />
+                        </FormField>
+                      </Grommet>
                     </Box>
                   </Box>
                 </Box>
