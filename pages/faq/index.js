@@ -13,6 +13,7 @@ import {
   Text,
   Paragraph,
 } from 'grommet';
+import { Up, Down } from 'grommet-icons';
 import { Row } from 'react-grid-system';
 
 import Layout from '../../components/Layout';
@@ -163,16 +164,20 @@ function FAQ({ t }) {
                             )}
                             <AccordionPanel
                               id={item.question}
-                              label={
-                                <Element name={item.question}>
-                                  <Box
-                                    pad="medium"
-                                    width="100%"
-                                    onClick={() => handlePanelSelect(index)}
+                              header={
+                                <Box
+                                  direction="row"
+                                  pad="medium"
+                                  onClick={() => handlePanelSelect(index)}
+                                >
+                                  <Element
+                                    name={item.question}
+                                    style={{ flexBasis: '100%', flexGrow: 3 }}
                                   >
                                     <Text weight="bold">{item.question}</Text>
-                                  </Box>
-                                </Element>
+                                  </Element>
+                                  {index === selectedIndex ? <Up /> : <Down />}
+                                </Box>
                               }
                             >
                               <Box
