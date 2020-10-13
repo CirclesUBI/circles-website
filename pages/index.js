@@ -55,6 +55,16 @@ const contributors = [
   'Wouter Kampmann',
 ];
 
+const getAboutImageTopMargin = (screenClass) => {
+  if (['xs', 'sm'].includes(screenClass)) {
+    return '250px';
+  } else if (['md', 'lg'].includes(screenClass)) {
+    return '120px';
+  } else {
+    return 'medium';
+  }
+};
+
 function Home({ t }) {
   const sliderContent = [
     {
@@ -97,7 +107,7 @@ function Home({ t }) {
       </Head>
 
       <Layout>
-        {(large) => (
+        {(large, screenClass) => (
           <Box>
             <Row>
               <Box width="100%" pad="large">
@@ -153,7 +163,11 @@ function Home({ t }) {
                 <Image src="/images/arrows-down.svg" />
               </Box>
 
-              <Box pad={{ top: 'xlarge', bottom: 'medium' }} id="about">
+              <Box
+                pad={{ top: 'xlarge', bottom: 'medium' }}
+                id="about"
+                margin={{ top: getAboutImageTopMargin(screenClass) }}
+              >
                 <Image src="images/people.svg" />
               </Box>
 

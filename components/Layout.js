@@ -82,7 +82,7 @@ const Layout = (props) => {
                 </Box>
               )}
 
-              {props.children(large)}
+              {props.children(large, screenClass)}
               <Footer />
             </Container>
           );
