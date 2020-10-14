@@ -111,7 +111,8 @@ function Home({ t }) {
         <meta
           name="keywords"
           content="circles, circle, gift economy, cryptocurrency, universal basic income, blockchain,
-          ubi, money, berlin, andrew yang, bernie sanders"
+          ubi, money, berlin, andrew yang, bernie sanders, doughnut economics, degrowth, local community currency, p2p, commons, democratic money,
+          faircoin, trustlines, gnosis"
         />
       </Head>
 
