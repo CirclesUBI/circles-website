@@ -134,6 +134,13 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
 });
 
 export const SocialMenu = ({ mobileMenu, ...otherProps }) => {
+  const menuStyle = { width: 'auto' };
+  if (!mobileMenu) {
+    menuStyle.background = 'rgba(255, 255, 255, .3)';
+    menuStyle.padding = 8;
+    menuStyle.marginRight = 8;
+  }
+
   return (
     <Box direction="row" justify="end" {...otherProps}>
       <Box
@@ -143,9 +150,7 @@ export const SocialMenu = ({ mobileMenu, ...otherProps }) => {
         justify="end"
         flex={{ grow: 0 }}
         basis="auto"
-        style={{
-          width: 'auto',
-        }}
+        style={menuStyle}
       >
         {socialMenuLinks.map((item) => (
           <Anchor href={item.link} key={item.link} style={{ height: 24 }}>
