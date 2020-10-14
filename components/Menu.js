@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Anchor, Box, Button, DropButton, Image } from 'grommet';
+import { Anchor, Box, Button, DropButton, Image, Layer } from 'grommet';
 import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
 import { useState } from 'react';
@@ -162,10 +162,6 @@ export const SocialMenu = ({ mobileMenu, ...otherProps }) => {
   );
 };
 
-const mobileMenuStyle = {
-  transform: 'translateY(-24px)',
-};
-
 const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
   const [open, setOpen] = useState(false);
 
@@ -173,72 +169,55 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
     setOpen(false);
   });
 
+  if (large) {
+    return <MenuContent large />;
+  }
+
+  const onOpen = () => setOpen(true);
+  const onClose = () => setOpen(false);
+
   return (
-    <Box>
-      <Box
-        width="100%"
-        style={open && !fixed ? mobileMenuStyle : {}}
-        align="center"
-        {...otherProps}
-      >
-        {large ? (
-          <MenuContent large />
-        ) : (
-          <DropButton
-            dropAlign={{ top: 'top', right: 'right' }}
-            alignSelf="end"
-            open={open}
-            onClick={() => setOpen(!open)}
-            pad={{ right: '0px' }}
-            hoverIndicator={false}
-            plain
-            label={
-              <Box pad={{ top: '0', right: 'medium' }}>
-                {open ? (
-                  <CloseIcon plain color="light-1" />
-                ) : (
-                  <MenuIcon plain color="light-1" />
-                )}
+    <Box width="100%" align="center" {...otherProps}>
+      {open && (
+        <Layer
+          position="right"
+          full="vertical"
+          onClickOutside={onClose}
+          onEsc={onClose}
+          responsive={false}
+        >
+          <Box pad="medium" justify="between" height="100vh">
+            {fixed ? (
+              <div />
+            ) : (
+              <Button
+                alignSelf="end"
+                onClick={onClose}
+                icon={<CloseIcon color="brand4" />}
+              />
+            )}
+            <Box pad={{ top: 'large' }}>
+              <MenuContent t={t} large={false} />
+            </Box>
+            <Box>
+              <LangSwitcher mobileMenu />
+              <Box justify="center" direction="row">
+                <SocialMenu
+                  fixed={fixed}
+                  mobileMenu={!large}
+                  margin={{ top: 'medium' }}
+                />
               </Box>
-            }
-            dropContent={
-              <Box
-                background="white"
-                pad="medium"
-                width="260px"
-                height="calc(100vh + 30px)"
-                justify="between"
-              >
-                {fixed ? (
-                  <div />
-                ) : (
-                  <Button
-                    onClick={() => setOpen(false)}
-                    alignSelf="end"
-                    hoverIndicator="none"
-                    icon={<CloseIcon plain color="brand4" />}
-                    plain
-                    margin={{ top: 'medium' }}
-                  />
-                )}
-                <Box pad={{ top: 'large' }} hoverIndicator="none">
-                  <MenuContent t={t} large={false} />
-                </Box>
-                <Box align="center">
-                  <LangSwitcher mobileMenu />
-                  <Box justify="center" direction="row">
-                    <SocialMenu
-                      fixed={fixed}
-                      mobileMenu={!large}
-                      margin={{ top: 'large' }}
-                    />
-                  </Box>
-                </Box>
-              </Box>
-            }
-          />
-        )}
-      </Box>
+            </Box>
+          </Box>
+        </Layer>
+      )}
+      <Button
+        alignSelf="end"
+        onClick={open ? onClose : onOpen}
+        icon={open ? <CloseIcon color="white" /> : <MenuIcon color="white" />}
+        margin={{ right: 'medium' }}
+      />
     </Box>
   );
 };

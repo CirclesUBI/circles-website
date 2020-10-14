@@ -18,30 +18,28 @@ const Header = ({ large, fixed }) => {
   };
 
   return (
-    <>
-      <Row
-        style={{
-          alignItems: 'center',
-        }}
-      >
-        <Col xs={3} md={2}>
-          <Box pad={{ left: 'large' }}>
-            <Link href="/">
-              <Image
-                style={fixed ? fixedStyle : large ? regularStyle : fixedStyle}
-                src="/images/logo.svg"
-              />
-            </Link>
-          </Box>
-        </Col>
-        <Col xs={6} md={8}>
-          {large && <Menu activeSection="donate" large />}
-        </Col>
-        <Col xs={3} md={2}>
-          {large ? <SocialMenu /> : <Menu fixed={fixed} large={false} />}
-        </Col>
-      </Row>
-    </>
+    <Row
+      style={{
+        alignItems: 'center',
+      }}
+    >
+      <Col xs={3} md={2}>
+        <Box pad={{ left: 'large' }}>
+          <Link href="/">
+            <Image
+              style={fixed ? fixedStyle : large ? regularStyle : fixedStyle}
+              src="/images/logo.svg"
+            />
+          </Link>
+        </Box>
+      </Col>
+      <Col xs={6} md={8}>
+        {large && <Menu activeSection="donate" large />}
+      </Col>
+      <Col xs={3} md={2}>
+        {large ? <SocialMenu /> : <Menu fixed={fixed} large={false} />}
+      </Col>
+    </Row>
   );
 };
 

@@ -2,7 +2,7 @@ import { Box, Button, Text } from 'grommet';
 import { i18n } from '../i18n';
 
 const LangSwitcher = ({ mobileMenu }) => (
-  <Box alignSelf={mobileMenu ? 'center' : 'end'} pad={{ right: 'small' }}>
+  <Box alignSelf="end" pad={{ right: '12px' }}>
     <Button
       onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
       label={
