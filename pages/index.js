@@ -104,6 +104,15 @@ function Home({ t }) {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+        <meta
+          name="description"
+          content="Circles | A Basic Income in the Blockchain"
+        />
+        <meta
+          name="keywords"
+          content="circles, circle, gift economy, cryptocurrency, universal basic income,
+          ubi, money, berlin, andrew yang, bernie sanders"
+        />
       </Head>
 
       <Layout>
