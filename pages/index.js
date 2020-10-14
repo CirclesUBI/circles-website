@@ -110,7 +110,7 @@ function Home({ t }) {
         />
         <meta
           name="keywords"
-          content="circles, circle, gift economy, cryptocurrency, universal basic income,
+          content="circles, circle, gift economy, cryptocurrency, universal basic income, blockchain,
           ubi, money, berlin, andrew yang, bernie sanders"
         />
       </Head>
