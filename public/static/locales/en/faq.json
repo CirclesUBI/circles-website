@@ -80,7 +80,7 @@
         "When you trust someone, you can also send Circles to people in their trusted network, without directly trusting those people yourself. This is called transitive trust, and allows the Circles network to grow more easily.",
         "Example: The person might not trust you, but you happen to own someone else's token besides your own. You can still pay that person with this person’s token. <em>Example: A wants to send B 10 Circles, B does not trust A but B trusts C, A owns 10 C Token and can therefore send these 10 C Tokens to B</em>",
         "You can own multiple different Circles tokens. You are not necessarily only sending your own tokens to someone when you send Circles. You are sending the ones you have a high enough balance of + which has a large enough trust limit.",
-        "Read the <a href='https://github.com/CirclesUBI/docs/blob/master/Circles.md' target='_blank'>Circles whitepaper</a> to read more about transitive transactions."
+        "Read the <a href='https://handbook.joincircles.net/about/whitepaper.html' target='_blank'>Circles whitepaper</a> to read more about transitive transactions."
       ]
     },
     {
