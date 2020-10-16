@@ -150,6 +150,9 @@ const Footer = ({ t }) => {
           <Anchor href="https://circles.garden" color="light-1">
             {t('links-wallet')}
           </Anchor>
+          <Anchor href="https://handbook.joincircles.net/about/whitepaper.html" color="light-1">
+            {t('links-whitepaper')}
+          </Anchor>
 
           {/* <Link href="/contact">
             <Anchor as="span" color="light-1">

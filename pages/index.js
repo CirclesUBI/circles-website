@@ -335,8 +335,10 @@ function Home({ t }) {
               margin={{ top: 'large' }}
               style={{
                 background: `linear-gradient(180deg, #fff 0%, rgb(243, 208, 223) 20%, #fff 40%, #fff 50%, rgb(243, 208, 223)) 100%`,
+                position: 'relative'
               }}
             >
+              {/* <div style={{width: '100%', height: 20, background: '#fff'}} /> */}
               <Heading
                 level={1}
                 textAlign="center"
@@ -365,10 +367,12 @@ function Home({ t }) {
                             alt={member.name}
                           />
                         </Box>
-                        <Text>{member.name}</Text>
-                        <Text>
-                          <em>{t(`${member.name} title`)}</em>
-                        </Text>
+                        <Box alignSelf="center">
+                          <Text textAlign="center">{member.name}</Text>
+                          <Text textAlign="center">
+                            <em>{t(`${member.name} title`)}</em>
+                          </Text>
+                        </Box>
                       </Box>
                     </Col>
                   ))}
