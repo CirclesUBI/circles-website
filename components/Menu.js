@@ -133,12 +133,11 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
   );
 });
 
-export const SocialMenu = ({ mobileMenu, ...otherProps }) => {
+export const SocialMenu = ({ mobileMenu, fixed, ...otherProps }) => {
   const menuStyle = { width: 'auto' };
-  if (!mobileMenu) {
+  if (!mobileMenu && !fixed) {
     menuStyle.background = 'rgba(255, 255, 255, .3)';
     menuStyle.padding = 8;
-    menuStyle.marginRight = 8;
   }
 
   return (

@@ -37,7 +37,7 @@ const Header = ({ large, fixed }) => {
         {large && <Menu activeSection="donate" large />}
       </Col>
       <Col xs={3} md={2}>
-        {large ? <SocialMenu /> : <Menu fixed={fixed} large={false} />}
+        {large ? <SocialMenu fixed={fixed} /> : <Menu fixed={fixed} large={false} />}
       </Col>
     </Row>
   );
