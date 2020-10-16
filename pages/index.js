@@ -45,7 +45,7 @@ const contributors = [
   'Ed Murphy',
   'Emin Durak',
   'Franziska Börner-Zobel',
-  'Harriet von Frohreich',
+  'Harriet von Froreich',
   'Jacob Hühn',
   'Javier Alaves',
   'Justyna Trivedi',
