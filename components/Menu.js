@@ -8,27 +8,28 @@ import { withTranslation } from '../i18n';
 import LangSwitcher from './LangSwitcher';
 
 const pageLinks = [
-  { label: 'faq', value: '/faq', isExternal: false, isRoute: true },
+  { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
+  // { label: 'Contact', value: '/contact', isExternal: false, isRoute: true },
   // { label: 'donate', value: '/donate', isExternal: false, isRoute: true },
 ];
 
 const homeMenuLinks = [
   {
     label: 'Wallet',
-    value: 'Wallet',
+    value: 'wallet',
     isExternal: true,
     isRoute: false,
     href: 'https://circles.garden',
   },
   {
     label: 'About',
-    value: 'About',
+    value: 'about',
     isExternal: false,
     isRoute: false,
   },
   {
     label: 'How It Works',
-    value: 'How It Works',
+    value: 'how-it-works',
     isExternal: false,
     isRoute: false,
   },
@@ -45,7 +46,7 @@ const notHomeMenuLinks = [
   },
   {
     label: 'Wallet',
-    value: 'Wallet',
+    value: 'wallet',
     isExternal: true,
     isRoute: false,
     href: 'https://circles.garden',
