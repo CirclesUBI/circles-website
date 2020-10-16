@@ -1,9 +1,9 @@
 {
-  "wallet": "Wallet",
-  "about": "About",
-  "how-it-works": "How It Works",
-  "community": "Community",
-  "faq": "FAQ",
-  "donate": "Donate",
-  "home": "Home"
+  "Wallet": "Wallet",
+  "About": "About",
+  "How It Works": "How It Works",
+  "Community": "Community",
+  "FAQ": "FAQ",
+  "Donate": "Donate",
+  "Home": "Home"
 }

@@ -14,21 +14,21 @@ const pageLinks = [
 
 const homeMenuLinks = [
   {
-    label: 'wallet',
-    value: 'wallet',
+    label: 'Wallet',
+    value: 'Wallet',
     isExternal: true,
     isRoute: false,
     href: 'https://circles.garden',
   },
   {
-    label: 'about',
-    value: 'about',
+    label: 'About',
+    value: 'About',
     isExternal: false,
     isRoute: false,
   },
   {
-    label: 'how-it-works',
-    value: 'how-it-works',
+    label: 'How It Works',
+    value: 'How It Works',
     isExternal: false,
     isRoute: false,
   },
@@ -38,14 +38,14 @@ const homeMenuLinks = [
 
 const notHomeMenuLinks = [
   {
-    label: 'home',
+    label: 'Home',
     value: '/',
     isExternal: false,
     isRoute: true,
   },
   {
     label: 'Wallet',
-    value: 'wallet',
+    value: 'Wallet',
     isExternal: true,
     isRoute: false,
     href: 'https://circles.garden',
