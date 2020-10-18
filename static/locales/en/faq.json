@@ -92,13 +92,6 @@
         "A trust limit is the percentage (0-100%) of your Circles supply that you are willing to hold in a given person’s tokens. <em>Example: I trust you 50%, the amount of Circles I have received since I signed up is 100, therefore I am willing to hold max 50 of your tokens</em>",
         "The current default limit is always set to 50% which is very high, and may be lowered in future versions."
       ]
-    },
-    {
-      "topic": "Trust Network",
-      "question": "How should I price things in Circles?",
-      "answer": [
-        "For suggestions about how to use Circles, check out our <a href='https://docs.google.com/document/d/1UQ-fD5n49RLTKXwA1tjSnFNFwP_TvHTCj3yG-1hpGac/edit?usp=sharing' target='_blank'>Pricing Guidelines</a>."
-      ]
     }
   ]
 }

@@ -92,13 +92,6 @@
         "Eine Vertrauensverbindung wird in Prozent (0-100%)  ausgedrückt, die Du bereit bist von einer bestimmten Person ihre Circles zu halten. Beispiel: Ich vertraue Dir zu 50 % der Menge Circles, die ich erhalten habe, seid ich bei Circles mitmache. Das sind 100 Circles, daher bin ich bereit, maximal 50 von deinen Circles zu halten.",
         "Das momentane Standard-Limit wird auf 50% deiner Tokens festgesetzt, was sehr viel ist und zu einem späteren Zeitpunkt vielleicht herabgesetzt werden wird."
       ]
-    },
-    {
-      "topic": "Vertrauensnetzwerk",
-      "question": "Wie soll ich Preise in Circles festlegen?",
-      "answer": [
-        "Für Empfehlungen dazu, wie Du Circles verwenden kannst, schau dir unsere <a href='https://docs.google.com/document/d/1UQ-fD5n49RLTKXwA1tjSnFNFwP_TvHTCj3yG-1hpGac/edit?usp=sharing' target='_blank'>Pricing Guidelines</a> an."
-      ]
     }
   ]
 }
