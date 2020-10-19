@@ -7,7 +7,7 @@
       "topic": "Onboarding",
       "question": "How do I verify my account?",
       "answer": [
-        "In order to get verified you must trust three people already trusted in the Circles system.",
+        "In order to get verified you must be trusted by three people already trusted in the Circles system.",
         "Please note that people should not verify each other if they have not met in person. It’s very easy for someone to attack the network if they can gain trust from strangers online. You could potentially lose your Circles to a fake account."
       ]
     },
