@@ -1,6 +1,5 @@
 const CONTENT = `
   # Terms of Service Agreement
-  ## Terms of Service Agreement
 
   Welcome to joincircles.net and circles.garden, website-hosted portals provided by Circles Coop eG. The Portal gives an understanding about how you can use the cryptocurrency Circles, and how you can participate in this community-based basic income protocol. This Terms of Service Agreement (the "Agreement") governs your use of the Portal and Protocol. This Agreement explains the terms and conditions by which you may access and use the Portal. You must read this Agreement carefully. By accessing or using the Portal, you signify that you have read, understand, and agree to be bound by this Agreement in its entirety. If you do not agree, you are not authorized to access or use the Portal.
 
@@ -85,3 +84,4 @@ const CONTENT = `
 `
 
 export default CONTENT;
+
