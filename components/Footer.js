@@ -172,7 +172,7 @@ const Footer = ({ t }) => {
             </Anchor>
           </Link>
 
-          {/* <Link href="/privacy-policy">
+          <Link href="/privacy-policy">
             <Anchor as="span" color="light-1">
               {t('links-privacy-policy')}
             </Anchor>
@@ -182,7 +182,7 @@ const Footer = ({ t }) => {
             <Anchor as="span" color="light-1">
               {t('links-terms')}
             </Anchor>
-          </Link> */}
+          </Link>
         </Box>
       </Col>
     </Row>
