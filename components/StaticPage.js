@@ -14,7 +14,7 @@ export default function StaticPage ({head, CONTENT, }) {
       <Layout>
         {(large) => (
           <Box
-            pad={{vertical: 'medium', horizontal: 'large'}}
+            pad={{vertical: 'medium', horizontal: large ? '150px' : 'large'}}
             width="large"
             alignSelf="center"
             className="page-wrapper"
