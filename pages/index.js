@@ -265,33 +265,39 @@ function Home({ t }) {
                 <Row>
                   <Col lg={4}>
                     <Box>
-                      <Widget
-                        title={t('community-widget-2-title')}
-                        content={t('community-widget-2-content')}
-                        imageLink="/images/learn.svg"
-                        imageHeight="180px"
-                      />
+                      <Anchor href="https://handbook.joincircles.net" target="_blank" >
+                        <Widget
+                          title={t('community-widget-2-title')}
+                          content={t('community-widget-2-content')}
+                          imageLink="/images/learn.svg"
+                          imageHeight="180px"
+                        />
+                      </Anchor>
                     </Box>
                   </Col>
                   <Col lg={4}>
                     <Box>
-                      <Widget
-                        title={t('community-widget-1-title')}
-                        content={t('community-widget-1-content')}
-                        imageLink="/images/chat.svg"
-                        imageHeight="180px"
-                      />
+                      <Anchor href="https://t.me/CirclesUBI" target="_blank" >
+                        <Widget
+                          title={t('community-widget-1-title')}
+                          content={t('community-widget-1-content')}
+                          imageLink="/images/chat.svg"
+                          imageHeight="180px"
+                        />
+                      </Anchor>
                     </Box>
                   </Col>
 
                   <Col lg={4}>
                     <Box>
-                      <Widget
-                        title={t('community-widget-3-title')}
-                        content={t('community-widget-3-content')}
-                        imageLink="/images/build.svg"
-                        imageHeight="180px"
-                      />
+                      <Anchor href="https://github.com/CirclesUBI/" target="_blank" >
+                        <Widget
+                          title={t('community-widget-3-title')}
+                          content={t('community-widget-3-content')}
+                          imageLink="/images/build.svg"
+                          imageHeight="180px"
+                        />
+                      </Anchor>
                     </Box>
                   </Col>
                 </Row>
