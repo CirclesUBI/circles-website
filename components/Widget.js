@@ -7,6 +7,7 @@ const Widget = ({
   content,
   imageWidth = 'small',
   imageHeight = '100px',
+  onClick = null
 }) => {
   return (
     <Box
@@ -17,6 +18,8 @@ const Widget = ({
       style={{ borderRadius: 8, maxWidth: '360px' }}
       alignSelf="center"
       background="white"
+      hoverIndicator="light-1"
+      onClick={onClick}
     >
       <Box margin={{ bottom: 'large' }}>
         <Image

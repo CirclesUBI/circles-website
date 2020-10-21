@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { Anchor, Box, Heading, Image, Text, Button } from 'grommet';
 import { Row, Col } from 'react-grid-system';
 import { Link as ScrollLink } from 'react-scroll';
@@ -88,6 +89,15 @@ function Home({ t }) {
       imageLink: '/images/slider-4.png',
     },
   ];
+
+  const isClient = typeof window !== 'undefined';
+
+  const handleRoute = (e, href) => {
+    e.preventDefault();
+    if (isClient) {
+      window.location.href = href;
+    }
+  }
 
   return (
     <div className={styles.home}>
@@ -265,39 +275,36 @@ function Home({ t }) {
                 <Row>
                   <Col lg={4}>
                     <Box>
-                      <Anchor href="https://handbook.joincircles.net" target="_blank" >
-                        <Widget
-                          title={t('community-widget-2-title')}
-                          content={t('community-widget-2-content')}
-                          imageLink="/images/learn.svg"
-                          imageHeight="180px"
-                        />
-                      </Anchor>
+                      <Widget
+                        title={t('community-widget-2-title')}
+                        content={t('community-widget-2-content')}
+                        imageLink="/images/learn.svg"
+                        imageHeight="180px"
+                        onClick={(e) => handleRoute(e, 'https://handbook.joincircles.net')}
+                      />
                     </Box>
                   </Col>
                   <Col lg={4}>
                     <Box>
-                      <Anchor href="https://t.me/CirclesUBI" target="_blank" >
-                        <Widget
-                          title={t('community-widget-1-title')}
-                          content={t('community-widget-1-content')}
-                          imageLink="/images/chat.svg"
-                          imageHeight="180px"
-                        />
-                      </Anchor>
+                      <Widget
+                        title={t('community-widget-1-title')}
+                        content={t('community-widget-1-content')}
+                        imageLink="/images/chat.svg"
+                        imageHeight="180px"
+                        onClick={(e) => handleRoute(e, 'https://t.me/CirclesUBI')}
+                      />
                     </Box>
                   </Col>
 
                   <Col lg={4}>
                     <Box>
-                      <Anchor href="https://github.com/CirclesUBI/" target="_blank" >
-                        <Widget
-                          title={t('community-widget-3-title')}
-                          content={t('community-widget-3-content')}
-                          imageLink="/images/build.svg"
-                          imageHeight="180px"
-                        />
-                      </Anchor>
+                      <Widget
+                        title={t('community-widget-3-title')}
+                        content={t('community-widget-3-content')}
+                        imageLink="/images/build.svg"
+                        imageHeight="180px"
+                        onClick={(e) => handleRoute(e, 'https://github.com/CirclesUBI/')} 
+                      />
                     </Box>
                   </Col>
                 </Row>
