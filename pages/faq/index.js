@@ -103,123 +103,121 @@ function FAQ({ t }) {
 
       <Layout>
         {(large) => (
-          <Box>
-            <Box
-              width="large"
-              alignSelf="center"
-              className="page-wrapper"
-              elevation="medium"
-            >
-              <Element name="page-wrapper">
-                <Box width="100%" pad={{ top: 'large' }}>
-                  <Box alignSelf="center">
-                    <Image
-                      src="/images/logo.svg"
-                      margin={{ bottom: 'large' }}
-                      style={{ width: 90, height: 90 }}
-                    />
-                  </Box>
-                  <Box
-                    margin={{ left: 'medium', right: 'medium' }}
-                    width="medium"
-                    alignSelf="center"
+          <Box
+            width="large"
+            alignSelf="center"
+            className="page-wrapper"
+            elevation="medium"
+          >
+            <Element name="page-wrapper">
+              <Box width="100%" pad={{ top: 'large' }}>
+                <Box alignSelf="center">
+                  <Image
+                    src="/images/logo.svg"
+                    margin={{ bottom: 'large' }}
+                    style={{ width: 90, height: 90 }}
+                  />
+                </Box>
+                <Box
+                  margin={{ left: 'medium', right: 'medium' }}
+                  width="medium"
+                  alignSelf="center"
+                >
+                  <Text
+                    weight="bold"
+                    size="large"
+                    textAlign="center"
+                    margin={{ bottom: 'medium' }}
                   >
-                    <Text
-                      weight="bold"
-                      size="large"
-                      textAlign="center"
-                      margin={{ bottom: 'medium' }}
-                    >
-                      {t('title')}
-                    </Text>
-                    <Box pad={{ horizontal: 'medium' }}>
-                      <Grommet theme={textFieldTheme}>
-                        <FormField>
-                          <TextInput
-                            ref={inputRef}
-                            value={inputValue}
-                            onChange={(event) => {
-                              setSelectedIndex(null);
-                              setInputValue(event.target.value);
-                            }}
-                            onSelect={onSelect}
-                            suggestions={suggestions}
-                            placeholder={t('placeholder')}
-                            type="search"
-                            dropProps={{ pad: { horizontal: 'medium' } }}
-                          />
-                        </FormField>
-                      </Grommet>
-                    </Box>
+                    {t('title')}
+                  </Text>
+                  <Box pad={{ horizontal: 'medium' }}>
+                    <Grommet theme={textFieldTheme}>
+                      <FormField>
+                        <TextInput
+                          ref={inputRef}
+                          value={inputValue}
+                          onChange={(event) => {
+                            setSelectedIndex(null);
+                            setInputValue(event.target.value);
+                          }}
+                          onSelect={onSelect}
+                          suggestions={suggestions}
+                          placeholder={t('placeholder')}
+                          type="search"
+                          dropProps={{ pad: { horizontal: 'medium' } }}
+                        />
+                      </FormField>
+                    </Grommet>
                   </Box>
                 </Box>
-              </Element>
-              <Row>
-                <Box width="100%">
-                  <Box
-                    margin={{ left: 'medium', right: 'medium' }}
-                    width="large"
-                    pad="large"
-                    alignSelf="center"
-                  >
-                    {isClient && (
-                      <Accordion activeIndex={selectedIndex}>
-                        {items.map((item, index) => (
-                          <Box key={item.question}>
-                            {(index === 0 ||
-                              item.topic !== items[index - 1].topic) && (
-                              <Text
-                                margin={{ top: 'xlarge', bottom: 'medium' }}
-                                size="large"
-                              >
-                                {item.topic}
-                              </Text>
-                            )}
-                            <AccordionPanel
-                              id={item.question}
-                              header={
-                                <Box
-                                  direction="row"
-                                  pad="medium"
-                                  onClick={() => handlePanelSelect(index)}
-                                >
-                                  <Element
-                                    name={item.question}
-                                    style={{ flexBasis: '100%', flexGrow: 3 }}
-                                  >
-                                    <Text weight="bold">{item.question}</Text>
-                                  </Element>
-                                  {index === selectedIndex ? <Up /> : <Down />}
-                                </Box>
-                              }
+              </Box>
+            </Element>
+            <Row>
+              <Box width="100%">
+                <Box
+                  margin={{ left: 'medium', right: 'medium' }}
+                  width="large"
+                  pad="large"
+                  alignSelf="center"
+                >
+                  {isClient && (
+                    <Accordion activeIndex={selectedIndex}>
+                      {items.map((item, index) => (
+                        <Box key={item.question}>
+                          {(index === 0 ||
+                            item.topic !== items[index - 1].topic) && (
+                            <Text
+                              margin={{ top: 'xlarge', bottom: 'medium' }}
+                              size="large"
                             >
+                              {item.topic}
+                            </Text>
+                          )}
+                          <AccordionPanel
+                            id={item.question}
+                            header={
                               <Box
-                                pad={{
-                                  horizontal: 'medium',
-                                  bottom: 'medium',
-                                }}
+                                direction="row"
+                                pad="medium"
+                                onClick={() => handlePanelSelect(index)}
                               >
-                                {item.answer.map((paragraph) => (
-                                  <Paragraph
-                                    key={
-                                      paragraph && paragraph.substring(0, 20)
-                                    }
-                                    className="faq-answer-anchor"
-                                    size="small"
-                                  >
-                                    {renderHTML(paragraph)}
-                                  </Paragraph>
-                                ))}
+                                <Element
+                                  name={item.question}
+                                  style={{ flexBasis: '100%', flexGrow: 3 }}
+                                >
+                                  <Text weight="bold">{item.question}</Text>
+                                </Element>
+                                {index === selectedIndex ? <Up /> : <Down />}
                               </Box>
-                            </AccordionPanel>
-                          </Box>
-                        ))}
-                      </Accordion>
-                    )}
-                  </Box>
+                            }
+                          >
+                            <Box
+                              pad={{
+                                horizontal: 'medium',
+                                bottom: 'medium',
+                              }}
+                            >
+                              {item.answer.map((paragraph) => (
+                                <Paragraph
+                                  key={
+                                    paragraph && paragraph.substring(0, 20)
+                                  }
+                                  className="faq-answer-anchor"
+                                  size="small"
+                                >
+                                  {renderHTML(paragraph)}
+                                </Paragraph>
+                              ))}
+                            </Box>
+                          </AccordionPanel>
+                        </Box>
+                      ))}
+                    </Accordion>
+                  )}
                 </Box>
-              </Row>
-            </Box>
+              </Box>
+            </Row>
           </Box>
         )}
       </Layout>
