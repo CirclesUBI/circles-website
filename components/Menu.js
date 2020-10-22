@@ -100,16 +100,16 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             label={t(item.label)}
             href={item.href}
             target="_blank"
-            color={large ? 'white' : 'brand4'}
-            margin={{horizontal: 'large'}}
+            color={ large ? 'white' : 'brand4' }
+            margin={{ horizontal: 'large', vertical: large ? 'none' : 'medium' }}
           />
         ) : item.isRoute ? (
           <Link key={item.value} href={item.value}>
             <Anchor
               as="span"
               label={t(item.label)}
-              color={large ? 'white' : 'brand4'}
-              margin={{horizontal: 'large'}}
+              color={ large ? 'white' : 'brand4' }
+              margin={{ horizontal: 'large', vertical: large ? 'none' : 'medium' }}
             />
           </Link>
         ) : (
@@ -124,12 +124,13 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             duration={500}
             offset={-50}
             // onSetActive={(item) => setActiveSection(item)}
+            style={ large ? null : { marginTop: 16, marginBottom: 16 } }
           >
             <Anchor
               as="span"
               label={t(item.label)}
-              color={large ? 'white' : 'brand4'}
-              margin={{horizontal: 'large'}}
+              color={ large ? 'white' : 'brand4' }
+              margin={{ horizontal: 'large' }}
             />
           </ScrollLink>
         )
@@ -143,9 +144,9 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           onClose={() => setOpen(false)}
           dropContent={<DonateContent onClose={() => setOpen(false)} />}
           dropProps={{ align: large ? { top: 'bottom' } : {bottom: 'top', right: 'left'}, style: { borderRadius: 8 } }}
-          plain
           style={{ fontWeight: 600, fontSize: 16, color: large ? '#fff' : '#7E133F', transform: 'translateY(-1px)'}}
-          margin={{horizontal: 'large'}}
+          margin={{ horizontal: '32px', vertical: large ? '0' : '16px' }}
+          plain
         />
       </Grommet>
 
@@ -176,6 +177,13 @@ const DonateContent = ({ onClose }) => {
     borderColor: '#D12D5F',
   }
 
+  const addressStyle = {
+    fontFamily: 'monospace',
+    background: '#eee',
+    padding: 4,
+    borderRadius: 4
+  }
+
   return (
     <Box pad={{vertical: 'small', horizontal: 'large'}} width="medium" elevation="large">
       <Box margin={{bottom: 'small'}}>
@@ -186,12 +194,12 @@ const DonateContent = ({ onClose }) => {
       </Box>
       <Box justify="center" align="center" margin={{bottom: 'small'}} gap="xsmall">
         <Text size="12px">ETH:</Text>
-        <Text size="12px" weight="bold" >{ETHADDRESS}</Text>
+        <Text size="12px" weight="bold" style={addressStyle} >{ETHADDRESS}</Text>
         <Button plain={false} size="small" style={buttonStyle} onClick={() => copyETH()}>{ethCopied ? 'Copied!' : 'Copy'}</Button>
       </Box>
       <Box justify="center" align="center" margin={{bottom: 'medium'}} gap="xsmall">
         <Text size="12px">BTC:</Text>
-        <Text size="12px" weight="bold">{BTCADDRESS}</Text>
+        <Text size="12px" weight="bold" style={addressStyle}>{BTCADDRESS}</Text>
         <Button plain={false} size="small" style={buttonStyle} onClick={() => copyBTC()}>{btcCopied ? 'Copied!' : 'Copy'}</Button>
       </Box>
 
