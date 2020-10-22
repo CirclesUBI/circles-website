@@ -198,7 +198,7 @@ const DonateContent = ({ onClose }) => {
       </Box>
       <Box margin={{bottom: 'small'}}>
         <Text textAlign="center" size="12px">And you can support our work on</Text>
-        <Text textAlign="center" size="12px"><Anchor href="https://gitcoin.co/grants/331/circles-ubi" target="_blank" >Git Coin</Anchor></Text>
+        <Text textAlign="center" size="12px"><Anchor href="https://gitcoin.co/grants/331/circles-ubi" target="_blank" >GitCoin</Anchor></Text>
       </Box>
     </Box>
   )
