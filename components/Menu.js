@@ -151,7 +151,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
 });
 
 const ETHADDRESS = '0x7415EfD9D908281ea0279c49A6c23011D9d9A0a4';
-const BTCADDRESS = '0x1P8oaMk65aE5PqJfsfzAzgRwqdPSHoXhw1';
+const BTCADDRESS = '1P8oaMk65aE5PqJfsfzAzgRwqdPSHoXhw1';
 
 const DonateContent = ({ onClose }) => {
   const [ethCopied, setEthCopied] = useState(false);
