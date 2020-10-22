@@ -143,7 +143,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           onOpen={() => setOpen(true)}
           onClose={() => setOpen(false)}
           dropContent={<DonateContent onClose={() => setOpen(false)} />}
-          dropProps={{ align: large ? { top: 'bottom' } : {bottom: 'top', right: 'left'}, style: { borderRadius: 8 } }}
+          dropProps={{ align: large ? { top: 'bottom' } : {bottom: 'bottom', right: 'left'}, style: { borderRadius: 8 } }}
           style={{ fontWeight: 600, fontSize: 16, color: large ? '#fff' : '#7E133F', transform: 'translateY(-1px)'}}
           margin={{ horizontal: '32px', vertical: large ? '0' : '16px' }}
           plain
