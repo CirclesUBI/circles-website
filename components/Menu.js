@@ -91,7 +91,6 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
     <Box
       direction={large ? 'row' : 'column'}
       justify="center"
-      gap="large"
       pad="small"
     >
       {menu.map((item, index) =>
@@ -102,6 +101,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             href={item.href}
             target="_blank"
             color={large ? 'white' : 'brand4'}
+            margin={{horizontal: 'large'}}
           />
         ) : item.isRoute ? (
           <Link key={item.value} href={item.value}>
@@ -109,6 +109,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
               as="span"
               label={t(item.label)}
               color={large ? 'white' : 'brand4'}
+              margin={{horizontal: 'large'}}
             />
           </Link>
         ) : (
@@ -128,6 +129,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
               as="span"
               label={t(item.label)}
               color={large ? 'white' : 'brand4'}
+              margin={{horizontal: 'large'}}
             />
           </ScrollLink>
         )
@@ -143,6 +145,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           dropProps={{ align: large ? { top: 'bottom' } : {bottom: 'top', right: 'left'}, style: { borderRadius: 8 } }}
           plain
           style={{ fontWeight: 600, fontSize: 16, color: large ? '#fff' : '#7E133F', transform: 'translateY(-1px)'}}
+          margin={{horizontal: 'large'}}
         />
       </Grommet>
 
@@ -151,7 +154,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
 });
 
 const ETHADDRESS = '0x7415EfD9D908281ea0279c49A6c23011D9d9A0a4';
-const BTCADDRESS = '0x1P8oaMk65aE5PqJfsfzAzgRwqdPSHoXhw1';
+const BTCADDRESS = '1P8oaMk65aE5PqJfsfzAzgRwqdPSHoXhw1';
 
 const DonateContent = ({ onClose }) => {
   const [ethCopied, setEthCopied] = useState(false);
@@ -179,7 +182,7 @@ const DonateContent = ({ onClose }) => {
         <Heading level={3} margin="small" textAlign="center">
           Donate to Circles
         </Heading>
-        <Text textAlign="center" size="small">All donations will go to supporting and maintenance of this project</Text>
+        <Text textAlign="center" size="small">All donations will go to support and maintenance of this project</Text>
       </Box>
       <Box justify="center" align="center" margin={{bottom: 'small'}} gap="xsmall">
         <Text size="12px">ETH:</Text>
@@ -187,7 +190,7 @@ const DonateContent = ({ onClose }) => {
         <Button plain={false} size="small" style={buttonStyle} onClick={() => copyETH()}>{ethCopied ? 'Copied!' : 'Copy'}</Button>
       </Box>
       <Box justify="center" align="center" margin={{bottom: 'medium'}} gap="xsmall">
-        <Text size="12px">BTC</Text>
+        <Text size="12px">BTC:</Text>
         <Text size="12px" weight="bold">{BTCADDRESS}</Text>
         <Button plain={false} size="small" style={buttonStyle} onClick={() => copyBTC()}>{btcCopied ? 'Copied!' : 'Copy'}</Button>
       </Box>
