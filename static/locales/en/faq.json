@@ -17,7 +17,7 @@
       "answer": [
         "After creating a new wallet you will need 3 incoming trust connections to verify your account. You can request trust by sharing a link to your profile, or in person by having someone scan your profile QR code.",
         "We are hosting regular meet-ups in Berlin during our test phase, where you can come meet the team and connect with other Circles users in person.",
-        "Once 3 people have trusted your profile the app will automatically deploy two smart contracts for you to use Circles: your Safe and your own Circles token. You will receive 100 Circles as an initial payout and continue to receive a regular UBI."
+        "Once 3 people have trusted your profile the app will automatically deploy two smart contracts for you to use Circles: your Safe and your own Circles token. You will receive 50 Circles as an initial payout and continue to receive a regular UBI."
       ]
     },
     {
@@ -50,7 +50,7 @@
       "topic": "UBI",
       "question": "How are my Circles Produced?",
       "answer": [
-        "Your Circles tokens are created automatically by the Circles smart contracts. Every day when you open the app, it checks the smart contracts for updates. Right now, Circles are paid out at a rate of about 14 per week, inflating 7% per year.",
+        "Your Circles tokens are created automatically by the Circles smart contracts. Every day when you open the app, it checks the smart contracts for updates. Right now, Circles are paid out at a rate of about 8 per week, inflating 7% per year.",
         "The money is not coming from anywhere outside the contracts - for example, we do not collect and deposit Euro into the system. It’s also not being mined the way some cryptocurrencies are, where it’s paid out to the people who maintain the network. Instead, Circles is paid out to you every day as a reward for being part of the community, and becomes more valuable over time as the Circles community becomes stronger."
       ]
     },
