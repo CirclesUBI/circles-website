@@ -47,14 +47,6 @@
       ]
     },
     {
-      "topic": "Onboarding",
-      "question": "What blockchain is Circles using?",
-      "answer": [
-        "For the public test phase, Circles is using Kovan network, which is one of the public Ethereum testnets. For our full launch later this year, we plan on using xDai network.",
-        "You can read more about Kovan <a href='https://kovan-testnet.github.io/website/' target='_blank'>here</a>. You can learn more about xDai <a href='https://www.xdaichain.com' target='_blank'>here</a>."
-      ]
-    },
-    {
       "topic": "UBI",
       "question": "How are my Circles Produced?",
       "answer": [
@@ -179,7 +171,7 @@
       "topic": "General",
       "question": "What blockchain is Circles using?",
       "answer": [
-        "Circles is using the xDAI blockchain. xDAI is functionally almost identical to Ethereum but has substantially lower transaction costs by being operated by only a limited amount of validators instead of using high energy and cost consuming “proof of work”. You can learn more about xDai here."
+        "Circles is using the xDAI blockchain. xDAI is functionally almost identical to Ethereum but has substantially lower transaction costs by being operated by only a limited amount of validators instead of using high energy and cost consuming “proof of work”. You can learn more about xDai <a href='https://www.xdaichain.com' target='_blank'>here</a>."
       ]
     },
     {

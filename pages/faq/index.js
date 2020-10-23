@@ -162,7 +162,7 @@ function FAQ({ t }) {
                   alignSelf="center"
                 >
                   {isClient && (
-                    <Accordion activeIndex={selectedIndex}>
+                    <Accordion activeIndex={selectedIndex} animate={false}>
                       {items.map((item, index) => (
                         <Box key={item.question}>
                           {(index === 0 ||
@@ -197,6 +197,7 @@ function FAQ({ t }) {
                                 horizontal: 'medium',
                                 bottom: 'medium',
                               }}
+                              animation="fadeIn"
                             >
                               {item.answer.map((paragraph) => (
                                 <Paragraph
