@@ -43,7 +43,7 @@
       "answer": [
         "Your Circles Safe is a smart contract that holds the keys to your account.",
         "You can add multiple devices, such as your computer or phone, to your Safe. Adding devices to your Safe can help with account recovery if you lose your seed phrase.",
-        "You can read more about Safes <a href='https://gnosis-safe.readthedocs.io' target='_blank'>here</a>."
+        "<a href='https://docs.gnosis.io/safe/' target='_blank'>Read more about Safes</a>"
       ]
     },
     {
