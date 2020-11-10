@@ -26,7 +26,7 @@
       "answer": [
         "Dein Circles Safe ist ein Smart Contract der die Schlüssel zu deinem Account verwaltet.",
         "Du kannst mehrere Geräte damit verknüpfen, deinen Computer und dein Telefon. Mehrere Geräte dem Safe hinzuzufügen kann auch dabei helfen, den Account wieder herzustellen, falls Du deine „Seed Phrase“ verlierst.",
-        "Du kannst mehr über Safes <a href='https://gnosis-safe.readthedocs.io' target='_blank'>hier</a> erfahren."
+        "<a href='https://docs.gnosis.io/safe/' target='_blank'>Erfahr mehr über Safes</a>"
       ]
     },
     {
