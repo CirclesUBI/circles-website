@@ -1,19 +1,28 @@
-import { Box, Button, Text } from 'grommet';
+import { Box, Menu } from 'grommet';
 import { i18n } from '../i18n';
+import { FormDown } from 'grommet-icons';
 
-const LangSwitcher = ({ mobileMenu }) => (
-  <Box alignSelf="end" pad={{ right: '12px' }}>
-    <Button
-      onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
-      label={
-        <Text size="small" color={mobileMenu ? 'brand4' : 'white'}>
-          {i18n.language === 'en' ? 'Deutsch' : 'English'}
-        </Text>
-      }
-      hoverIndicator={false}
-      plain
-    />
-  </Box>
-);
+const activeLanguages = ['en', 'de'];
+
+const LangSwitcher = () => {
+  if (!i18n || !i18n.language) {
+    return null;
+  }
+
+  return (
+    <Box alignSelf="end" pad="small">
+      <Menu
+        label={i18n.language.toUpperCase()}
+        items={activeLanguages.map((lang) => ({
+          label: lang.toUpperCase(),
+          onClick: () => i18n.changeLanguage(lang),
+        }))}
+        size="small"
+        color="white"
+        icon={<FormDown color="white" size="small" />}
+      />
+    </Box>
+  );
+};
 
 export default LangSwitcher;

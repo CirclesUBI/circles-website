@@ -1,11 +1,20 @@
 import Link from 'next/link';
-import { Anchor, Box, Button, DropButton, Image, Grommet, Heading, Layer, Text } from 'grommet';
+import {
+  Anchor,
+  Box,
+  Button,
+  DropButton,
+  Image,
+  Grommet,
+  Heading,
+  Layer,
+  Text,
+} from 'grommet';
 import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
 import { useState } from 'react';
 
 import { withTranslation } from '../i18n';
-import LangSwitcher from './LangSwitcher';
 import copy from 'copy-to-clipboard';
 
 const pageLinks = [
@@ -88,11 +97,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
   const menu = pathname && pathname === '/' ? homeMenuLinks : notHomeMenuLinks;
 
   return (
-    <Box
-      direction={large ? 'row' : 'column'}
-      justify="center"
-      pad="small"
-    >
+    <Box direction={large ? 'row' : 'column'} justify="center" pad="small">
       {menu.map((item, index) =>
         item.isExternal ? (
           <Anchor
@@ -100,16 +105,22 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             label={t(item.label)}
             href={item.href}
             target="_blank"
-            color={ large ? 'white' : 'brand4' }
-            margin={{ horizontal: 'large', vertical: large ? 'none' : 'medium' }}
+            color={large ? 'white' : 'brand4'}
+            margin={{
+              horizontal: 'large',
+              vertical: large ? 'none' : 'medium',
+            }}
           />
         ) : item.isRoute ? (
           <Link key={item.value} href={item.value}>
             <Anchor
               as="span"
               label={t(item.label)}
-              color={ large ? 'white' : 'brand4' }
-              margin={{ horizontal: 'large', vertical: large ? 'none' : 'medium' }}
+              color={large ? 'white' : 'brand4'}
+              margin={{
+                horizontal: 'large',
+                vertical: large ? 'none' : 'medium',
+              }}
             />
           </Link>
         ) : (
@@ -124,18 +135,18 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             duration={500}
             offset={-50}
             // onSetActive={(item) => setActiveSection(item)}
-            style={ large ? null : { marginTop: 16, marginBottom: 16 } }
+            style={large ? null : { marginTop: 16, marginBottom: 16 }}
           >
             <Anchor
               as="span"
               label={t(item.label)}
-              color={ large ? 'white' : 'brand4' }
+              color={large ? 'white' : 'brand4'}
               margin={{ horizontal: 'large' }}
             />
           </ScrollLink>
         )
       )}
-      
+
       <Grommet>
         <DropButton
           label="Donate"
@@ -143,13 +154,22 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           onOpen={() => setOpen(true)}
           onClose={() => setOpen(false)}
           dropContent={<DonateContent onClose={() => setOpen(false)} />}
-          dropProps={{ align: large ? { top: 'bottom' } : {bottom: 'bottom', right: 'left'}, style: { borderRadius: 8 } }}
-          style={{ fontWeight: 600, fontSize: 16, color: large ? '#fff' : '#7E133F', transform: 'translateY(-1px)'}}
+          dropProps={{
+            align: large
+              ? { top: 'bottom' }
+              : { bottom: 'bottom', right: 'left' },
+            style: { borderRadius: 8 },
+          }}
+          style={{
+            fontWeight: 600,
+            fontSize: 16,
+            color: large ? '#fff' : '#7E133F',
+            transform: 'translateY(-1px)',
+          }}
           margin={{ horizontal: '32px', vertical: large ? '0' : '16px' }}
           plain
         />
       </Grommet>
-
     </Box>
   );
 });
@@ -159,60 +179,109 @@ const BTCADDRESS = '1P8oaMk65aE5PqJfsfzAzgRwqdPSHoXhw1';
 
 const DonateContent = ({ onClose }) => {
   const [ethCopied, setEthCopied] = useState(false);
-  const [btcCopied, setBtcCopied] = useState(false); 
+  const [btcCopied, setBtcCopied] = useState(false);
 
   const copyETH = () => {
     setBtcCopied(false);
     copy(ETHADDRESS);
     setEthCopied(true);
-  }
+  };
   const copyBTC = () => {
     setEthCopied(false);
     copy(BTCADDRESS);
     setBtcCopied(true);
-  }
+  };
 
   const buttonStyle = {
     borderRadius: 8,
     borderColor: '#D12D5F',
-  }
+  };
 
   const addressStyle = {
     fontFamily: 'monospace',
     background: '#eee',
     padding: 4,
-    borderRadius: 4
-  }
+    borderRadius: 4,
+  };
 
   return (
-    <Box pad={{vertical: 'small', horizontal: 'large'}} width="medium" elevation="large">
-      <Box margin={{bottom: 'small'}}>
+    <Box
+      pad={{ vertical: 'small', horizontal: 'large' }}
+      width="medium"
+      elevation="large"
+    >
+      <Box margin={{ bottom: 'small' }}>
         <Heading level={3} margin="small" textAlign="center">
           Donate to Circles
         </Heading>
-        <Text textAlign="center" size="small">All donations will go to support and maintenance of this project</Text>
+        <Text textAlign="center" size="small">
+          All donations will go to support and maintenance of this project
+        </Text>
       </Box>
-      <Box justify="center" align="center" margin={{bottom: 'small'}} gap="xsmall">
+      <Box
+        justify="center"
+        align="center"
+        margin={{ bottom: 'small' }}
+        gap="xsmall"
+      >
         <Text size="12px">ETH:</Text>
-        <Text size="12px" weight="bold" style={addressStyle} >{ETHADDRESS}</Text>
-        <Button plain={false} size="small" style={buttonStyle} onClick={() => copyETH()}>{ethCopied ? 'Copied!' : 'Copy'}</Button>
+        <Text size="12px" weight="bold" style={addressStyle}>
+          {ETHADDRESS}
+        </Text>
+        <Button
+          plain={false}
+          size="small"
+          style={buttonStyle}
+          onClick={() => copyETH()}
+        >
+          {ethCopied ? 'Copied!' : 'Copy'}
+        </Button>
       </Box>
-      <Box justify="center" align="center" margin={{bottom: 'medium'}} gap="xsmall">
+      <Box
+        justify="center"
+        align="center"
+        margin={{ bottom: 'medium' }}
+        gap="xsmall"
+      >
         <Text size="12px">BTC:</Text>
-        <Text size="12px" weight="bold" style={addressStyle}>{BTCADDRESS}</Text>
-        <Button plain={false} size="small" style={buttonStyle} onClick={() => copyBTC()}>{btcCopied ? 'Copied!' : 'Copy'}</Button>
+        <Text size="12px" weight="bold" style={addressStyle}>
+          {BTCADDRESS}
+        </Text>
+        <Button
+          plain={false}
+          size="small"
+          style={buttonStyle}
+          onClick={() => copyBTC()}
+        >
+          {btcCopied ? 'Copied!' : 'Copy'}
+        </Button>
       </Box>
 
-      <Box margin={{bottom: 'small'}}>
-        <Text textAlign="center" size="12px">We also have non-profit status via Open Collective</Text>
-        <Text textAlign="center" size="12px"><Anchor href="https://opencollective.com/circles" target="_blank">Open Collective</Anchor></Text>
+      <Box margin={{ bottom: 'small' }}>
+        <Text textAlign="center" size="12px">
+          We also have non-profit status via Open Collective
+        </Text>
+        <Text textAlign="center" size="12px">
+          <Anchor href="https://opencollective.com/circles" target="_blank">
+            Open Collective
+          </Anchor>
+        </Text>
       </Box>
-      <Box margin={{bottom: 'small'}}>
-        <Text textAlign="center" size="12px">And you can support our work on</Text>
-        <Text textAlign="center" size="12px"><Anchor href="https://gitcoin.co/grants/331/circles-ubi" target="_blank" >GitCoin</Anchor></Text>
+      <Box margin={{ bottom: 'small' }}>
+        <Text textAlign="center" size="12px">
+          And you can support our work on
+        </Text>
+        <Text textAlign="center" size="12px">
+          <Anchor
+            href="https://gitcoin.co/grants/331/circles-ubi"
+            target="_blank"
+          >
+            GitCoin
+          </Anchor>
+        </Text>
       </Box>
     </Box>
-  )
+  );
 };
 
 export const SocialMenu = ({ mobileMenu, fixed, ...otherProps }) => {
@@ -281,7 +350,6 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
               <MenuContent t={t} large={false} />
             </Box>
             <Box>
-              <LangSwitcher mobileMenu />
               <Box justify="center" direction="row">
                 <SocialMenu
                   fixed={fixed}

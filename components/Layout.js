@@ -10,7 +10,6 @@ import {
 import theme from '../config/theme';
 import Header from './Header';
 import Footer from './Footer';
-import LangSwitcher from './LangSwitcher';
 
 setConfiguration({ gutterWidth: 0 });
 
@@ -65,7 +64,6 @@ const Layout = (props) => {
             <Container style={{ maxWidth: 1280 }}>
               <Box style={{ paddingTop: 12 }}>
                 <Header large={large} />
-                {large && <LangSwitcher />}
               </Box>
               {scrollPosition > 400 && (
                 <Box>
@@ -78,7 +76,6 @@ const Layout = (props) => {
                   >
                     <Header large={large} fixed />
                   </Box>
-                  {large && <LangSwitcher />}
                 </Box>
               )}
 
