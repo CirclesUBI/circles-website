@@ -119,6 +119,7 @@ const addressStyle = {
   background: '#eee',
   padding: 4,
   borderRadius: 4,
+  wordBreak: 'break-all',
 };
 
 function AddressSection({ title, subtitle, address, action, copied }) {
