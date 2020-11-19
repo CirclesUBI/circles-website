@@ -1,25 +1,14 @@
 import Link from 'next/link';
-import {
-  Anchor,
-  Box,
-  Button,
-  DropButton,
-  Image,
-  Grommet,
-  Heading,
-  Layer,
-  Text,
-} from 'grommet';
+import { Anchor, Box, Button, Image, Layer } from 'grommet';
 import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
 import { useState } from 'react';
 
 import { withTranslation } from '../i18n';
-import copy from 'copy-to-clipboard';
 
 const pageLinks = [
   { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
-  // { label: 'Contact', value: '/contact', isExternal: false, isRoute: true },
+  { label: 'Donate', value: '/donate', isExternal: false, isRoute: true },
 ];
 
 const homeMenuLinks = [
@@ -82,13 +71,11 @@ const socialMenuLinks = [
   {
     icon: '/images/em.svg',
     iconp: '/images/em-p.svg',
-    link: 'mailto:hello@joincircles.net',
+    link: '/contact',
   },
 ];
 
 const MenuContent = withTranslation('header')(({ t, large }) => {
-  const [open, setOpen] = useState(false);
-
   let pathname;
   if (process.browser) {
     pathname = location.pathname;
@@ -146,143 +133,9 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           </ScrollLink>
         )
       )}
-
-      <Grommet>
-        <DropButton
-          label="Donate"
-          open={open}
-          onOpen={() => setOpen(true)}
-          onClose={() => setOpen(false)}
-          dropContent={<DonateContent onClose={() => setOpen(false)} />}
-          dropProps={{
-            align: large
-              ? { top: 'bottom' }
-              : { bottom: 'bottom', right: 'left' },
-            style: { borderRadius: 8 },
-          }}
-          style={{
-            fontWeight: 600,
-            fontSize: 16,
-            color: large ? '#fff' : '#7E133F',
-            transform: 'translateY(-1px)',
-          }}
-          margin={{ horizontal: '32px', vertical: large ? '0' : '16px' }}
-          plain
-        />
-      </Grommet>
     </Box>
   );
 });
-
-const ETHADDRESS = '0x7415EfD9D908281ea0279c49A6c23011D9d9A0a4';
-const BTCADDRESS = '1P8oaMk65aE5PqJfsfzAzgRwqdPSHoXhw1';
-
-const DonateContent = ({ onClose }) => {
-  const [ethCopied, setEthCopied] = useState(false);
-  const [btcCopied, setBtcCopied] = useState(false);
-
-  const copyETH = () => {
-    setBtcCopied(false);
-    copy(ETHADDRESS);
-    setEthCopied(true);
-  };
-  const copyBTC = () => {
-    setEthCopied(false);
-    copy(BTCADDRESS);
-    setBtcCopied(true);
-  };
-
-  const buttonStyle = {
-    borderRadius: 8,
-    borderColor: '#D12D5F',
-  };
-
-  const addressStyle = {
-    fontFamily: 'monospace',
-    background: '#eee',
-    padding: 4,
-    borderRadius: 4,
-  };
-
-  return (
-    <Box
-      pad={{ vertical: 'small', horizontal: 'large' }}
-      width="medium"
-      elevation="large"
-    >
-      <Box margin={{ bottom: 'small' }}>
-        <Heading level={3} margin="small" textAlign="center">
-          Donate to Circles
-        </Heading>
-        <Text textAlign="center" size="small">
-          All donations will go to support and maintenance of this project
-        </Text>
-      </Box>
-      <Box
-        justify="center"
-        align="center"
-        margin={{ bottom: 'small' }}
-        gap="xsmall"
-      >
-        <Text size="12px">ETH:</Text>
-        <Text size="12px" weight="bold" style={addressStyle}>
-          {ETHADDRESS}
-        </Text>
-        <Button
-          plain={false}
-          size="small"
-          style={buttonStyle}
-          onClick={() => copyETH()}
-        >
-          {ethCopied ? 'Copied!' : 'Copy'}
-        </Button>
-      </Box>
-      <Box
-        justify="center"
-        align="center"
-        margin={{ bottom: 'medium' }}
-        gap="xsmall"
-      >
-        <Text size="12px">BTC:</Text>
-        <Text size="12px" weight="bold" style={addressStyle}>
-          {BTCADDRESS}
-        </Text>
-        <Button
-          plain={false}
-          size="small"
-          style={buttonStyle}
-          onClick={() => copyBTC()}
-        >
-          {btcCopied ? 'Copied!' : 'Copy'}
-        </Button>
-      </Box>
-
-      <Box margin={{ bottom: 'small' }}>
-        <Text textAlign="center" size="12px">
-          We also have non-profit status via Open Collective
-        </Text>
-        <Text textAlign="center" size="12px">
-          <Anchor href="https://opencollective.com/circles" target="_blank">
-            Open Collective
-          </Anchor>
-        </Text>
-      </Box>
-      <Box margin={{ bottom: 'small' }}>
-        <Text textAlign="center" size="12px">
-          And you can support our work on
-        </Text>
-        <Text textAlign="center" size="12px">
-          <Anchor
-            href="https://gitcoin.co/grants/331/circles-ubi"
-            target="_blank"
-          >
-            GitCoin
-          </Anchor>
-        </Text>
-      </Box>
-    </Box>
-  );
-};
 
 export const SocialMenu = ({ mobileMenu, fixed, ...otherProps }) => {
   const menuStyle = { width: 'auto' };
@@ -303,9 +156,11 @@ export const SocialMenu = ({ mobileMenu, fixed, ...otherProps }) => {
         style={menuStyle}
       >
         {socialMenuLinks.map((item) => (
-          <Anchor href={item.link} key={item.link} style={{ height: 24 }}>
-            <Image width="24px" src={mobileMenu ? item.iconp : item.icon} />
-          </Anchor>
+          <Link href={item.link}>
+            <Anchor as="span" key={item.link} style={{ height: 24 }}>
+              <Image width="24px" src={mobileMenu ? item.iconp : item.icon} />
+            </Anchor>
+          </Link>
         ))}
       </Box>
     </Box>

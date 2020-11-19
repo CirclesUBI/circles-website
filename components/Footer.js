@@ -36,7 +36,7 @@ const footerLinks = [
   },
   {
     label: 'Email',
-    value: 'mailto:hello@joincircles.net',
+    value: '/contact',
     imageLink: '/images/em.svg',
     blank: false,
   },
@@ -76,20 +76,22 @@ const Footer = ({ t }) => {
             {t('follow-us')}
           </Text>
           {footerLinks.map((link) => (
-            <Anchor
-              key={link.value}
-              href={link.value}
-              target={link.blank ? '_blank' : '_self'}
-              color="light-1"
-              style={{ display: 'flex', alignItems: 'center' }}
-            >
-              <Image
-                width="24px"
-                src={link.imageLink}
-                margin={{ right: 'small' }}
-              />
-              <Text size="small">{link.label}</Text>
-            </Anchor>
+            <Link href={link.value}>
+              <Anchor
+                as="span"
+                key={link.value}
+                target={link.blank ? '_blank' : '_self'}
+                color="light-1"
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
+                <Image
+                  width="24px"
+                  src={link.imageLink}
+                  margin={{ right: 'small' }}
+                />
+                <Text size="small">{link.label}</Text>
+              </Anchor>
+            </Link>
           ))}
         </Box>
       </Col>
@@ -150,11 +152,14 @@ const Footer = ({ t }) => {
           <Anchor href="https://circles.garden" color="light-1">
             {t('links-wallet')}
           </Anchor>
-          <Anchor href="https://handbook.joincircles.net/about/whitepaper.html" color="light-1">
+          <Anchor
+            href="https://handbook.joincircles.net/about/whitepaper.html"
+            color="light-1"
+          >
             {t('links-whitepaper')}
           </Anchor>
 
-          {/* <Link href="/contact">
+          <Link href="/contact">
             <Anchor as="span" color="light-1">
               {t('links-contact')}
             </Anchor>
@@ -164,7 +169,7 @@ const Footer = ({ t }) => {
             <Anchor as="span" color="light-1">
               {t('links-donate')}
             </Anchor>
-          </Link> */}
+          </Link>
 
           <Link href="/faq">
             <Anchor as="span" color="light-1">
