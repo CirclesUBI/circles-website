@@ -55,7 +55,11 @@ export default function Donate() {
               </Text>
             </Box>
 
-            <Box background="light-1" pad="medium">
+            <Box
+              background="light-1"
+              pad="medium"
+              margin={{ vertical: 'medium' }}
+            >
               <AddressSection
                 title="EURO"
                 subtitle="Circles Coop eG. at GLS BANK"
