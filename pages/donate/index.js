@@ -33,6 +33,7 @@ export default function Donate() {
   const buttonStyle = {
     borderRadius: 8,
     borderColor: '#D12D5F',
+    borderWidth: 1,
   };
 
   const addressStyle = {
@@ -73,18 +74,26 @@ export default function Donate() {
                   EURO
                 </Heading>
                 <Text size="small">Circles Coop eG. at GLS BANK</Text>
-                <Box direction="row" gap="medium" margin={{ bottom: 'medium' }}>
+                <Box
+                  direction="row"
+                  gap="small"
+                  margin={{ bottom: 'medium' }}
+                  align="center"
+                >
                   <Text size="small" weight="bold" style={addressStyle}>
                     {EuroADDRESS}
                   </Text>
-                  <Button
-                    plain={false}
-                    size="small"
-                    style={buttonStyle}
-                    onClick={() => copyEuro()}
-                  >
-                    {euroCopied ? 'Copied!' : 'COPY'}
-                  </Button>
+                  {!euroCopied ? (
+                    <Button
+                      plain={false}
+                      size="small"
+                      style={buttonStyle}
+                      onClick={() => copyEuro()}
+                      label="COPY"
+                    ></Button>
+                  ) : (
+                    <Text size="small">Copied!</Text>
+                  )}
                 </Box>
               </Box>
 
@@ -92,18 +101,26 @@ export default function Donate() {
                 <Heading level={3} margin="none">
                   ETHEREUM
                 </Heading>
-                <Box direction="row" gap="medium" margin={{ bottom: 'medium' }}>
+                <Box
+                  direction="row"
+                  gap="small"
+                  margin={{ bottom: 'medium' }}
+                  align="center"
+                >
                   <Text size="small" weight="bold" style={addressStyle}>
                     {ETHADDRESS}
                   </Text>
-                  <Button
-                    plain={false}
-                    size="small"
-                    style={buttonStyle}
-                    onClick={() => copyETH()}
-                  >
-                    {ethCopied ? 'Copied!' : 'COPY'}
-                  </Button>
+                  {!ethCopied ? (
+                    <Button
+                      plain={false}
+                      size="small"
+                      style={buttonStyle}
+                      onClick={() => copyETH()}
+                      label="COPY"
+                    />
+                  ) : (
+                    <Text size="small">Copied!</Text>
+                  )}
                 </Box>
               </Box>
 
@@ -111,18 +128,26 @@ export default function Donate() {
                 <Heading level={3} margin="none">
                   BITCOIN
                 </Heading>
-                <Box direction="row" gap="medium" margin={{ bottom: 'medium' }}>
+                <Box
+                  direction="row"
+                  gap="small"
+                  margin={{ bottom: 'medium' }}
+                  align="center"
+                >
                   <Text size="small" weight="bold" style={addressStyle}>
                     {BTCADDRESS}
                   </Text>
-                  <Button
-                    plain={false}
-                    size="small"
-                    style={buttonStyle}
-                    onClick={() => copyBTC()}
-                  >
-                    {btcCopied ? 'Copied!' : 'COPY'}
-                  </Button>
+                  {!btcCopied ? (
+                    <Button
+                      plain={false}
+                      size="small"
+                      style={buttonStyle}
+                      onClick={() => copyBTC()}
+                      label="COPY"
+                    />
+                  ) : (
+                    <Text size="small">Copied!</Text>
+                  )}
                 </Box>
               </Box>
             </Box>
