@@ -58,11 +58,11 @@ const contributors = [
 
 const getAboutImageTopMargin = (screenClass) => {
   if (['xs', 'sm'].includes(screenClass)) {
-    return '250px';
-  } else if (['md', 'lg'].includes(screenClass)) {
+    return '280px';
+  } else if (['md', 'lg', 'xl'].includes(screenClass)) {
     return '120px';
   } else {
-    return 'medium';
+    return '120px';
   }
 };
 
@@ -97,7 +97,7 @@ function Home({ t }) {
     if (isClient) {
       window.location.href = href;
     }
-  }
+  };
 
   return (
     <div className={styles.home}>
@@ -280,7 +280,9 @@ function Home({ t }) {
                         content={t('community-widget-2-content')}
                         imageLink="/images/learn.svg"
                         imageHeight="180px"
-                        onClick={(e) => handleRoute(e, 'https://handbook.joincircles.net')}
+                        onClick={(e) =>
+                          handleRoute(e, 'https://handbook.joincircles.net')
+                        }
                       />
                     </Box>
                   </Col>
@@ -291,7 +293,9 @@ function Home({ t }) {
                         content={t('community-widget-1-content')}
                         imageLink="/images/chat.svg"
                         imageHeight="180px"
-                        onClick={(e) => handleRoute(e, 'https://t.me/CirclesUBI')}
+                        onClick={(e) =>
+                          handleRoute(e, 'https://t.me/CirclesUBI')
+                        }
                       />
                     </Box>
                   </Col>
@@ -303,7 +307,9 @@ function Home({ t }) {
                         content={t('community-widget-3-content')}
                         imageLink="/images/build.svg"
                         imageHeight="180px"
-                        onClick={(e) => handleRoute(e, 'https://github.com/CirclesUBI/')} 
+                        onClick={(e) =>
+                          handleRoute(e, 'https://github.com/CirclesUBI/')
+                        }
                       />
                     </Box>
                   </Col>
@@ -348,7 +354,7 @@ function Home({ t }) {
               margin={{ top: 'large' }}
               style={{
                 background: `linear-gradient(180deg, #fff 0%, rgb(243, 208, 223) 20%, #fff 40%, #fff 50%, rgb(243, 208, 223)) 100%`,
-                position: 'relative'
+                position: 'relative',
               }}
             >
               {/* <div style={{width: '100%', height: 20, background: '#fff'}} /> */}

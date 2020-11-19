@@ -20,6 +20,7 @@ const LangSwitcher = () => {
         size="small"
         color="white"
         icon={<FormDown color="white" size="small" />}
+        dropProps={{ style: { zIndex: 99 } }}
       />
     </Box>
   );

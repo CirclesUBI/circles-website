@@ -30,21 +30,6 @@ export default function Donate() {
     setEuroCopied(true);
   };
 
-  const buttonStyle = {
-    borderRadius: 8,
-    borderColor: '#D12D5F',
-    borderWidth: 1,
-  };
-
-  const addressStyle = {
-    fontFamily: 'monospace',
-    background: '#eee',
-    padding: 4,
-    borderRadius: 4,
-  };
-
-  console.log(ETHADDRESS);
-
   return (
     <div className="page">
       <Head>
@@ -69,87 +54,24 @@ export default function Donate() {
             </Box>
 
             <Box background="light-1" pad="medium">
-              <Box margin={{ vertical: 'medium' }} gap="xsmall">
-                <Heading level={3} margin="none">
-                  EURO
-                </Heading>
-                <Text size="small">Circles Coop eG. at GLS BANK</Text>
-                <Box
-                  direction="row"
-                  gap="small"
-                  margin={{ bottom: 'medium' }}
-                  align="center"
-                >
-                  <Text size="small" weight="bold" style={addressStyle}>
-                    {EuroADDRESS}
-                  </Text>
-                  {!euroCopied ? (
-                    <Button
-                      plain={false}
-                      size="small"
-                      style={buttonStyle}
-                      onClick={() => copyEuro()}
-                      label="COPY"
-                    ></Button>
-                  ) : (
-                    <Text size="small">Copied!</Text>
-                  )}
-                </Box>
-              </Box>
+              <AddressSection
+                title="EURO"
+                subtitle="Circles Coop eG. at GLS BANK"
+                address={EuroADDRESS}
+                action={() => copyEuro()}
+              />
 
-              <Box margin={{ vertical: 'medium' }} gap="xsmall">
-                <Heading level={3} margin="none">
-                  ETHEREUM
-                </Heading>
-                <Box
-                  direction="row"
-                  gap="small"
-                  margin={{ bottom: 'medium' }}
-                  align="center"
-                >
-                  <Text size="small" weight="bold" style={addressStyle}>
-                    {ETHADDRESS}
-                  </Text>
-                  {!ethCopied ? (
-                    <Button
-                      plain={false}
-                      size="small"
-                      style={buttonStyle}
-                      onClick={() => copyETH()}
-                      label="COPY"
-                    />
-                  ) : (
-                    <Text size="small">Copied!</Text>
-                  )}
-                </Box>
-              </Box>
+              <AddressSection
+                title="ETHEREUM"
+                address={ETHADDRESS}
+                action={() => copyETH()}
+              />
 
-              <Box margin={{ bottom: 'medium' }} gap="xsmall">
-                <Heading level={3} margin="none">
-                  BITCOIN
-                </Heading>
-                <Box
-                  direction="row"
-                  gap="small"
-                  margin={{ bottom: 'medium' }}
-                  align="center"
-                >
-                  <Text size="small" weight="bold" style={addressStyle}>
-                    {BTCADDRESS}
-                  </Text>
-                  {!btcCopied ? (
-                    <Button
-                      plain={false}
-                      size="small"
-                      style={buttonStyle}
-                      onClick={() => copyBTC()}
-                      label="COPY"
-                    />
-                  ) : (
-                    <Text size="small">Copied!</Text>
-                  )}
-                </Box>
-              </Box>
+              <AddressSection
+                title="BITCOIN"
+                address={BTCADDRESS}
+                action={() => copyBTC()}
+              />
             </Box>
 
             <Box margin={{ vertical: 'medium' }}>
@@ -178,5 +100,46 @@ export default function Donate() {
         )}
       </Layout>
     </div>
+  );
+}
+
+const buttonStyle = {
+  borderRadius: 8,
+  borderColor: '#D12D5F',
+  borderWidth: 1,
+};
+
+const addressStyle = {
+  fontFamily: 'monospace',
+  background: '#eee',
+  padding: 4,
+  borderRadius: 4,
+};
+
+function AddressSection({ title, subtitle, address, action }) {
+  return (
+    <Box margin={{ vertical: 'medium' }} gap="xsmall">
+      <Heading level={3} margin="none">
+        {title}
+      </Heading>
+      {subtitle && <Text size="small">Circles Coop eG. at GLS BANK</Text>}
+      <Box
+        direction="row"
+        gap="small"
+        margin={{ bottom: 'medium' }}
+        align="center"
+      >
+        <Text size="small" weight="bold" style={addressStyle}>
+          {address}
+        </Text>
+        <Button
+          plain={false}
+          size="small"
+          style={buttonStyle}
+          onClick={action}
+          label="COPY"
+        ></Button>
+      </Box>
+    </Box>
   );
 }
