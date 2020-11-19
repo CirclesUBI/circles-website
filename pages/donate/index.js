@@ -4,7 +4,9 @@ import { Anchor, Box, Button, Heading, Text } from 'grommet';
 import copy from 'copy-to-clipboard';
 
 import Layout from '../../components/Layout';
-import { ETHADDRESS, BTCADDRESS, EuroADDRESS } from './constants';
+import { accountAddresses } from '../../config/constants';
+
+const { ETHADDRESS, BTCADDRESS, EuroADDRESS } = accountAddresses;
 
 export default function Donate() {
   const [ethCopied, setEthCopied] = useState(false);
@@ -59,18 +61,21 @@ export default function Donate() {
                 subtitle="Circles Coop eG. at GLS BANK"
                 address={EuroADDRESS}
                 action={() => copyEuro()}
+                copied={euroCopied}
               />
 
               <AddressSection
                 title="ETHEREUM"
                 address={ETHADDRESS}
                 action={() => copyETH()}
+                copied={ethCopied}
               />
 
               <AddressSection
                 title="BITCOIN"
                 address={BTCADDRESS}
                 action={() => copyBTC()}
+                copied={btcCopied}
               />
             </Box>
 
@@ -116,7 +121,7 @@ const addressStyle = {
   borderRadius: 4,
 };
 
-function AddressSection({ title, subtitle, address, action }) {
+function AddressSection({ title, subtitle, address, action, copied }) {
   return (
     <Box margin={{ vertical: 'medium' }} gap="xsmall">
       <Heading level={3} margin="none">
@@ -137,7 +142,7 @@ function AddressSection({ title, subtitle, address, action }) {
           size="small"
           style={buttonStyle}
           onClick={action}
-          label="COPY"
+          label={copied ? 'COPIED!' : 'COPY'}
         ></Button>
       </Box>
     </Box>
