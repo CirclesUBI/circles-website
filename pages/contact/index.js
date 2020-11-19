@@ -39,7 +39,7 @@ const formTheme = {
   },
 };
 
-export default function Terms() {
+export default function Contact() {
   return (
     <div className="page">
       <Head>
