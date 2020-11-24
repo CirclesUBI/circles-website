@@ -24,7 +24,7 @@ const Header = ({ large, fixed }) => {
         alignItems: 'center',
       }}
     >
-      <Col xs={3} md={2}>
+      <Col xs={large ? 3 : 5} md={2}>
         <Box pad={{ left: 'large' }} direction="row" align="center">
           <Link href="/">
             <Image
@@ -37,7 +37,7 @@ const Header = ({ large, fixed }) => {
           </Box>
         </Box>
       </Col>
-      <Col xs={6} md={8}>
+      <Col xs={large ? 6 : 4} md={8}>
         {large && <Menu activeSection="donate" large />}
       </Col>
       <Col xs={3} md={2}>
