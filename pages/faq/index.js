@@ -378,17 +378,27 @@ function VideoSlider({ large }) {
         ))}
       </Slider>
 
-      {showVideo && (
-        <Layer position="bottom">
-          <Button
-            icon={<Close color="dark-1" />}
-            label="CLOSE"
-            onClick={() => setShowVideo(null)}
-          />
-        </Layer>
-      )}
-
       <VideoLayer onClose={() => setShowVideo(null)} thumb={showVideo} />
+
+      {showVideo && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 100,
+          }}
+        >
+          <Box background="dark-1" pad="medium">
+            <Button
+              icon={<Close />}
+              label="CLOSE"
+              onClick={() => setShowVideo(null)}
+            />
+          </Box>
+        </div>
+      )}
     </Box>
   );
 }
