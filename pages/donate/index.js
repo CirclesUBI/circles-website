@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { Anchor, Box, Button, Heading, Text } from 'grommet';
+import { Anchor, Box, Button, Heading, Paragraph, Text } from 'grommet';
 import copy from 'copy-to-clipboard';
 
 import Layout from '../../components/Layout';
@@ -49,10 +49,17 @@ export default function Donate() {
           >
             <Box margin={{ bottom: 'small' }}>
               <Heading level={1}>Donate to Circles</Heading>
-              <Text>
-                All donations will go to support and maintenance of this
-                project.
-              </Text>
+              <Paragraph>
+                Our legal entity is a cooperative, the Circles Coop eG (in
+                Gründung). It is founded by the team who was most busy in the
+                last years on Circles and we are dedicated to improve Circles in
+                a direction which give access to a community based basic income
+                for many, around the globe.
+              </Paragraph>
+
+              <Paragraph>
+                This huge and long work needs your support too.
+              </Paragraph>
             </Box>
 
             <Box
