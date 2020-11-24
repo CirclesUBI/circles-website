@@ -2,19 +2,23 @@ import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { scroller, Element, Link as ScrollLink } from 'react-scroll';
 import renderHTML from 'react-render-html';
+import Slider from 'react-slick';
+import ReactPlayer from 'react-player/vimeo';
 
 import {
   Accordion,
   AccordionPanel,
   Box,
+  Button,
   FormField,
   Image,
   Grommet,
+  Layer,
   TextInput,
   Text,
   Paragraph,
 } from 'grommet';
-import { Up, Down } from 'grommet-icons';
+import { Up, Down, Close } from 'grommet-icons';
 import { Row } from 'react-grid-system';
 
 import Layout from '../../components/Layout';
@@ -99,6 +103,27 @@ function FAQ({ t }) {
     <div className="page">
       <Head>
         <title>Circles UBI | Frequently Asked Questions</title>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        <meta
+          name="description"
+          content="Circles | A Basic Income in the Blockchain"
+        />
+        <meta
+          name="keywords"
+          content="circles, circle, gift economy, cryptocurrency, universal basic income, blockchain,
+          ubi, money, berlin, andrew yang, bernie sanders, doughnut economics, degrowth, local community currency, p2p, commons, democratic money,
+          faircoin, trustlines, gnosis"
+        />
       </Head>
 
       <Layout>
@@ -155,10 +180,20 @@ function FAQ({ t }) {
             </Element>
             <Row>
               <Box width="100%">
+                <Box pad={{ top: 'large', horizontal: 'large' }}>
+                  <Text
+                    margin={{ top: 'medium', bottom: 'medium' }}
+                    size="large"
+                  >
+                    Video Library
+                  </Text>
+                  <VideoSlider large={large} />
+                </Box>
+
                 <Box
                   margin={{ left: 'medium', right: 'medium' }}
                   width="large"
-                  pad="large"
+                  pad={{ horizontal: 'large', bottom: 'large' }}
                   alignSelf="center"
                 >
                   {isClient && (
@@ -201,9 +236,7 @@ function FAQ({ t }) {
                             >
                               {item.answer.map((paragraph) => (
                                 <Paragraph
-                                  key={
-                                    paragraph && paragraph.substring(0, 20)
-                                  }
+                                  key={paragraph && paragraph.substring(0, 20)}
                                   className="faq-answer-anchor"
                                   size="small"
                                 >
@@ -223,6 +256,140 @@ function FAQ({ t }) {
         )}
       </Layout>
     </div>
+  );
+}
+
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  arrows: false,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  lazyLoad: false,
+};
+
+const videoThumbs = [
+  {
+    caption: 'Circles Philosophy',
+    videoSrc: 'https://player.vimeo.com/video/469757163',
+    imageSrc: '/images/videothumbs/circles-team-philosophy.jpg',
+  },
+  {
+    caption: 'Basic Income March',
+    videoSrc: 'https://player.vimeo.com/video/469872391',
+    imageSrc: '/images/videothumbs/basic-income-march-berlin.jpg',
+  },
+  {
+    caption: 'About Basic Income',
+    videoSrc: 'https://player.vimeo.com/video/469693447',
+    imageSrc: '/images/videothumbs/circles-team-basic-income.jpg',
+  },
+  {
+    caption: 'Users Explain Circles',
+    videoSrc: 'https://player.vimeo.com/video/475014191',
+    imageSrc: '/images/videothumbs/users-explain-circles.jpg',
+  },
+];
+
+function VideoThumb({ thumb, large }) {
+  return (
+    <Box
+      alignSelf="center"
+      width={large ? 'small' : 'medium'}
+      height={large ? 'xsmall' : 'small'}
+      style={{ margin: '0 auto', position: 'relative' }}
+    >
+      <Image fit="cover" src={thumb.imageSrc} caption={thumb.caption} />
+      <Box
+        pad="xsmall"
+        background="rgba(255, 255, 255, .8)"
+        style={{ position: 'absolute', bottom: 6 }}
+      >
+        <Text size="small" color="dark-1">
+          {thumb.caption}
+        </Text>
+      </Box>
+    </Box>
+  );
+}
+
+function VideoLayer({ thumb, onClose }) {
+  if (!thumb) {
+    return null;
+  }
+
+  return (
+    <Layer animation="fadeIn" onEsc={onClose} onClickOutside={onClose}>
+      <Box width="large" height="medium">
+        <ReactPlayer
+          width="100%"
+          height="100%"
+          url={thumb.videoSrc}
+          controls
+          playing
+          playerOptions={{ fullscreen: false }}
+        />
+      </Box>
+    </Layer>
+  );
+}
+
+function VideoSlider({ large }) {
+  const [showVideo, setShowVideo] = useState(null);
+
+  if (large) {
+    return (
+      <Box>
+        <Box direction="row" align="start" justify="center" gap="medium">
+          {videoThumbs.map((thumb) => (
+            <Box key={thumb.caption} onClick={() => setShowVideo(thumb)}>
+              <VideoThumb large={large} thumb={thumb} />
+            </Box>
+          ))}
+        </Box>
+
+        {showVideo && (
+          <Layer position="top-right" modal={false} plain>
+            <Button
+              icon={<Close color="white" />}
+              onClick={() => setShowVideo(null)}
+              style={{ zIndex: 999 }}
+            />
+          </Layer>
+        )}
+
+        <VideoLayer onClose={() => setShowVideo(null)} thumb={showVideo} />
+      </Box>
+    );
+  }
+
+  return (
+    <Box>
+      <Slider {...sliderSettings}>
+        {videoThumbs.map((thumb) => (
+          <Box key={thumb.caption} onClick={() => setShowVideo(thumb)}>
+            <VideoThumb
+              onClick={() => setShowVideo(thumb)}
+              large={large}
+              thumb={thumb}
+            />
+          </Box>
+        ))}
+      </Slider>
+
+      {showVideo && (
+        <Layer position="bottom">
+          <Button
+            icon={<Close color="dark-1" />}
+            label="CLOSE"
+            onClick={() => setShowVideo(null)}
+          />
+        </Layer>
+      )}
+
+      <VideoLayer onClose={() => setShowVideo(null)} thumb={showVideo} />
+    </Box>
   );
 }
 

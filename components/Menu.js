@@ -156,7 +156,7 @@ export const SocialMenu = ({ mobileMenu, fixed, ...otherProps }) => {
         style={menuStyle}
       >
         {socialMenuLinks.map((item) => (
-          <Link href={item.link}>
+          <Link key={item.icon} href={item.link}>
             <Anchor as="span" key={item.link} style={{ height: 24 }}>
               <Image width="24px" src={mobileMenu ? item.iconp : item.icon} />
             </Anchor>

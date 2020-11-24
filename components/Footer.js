@@ -76,7 +76,7 @@ const Footer = ({ t }) => {
             {t('follow-us')}
           </Text>
           {footerLinks.map((link) => (
-            <Link href={link.value}>
+            <Link key={link.label} href={link.value}>
               <Anchor
                 as="span"
                 key={link.value}

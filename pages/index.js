@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { Anchor, Box, Heading, Image, Text, Button } from 'grommet';
 import { Row, Col } from 'react-grid-system';
 import { Link as ScrollLink } from 'react-scroll';
