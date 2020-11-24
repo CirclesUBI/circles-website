@@ -52,12 +52,13 @@ export default function Donate() {
               <Paragraph>
                 Our legal entity is a cooperative: The Circles Coop eG (in
                 Gründung). It is founded by the team who have been most busy
-                during the last years working on Circles.{' '}
+                during the last years working on implementing varying features
+                that compose Circles ecosystem.{' '}
               </Paragraph>
 
               <Paragraph>
-                We are dedicated to improve Circles toward a direction which
-                provides access to a community based basic income for many,
+                We are dedicated to continue improving Circles; with motivations
+                to provide access to a community based basic income for many,
                 around the entire globe.
               </Paragraph>
 
