@@ -50,15 +50,19 @@ export default function Donate() {
             <Box margin={{ bottom: 'small' }}>
               <Heading level={1}>Donate to Circles</Heading>
               <Paragraph>
-                Our legal entity is a cooperative, the Circles Coop eG (in
-                Gründung). It is founded by the team who was most busy in the
-                last years on Circles and we are dedicated to improve Circles in
-                a direction which give access to a community based basic income
-                for many, around the globe.
+                Our legal entity is a cooperative: The Circles Coop eG (in
+                Gründung). It is founded by the team who have been most busy
+                during the last years working on Circles.{' '}
               </Paragraph>
 
               <Paragraph>
-                This huge and long work needs your support too.
+                We are dedicated to improve Circles toward a direction which
+                provides access to a community based basic income for many,
+                around the entire globe.
+              </Paragraph>
+
+              <Paragraph>
+                Therefore this huge and long work needs your support too.
               </Paragraph>
             </Box>
 
