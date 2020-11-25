@@ -107,7 +107,7 @@
       "answer": [
         "Hay dos formas de proteger su cuenta: guardar su frase inicial y vincular otros dispositivos.",
         "Guardar su frase inicial: recomendamos ir a la página de su perfil en la aplicación y escribir su frase de 24 palabras, esto se llama su frase inicial y debe guardarla en un lugar seguro. Puede pensar en ella como una contraseña: la usamos para generar sus claves de Circles.",
-        "Por razones de seguridad, su frase inicial normalmente se mantiene oculta. Puede revelarlo haciendo clic en "Exportar su frase inicial" en su página de perfil.",
+        "Por razones de seguridad, su frase inicial normalmente se mantiene oculta. Puede revelarlo haciendo clic en 'Exportar su frase inicial' en su página de perfil.",
         "Vinculación de dispositivos: también recomendamos agregar un segundo dispositivo lo antes posible, por ejemplo, tanto su teléfono como su computadora. Agregar un dispositivo facilita la reconexión a su cuenta si un dispositivo falla por cualquier motivo. Puede agregar un dispositivo yendo a su perfil en la aplicación y haciendo clic en "Agregar nuevo dispositivo".”"
       ]
     },
@@ -115,7 +115,7 @@
       "topic": "Seguridad",
       "question": "Me desconecté o perdí mi dispositivo, ¿qué puedo hacer?",
       "answer": [
-        "Si ha perdido uno de sus dispositivos o restableció su navegador, aún podrá recuperar su cuenta con su frase inicial. Puede ir a la aplicación Circles y hacer clic en "Conectar a una cuenta existente" y luego en "Restaurar desde la frase inicial".",
+        "Si ha perdido uno de sus dispositivos o restableció su navegador, aún podrá recuperar su cuenta con su frase inicial. Puede ir a la aplicación Circles y hacer clic en 'Conectar a una cuenta existente' y luego en 'Restaurar desde la frase inicial'.",
         "Si tienes un segundo dispositivo que está actualmente conectado a tu cuenta de Circles, aún puedes acceder a tu cuenta desde allí. También debe quitar el dispositivo que se perdió o que se desconectó. Puede eliminar los dispositivos perdidos de su página de perfil en la aplicación.",
         "Si no ha guardado su frase inicial y no tiene acceso a otro dispositivo en el que haya iniciado sesión en Circles, no podremos recuperar su cuenta. Le invitamos a crear una nueva cuenta. Tenga en cuenta que si su caja fuerte y el token de Circles no se implementaron, su cuenta nunca se creó por completo y no hay nada que restaurar."
       ]
@@ -132,7 +132,7 @@
       "topic": "Red de Confianza",
       "question": "¿Cómo funciona la confianza en los Circles?",
       "answer": [
-        "Puedes enviar Circles a alguien que confíe en ti. Esto significa que enviar Circles a alguien es la dirección contraria a confiar en alguien, por ejemplo. "Confío en ti, por lo tanto, acepto tus Circles" o "Tú confías en mí, por lo tanto, puedo enviarte mis Circles".",
+        "Puedes enviar Circles a alguien que confíe en ti. Esto significa que enviar Circles a alguien es la dirección contraria a confiar en alguien, por ejemplo. 'Confío en ti, por lo tanto, acepto tus Circles' o 'Tú confías en mí, por lo tanto, puedo enviarte mis Circles'.",
         "Cuando confías en alguien, también puedes enviar Circles a personas en su red de confianza, sin confiar directamente en esas personas. Esto se denomina confianza transitiva y permite que la red de Circles crezca más fácilmente.",
         "Ejemplo: es posible que la persona no confíe en ti, pero resulta que tienes la ficha de otra persona además de la tuya. Aún puede pagarle a esa persona con el token de esta persona. <em> Ejemplo: A quiere enviar 10 Circles a B, B no confía en A pero B confía en C, A posee 10 tokens C y, por lo tanto, puede enviar estos 10 tokens C a B </em> ",
         "Puede poseer varios tokens de Circles diferentes. No necesariamente está enviando sus propios tokens a alguien cuando envía Circles. Estás enviando los que tienes un saldo lo suficientemente alto de + que tiene un límite de confianza lo suficientemente grande ".,
@@ -162,7 +162,7 @@
       "topic": "Red de Confianza",
       "question": "¿Por qué la aplicación dice que no puedo transferir Circles?",
       "answer": [
-        "A veces, no hay un camino en el que podamos enviar tokens entre tú y otra persona en el ecosistema de Circles. Cada conexión de confianza en Circles no solo tiene una dirección ("desde", "hasta"), sino también un límite. Una vez que se alcanza el límite, no se pueden enviar más Circles a lo largo de esa conexión de confianza hasta que se devuelvan algunos Circles. En una economía de Circles saludable, no alcanzaremos estos límites con mucha frecuencia, pero aún puede suceder de vez en cuando.",
+        "A veces, no hay un camino en el que podamos enviar tokens entre tú y otra persona en el ecosistema de Circles. Cada conexión de confianza en Circles no solo tiene una dirección ('desde', 'hasta'), sino también un límite. Una vez que se alcanza el límite, no se pueden enviar más Circles a lo largo de esa conexión de confianza hasta que se devuelvan algunos Circles. En una economía de Circles saludable, no alcanzaremos estos límites con mucha frecuencia, pero aún puede suceder de vez en cuando.",
         "Los límites de confianza lo protegen de perder todos sus propios tokens a través de transacciones transitivas. Esto puede suceder cuando alguien usa tus propios tokens para enviar Circles a través de ti a otra persona.",
         "Un límite de confianza es el porcentaje (0-100%) del suministro de sus Circles que está dispuesto a mantener en las fichas de una persona determinada. <em> Ejemplo: confío en ti al 50%, la cantidad de Circles que he recibido desde que me registré es 100, por lo que estoy dispuesto a guardar un máximo de 50 de tus tokens </em>",
         "El límite predeterminado actual siempre se establece en 50%, que es muy alto y puede reducirse en versiones futuras."
