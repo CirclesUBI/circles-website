@@ -1,17 +1,17 @@
 
 {
-  "follow-us": "Follow us",
+  "follow-us": "Síguenos",
   "newsletter-title": "Newsletter",
-  "newsletter-text": "Sign up and receive news about Circles directly to your email",
-  "newsletter-input-placeholder": "Enter your email",
-  "newsletter-signup-button-label": "Sign up",
-  "newsletter-gdpr-check": "GDPR | Yes, please email me Circles updates",
-  "links-title": "Helpful Links",
-  "links-wallet": "Wallet",
-  "links-whitepaper": "White Paper",
-  "links-contact": "Contact",
-  "links-donate": "Donate",
-  "links-faq": "FAQ",
-  "links-privacy-policy": "Privacy Policy",
-  "links-terms": "Terms"
+  "newsletter-text": "Regístrese y reciba noticias sobre Circles directamente en su correo electrónico",
+  "newsletter-input-placeholder": "Introduce tu correo electrónico",
+  "newsletter-signup-button-label": "Regístrate",
+  "newsletter-gdpr-check": "GDPR | Sí, envíeme un correo electrónico con las actualizaciones de Circles",
+  "links-title": "Enlaces Útiles",
+  "links-wallet": "Billetera",
+  "links-whitepaper": "WhitePaper",
+  "links-contact": "Contacto",
+  "links-donate": "Donar",
+  "links-faq": "Preguntas frecuentes",
+  "links-privacy-policy": "Política de privacidad",
+  "links-terms": "Condiciones"
 }
