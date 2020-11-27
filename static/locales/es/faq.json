@@ -1,0 +1,231 @@
+{
+  "meta": "Circles IBU | Preguntas frecuentes",
+  "title": "¿Como podemos ayudarte?",
+  "placeholder": "Describe tu pregunta",
+  "items": [
+    {
+      "topic": "Inducción",
+      "question": "¿Cómo verifico mi cuenta?",
+      "answer": [
+        "Para obtener la verificación, deben contar con la confianza de tres personas que ya verificado en el sistema de Circles.",
+        "Tenga en cuenta que las personas no deben verificar entre sí si no se han conocido en persona. Es muy fácil para alguien atacar la red si puede ganarse la confianza de extraños en línea. Potencialmente, podría perder sus Circles por una cuenta falsa."
+      ]
+    },
+    {
+      "topic": "Inducción",
+      "question": "¿Cómo empiezo a recibir un ingreso básico con Circles?",
+      "answer": [
+        "Después de crear una nueva billetera, necesitará 3 conexiones de confianza entrantes para verificar su cuenta. Puede solicitar confianza compartiendo un enlace a su perfil o en persona haciendo que alguien escanee el código QR de su perfil.",
+        "Tenemos reuniones regulares en Berlín durante nuestra fase de prueba, donde puedes conocer al equipo y conectarte con otros usuarios de Circles en persona.",
+        "Una vez que 3 personas hayan confiado en tu perfil, la aplicación implementará automáticamente dos contratos inteligentes para que uses Circles: tu Safe y tu propio token de Circles. Recibirás 50 Circles como pago inicial y seguirás recibiendo una IBU regular."
+      ]
+    },
+    {
+      "topic": "Inducción",
+      "question": "¿Qué pasa si no conozco a nadie de confianza en el sistema de Circles que pueda verificarme?",
+      "answer": [
+        "Si está realmente ansioso por comenzar algo en su ubicación con amigos, puede acceder a Circles sin 3 conexiones de confianza y comenzar en su comunidad:",
+        "Envíe 0.1 xDAI a su cuenta (la dirección del enlace que aparece cuando comparte SU perfil). La dirección se verá así: 0xeb9784F6A6e3d03466974Cb3a5a77c79afbA14e8).",
+        "Si eso no funciona, intente enviar 0.2 xDAI ya que parece fluctuar.",
+        "Pero nuevamente, esto no será útil si no agrega amigos, negocios, cooperativas, agricultores, etc. que también estén dispuestos a intercambiar productos y servicios con usted, realizar transacciones con usted y construir su red de Circles."
+      ]
+    },
+    {
+      "topic": "Inducción",
+      "question": "¿Qué pasa si confié en una cuenta por error o ya no confío en alguien del sistema?",
+      "answer": [
+        "Puede ir al perfil de ese usuario, tocar el icono de confianza junto a su nombre y revocar la confianza. Le recomendamos que haga esto lo antes posible para evitar perder sus tokens en su cuenta."
+      ]
+    },
+    {
+      "topic": "Inducción",
+      "question": "¿Qué es una Safe Circles?",
+      "answer": [
+        "Tu Circles Safe es una caja fuerte y un contrato inteligente que contiene las claves de su cuenta.",
+        "Puede agregar varios dispositivos, como su computadora o teléfono, a su Safe. Agregar dispositivos a su caja fuerte puede ayudar con la recuperación de la cuenta si pierde su frase inicial.",
+        "<a href='https://docs.gnosis.io/safe/' target='_blank'>Leer más sobre Safes</a>"
+      ]
+    },
+    {
+      "topic": "UBI",
+      "question": "¿Cómo se producen mis Circles?",
+      "answer": [
+        "Los tokens de Circles se crean automáticamente mediante los contratos inteligentes de Circles. Todos los días, cuando abre la aplicación, verifica los contratos inteligentes en busca de actualizaciones. En este momento, los Circles se pagan a una tasa de aproximadamente 8 por semana, inflando un 7% por año.",
+        "El dinero no proviene de ningún lugar fuera de los contratos; por ejemplo, no recolectamos ni depositamos euros en el sistema. Tampoco se extrae de la misma manera que algunas criptomonedas, donde se paga a las personas que mantienen la red. En cambio, se le paga a Circles todos los días como recompensa por ser parte de la comunidad, y se vuelve más valioso con el tiempo a medida que la comunidad de Circles se fortalece."
+      ]
+    },
+    {
+      "topic": "IBU",
+      "question": "¿Para qué sirven los círculos?",
+      "answer": [
+        "Circles es un sistema económico alternativo que actúa un poco como un ingreso básico. En lugar de esperar a alguien más, podemos construir nuestros propios sistemas económicos para apoyarnos unos a otros y, de hecho, darnos unos a otros un ingreso básico. Circles está destinado a ser un nuevo tipo de intercambio, completamente diferente a cualquier tipo de dinero en uso hoy. Viene incondicionalmente y crece en valor según las comunidades. Los tokens de Circles se mueven a través de las comunidades a través de "conexiones de confianza".",
+        "Los objetivos de esto son fomentar las interacciones económicas locales y valorar aquellas cosas que no se ven, son invisibles o no se valoran en nuestro sistema actual. Circles está construyendo nuevas redes para reconocer aquellas cosas fundamentales que en el sistema actual no tienen valor en euros."
+      ]
+    },
+    {
+      "topic": "IBU",
+      "question": "¿No es todo esto un poco loco? ¿Todo este tiempo y esfuerzo solo para poder pagar a algunos lectores de cartas del tarot?",
+      "answer": [
+        "Somos conscientes de que estamos trabajando en un enfoque radicalmente nuevo. Creemos que nuestra sociedad se encuentra en una crisis tan compleja, que solo algo radical puede darnos la oportunidad de evitar un colapso. En realidad, la crisis de la corona hizo que la importancia de nuestros dos fundamentos principales fuera nuevamente visible para muchas personas: la renta básica y la importancia de los valores no materiales, como el cuidado y la ayuda mutua. Ahora está claro para muchas más personas que la renta básica es la solución inevitable para las crisis que enfrentamos y que enfrentaremos en una escala aún más severa en los próximos años."
+      ]
+    },
+    {
+      "topic": "IBU",
+      "question": "¿Es Circles una renta básica real?",
+      "answer": [
+        "Es un ingreso básico en el sentido de que si estás en el sistema, lo obtendrás sin más condiciones, y todos los días obtendrán la misma parte de este pastel económico. Pero al principio, esperamos que sea más como dinero de bolsillo básico. ¡Y esto es realmente importante en las primeras etapas del sistema! Necesitamos dejar que los Circles crezcan de forma natural, de modo que la cantidad de Circles que se creen todos los días sea proporcional a la cantidad de bienes y servicios que se pueden intercambiar con los Circles. Más adelante, si el sistema se usa ampliamente en una comunidad, esperamos que pueda cubrir las necesidades básicas de uno.",
+        "Los Circles también se consideran ingresos básicos en el sentido de que no son para ahorrar. La oferta de fichas de Circles es inflacionaria, lo que significa que si se aferran a sus Circles durante mucho tiempo, en realidad terminan valiendo menos que cuando los obtuvieron. El objetivo de esto es que usted y su red estén motivados para usar sus Circles en lugar de sentarse en ellos, lo que respalda un sistema económico vital y fluido en lugar de uno estancado. ",
+        "Otra forma de pensar en esto es que los Circles están decayendo, lo cual también es una parte importante del ecosistema de los Circles. Si tenemos más dinero que recursos disponibles, el dinero pierde su valor, el sistema puede perder su equilibrio y luego posiblemente colapsar. Entonces, cuando los Circles no son necesarios, decaen para no bloquear el espacio. Como en un jardín, las plantas más viejas y moribundas hacen espacio para el nuevo crecimiento y lo alimentan."
+      ]
+    },
+    {
+      "topic": "IBU",
+      "question": "¿Por qué es bueno tener una economía complementaria?",
+      "answer": [
+        "Piénselo de esta manera: los euros y el estado y el sistema monetario que rigen los grandes bancos es como una bicicleta de carreras. Es bueno para algunos propósitos, pero no para todos. Si estás en carreteras embarradas o resbaladizas y quieres llevar a tu hijo y a tu perro contigo, necesitarás otro tipo de bicicleta: una bicicleta complementaria. Del mismo modo, los Circles son una moneda complementaria, un tipo de dinero que no está destinado a la acumulación, sino a la construcción de la comunidad local."
+      ]
+    },
+    {
+      "topic": "IBU",
+      "question": "¿Por qué los Circles tienen valor?",
+      "answer": [
+        "El dinero es una especie de lenguaje. Estamos de acuerdo en su significado y ese acuerdo es la razón por la que tiene valor. Puede que no lo parezca, pero funciona igual con Euros o con Bitcoin.",
+        "El valor de los Circles se basa en el valor que las personas le dan y ofrecen a la comunidad. Si vendes tu bicicleta por Circles, o traduces para alguien en el puesto de trabajo, y te pagan con Circles, este valor entra en el sistema y permanece en la comunidad y circula. Creemos que este es un "valor" tan real detrás de nuestra moneda como las reservas de oro detrás del euro, un valor que nunca hemos visto y nunca veremos." 
+      ]
+    },
+    {
+      "topic": "IBU",
+      "question": "¿A quién puedo pagar con Circles?",
+      "answer": [
+        "Puede pagar a personas con las que tenga una conexión de confianza. Estas son las personas que confían en usted, o las personas con las que tiene una persona de confianza común.",
+        "Confianza significa que confían en los Circles que se le enviaron o, metafóricamente, le dan crédito. Debes usar tu confianza en el sistema de Circles con cautela, tal vez no de la forma en que estás acostumbrado en las redes sociales, donde también haces amigos de las personas incluso si no las conoces tan bien. Ese tipo de comportamiento conduciría con el tiempo a la pérdida de valor en sus ingresos básicos, y tal vez no solo para usted, sino también para su red. Si confía en personas al azar, podría terminar rápidamente en una situación en la que las personas reales, cuya conexión significa un beneficio económico real para usted, revocarán su confianza en usted para proteger el valor de sus ingresos básicos."
+      ]
+    },
+    {
+      "topic": "Seguridad",
+      "question": "¿Cómo aseguro mi cuenta de Circles?",
+      "answer": [
+        "Hay dos formas de proteger su cuenta: guardar su frase inicial y vincular otros dispositivos.",
+        "Guardar su frase inicial: recomendamos ir a la página de su perfil en la aplicación y escribir su frase de 24 palabras, esto se llama su frase inicial y debe guardarla en un lugar seguro. Puede pensar en ella como una contraseña: la usamos para generar sus claves de Circles.",
+        "Por razones de seguridad, su frase inicial normalmente se mantiene oculta. Puede revelarlo haciendo clic en 'Exportar su frase inicial' en su página de perfil.",
+        "Vinculación de dispositivos: también recomendamos agregar un segundo dispositivo lo antes posible, por ejemplo, tanto su teléfono como su computadora. Agregar un dispositivo facilita la reconexión a su cuenta si un dispositivo falla por cualquier motivo. Puede agregar un dispositivo yendo a su perfil en la aplicación y haciendo clic en "Agregar nuevo dispositivo".”"
+      ]
+    },
+    {
+      "topic": "Seguridad",
+      "question": "Me desconecté o perdí mi dispositivo, ¿qué puedo hacer?",
+      "answer": [
+        "Si ha perdido uno de sus dispositivos o restableció su navegador, aún podrá recuperar su cuenta con su frase inicial. Puede ir a la aplicación Circles y hacer clic en 'Conectar a una cuenta existente' y luego en 'Restaurar desde la frase inicial'.",
+        "Si tienes un segundo dispositivo que está actualmente conectado a tu cuenta de Circles, aún puedes acceder a tu cuenta desde allí. También debe quitar el dispositivo que se perdió o que se desconectó. Puede eliminar los dispositivos perdidos de su página de perfil en la aplicación.",
+        "Si no ha guardado su frase inicial y no tiene acceso a otro dispositivo en el que haya iniciado sesión en Circles, no podremos recuperar su cuenta. Le invitamos a crear una nueva cuenta. Tenga en cuenta que si su caja fuerte y el token de Circles no se implementaron, su cuenta nunca se creó por completo y no hay nada que restaurar."
+      ]
+    },
+    {
+      "topic": "Seguridad",
+      "question": "¿Qué información recopila Circles sobre mí?",
+      "answer": [
+        "Los únicos datos que almacenamos son su dirección de correo electrónico y nombre de usuario, y nunca los compartiremos con nadie. La clave privada de su billetera se encuentra sin conexión en el navegador de su dispositivo y no se comparte con nosotros.",
+        "Los datos registrados por blockchains son de acceso público e incluyen la red de confianza y su historial de transacciones, pero no están asociados públicamente con su nombre de usuario o dirección de correo electrónico."
+      ]
+    },
+    {
+      "topic": "Red de Confianza",
+      "question": "¿Cómo funciona la confianza en los Circles?",
+      "answer": [
+        "Puedes enviar Circles a alguien que confíe en ti. Esto significa que enviar Circles a alguien es la dirección contraria a confiar en alguien, por ejemplo. 'Confío en ti, por lo tanto, acepto tus Circles' o 'Tú confías en mí, por lo tanto, puedo enviarte mis Circles'.",
+        "Cuando confías en alguien, también puedes enviar Circles a personas en su red de confianza, sin confiar directamente en esas personas. Esto se denomina confianza transitiva y permite que la red de Circles crezca más fácilmente.",
+        "Ejemplo: es posible que la persona no confíe en ti, pero resulta que tienes la ficha de otra persona además de la tuya. Aún puede pagarle a esa persona con el token de esta persona. <em> Ejemplo: A quiere enviar 10 Circles a B, B no confía en A pero B confía en C, A posee 10 tokens C y, por lo tanto, puede enviar estos 10 tokens C a B </em> ",
+        "Puede poseer varios tokens de Circles diferentes. No necesariamente está enviando sus propios tokens a alguien cuando envía Circles. Estás enviando los que tienes un saldo lo suficientemente alto de + que tiene un límite de confianza lo suficientemente grande ".,
+        "Lea el <a href='https://handbook.joincircles.net/about/whitepaper.html' target='_blank'> documento técnico de los Circles </a> para obtener más información sobre las transacciones transitivas."
+      ]
+    },
+    {
+      "topic": "Red de Confianza",
+      "question": "¿Por qué no debería confiar en todas?",
+      "answer": [
+        "Pista: ¡definitivamente no deberías! :-)",
+        "Al confiar en las personas, estás dando tu consentimiento para aceptar los Circles que se crean para ellos a cambio de los Circles que se crean para ti. Si confías en cuentas falsas o en personas que dejarán de usar y abandonarán los Circles, corres el riesgo de quedarte atrapado en la posesión de un montón de Circles creados para ellos que no puedes gastar en ningún lado. Si otras personas de tu red ven que confías en otras personas de manera imprudente, es posible que se sientan motivadas a revocar la confianza que tienen en ti, ya que también corren el riesgo de recibir Circles falsos. Puede pensar en esto como un sistema inmunológico, aislando partes de la red que no son saludables.",
+        "Donde hay confianza, hay crédito. Las personas de confianza son personas creíbles, es por eso que debes confiar solo después de considerar el riesgo que corres tú, tu empresa o tu comunidad. La última crisis económica ocurrió porque el crédito se distribuyó sin consideración. Cuando la gente se dio cuenta de que no había nada detrás de esos créditos, todo el sistema colapsó. Esta fue una forma irresponsable de generar confianza y esto es exactamente lo que queremos evitar en Circles. En nuestro sistema, es su propio interés utilizar su confianza con cuidado. Si es descuidado con la confianza, no perjudicará a todo el sistema a la vez, más que nada, personalmente. En realidad, esto, la forma en que se implementa y programa el sistema de confianza en Circles, es el núcleo de nuestro concepto, y nuestra forma de pasar por el cuello de botella más difícil de una criptomoneda de ingresos básicos: ¿cómo se le da valor al dinero que viene gratis?",
+        "El secreto es, por supuesto, que en realidad no es gratis. En lugar de provenir de la ciudadanía, o de tener los documentos correctos, este ingreso básico proviene de la confianza de una comunidad."
+      ]
+    },
+    {
+      "topic": "Red de Confianza",
+      "question": "¿En quién debo confiar?",
+      "answer": [
+        "Para construir un sistema de ingresos básico estable y vivo con Circles, debe confiar principalmente en las personas que aportan valor al sistema. Idealmente, debes confiar en las personas que venderán cupcakes o su bicicleta para los Circles, que ayudarán a sus amigos a moverse y se les pagará por eso con Circles, etc. Si tenemos suficiente de este tipo de energía en el sistema, despegará y volar, y una vez que eso suceda, podremos apoyar mejor a quienes realmente necesitan este tipo de ingresos básicos, pero no están en condiciones de dar nada a cambio.",
+        "No lo olvide: los Circles se tratan de darse unos a otros unos ingresos básicos. Aquí también necesitamos donantes.
+"
+      ]
+    },
+    {
+      "topic": "Red de Confianza",
+      "question": "¿Por qué la aplicación dice que no puedo transferir Circles?",
+      "answer": [
+        "A veces, no hay un camino en el que podamos enviar tokens entre tú y otra persona en el ecosistema de Circles. Cada conexión de confianza en Circles no solo tiene una dirección ('desde', 'hasta'), sino también un límite. Una vez que se alcanza el límite, no se pueden enviar más Circles a lo largo de esa conexión de confianza hasta que se devuelvan algunos Circles. En una economía de Circles saludable, no alcanzaremos estos límites con mucha frecuencia, pero aún puede suceder de vez en cuando.",
+        "Los límites de confianza lo protegen de perder todos sus propios tokens a través de transacciones transitivas. Esto puede suceder cuando alguien usa tus propios tokens para enviar Circles a través de ti a otra persona.",
+        "Un límite de confianza es el porcentaje (0-100%) del suministro de sus Circles que está dispuesto a mantener en las fichas de una persona determinada. <em> Ejemplo: confío en ti al 50%, la cantidad de Circles que he recibido desde que me registré es 100, por lo que estoy dispuesto a guardar un máximo de 50 de tus tokens </em>",
+        "El límite predeterminado actual siempre se establece en 50%, que es muy alto y puede reducirse en versiones futuras."
+      ]
+    },
+    {
+      "topic": "General",
+      "question": "¿Qué blockchain está usando Circles?",
+      "answer": [
+        "Circles está usando la cadena de bloques xDAI. xDAI es funcionalmente casi idéntico a Ethereum, pero tiene costos de transacción sustancialmente más bajos al ser operado por una cantidad limitada de validadores en lugar de usar una “prueba de trabajo” que consume mucha energía y costos. Puede obtener más información sobre xDai <a href='https://www.xdaichain.com' target='_blank'> aquí </a>."
+      ]
+    },
+    {
+      "topic": "General",
+      "question": "¿Puedo hacerme rico con Circles, como los primeros receptores de Bitcoin?",
+      "answer": [
+        "Realmente no. Bitcoin se construye como el oro: se basa en la escasez y hay una cantidad limitada de bitcoins que se crearán alguna vez. Por eso es bueno para almacenar valor. Euros, dólares y otros sistemas monetarios a los que podría estar acostumbrado son muy similares en este sentido: su creación está limitada por los gobiernos.",
+        "Circles tiene otro enfoque: es una moneda diseñada para circular, no para almacenar. Nosotros, como personas, y la economía necesitamos ambos tipos de monedas. Los Circles están optimizados no para almacenar valor, sino para intercambiarlo."
+      ]
+    },
+    {
+      "topic": "General",
+      "question": "Si es de código abierto, ¿alguien puede piratearlo y tomar mi dinero?",
+      "answer": [
+        "¡Tal vez! Pero hemos tratado de ponérselo difícil. El principal riesgo que debe conocer es que tiene una frase secreta de 24 palabras: si pierde esta frase o la comparte accidentalmente, puede perder el acceso a sus Circles. Puede leer más sobre la seguridad de la cuenta en las preguntas frecuentes de nuestra aplicación."
+      ]
+    },
+    {
+      "topic": "General",
+      "question": "¿Qué tienen los Circles en común con la permacultura?",
+      "answer": [
+        "El sistema monetario actual es como la agricultura intensiva industrial. Todo el paisaje está produciendo el mismo cultivo, es eficiente de cierta manera: puede cosechar todo al mismo tiempo, solo necesita un tipo de máquina y solo un distribuidor. Pero también necesitarás muchos pesticidas y en términos ecológicos esta tierra estará casi muerta. Si aparece una nueva plaga resistente a sus pesticidas, es probable que pierda su producción. Así es básicamente como funciona nuestro actual sistema monetario gobernado por el estado y basado en la deuda.",
+        "Al introducir gradualmente monedas complementarias, como los Circles, podemos hacer que el sistema sea más diverso. Sí, será torpe (necesitas aprender Circles, al igual que aprendiste airbnb y tu nuevo teléfono) pero el sistema económico en su conjunto se volverá más estable. Al igual que con la agricultura orgánica de permacultura: si pierde sus campos de fresas, todavía tendrá sus rosas, papas y cannabis."
+      ]
+    },
+    {
+      "topic": "General",
+      "question": "¿Qué tienen los Circles en común con el feminismo?",
+      "answer": [
+        "Creamos Circles para empoderar a las comunidades más pequeñas y equilibrar las desigualdades, algunas de las cuales tienen su origen en el sistema gobernante que no paga a las mujeres por igual. El sistema económico dominante devalúa el trabajo de cuidados y el trabajo que históricamente han realizado las mujeres. Circles está diseñado para reconocer y valorar este tipo de trabajo, como cuidar a la mascota de tu amigo o cuidar niños, que es parte integral de las comunidades, pero a menudo no es remunerado. Al pagar estos servicios con Circles, les damos un nuevo nivel de visibilidad y reconocimiento, y cuando las personas pueden pagar con Circles en librerías, cafés y otros lugares, los pagos realizados por el trabajo de cuidado también se vuelven más legítimos."
+      ]
+    },
+    {
+      "topic": "General",
+      "question": "Dice que el euro no es democrático ni participativo. ¿Por qué?",
+      "answer": [
+        "Las decisiones sobre el euro se toman en grupos cerrados con planificación central, bancos privados y entidades estatales y la gente no tiene visión general ni control sobre ellos. Esas entidades toman decisiones para emitir euros y a qué tasa, sin tener en cuenta directamente ni siquiera conocimiento de ti, tu labor de cuidado o lo que necesitas para vivir una vida sin miedo."
+      ]
+    },
+    {
+      "topic": "General",
+      "question": "¿Y cómo es Circles democrático, participativo? Veo cómo administrar un club de excursionistas puede ser democrático y participativo, pero ¿una moneda? ¿Cuáles son los puntos de decisión?",
+      "answer": [
+        "Usar euros como pago es una especie de aspiradora. Hay deudas en las máquinas de los agricultores, en los camiones de los conductores, en las neveras de los supermercados, y si pagamos con euros la fresa que resulta, una gran parte del valor de lo que producimos acaba en el bancos que dieron esas líneas de crédito. En otras palabras, este valor sale de la economía local real. Si usamos Circles y participamos en una economía local, el dinero y el valor permanecen cerca de nosotros y regresan más rápido. Esta es una de las ventajas más importantes de las monedas complementarias.",
+        "En el reverso de la aspiradora del euro, un sistema monetario de arriba hacia abajo que absorbe el valor creado localmente, los Circles son un sistema de dinero de abajo hacia arriba."
+      ]
+    },
+    {
+      "topic": "General",
+      "question": "¿Tengo que pagar impuestos sobre los Circles?",
+      "answer": [
+        "Si eres una empresa, o aceptas Circles por algún tipo de bienes o servicios, deberás pagar impuestos en euros como lo harías con cualquier otro tipo de ingresos: bitcoins, euros, dólares, etc."
+      ]
+    }
+  ]
+}
