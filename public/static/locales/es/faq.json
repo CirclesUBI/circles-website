@@ -47,7 +47,7 @@
       ]
     },
     {
-      "topic": "UBI",
+      "topic": "IBU",
       "question": "¿Cómo se producen mis Circles?",
       "answer": [
         "Los tokens de Circles se crean automáticamente mediante los contratos inteligentes de Circles. Todos los días, cuando abre la aplicación, verifica los contratos inteligentes en busca de actualizaciones. En este momento, los Circles se pagan a una tasa de aproximadamente 8 por semana, inflando un 7% por año.",
