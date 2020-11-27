@@ -65,6 +65,10 @@ export default function Donate() {
               <Paragraph>
                 Therefore this huge and long work needs your support too.
               </Paragraph>
+
+              <Paragraph>
+              We will make our business plan and our budget here transparent to show you how we are using your donation.
+              </Paragraph>
             </Box>
 
             <Box
