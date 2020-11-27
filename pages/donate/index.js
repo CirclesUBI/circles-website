@@ -67,7 +67,8 @@ export default function Donate() {
               </Paragraph>
 
               <Paragraph>
-              We will make our business plan and our budget here transparent to show you how we are using your donation.
+                We will make our business plan and our budget transparently
+                published here to show you how we are using your donation.
               </Paragraph>
             </Box>
 

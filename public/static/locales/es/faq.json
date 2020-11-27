@@ -58,7 +58,7 @@
       "topic": "IBU",
       "question": "¿Para qué sirven los círculos?",
       "answer": [
-        "Circles es un sistema económico alternativo que actúa un poco como un ingreso básico. En lugar de esperar a alguien más, podemos construir nuestros propios sistemas económicos para apoyarnos unos a otros y, de hecho, darnos unos a otros un ingreso básico. Circles está destinado a ser un nuevo tipo de intercambio, completamente diferente a cualquier tipo de dinero en uso hoy. Viene incondicionalmente y crece en valor según las comunidades. Los tokens de Circles se mueven a través de las comunidades a través de "conexiones de confianza".",
+        "Circles es un sistema económico alternativo que actúa un poco como un ingreso básico. En lugar de esperar a alguien más, podemos construir nuestros propios sistemas económicos para apoyarnos unos a otros y, de hecho, darnos unos a otros un ingreso básico. Circles está destinado a ser un nuevo tipo de intercambio, completamente diferente a cualquier tipo de dinero en uso hoy. Viene incondicionalmente y crece en valor según las comunidades. Los tokens de Circles se mueven a través de las comunidades a través de \"conexiones de confianza\".",
         "Los objetivos de esto son fomentar las interacciones económicas locales y valorar aquellas cosas que no se ven, son invisibles o no se valoran en nuestro sistema actual. Circles está construyendo nuevas redes para reconocer aquellas cosas fundamentales que en el sistema actual no tienen valor en euros."
       ]
     },
@@ -90,7 +90,7 @@
       "question": "¿Por qué los Circles tienen valor?",
       "answer": [
         "El dinero es una especie de lenguaje. Estamos de acuerdo en su significado y ese acuerdo es la razón por la que tiene valor. Puede que no lo parezca, pero funciona igual con Euros o con Bitcoin.",
-        "El valor de los Circles se basa en el valor que las personas le dan y ofrecen a la comunidad. Si vendes tu bicicleta por Circles, o traduces para alguien en el puesto de trabajo, y te pagan con Circles, este valor entra en el sistema y permanece en la comunidad y circula. Creemos que este es un "valor" tan real detrás de nuestra moneda como las reservas de oro detrás del euro, un valor que nunca hemos visto y nunca veremos." 
+        "El valor de los Circles se basa en el valor que las personas le dan y ofrecen a la comunidad. Si vendes tu bicicleta por Circles, o traduces para alguien en el puesto de trabajo, y te pagan con Circles, este valor entra en el sistema y permanece en la comunidad y circula. Creemos que este es un \"valor\" tan real detrás de nuestra moneda como las reservas de oro detrás del euro, un valor que nunca hemos visto y nunca veremos."
       ]
     },
     {
@@ -108,7 +108,7 @@
         "Hay dos formas de proteger su cuenta: guardar su frase inicial y vincular otros dispositivos.",
         "Guardar su frase inicial: recomendamos ir a la página de su perfil en la aplicación y escribir su frase de 24 palabras, esto se llama su frase inicial y debe guardarla en un lugar seguro. Puede pensar en ella como una contraseña: la usamos para generar sus claves de Circles.",
         "Por razones de seguridad, su frase inicial normalmente se mantiene oculta. Puede revelarlo haciendo clic en 'Exportar su frase inicial' en su página de perfil.",
-        "Vinculación de dispositivos: también recomendamos agregar un segundo dispositivo lo antes posible, por ejemplo, tanto su teléfono como su computadora. Agregar un dispositivo facilita la reconexión a su cuenta si un dispositivo falla por cualquier motivo. Puede agregar un dispositivo yendo a su perfil en la aplicación y haciendo clic en "Agregar nuevo dispositivo".”"
+        "Vinculación de dispositivos: también recomendamos agregar un segundo dispositivo lo antes posible, por ejemplo, tanto su teléfono como su computadora. Agregar un dispositivo facilita la reconexión a su cuenta si un dispositivo falla por cualquier motivo. Puede agregar un dispositivo yendo a su perfil en la aplicación y haciendo clic en \"Agregar nuevo dispositivo\".”"
       ]
     },
     {
@@ -135,7 +135,7 @@
         "Puedes enviar Circles a alguien que confíe en ti. Esto significa que enviar Circles a alguien es la dirección contraria a confiar en alguien, por ejemplo. 'Confío en ti, por lo tanto, acepto tus Circles' o 'Tú confías en mí, por lo tanto, puedo enviarte mis Circles'.",
         "Cuando confías en alguien, también puedes enviar Circles a personas en su red de confianza, sin confiar directamente en esas personas. Esto se denomina confianza transitiva y permite que la red de Circles crezca más fácilmente.",
         "Ejemplo: es posible que la persona no confíe en ti, pero resulta que tienes la ficha de otra persona además de la tuya. Aún puede pagarle a esa persona con el token de esta persona. <em> Ejemplo: A quiere enviar 10 Circles a B, B no confía en A pero B confía en C, A posee 10 tokens C y, por lo tanto, puede enviar estos 10 tokens C a B </em> ",
-        "Puede poseer varios tokens de Circles diferentes. No necesariamente está enviando sus propios tokens a alguien cuando envía Circles. Estás enviando los que tienes un saldo lo suficientemente alto de + que tiene un límite de confianza lo suficientemente grande ".,
+        "Puede poseer varios tokens de Circles diferentes. No necesariamente está enviando sus propios tokens a alguien cuando envía Circles. Estás enviando los que tienes un saldo lo suficientemente alto de + que tiene un límite de confianza lo suficientemente grande ",
         "Lea el <a href='https://handbook.joincircles.net/about/whitepaper.html' target='_blank'> documento técnico de los Circles </a> para obtener más información sobre las transacciones transitivas."
       ]
     },
@@ -154,8 +154,7 @@
       "question": "¿En quién debo confiar?",
       "answer": [
         "Para construir un sistema de ingresos básico estable y vivo con Circles, debe confiar principalmente en las personas que aportan valor al sistema. Idealmente, debes confiar en las personas que venderán cupcakes o su bicicleta para los Circles, que ayudarán a sus amigos a moverse y se les pagará por eso con Circles, etc. Si tenemos suficiente de este tipo de energía en el sistema, despegará y volar, y una vez que eso suceda, podremos apoyar mejor a quienes realmente necesitan este tipo de ingresos básicos, pero no están en condiciones de dar nada a cambio.",
-        "No lo olvide: los Circles se tratan de darse unos a otros unos ingresos básicos. Aquí también necesitamos donantes.
-"
+        "No lo olvide: los Circles se tratan de darse unos a otros unos ingresos básicos. Aquí también necesitamos donantes."
       ]
     },
     {
