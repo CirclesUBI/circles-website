@@ -94,7 +94,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             target="_blank"
             color={large ? 'white' : 'brand4'}
             margin={{
-              horizontal: 'large',
+              horizontal: '28px',
               vertical: large ? 'none' : 'medium',
             }}
           />
@@ -105,7 +105,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
               label={t(item.label)}
               color={large ? 'white' : 'brand4'}
               margin={{
-                horizontal: 'large',
+                horizontal: '28px',
                 vertical: large ? 'none' : 'medium',
               }}
             />
@@ -128,7 +128,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
               as="span"
               label={t(item.label)}
               color={large ? 'white' : 'brand4'}
-              margin={{ horizontal: 'large' }}
+              margin={{ horizontal: '28px' }}
             />
           </ScrollLink>
         )
@@ -158,7 +158,7 @@ export const SocialMenu = ({ mobileMenu, fixed, ...otherProps }) => {
         {socialMenuLinks.map((item) => (
           <Link key={item.icon} href={item.link}>
             <Anchor as="span" key={item.link} style={{ height: 24 }}>
-              <Image width="24px" src={mobileMenu ? item.iconp : item.icon} />
+              <Image width="28px" src={mobileMenu ? item.iconp : item.icon} />
             </Anchor>
           </Link>
         ))}
