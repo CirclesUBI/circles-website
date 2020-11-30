@@ -90,7 +90,7 @@
       ]
     },
     {
-      "topic": "Trust network - What does trust mean in Circles?",
+      "topic": "Trust Network - What does “Trust“ mean in Circles?",
       "question": "Whom can I pay with Circles?",
       "answer": [
         "You can pay people with whom you have a trust connection. These are the people who trust you, or the people with whom you have a common trusted person.",
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "topic": "Trust network - What does trust mean in Circles?",
+      "topic": "Trust Network - What does “Trust“ mean in Circles?",
       "question": "How does trust work in Circles?",
       "answer": [
         "You can send Circles to someone who trusts you. This means that sending Circles to someone is the reverse direction of trusting someone eg. “I trust you, therefore I accept your Circles” or “You trust me, therefore I can send my Circles to you.”",
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "topic": "Trust network - What does trust mean in Circles?",
+      "topic": "Trust Network - What does “Trust“ mean in Circles?",
       "question": "Why shouldn’t I trust everyone?",
       "answer": [
         "Hint: you definitely should not! :-)",
@@ -119,7 +119,7 @@
       ]
     },
     {
-      "topic": "Trust network - What does trust mean in Circles?",
+      "topic": "Trust Network - What does “Trust“ mean in Circles?",
       "question": "Whom should I trust?",
       "answer": [
         "In order to build a living, stable, basic income system with Circles, you should mainly trust people who bring value into the system. Ideally, you should trust people who will sell cupcakes or their bike for Circles, who will help their friends move and get paid for that with Circles, etc. If we have enough of this type of energy in the system, it will take off and fly, and once that happens, we will be able to better support those who truly need this kind of basic income, but are not in the position to give anything in return.",
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "topic": "Trust network - What does trust mean in Circles?",
+      "topic": "Trust Network - What does “Trust“ mean in Circles?",
       "question": "Why does the app say I can’t transfer Circles?",
       "answer": [
         "Sometimes, there is no path we can send tokens between you and another person in the Circles ecosystem. Every trust connection in Circles does not only have a direction (“from”, “to”) but also a limit. Once the limit has been hit, no more Circles can be sent along that trust connection until some Circles are sent back. In a healthy Circles economy, we won’t hit these limits very often, but it may still happen from time to time.",
@@ -230,7 +230,7 @@
     },
     {
       "topic": "Security and Technical Background",
-      "question": "Can I delete my account? What is “the liveness trigger",
+      "question": "Can I delete my account? What is “the liveness trigger“",
       "answer": [
         "Although you cannot currently delete your account, if you do not collect your basic income for 90 days it will stop being issued. This is referred to as a ”liveness trigger” also known as a “dead man’s switch”.",
         "If after 90 days you have not logged in, or manually called the contract, your basic income cannot be reactivated. You will, however, be able to trade your old tokens. If after 90 days of inactivity you wish to receive a basic income again, you will need to start a new Circles wallet."
