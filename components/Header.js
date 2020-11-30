@@ -38,7 +38,7 @@ const Header = ({ large, fixed }) => {
         </Box>
       </Col>
       <Col xs={large ? 6 : 4} md={8}>
-        {large && <Menu activeSection="donate" large />}
+        {large && <Menu large />}
       </Col>
       <Col xs={3} md={2}>
         {large ? (

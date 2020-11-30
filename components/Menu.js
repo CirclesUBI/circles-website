@@ -1,8 +1,8 @@
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Anchor, Box, Button, Image, Layer } from 'grommet';
+import { Anchor, Box, Button, Drop, Image, Layer, Menu } from 'grommet';
 import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
-import { useState } from 'react';
 
 import { withTranslation } from '../i18n';
 
@@ -12,13 +12,6 @@ const pageLinks = [
 ];
 
 const homeMenuLinks = [
-  {
-    label: 'Wallet',
-    value: 'wallet',
-    isExternal: true,
-    isRoute: false,
-    href: 'https://circles.garden',
-  },
   {
     label: 'About',
     value: 'about',
@@ -31,8 +24,18 @@ const homeMenuLinks = [
     isExternal: false,
     isRoute: false,
   },
-  { label: 'Community', value: 'community', isExternal: false, isRoute: false },
-  ...pageLinks,
+  {
+    label: 'Community',
+    value: 'community',
+    isExternal: false,
+    isRoute: false,
+  },
+  {
+    label: 'Team',
+    value: 'team',
+    isExternal: false,
+    isRoute: false,
+  },
 ];
 
 const notHomeMenuLinks = [
@@ -75,18 +78,95 @@ const socialMenuLinks = [
   },
 ];
 
+const HomeMenu = ({ item, t, large, isCurrentPage }) => {
+  const targetRef = useRef();
+  const [show, setShow] = useState(false);
+
+  return (
+    <Box
+      onMouseOver={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
+      onFocus={() => setShow(true)}
+      onBlur={() => setShow(false)}
+    >
+      <Box ref={targetRef}>
+        <Link key={item.value} href={item.value}>
+          <Anchor
+            as="span"
+            label={t(item.label)}
+            color={large ? 'white' : 'brand4'}
+            margin={{
+              horizontal: '28px',
+              vertical: large ? 'none' : 'medium',
+            }}
+            style={{
+              fontSize: 16,
+            }}
+          />
+        </Link>
+      </Box>
+      {isCurrentPage && show && targetRef.current && (
+        <Drop
+          align={{ top: 'bottom', left: 'left' }}
+          target={targetRef.current}
+          elevation="none"
+          background="none"
+          style={{ zIndex: 120 }}
+        >
+          <Box
+            // direction="row"
+            pad={{
+              left: 'medium',
+              top: 'small',
+              bottom: 'small',
+              right: 'small',
+            }}
+            background={{ opacity: 'weak' }}
+          >
+            {homeMenuLinks.map((subItem) => (
+              <ScrollLink
+                key={subItem.value}
+                activeClass="menuitem-active"
+                className="menuitem"
+                to={subItem.value}
+                spy
+                hashSpy
+                smooth
+                duration={500}
+                offset={-50}
+                style={{ marginTop: 8, marginBottom: 8 }}
+              >
+                <Anchor
+                  as="span"
+                  label={t(subItem.label)}
+                  color={large ? 'brand' : 'brand4'}
+                  margin={{ horizontal: 'small' }}
+                />
+              </ScrollLink>
+            ))}
+          </Box>
+        </Drop>
+      )}
+    </Box>
+  );
+};
+
 const MenuContent = withTranslation('header')(({ t, large }) => {
   let pathname;
   if (process.browser) {
     pathname = location.pathname;
   }
 
-  const menu = pathname && pathname === '/' ? homeMenuLinks : notHomeMenuLinks;
+  // const menu = pathname && pathname === '/' ? homeMenuLinks : notHomeMenuLinks;
+  const menu = notHomeMenuLinks;
+  const isHome = pathname && pathname === '/';
 
   return (
     <Box direction={large ? 'row' : 'column'} justify="center" pad="small">
       {menu.map((item, index) =>
-        item.isExternal ? (
+        item.value === '/' ? (
+          <HomeMenu item={item} t={t} large={large} isCurrentPage={isHome} />
+        ) : item.isExternal ? (
           <Anchor
             key={item.value}
             label={t(item.label)}
@@ -121,7 +201,6 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             smooth
             duration={500}
             offset={-50}
-            // onSetActive={(item) => setActiveSection(item)}
             style={large ? null : { marginTop: 16, marginBottom: 16 }}
           >
             <Anchor
@@ -167,7 +246,7 @@ export const SocialMenu = ({ mobileMenu, fixed, ...otherProps }) => {
   );
 };
 
-const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
+const MainMenu = ({ t, large, fixed, ...otherProps }) => {
   const [open, setOpen] = useState(false);
 
   Events.scrollEvent.register('begin', function (to, element) {
@@ -226,4 +305,4 @@ const Menu = ({ t, activeSection, large, fixed, ...otherProps }) => {
   );
 };
 
-export default Menu;
+export default MainMenu;
