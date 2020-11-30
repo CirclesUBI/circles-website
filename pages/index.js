@@ -183,6 +183,8 @@ function Home({ t }) {
               </Box>
 
               <Box
+                width="medium"
+                alignSelf="center"
                 pad={{ top: 'xlarge', bottom: 'medium' }}
                 id="about"
                 margin={{ top: getAboutImageTopMargin(screenClass) }}
