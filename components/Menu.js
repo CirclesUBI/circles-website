@@ -78,6 +78,37 @@ const socialMenuLinks = [
   },
 ];
 
+const SubMenuItems = ({ t, large }) => (
+  <Box
+    pad={{
+      left: '22px',
+      top: 'small',
+      bottom: 'small',
+      right: 'small',
+    }}
+  >
+    {homeMenuLinks.map((subItem) => (
+      <ScrollLink
+        key={subItem.value}
+        to={subItem.value}
+        spy
+        hashSpy
+        smooth
+        duration={500}
+        offset={-50}
+        style={{ marginTop: 8, marginBottom: 8 }}
+      >
+        <Anchor
+          as="span"
+          label={t(subItem.label)}
+          color={large ? 'brand' : 'brand3'}
+          margin={{ horizontal: 'small' }}
+        />
+      </ScrollLink>
+    ))}
+  </Box>
+);
+
 const HomeMenu = ({ item, t, large, isCurrentPage }) => {
   const targetRef = useRef();
   const [show, setShow] = useState(false);
@@ -97,7 +128,7 @@ const HomeMenu = ({ item, t, large, isCurrentPage }) => {
             color={large ? 'white' : 'brand4'}
             margin={{
               horizontal: '28px',
-              vertical: large ? 'none' : 'medium',
+              vertical: !isCurrentPage && !large ? 'medium' : 'none',
             }}
             style={{
               fontSize: 16,
@@ -105,48 +136,25 @@ const HomeMenu = ({ item, t, large, isCurrentPage }) => {
           />
         </Link>
       </Box>
-      {isCurrentPage && show && targetRef.current && (
-        <Drop
-          align={{ top: 'bottom', left: 'left' }}
-          target={targetRef.current}
-          elevation="none"
-          background="none"
-          style={{ zIndex: 120 }}
-        >
-          <Box
-            // direction="row"
-            pad={{
-              left: '22px',
-              top: 'small',
-              bottom: 'small',
-              right: 'small',
-            }}
-            background={{ opacity: 'weak' }}
-          >
-            {homeMenuLinks.map((subItem) => (
-              <ScrollLink
-                key={subItem.value}
-                activeClass="menuitem-active"
-                className="menuitem"
-                to={subItem.value}
-                spy
-                hashSpy
-                smooth
-                duration={500}
-                offset={-50}
-                style={{ marginTop: 8, marginBottom: 8 }}
-              >
-                <Anchor
-                  as="span"
-                  label={t(subItem.label)}
-                  color={large ? 'brand' : 'brand4'}
-                  margin={{ horizontal: 'small' }}
-                />
-              </ScrollLink>
-            ))}
-          </Box>
-        </Drop>
-      )}
+      {large
+        ? isCurrentPage &&
+          show &&
+          targetRef.current && (
+            <Drop
+              align={{ top: 'bottom', left: 'left' }}
+              target={targetRef.current}
+              elevation="xsmall"
+              background="none"
+              style={{ zIndex: 120 }}
+            >
+              <SubMenuItems t={t} large={large} />
+            </Drop>
+          )
+        : isCurrentPage && (
+            <Box pad={{ left: 'medium' }}>
+              <SubMenuItems t={t} large={large} />
+            </Box>
+          )}
     </Box>
   );
 };
@@ -165,7 +173,13 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
     <Box direction={large ? 'row' : 'column'} justify="center" pad="small">
       {menu.map((item, index) =>
         item.value === '/' ? (
-          <HomeMenu item={item} t={t} large={large} isCurrentPage={isHome} />
+          <HomeMenu
+            key={item.value}
+            item={item}
+            t={t}
+            large={large}
+            isCurrentPage={isHome}
+          />
         ) : item.isExternal ? (
           <Anchor
             key={item.value}
@@ -193,8 +207,6 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
         ) : (
           <ScrollLink
             key={item.value}
-            activeClass="menuitem-active"
-            className="menuitem"
             to={item.value}
             spy
             hashSpy
