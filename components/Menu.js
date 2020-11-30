@@ -116,7 +116,7 @@ const HomeMenu = ({ item, t, large, isCurrentPage }) => {
           <Box
             // direction="row"
             pad={{
-              left: 'medium',
+              left: '22px',
               top: 'small',
               bottom: 'small',
               right: 'small',
