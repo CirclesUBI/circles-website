@@ -53,6 +53,13 @@ const notHomeMenuLinks = [
     href: 'https://circles.garden',
   },
   ...pageLinks,
+  {
+    label: 'News',
+    value: 'news',
+    isExternal: true,
+    isRoute: false,
+    href: 'https://medium.com/circles-ubi',
+  },
 ];
 
 const socialMenuLinks = [
