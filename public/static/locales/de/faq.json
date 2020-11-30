@@ -103,7 +103,7 @@
         "Wenn du einer Person vertraust, kannst du den Kontakten, denen sie vertraut, ebenfalls Circles senden, ohne dass du ihnen selbst vertrauen musst. Das nennen wir transitives Vertrauen, es hilft dem Circles-Netzwerk zu wachsen.",
         "Ein Beispiel: Eine Person vertraut dir noch nicht, aber neben deinen eigenen Token besitzt du auch noch Token einer anderen Person. Du kannst die erste Person mit den Token der anderen Person bezahlen. <em>Konkret: A möchte B 10 Circles senden, B vertraut A nicht, aber B vertraut C. A besitzt 10 Token von C und kann B aus diesem Grund 10 C Token senden.</em>",
         "Du kannst viele verschiedene Circles-Token besitzen. Du sendest anderen also nicht unbedingt nur deine eigenen Token, wenn du ihnen Circles senden möchtest. Vielmehr sendest du die Token, von denen du genügend hast und die im Netzwerk das höchste Vertrauen genießen.",
-        "Im <a href=`https://handbook.joincircles.net/about/whitepaper.html` target=`_blank`>Circles Whitepaper</a> kannst du mehr über transitive Transaktionen erfahren."
+        "Im <a href='https://handbook.joincircles.net/about/whitepaper.html' target='_blank'>Circles Whitepaper</a> kannst du mehr über transitive Transaktionen erfahren."
       ]
     },
     {
@@ -190,7 +190,7 @@
       "topic": "Sicherheit",
       "question": "Welche Blockchain verwendet Circles?",
       "answer": [
-        "Circles nutzt die xDAI Blockchain. Funktional gesehen ist xDAI fast identisch mit Ethereum, ihre Transaktionskosten sind jedoch wesentlich geringer. Das liegt daran, das sie nur von einer begrenzten Anzahl an Validatoren betrieben wird, nicht mit dem hohen Energie- und Kostenaufwand des „Proof of Work”. Hier kannst du mehr über xDAI erfahren."
+        "Circles nutzt die xDAI Blockchain. Funktional gesehen ist xDAI fast identisch mit Ethereum, ihre Transaktionskosten sind jedoch wesentlich geringer. Das liegt daran, das sie nur von einer begrenzten Anzahl an Validatoren betrieben wird, nicht mit dem hohen Energie- und Kostenaufwand des „Proof of Work”. <a href='https://www.xdaichain.com' target='_blank'> aquí </a>Hier</a> kannst du mehr über xDAI erfahren."
       ]
     },
     {

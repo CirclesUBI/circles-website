@@ -221,12 +221,19 @@
         "The data recorded by blockchains is publicly accessible, and includes the trust network and your transaction history, but it is not associated publicly with your username or email address."
       ]
     },
-
     {
       "topic": "Security and Technical Background",
       "question": "If it’s open source, can anybody hack it and take my money?",
       "answer": [
         "Maybe! But we’ve tried to make it hard for them. The main risk for you to know about is that you have a secret 24-word phrase - if you lose this phrase or accidentally share it, you may lose access to your circles. You can read more about account security in our app faq."
+      ]
+    },
+    {
+      "topic": "Security and Technical Background",
+      "question": "Can I delete my account? What is “the liveness trigger",
+      "answer": [
+        "Although you cannot currently delete your account, if you do not collect your basic income for 90 days it will stop being issued. This is referred to as a ”liveness trigger” also known as a “dead man’s switch”.",
+        "If after 90 days you have not logged in, or manually called the contract, your basic income cannot be reactivated. You will, however, be able to trade your old tokens. If after 90 days of inactivity you wish to receive a basic income again, you will need to start a new Circles wallet."
       ]
     }
   ]
