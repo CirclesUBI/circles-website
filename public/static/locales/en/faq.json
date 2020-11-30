@@ -90,7 +90,7 @@
       ]
     },
     {
-      "topic": "Trust network - What does trust mean in Circles? ",
+      "topic": "Trust network - What does trust mean in Circles?",
       "question": "Whom can I pay with Circles?",
       "answer": [
         "You can pay people with whom you have a trust connection. These are the people who trust you, or the people with whom you have a common trusted person.",
@@ -180,7 +180,7 @@
       ]
     },
     {
-      "topic": "Security and technical background",
+      "topic": "Security and Technical Background",
       "question": "How are my Circles Produced?",
       "answer": [
         "Your Circles tokens are created automatically by the Circles smart contracts. Every day when you open the app, it checks the smart contracts for updates. Right now, Circles are paid out at a rate of about 8 per week, inflating 7% per year.",
@@ -188,7 +188,7 @@
       ]
     },
     {
-      "topic": "Security and technical background",
+      "topic": "Security and Technical Background",
       "question": "What blockchain is Circles using?",
       "answer": [
         "Circles is using the xDAI blockchain. xDAI is functionally almost identical to Ethereum but has substantially lower transaction costs by being operated by only a limited amount of validators instead of using high energy and cost consuming “proof of work”. You can learn more about xDai <a href='https://www.xdaichain.com' target='_blank'>here</a>."
