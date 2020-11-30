@@ -4,93 +4,227 @@
   "placeholder": "Beschreibe dein Anliegen",
   "items": [
     {
-      "topic": "Onboarding",
-      "question": "Warum kann ich meinen Usernamen nicht ändern?",
+      "topic": "Allgemeines",
+      "question": "Wozu dienen Circles?",
       "answer": [
-        "Der zweite Weg für Circles dich zu identifizieren neben deiner Öffentlichen Adresse ist dein Username. Weil die Verifizierung der Identität im Circles-System sehr wichtig ist, können Usernamen nicht geändert werden. Usernamen werden nicht auf dem Blockchain, sondern auf einem Circles-Server gespeichert und geschützt.",
-        "Sobald der Server nach der Testphase zurückgesetzt wird, werden auch die Usernamen gelöscht."
+        "Circles ist ein alternatives Wirtschaftssystem, das wie ein Grundeinkommen funktioniert.  Anstatt darauf zu warten, dass sich etwas ändert, können wir unser eigenes Wirtschaftssystem einführen, mit dem wir uns gegenseitig unterstützen und einander ein Grundeinkommen sichern. Circles soll eine neue Art des Tausches ermöglichen, ganz anders als die Art von Geld, die heute im Umlauf ist. Circles werden frei von irgendwelchen Bedingungen geschöpft und ihr Wert wächst auf der Basis von Gemeinschaft. Circles-Token zirkulieren in den jeweiligen Communities mittels „Vertrauensbeziehungen“.",
+        "Damit wird das Ziel verfolgt, lokale wirtschaftliche Interaktionen zu fördern und die Dinge schätzen zu lernen, die in unserem gegenwärtigen System nicht gesehen oder gewürdigt werden. Mit Hilfe von Circles entstehen neue Netzwerke, innerhalb derer jene grundlegenden Dinge anerkannt werden, denen im gegenwärtigen System kein Euro-Wert beigemessen wird."
+      ]
+    },
+    {
+      "topic": "Allgemeines",
+      "question": "Klingt das alles nicht ein bisschen verrückt? Diese ganze Zeit und Mühe, nur um ein paar Tarotkartenleser bezahlen zu können?",
+      "answer": [
+        "Uns ist bewusst, dass wir an einem radikal neuen Ansatz arbeiten. Doch wir glauben, dass sich unsere Gesellschaft in einer so komplexen Krise befindet, dass es eines radikalen Eingriffs bedarf, um einen Zusammenbruch zu vermeiden. Tatsächlich hat die Corona-Krise den beiden Grundfesten unseres Zusammenlebens zu neuer Sichtbarkeit und Relevanz verholfen: das Grundeinkommen und die Bedeutung nicht materieller Werte wie Fürsorge und gegenseitige Hilfe. Mittlerweile scheint vielen Menschen klar geworden zu sein, dass das Grundeinkommen die einzige Abhilfe für diejenigen Krisen sein wird, vor denen wir derzeit stehen und denen wir in Zukunft in einem ganz anderen Ausmaß begegnen werden."
+      ]
+    },
+    {
+      "topic": "Allgemeines",
+      "question": "Ist Circles ein echtes Grundeinkommen?",
+      "answer": [
+        "Circles ist in dem Sinne ein Grundeinkommen, dass diejenigen, die Teil der Community sind, jeden Tag ein gleich großes Stück des Circles-Kuchens erhalten, ohne irgendwelche Bedingungen oder Auflagen zu erfüllen. Anfangs wird es wohl eher ein regelmäßiges Taschengeld sein. Aber gerade das ist wichtig in der ersten Phase. Circles muss auf natürliche Weise wachsen, sodass die Menge der Circles, die jeden Tag geschöpft wird, proportional zur Menge an Waren und Dienstleitungen bleibt, die mit Circles getauscht werden. Zu einem späteren Zeitpunkt, wenn sich das System in den Communities weiter verbreitet hat, hoffen wir, dass es die Grundbedürfnisse eines jeden abdecken kann.",
+        "Circles ist zudem ein Grundeinkommen, weil es nicht gespart werden kann, d. h. umlaufgesichert ist. Die Versorgung mit Token steigt inflationär. Das bedeutet, dass deine Tokens, wenn du sie zu lange behältst, weniger wert sind als an dem Tag, an dem zu sie erhalten hast. Dahinter steht die Absicht, alle zu motivieren, ihre Circles auszugeben, anstatt sie anzusparen. Es soll ein fließendes, lebendiges Wirtschaftssystem hergestellt werden, keins, das stagniert.",
+        "Alternativ könnte man sich vorstellen, dass Circles verfallen, was ebenfalls ein wichtiger Aspekt des Circles-Ökosystems ist. Ist mehr Geld vorhanden oder im Umlauf als verfügbare Ressourcen, verliert das Geld an Wert und das System sein Gleichgewicht, was zu einem Zusammenbruch führen kann. Sind Circles überschüssig, d. h. werden sie nicht benötigt, nimmt ihr Wer ab, damit sie den Wirtschaftskreislauf nicht blockieren. Das ist wie bei einem Garten, in dem die alten, sterbenden Pflanzen den neuen Platz machen und sie nähren."
+      ]
+    },
+    {
+      "topic": "Allgemeines",
+      "question": "Warum ist es gut, eine Komplementärwirtschaft zu errichten?",
+      "answer": [
+        "Betrachte es so: Der Euro, der Staat und das Währungssystem, das von den großen Banken beherrscht wird, ist wie ein Rennrad. Für manche Zwecke ist es nützlich, aber nicht für alle. Wenn du mit dem Rennrad auf schlammigen oder rutschigen Straßen unterwegs bist und Kind oder Hund mitnehmen möchtest, brauchst du ein anderes Fahrrad: ein alternatives, zusätzliches Fahrrad. So ähnlich verhält es sich mit Circles als Komplementärwährung – es ist eine Währung, die nicht der Akkumulation dient, sondern zur Unterstützung der lokalen Gemeinschaft bestimmt ist."
+      ]
+    },
+    {
+      "topic": "Allgemeines",
+      "question": "Warum haben Circles einen Wert?",
+      "answer": [
+        "Geld ist eine Art Sprache. Wir sind uns über seine Bedeutung einig, und diese Übereinkunft ist der Grund, warum es einen Wert besitzt. Es mag vielleicht nicht so wirken, aber bei Euro oder Bitcoin stellt sich der Wert auf dieselbe Art und Weise her.",
+        "Der Wert von Circles basiert auf dem Wert, den die Menschen in Circles und in die Community investieren. Wenn du dein Fahrrad gegen Circles tauschst oder gegen Bezahlung in Circles für jemanden im Jobcenter dolmetscht, wird dieser Wert dem System zugeführt und zirkuliert innerhalb der Community. Wir glauben, dass das ein ebenso realer „Wert“ ist, der unsere Währung deckt, wie die Goldreserven den Euro; einen Wert, den wir nie gesehen haben und nie sehen werden."
+      ]
+    },
+    {
+      "topic": "Allgemeines",
+      "question": "Kann ich mit Circles reich werden, wie die frühen Empfänger von Bitcoin?",
+      "answer": [
+        "Nicht wirklich. Bitcoin wurde den Eigenschaften von Gold nachempfunden: Es beruht auf Knappheit und die Anzahl der Bitcoin, die es auf der Welt geben kann, ist begrenzt. Aufgrund dieser Wesensmerkmale eignet sich Bitcoin besonders gut als Wertspeicher. Euro, Dollar oder andere Währungssysteme, die du kennst, gleichen Bitcoin in dieser Hinsicht – die Menge des geschöpften Geldes wird von den Regierungen begrenzt.",
+        "Circles folgt einem anderen Ansatz: Es ist eine Währung, die für den Umlauf bestimmt ist, nicht als Wertanlage. Wir als Menschen und unsere Wirtschaft bedürfen beider Arten von Währungen. Circles wurde so entworfen, dass man es handelt, nicht ansammelt."
+      ]
+    },
+    {
+      "topic": "Allgemeines",
+      "question": "Was hat Circles mit dem Feminismus gemein?",
+      "answer": [
+        "Wir haben Circles entwickelt, um kleinere Communities zu stärken und Ungleichheiten zu beheben, die zum Teil darauf zurückzuführen sind, dass Frauen im vorherrschenden System nicht gleich bezahlt werden. Im vorherrschenden Wirtschaftssystem werden Care-Arbeit und die Arbeit, die historisch gesehen von Frauen geleistet wurde, entwertet. Circles wurde entworfen, um diese Art der Arbeit anzuerkennen und wertzuschätzen, wie z. B. die Betreuung des Haustiers von Freunden oder Babysitten, die zentral ist für die Integration von Gemeinschaften, aber oftmals nicht vergütet wird. Indem wir für solche Dienstleistungen mit Circles bezahlen, erreichen diese Tätigkeiten eine neue Ebene der Sichtbarkeit und Anerkennung. Und wenn Leute mit Circles in Buchläden, Cafés und an anderen Orten bezahlen, gewinnt auch dadurch die Bezahlung von Care-Arbeit an Legitimität."
+      ]
+    },
+    {
+      "topic": "Allgemeines",
+      "question": "Was haben Circles und Permakultur gemein?",
+      "answer": [
+        "Das gegenwärtige Geldsystem gleicht der industriellen, intensiven Landwirtschaft. Auf jedem Acker wird die gleiche Ernte produziert – in gewisser Hinsicht sind diese Monokulturen effizient: Alles kann zur gleichen Zeit geerntet werden, es wird nur ein Maschinentyp und ein Zwischenhändler benötigt. Gleichzeitig bedarf diese Art der Landwirtschaft jedoch einer Menge Pestizide und ökologisch gesehen ist das Land mehr oder weniger tot. Wenn ein neuer Schädling kommt, die resistent ist gegen die Pestizide, kann es sein, dass der ganze Ertrag verloren geht. So ungefähr funktioniert auch unser aktuelles schuldenbasiertes, staatlich gesteuertes Währungssystem.",
+        "Durch die schrittweise Einführung von Komplementärwährungen wie Circles können wir das System vielfältiger gestalten. Ja, das kann anfangs etwas kompliziert sein (du musst lernen, mit Circles umzugehen, so wie du lernen musstest, AirBnB oder dein neues Telefon zu bedienen), aber das Wirtschaftssystem als Ganzes wird stabiler werden. Genau wie bei einer ökologischen, permakulturell gestalteten Landwirtschaft: Wenn dir die Erdbeerernte kaputt geht, wirst du immer noch Rosen, Kartoffeln oder Cannabis ernten können."
+      ]
+    },
+    {
+      "topic": "Allgemeines",
+      "question": "Ihr sagt, der Euro sei nicht demokratisch oder partizipatorisch. Warum?",
+      "answer": [
+        "Entscheidungen zum Euro werden hinter verschlossenen Türen in Gruppen aus Zentralverwaltung, Banken und Staatsorganen getroffen und die Bürger haben keine Aufsichts- oder Kontrollbefugnis. Diese Instanzen entscheiden, wie viele Euros und zu welchem Kurs sie auf den Markt gebracht werden, ohne Beachtung für dich oder Kenntnis von dir, deiner Care-Arbeit oder dem, was du benötigst, um ein angstbefreites Leben zu führen."
+      ]
+    },
+    {
+      "topic": "Allgemeines",
+      "question": "Und inwiefern ist Circles demokratisch und partizipatorisch? Ich kann mir vorstellen, wie man einen Wanderclub demokratisch und partizipativ führt, aber eine Währung? Was sind die Entscheidungskriterien?",
+      "answer": [
+        "Euro als Zahlungsmittel sind eine Art Staubsauger. Die Maschinen der Bauern, die Lastwagen der Fahrer, die Kühlschränke in den Supermärkten wurden über Kredite finanziert. Wenn wir für die Erdbeeren, die schließlich im Supermarkt liegen, mit Euro bezahlen, geht ein großer Teil der Wertschöpfung aus dieser Produktion an die Banken, die diese Kredite ausgegeben haben. Mit anderen Worten: Dieser Wert verlässt die reale, lokale Wirtschaft. Wenn wir Circles nutzen und uns an einem lokalen Wirtschaftskreislauf beteiligen, bleiben das Geld und der Wert in unserer Nähe und kommen schneller zurück. Dies ist einer der wichtigsten Vorteile von Komplementärwährungen.",
+        "Im Gegensatz zum Euro-Staubsauger, einem Geldsystem „von oben“, das lokal geschaffene Werte aufsaugt, ist Circles ein Geldsystem „von unten“."
+      ]
+    },
+    {
+      "topic": "Allgemeines",
+      "question": "Muss ich auf Circles Steuern zahlen?",
+      "answer": [
+        "Wenn du ein Unternehmen bist oder Circles für irgendeine Art von Waren oder Dienstleistungen akzeptierst, solltest du darauf Steuern in Euro zahlen, so wie du das für jede andere Form von Einkommen ebenfalls tun würdest: Bitcoin, Euro, Dollar usw."
+      ]
+    },
+    {
+      "topic": "Das „Trust-Netzwerk“",
+      "question": "Wen kann ich mit Circles bezahlen?",
+      "answer": [
+        "Du kannst die Leute bezahlen, zu denen du ein „Vertrauensverhältnis“ hast. Das sind die Leute, die dir vertrauen oder diejenigen, mit denen du einen Kontakt teilst, dem ihr beide vertraut.",
+        "Vertrauen bedeutet hier, dass die Leute den Circles vertrauen, die an dich ausgegeben wurden, oder, bildlich gesprochen, an sie glauben. Du solltest mit deinem Vertrauen in der Circles-Community umsichtig umgehen – also nicht unbedingt so, wie du es vielleicht aus den sozialen Netzwerken gewohnt bist, wo du eine Freundschaftsanfrage annimmst, obwohl du die Person nicht sehr gut kennst. Denn mit der Zeit könnte so ein Verhalten zu einem Wertverlust deines Grundeinkommens führen – und eventuell sogar zu dem deines Netzwerkes. Anderen Personen wahllos zu vertrauen, kann dich in eine Situation bringen, in der dir deine wirklichen Kontakte, von denen du einen echten wirtschaftlich Nutzen hast, ihr Vertrauen entziehen, um den Wert ihres eigenen Grundeinkommens zu schützen."
+      ]
+    },
+    {
+      "topic": "Das „Trust-Netzwerk“",
+      "question": "Wie funktioniert Vertrauen in Circles?",
+      "answer": [
+        "Wenn dir eine Person vertraut, kannst du ihr Circles senden. Das bedeutet, dass das Senden von Circles in die umgekehrte Richtung stattfindet als jemandem zu vertrauen. Man könnte auch sagen: “Weil ich dir vertraue, akzeptiere ich deine Circles“ oder „Weil du mir vertraust, darf ich dir meine Circles senden“.",
+        "Wenn du einer Person vertraust, kannst du den Kontakten, denen sie vertraut, ebenfalls Circles senden, ohne dass du ihnen selbst vertrauen musst. Das nennen wir transitives Vertrauen, es hilft dem Circles-Netzwerk zu wachsen.",
+        "Ein Beispiel: Eine Person vertraut dir noch nicht, aber neben deinen eigenen Token besitzt du auch noch Token einer anderen Person. Du kannst die erste Person mit den Token der anderen Person bezahlen. <em>Konkret: A möchte B 10 Circles senden, B vertraut A nicht, aber B vertraut C. A besitzt 10 Token von C und kann B aus diesem Grund 10 C Token senden.</em>",
+        "Du kannst viele verschiedene Circles-Token besitzen. Du sendest anderen also nicht unbedingt nur deine eigenen Token, wenn du ihnen Circles senden möchtest. Vielmehr sendest du die Token, von denen du genügend hast und die im Netzwerk das höchste Vertrauen genießen.",
+        "Im <a href=`https://handbook.joincircles.net/about/whitepaper.html` target=`_blank`>Circles Whitepaper</a> kannst du mehr über transitive Transaktionen erfahren."
+      ]
+    },
+    {
+      "topic": "Das „Trust-Netzwerk“",
+      "question": "Warum sollte ich nicht jeder Person vertrauen?",
+      "answer": [
+        "Hinweis: Das solltest du bitte auf gar keinen Fall! :-)",
+        "Indem du anderen Personen vertraust, willigst du ein, die für sie generierten Circles bei einem Tausch für die für dich generierten Circles zu akzeptieren. Wenn du Fake-Konten vertraust oder Leuten, die Circles nicht regelmäßig nutzen, läufst du Gefahr, auf den Circles sitzen zu bleiben, die für diese Leute geschaffen wurden, da du sie nirgends ausgeben kannst. Wenn andere Kontakte in deinem Netzwerk erkennen, dass du anderen Personen leichtfertig vertraust, werden sie dir ihr Vertrauen wahrscheinlich entziehen, da auch sie Gefahr laufen, gefälschte Circles zu erhalten. Man kann sich das wie eine Art Immunsystem vorstellen, das ungesunde Teile des Systems abtrennt.",
+        "Wo Vertrauen vorhanden ist, ist auch die Glaubwürdigkeit nicht weit. Vertrauenswürdige Menschen sind kreditwürdige Menschen, deshalb solltest du anderen erst dann vertrauen, wenn du dir des Risikos bewusst bist, das du, dein Unternehmen oder deine Community eingehen. Auslöser der letzten Wirtschaftskrise war die Vergabe von Krediten ohne Rücksicht auf Kreditwürdigkeit. Als die Menschen schließlich erkannten, dass sich hinter diesen Krediten nichts verbirgt, brach das ganze System zusammen. Einen solchen unverantwortlichen Umgang mit Vertrauen wollen wir bei Circles vermeiden. In unserem System ist es in deinem eigenen Interesse, sorgfältig mit deinem Vertrauen umzugehen. Tust du das nicht, schadet das nicht sofort dem ganzen System, sondern in erster Linie dir persönlich. Die Art und Weise, wie das Vertrauenssystem in Circles funktioniert und programmiert wurde, ist der eigentliche Kern unseres Konzepts – und der Weg, die größte Hürde einer Kryptowährung als Grundeinkommen zu überwinden: Wie kann eine Währung, die es umsonst gibt, einen Wert erhalten?",
+        "Das Geheimnis ist natürlich, dass sie eigentlich nicht umsonst zu haben ist. Du erhältst dein Grundeinkommen nicht auf der Grundlage deiner Staatsbürgerschaft oder aufgrund der richtigen Ausweisdokumente, sondern du erhältst es, weil dir die Community vertraut."
+      ]
+    },
+    {
+      "topic": "Das „Trust-Netzwerk“",
+      "question": "Wem sollte ich vertrauen?",
+      "answer": [
+        "Um mit Circles ein lebendiges, stabiles Grundeinkommenssystem herzustellen, solltest du vor allem Personen vertrauen, die einen Wert für das System darstellen. Im Idealfall solltest du also den Menschen vertrauen, die Muffins oder ihr Fahrrad gegen Circles verkaufen, die ihren Freunden beim Umzug helfen und dafür mit Circles bezahlt werden usw. Wenn das System genug von dieser Art von Energie besitzt, wird es abheben und fliegen. Sobals das geschieht, werden wir in der Lage sein, diejenigen zu unterstützen, die ein Grundeinkommen wirklich brauchen, aber dafür keine Gegenleistung erbringen können.",
+        "Bei Circles geht es darum, sich gegenseitig ein Grundeinkommen zu ermöglichen. Auch dafür braucht es die, die geben."
+      ]
+    },
+    {
+      "topic": "Das „Trust-Netzwerk“",
+      "question": "Warum sagt die App mir, dass ich keine Circles senden kann? ",
+      "answer": [
+        "Manchmal gibt es keinen Pfad, über den Token von dir zu einer anderen Person übermittelt werden können. Jede Vertrauensverbindung in Circles hat nicht nur eine Richtung („von“, „nach“), sondern auch eine Obergrenze. Sobald diese Obergrenze erreicht ist, können auf dieser Verbindung keine weiteren Circles mehr transferiert werden bis einige Circles zurückgeschickt wurden. In einer gesunden Circles-Ökonomie werden wir nicht sehr oft an diese Grenzen stoßen, aber es kann trotzdem hin und wieder vorkommen.",
+        "Vertrauensgrenzen schützen dich davor, dass du durch transitive Transaktionen deine gesamten Token verlierst. Das kann passieren, wenn jemand deine Token benutzt, um Circles über dich an eine andere Person zu senden.",
+        "Eine Vertrauensgrenze ist der Prozentsatz (0-100%) deiner erhaltenen Circles, den du bereit bist in der Währung einer anderen Person zu halten. <em>Zum Beispiel: Du vertraust einer anderen Person 50%. Wenn du seit deiner Anmeldung 100 Circles erhalten hast, kannst du maximal 50 Token der anderen Person besitzen.</em>",
+        "Aktuell liegt die Standardobergrenze immer bei 50%. Das ist sehr hoch und kann in Zukunft gesenkt werden."
       ]
     },
     {
       "topic": "Onboarding",
-      "question": "Was muss ich machen, um mein Circles Grundeinkommen zu erhalten?",
+      "question": "Wie lasse ich mein Konto verifizieren?",
       "answer": [
-        "Nach Erstellung des neuen Wallets brauchst Du drei Vertrauensverbindungen um deinen Account zu verifizieren. Du kannst Vertrauen erfragen, indem Du einen Link zu deinem Circles-Profil teilst, oder direkt vor Ort, indem Du jemanden deinen QR-code scannen lässt.",
-        "Wir veranstalten regelmäßige Treffen in Berlin während der Testphase. Du kannst dort das Team und andere Circles-User persönlich treffen und Verbindungen knüpfen.",
-        "Sobald drei Personen deinem Profil vertraut haben, wird die App automatisch zwei „Smart Contracts“ für dich aktivieren: dein Safe und dein eigener Circles-Token. Du wirst 50 Circles als eine erste Auszahlung erhalten und danach weiterhin ein regelmäßiges Grundeinkommen beziehen."
+        "Zur Verifizierung müssen dir drei Personen vertrauen, denen im Circles-System bereits vertraut wird.",
+        "Bitte beachte, dass Personen, die sich nicht persönlich kennen, einander nicht vertrauen sollten. Wird einer Person erstmal online von Fremden vertraut, ist es ihr ein Leichtes, das System anzugreifen. Du könntest deine Circles an ein Fake-Konto verlieren."
       ]
     },
     {
       "topic": "Onboarding",
-      "question": "Was ist „Circles Safe“?",
+      "question": "Wie erhalte ich ein Grundeinkommen über Circles?",
       "answer": [
-        "Dein Circles Safe ist ein Smart Contract der die Schlüssel zu deinem Account verwaltet.",
-        "Du kannst mehrere Geräte damit verknüpfen, deinen Computer und dein Telefon. Mehrere Geräte dem Safe hinzuzufügen kann auch dabei helfen, den Account wieder herzustellen, falls Du deine „Seed Phrase“ verlierst.",
-        "<a href='https://docs.gnosis.io/safe/' target='_blank'>Erfahr mehr über Safes</a>"
+        "Nach Erstellen eines neuen Wallet benötigst du drei Vertrauenskontakte, um dein Konto zu verifizieren. Du kannst Vertrauensanfragen stellen, indem du einen Link zu deinem Circles-Profil teilst oder persönlich, indem du jemanden deinen QR-Code scannen lässt.",
+        "Während unserer Testphase veranstalten wir regelmäßige Treffen in Berlin. Hier kannst du das Team kennenlernen und dich mit anderen Circles-Nutzern verbinden und austauschen.",
+        "Sobald drei Personen deinem Profil vertraut haben, aktiviert die App automatisch zwei Smart Contracts zur Nutzung von Circles: deinen „Safe“ und deinen eigenen Circles-Token. Du erhältst 50 Circles in einer ersten Auszahlung, danach ein regelmäßiges Grundeinkommen."
       ]
     },
     {
       "topic": "Onboarding",
-      "question": "Welchen Blockchain benutzt Circles?",
+      "question": "Was mache ich, wenn ich niemanden im Circles-System kenne, der mich verifizieren kann?",
       "answer": [
-        "Für die Testphase nutzt Circles das Kovan Netzwerk, welches eines der öffentlichen Ethereum Testnets ist. Für unseren offiziellen Start zu einem späteren Zeitpunkt wollen wir das xdai Netzwerk nutzen. ",
-        "Erfahre mehr über Kovan hier. Erfahre mehr über xdai <a href='https://www.xdaichain.com' target='_blank'>hier</a>."
+        "Wenn du in deiner Community unbedingt etwas mit deinen Freunden starten möchtest, könnt ihr Circles auch ohne drei Vertrauenskontakte beitreten:",
+        "Sende 0.1 xDAI an dein Konto (das ist die Adresse im Link, die angezeigt wird, wenn du DEIN Profil teilst). Die Adresse wird ungefähr so aussehen: 0xeb9784F6A6e3d03466974Cb3a5a77c79afbA14e8 ).",
+        "Falls das nicht klappen sollte – es schwankt manchmal –, versuche 0.2xDAI zu senden.",
+        "Aber noch einmal – das wird nur funktionieren, wenn du Freunde, Unternehmen, Genossenschaften, Landwirte usw. hinzufügst, die mit dir Waren und Dienstleistungen handeln und tauschen und Circles vor Ort aufbauen wollen."
       ]
     },
     {
-      "topic": "Grundeinkommen",
+      "topic": "Onboarding",
+      "question": "Was ist ein “Circles Safe”?",
+      "answer": [
+        "Dein Circles Safe ist ein Smart Contract, der die Schlüssel zu deinem Konto verwaltet.",
+        "Du kannst mehrere Geräte wie z. B. deinen Computer und dein Telefon damit verknüpfen. Wenn du dem Safe mehrere Geräte hinzufügst, kann dir das bei der Wiederherstellung deines Kontos helfen, falls du deine „Seed Phrase“ verlieren solltest.",
+        "<a href='https://docs.gnosis.io/safe/' target='_blank'>Mehr über Safes erfahren</a>"
+      ]
+    },
+    {
+      "topic": "Onboarding",
+      "question": "Was passiert, wenn ich einem Konto fälschlicherweise vertraut habe oder einer Person mein Vertrauen entziehen möchte?",
+      "answer": [
+        "Du kannst auf das Profil dieses Nutzers gehen, das Vertrauen-Symbol neben dem Namen anklicken und dein Vertrauen widerrufen. Um zu verhindern, dass du deine Token an dieses Konto verlierst, empfehlen wir dir, das so schnell wie möglich zu tun."
+      ]
+    },
+
+    {
+      "topic": "Sicherheit",
       "question": "Wie werden meine Circles geschöpft?",
       "answer": [
-        "Deine Circles Token werden automatisch durch den Circles Smart Contract geschöpft. Jeden Tag wenn Du deine App öffnest, ruft sie den Smart Contract auf für Updates. Momentan werden ungefähr 8 Circles pro Woche ausgezahlt, was einer Inflation von 7 % im Jahr entspricht.",
-        "Das Geld kommt nicht von irgendwo außerhalb des Contracts – wir nehmen keine Einzahlungen etwa in Euro in das System auf. Es gibt keine Mining wie bei anderen Kryptowährungen, es wird auch nicht ausschließlich an Leute ausgezahlt, die das Netzwerk technisch in Gang halten. Stattdessen wird Circles jeden Tag an Dich ausgezahlt als Belohnung dafür, daß Du Teil der Community bist. Es wird wertvoller je stärker die Community wird."
+        "Deine Circles-Token entstehen automatisch über die Circles Smart Contracts. Jeden Tag, wenn Du deine App öffnest, sucht sie nach Updates auf dem Smart Contract. Momentan werden ungefähr 8 Circles pro Woche ausgezahlt, die Inflation beträgt 7 % pro Jahr.",
+        "Der Geldwert entsteht nicht irgendwo außerhalb der Smart Contracts – wir zahlen beispielsweise keine Euro in das System ein. Ebenso wenig werden Circles „gemined“ wie bei anderen Kryptowährungen, also an diejenigen ausgezahlt, die das Netzwerk aufrechterhalten. Stattdessen wird Circles jeden Tag an dich ausgezahlt, als Belohnung dafür, dass du Teil der Community bist. Circles werden mit der Zeit wertvoller, da die Community wächst und stärker wird."
       ]
     },
     {
       "topic": "Sicherheit",
-      "question": "Wie schütze ich meinen Circles-Account?",
+      "question": "Welche Blockchain verwendet Circles?",
       "answer": [
-        "Es gibt zwei Wege, deinen Account zu sichern -die „Seed Phrase“ speichern und die Verknüpfung mit mehreren Endgeräten herzustellen.",
-        "Die Seed Phrase speichern: Wir empfehlen Dir auf dein Profil zu gehen in der App und die Seed Phrase dort abzuschreiben. Die 24 Worte nennen sich Seed Phrase und sollten irgendwo sicher verwahrt werden. Du kannst sie dir wie ein Passwort vorstellen – wir nutzen sie, um deine Circles-Schlüssel zu erstellen.",
-        "Aus Sicherheitsgründen ist deine Seed Phrase normalerweise versteckt. Du kannst sie anzeigen, indem du in deinem Profil auf „Exportiere deine Seed Phrase“ klickst",
-        "Endgeräte verknüpfen: Wir empfehlen Dir ein zweites Endgerät so schnell wie möglich zu verknüpfen, zum Beispiel dein Handy und deinen Computer. Das macht es einfacher, deinen Account wieder herzustellen, falls ein Gerät aus irgendeinem Grund ausfällt. Du kannst ein weiteres Endgerät hinzufügen, indem Du in deinem Profil in der App auf „weiteres Endgerät hinzufügen“ klickst."
+        "Circles nutzt die xDAI Blockchain. Funktional gesehen ist xDAI fast identisch mit Ethereum, ihre Transaktionskosten sind jedoch wesentlich geringer. Das liegt daran, das sie nur von einer begrenzten Anzahl an Validatoren betrieben wird, nicht mit dem hohen Energie- und Kostenaufwand des „Proof of Work”. Hier kannst du mehr über xDAI erfahren."
       ]
     },
     {
       "topic": "Sicherheit",
-      "question": "Ich habe mich ausgeloggt oder mein Gerät verloren – was kann ich tun?",
+      "question": "Wie schütze ich mein Circles-Konto?",
       "answer": [
-        "Falls Du eines deiner Geräte verloren oder deinen Browser zurückgesetzt hast, wirst Du immer noch in der Lage sein deinen Account wieder herzustellen mit der Seed phrase. Gehe in der Circles app auf „Verbinden mit bestehendem Account“ und dann „Wiederherstellen von seed phrase“",
-        "Falls Du ein zweites Endgerät verbunden hast, kannst Du deinen Account von dort aus noch erreichen. Du solltest das verlorene Gerät aus Sicherheitsgründen in der App entfernen, indem du im Profil auf die entsprechende Funktion klickst.",
-        "Falls Du keine Seed Phrase gespeichert hast und auch keinen Zugang zu einem zweiten Gerät hast, können wir deinen Account nicht wieder herstellen. Du kannst dann gerne einen neuen Account erstellen."
+        "Es gibt zwei Wege, dein Konto zu schützen: deinen Seed Phrase speichern und dein Konto mit anderen Geräten verknüpfen.",
+        "Speichern deines Seed Phrase: Wir empfehlen dir, die 24 Wörter zu notieren, die du auf deiner Profil-Seite in der App findest – deinen Seed Phrase – und sie an einem sicheren Ort zu hinterlegen. Verstehe es als ein Passwort – wir benutzen es, um deine Circles-Schlüssel zu generieren.",
+        "Aus Sicherheitsgründen ist dein Seed Phrase auf deiner Profil-Seite normalerweise nicht sichtbar. Klicke auf “Seed Phrase exportieren”, um ihn anzuzeigen.",
+        "Verknüpfen deiner Geräte: Wir empfehlen dir, so bald wie möglich ein zweites Gerät mit deinem Konto zu verknüpfen, zum Beispiel dein Telefon und deinen Computer. Mit einem zweiten Gerät kannst du weiterhin auf dein Konto zugreifen, auch wenn ein anderer Zugang aus irgendeinem Grund versagen sollte. Um ein anderes Gerät mit deinem Konto zu verlinken, klicke auf deiner Profil-Seite auf “Neues Gerät hinzufügen”."
       ]
     },
     {
       "topic": "Sicherheit",
-      "question": "Welche Informationen sammelt Circles über mich?",
+      "question": "Ich habe mich ausgeloggt oder mein Gerät verloren – was kann ich machen?",
       "answer": [
-        "Die einzigen Daten die wir speichern sind deine Email-adresse und dein Nutzername – und die werden wir mit niemandem teilen. Deine Wallet-Schlüssel sind nur Offline in deinem Endgerät gespeichert, sie werden nicht mit uns geteilt.",
-        "Die Daten die auf dem Blockchain ausgetauscht werden sind öffentlich zugänglich, das schließt das Vertrauensnetzwerk und die Transaktions-Historie mit ein. Aber sie sind nicht öffentlich mit deinem Klarnamen oder einer Email-Adresse verknüpft."
+        "Solltest du eins deiner Geräte verloren oder deinen Browser zurückgesetzt haben, kannst du dein Konto mit deinem See Phrase wiederherstellen. Gehe dazu auf die Circles App und klicke auf “Mit vorhandenem Konto verbinden” und dann auf “Wiederherstellen mit Seed Phrase“.",
+        "Ist ein zweites Gerät mit deinem Konto verknüpft, kannst du über dieses Gerät weiterhin auf dein Konto zugreifen. Du solltest das verlorene oder getrennte Gerät unbedingt aus deinem Profil entfernen. Du kannst Geräte über die Profil-Seite in deiner App löschen.",
+        "Falls du deinen Seed Phrase nicht gespeichert hast und auch nicht über ein zweites Gerät eingeloggt bist, können wir dein Konto leider nicht wiederherstellen. Du kannst gerne ein neues Konto erstellen. Beachte: Wenn du deinen Safe und deine Circles-Token nicht genutzt hast, wurde dein Konto noch nicht richtig aktiviert und kann es nicht wiederhergestellt werden."
       ]
     },
     {
-      "topic": "Vertrauensnetzwerk",
-      "question": "Wie funktioniert Vertrauen im Circles-System?",
+      "topic": "Sicherheit",
+      "question": "Welche Informationen sammelt Circles von mir?",
       "answer": [
-        "Du kannst Circles an jede/n schicken, der/die Dir vertraut.  Das bedeutet, dass jemandem Circles schicken bedeutet gleichzeitig eine Vertrauensverbindung. „Ich vertraue Dir, darum akzeptiere ich deine Circles“ „Du vertraust mir, dafür kann ich Dir meine Circles senden“",
-        "Wenn Du jemandem vertraust, dann kannst Du deine Circles auch an Leute in seinem Vertrauensnetzwerk schicken, ohne diesen Leuten selbst zu vertrauen. Das nennt sich „transitive trust“ und erlaubt es dem Circles-Netzwerk leichter zu wachsen.",
-        "Beispiel: Die Person vertraut Dir vielleicht nicht, aber Du hast den Token von jemandem anderen außer Dir selbst. Du kannst diese Person dann mit dem Token der anderen Person bezahlen. Beispiel: A möchte B 10 Circles schicken, B hat keine Vertrauensverbindung zu A sondern zu C, A besitzt 10 Token von C und kann darum diese 10 C Token an B senden.",
-        "Du kannst beliebig viele verschiedene Token anderer Personen halten. Du musst nicht notwendigerweise nur deine eigenen Token an andere senden, wenn Du Circles schickst. Du kannst die Token senden, denen genügend vertraut wird.",
-        "Lies mehr im <a href='https://github.com/CirclesUBI/docs/blob/master/Circles.md' target='_blank'>Circles whitepaper</a> über transitive transactions."
+        "Die einzigen Daten, die wir speichern, sind deine E-Mail-Adresse und dein Benutzername –, die wir niemals mit jemand anderem teilen werden. Der persönliche Schlüssel zu deinem Wallet liegt offline auf dem Browser deines Geräts und wird nicht mit uns geteilt.",
+        "Daten, die von der Blockchain erfasst werden, sind öffentlich zugänglich. Dazu gehören das “Trust-Netzwerk” (Netzwerk des gegenseitigen Vertrauens) und deine Transaktionsgeschichte. Diese Daten sind öffentlich jedoch weder deinem Benutzernamen noch deiner E-Mail-Adresse zuordenbar."
       ]
     },
     {
-      "topic": "Vertrauensnetzwerk",
-      "question": "Warum sagt die App, dass ich keine Circles übertragen kann?",
+      "topic": "Sicherheit",
+      "question": "Circles ist Open Source. Heißt das, jeder kann es hacken und an mein Geld kommen?",
       "answer": [
-        "Manchmal gibt es keine ausreichenden Pfade über den die Token zwischen Dir und einer anderen Person geschickt werden könnten.  Vertrauensverbindungen im Circles-System kennen nicht nur eine Richtung („von“ „nach“), sondern auch ein Limit. Wenn dieses Limit erreicht ist, dann können keine Circles mehr über diesen Pfad übertragen werden, solange nicht auch Circles zurückgeflossen sind. In einer gesunden Circles-Ökonomie werden wir diese Limits nicht oft erreichen, aber manchmal kann es passieren.",
-        "Vertrauens-Limits beschützen Dich davor, alle deine Token durch Transitive Transaktionen anderer Personen zu verlieren.",
-        "Eine Vertrauensverbindung wird in Prozent (0-100%)  ausgedrückt, die Du bereit bist von einer bestimmten Person ihre Circles zu halten. Beispiel: Ich vertraue Dir zu 50 % der Menge Circles, die ich erhalten habe, seid ich bei Circles mitmache. Das sind 100 Circles, daher bin ich bereit, maximal 50 von deinen Circles zu halten.",
-        "Das momentane Standard-Limit wird auf 50% deiner Tokens festgesetzt, was sehr viel ist und zu einem späteren Zeitpunkt vielleicht herabgesetzt werden wird."
+        "Vielleicht! Aber wir haben versucht, es ihnen so schwer wie möglich zu machen. Das Hauptrisiko besteht darin, dass du einen geheimen 24-Wort Seed Phrase besitzt – wenn du diesen Seed Phrase verlieren oder versehentlich weitergeben solltest, kann es sein, dass du den Zugang zu deinen Circles verlierst. In den FAQ unserer App kannst du mehr über die Sicherheit deines Kontos erfahren."
       ]
     }
   ]
