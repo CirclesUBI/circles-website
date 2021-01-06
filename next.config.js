@@ -15,6 +15,12 @@ module.exports = {
     { dev, dir, outDir, distDir, buildId }
   ) {
     return {
+      '/': { page: '/' },
+      '/faq': { page: '/faq' },
+      '/contact': { page: '/contact' },
+      '/donate': { page: '/donate' },
+      '/terms': { page: '/terms' },
+      '/privacy-policy': { page: '/privacy-policy' },
       '/de': { page: '/' },
       '/de/faq': { page: '/faq' },
       '/de/contact': { page: '/contact' },
