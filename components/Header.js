@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '../i18n';
 import { Box, Image } from 'grommet';
 import { Row, Col } from 'react-grid-system';
 

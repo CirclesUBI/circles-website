@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
+import { useState, useRef } from 'react';
+import { Link } from '../i18n';
 import { Anchor, Box, Button, Drop, Image, Layer, Menu } from 'grommet';
 import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
