@@ -15,10 +15,18 @@ module.exports = {
     { dev, dir, outDir, distDir, buildId }
   ) {
     return {
-      '/de/about': { page: '/about' },
+      '/de/': { page: '/' },
       '/de/faq': { page: '/faq' },
       '/de/contact': { page: '/contact' },
       '/de/donate': { page: '/donate' },
+      '/de/terms': { page: '/terms' },
+      '/de/privacy-policy': { page: '/privacy-policy' },
+      '/es/about': { page: '/about' },
+      '/es/faq': { page: '/faq' },
+      '/es/contact': { page: '/contact' },
+      '/es/donate': { page: '/donate' },
+      '/es/terms': { page: '/terms' },
+      '/es/privacy-policy': { page: '/privacy-policy' },
     };
   },
 };
