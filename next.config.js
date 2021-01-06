@@ -10,4 +10,15 @@ module.exports = {
   publicRuntimeConfig: {
     localeSubpaths,
   },
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/de/about': { page: '/about' },
+      '/de/faq': { page: '/faq' },
+      '/de/contact': { page: '/contact' },
+      '/de/donate': { page: '/donate' },
+    };
+  },
 };
