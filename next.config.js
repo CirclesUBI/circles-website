@@ -15,8 +15,6 @@ langs.forEach((lang) => {
   });
 });
 
-console.log(pathMap);
-
 module.exports = {
   rewrites: async () => nextI18NextRewrites(localeSubpaths),
   publicRuntimeConfig: {
