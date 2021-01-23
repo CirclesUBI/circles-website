@@ -87,7 +87,7 @@ export default function Donate() {
 
             <Box
               background={large ? 'dark-1' : 'none'}
-              pad={large ? 'medium' : 'none'}
+              pad={large ? { vertical: 'large', horizontal: 'medium' } : 'none'}
               margin={{ vertical: 'medium' }}
             >
               <Box direction="row" justify="center">
