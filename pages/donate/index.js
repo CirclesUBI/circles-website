@@ -76,6 +76,14 @@ export default function Donate() {
               </Paragraph>
             </Box>
 
+            <Heading
+              level={3}
+              margin={{ top: 'medium', bottom: 'none' }}
+              textAlign="center"
+            >
+              Donate with Card
+            </Heading>
+
             <Box
               background="dark-1"
               pad="medium"
@@ -90,7 +98,7 @@ export default function Donate() {
                     name="donorbox"
                     scrolling="no"
                     seamless="seamless"
-                    src="https://donorbox.org/embed/contribute-to-circlesubi"
+                    src="https://donorbox.org/embed/circlesubi"
                     style={{
                       maxWidth: 500,
                       minWidth: 250,
