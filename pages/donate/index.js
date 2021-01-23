@@ -36,6 +36,10 @@ export default function Donate() {
     <div className="page">
       <Head>
         <title>CirclesUBI | Donate to Our Cause</title>
+        <script
+          src="https://donorbox.org/widget.js"
+          paypalexpress="false"
+        ></script>
       </Head>
 
       <Layout>
@@ -70,6 +74,32 @@ export default function Donate() {
                 We will make our business plan and our budget transparently
                 published here to show you how we are using your donation.
               </Paragraph>
+            </Box>
+
+            <Box
+              background="dark-1"
+              pad="medium"
+              margin={{ vertical: 'medium' }}
+            >
+              <Box direction="row" justify="center" pad="medium">
+                <div>
+                  <iframe
+                    allowpaymentrequest=""
+                    frameBorder="0"
+                    height="900px"
+                    name="donorbox"
+                    scrolling="no"
+                    seamless="seamless"
+                    src="https://donorbox.org/embed/contribute-to-circlesubi"
+                    style={{
+                      maxWidth: 500,
+                      minWidth: 250,
+                      maxHeight: 'none!important',
+                    }}
+                    width="100%"
+                  ></iframe>
+                </div>
+              </Box>
             </Box>
 
             <Box
