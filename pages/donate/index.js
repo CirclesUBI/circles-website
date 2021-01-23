@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Anchor, Box, Button, Heading, Paragraph, Text } from 'grommet';
 import copy from 'copy-to-clipboard';
+import Iframe from 'react-iframe';
 
 import Layout from '../../components/Layout';
 import { accountAddresses } from '../../config/constants';
@@ -85,13 +86,13 @@ export default function Donate() {
             </Heading>
 
             <Box
-              background="dark-1"
-              pad="medium"
+              background={large ? 'dark-1' : 'none'}
+              pad={large ? 'medium' : 'none'}
               margin={{ vertical: 'medium' }}
             >
-              <Box direction="row" justify="center" pad="medium">
+              <Box direction="row" justify="center">
                 <div>
-                  <iframe
+                  <Iframe
                     allowpaymentrequest=""
                     frameBorder="0"
                     height="900px"
@@ -102,10 +103,25 @@ export default function Donate() {
                     style={{
                       maxWidth: 500,
                       minWidth: 250,
-                      maxHeight: 'none!important',
+                      maxHeight: 'none !important',
+                    }}
+                    width={large ? 400 : 320}
+                  />
+                  {/* <iframe
+                    allowpaymentrequest=""
+                    frameBorder="0"
+                    height="900px"
+                    name="donorbox"
+                    scrolling="no"
+                    seamless="seamless"
+                    src="https://donorbox.org/embed/circlesubi"
+                    style={{
+                      maxWidth: 500,
+                      minWidth: large ? 400 : 320,
+                      maxHeight: 'none !important',
                     }}
                     width="100%"
-                  ></iframe>
+                  ></iframe> */}
                 </div>
               </Box>
             </Box>
