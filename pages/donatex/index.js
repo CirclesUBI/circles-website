@@ -9,7 +9,7 @@ import { accountAddresses } from '../../config/constants';
 
 const { ETHADDRESS, BTCADDRESS, EuroADDRESS } = accountAddresses;
 
-export default function Donate() {
+export default function DonateX() {
   const [ethCopied, setEthCopied] = useState(false);
   const [btcCopied, setBtcCopied] = useState(false);
   const [euroCopied, setEuroCopied] = useState(false);
