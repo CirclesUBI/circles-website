@@ -78,8 +78,9 @@ const Layout = (props) => {
                   </Box>
                 </Box>
               )}
-
-              {props.children(large, screenClass)}
+              <Box margin={{ top: '-36px' }}>
+                {props.children(large, screenClass)}
+              </Box>
               <Footer />
             </Container>
           );
