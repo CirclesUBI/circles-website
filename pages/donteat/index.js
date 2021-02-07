@@ -152,7 +152,7 @@ export default function Donteat() {
                   </Heading>
 
                   <Box direction="row" justify="center">
-                    <Box background="dark-1" height="900px">
+                    <Box background="dark-1">
                       <Iframe
                         allowpaymentrequest=""
                         frameBorder="0"
