@@ -40,14 +40,15 @@ export default function Donteat() {
   const [ethCopied, setEthCopied] = useState(false);
   const [btcCopied, setBtcCopied] = useState(false);
   const [euroCopied, setEuroCopied] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      scroller.scrollTo('donate-section', {
-        duration: 200,
-        smooth: true,
-      });
-    }, 300);
-  }, []);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     scroller.scrollTo('donate-section', {
+  //       duration: 200,
+  //       smooth: true,
+  //     });
+  //   }, 300);
+  // }, []);
 
   const copyETH = () => {
     setBtcCopied(false);
@@ -151,7 +152,7 @@ export default function Donteat() {
                   </Heading>
 
                   <Box direction="row" justify="center">
-                    <Box background="dark-1">
+                    <Box background="dark-1" height="900px">
                       <Iframe
                         allowpaymentrequest=""
                         frameBorder="0"
