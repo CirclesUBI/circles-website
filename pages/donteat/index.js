@@ -41,10 +41,12 @@ export default function Donteat() {
   const [btcCopied, setBtcCopied] = useState(false);
   const [euroCopied, setEuroCopied] = useState(false);
   useEffect(() => {
-    scroller.scrollTo('donate-section', {
-      duration: 200,
-      smooth: true,
-    });
+    setTimeout(() => {
+      scroller.scrollTo('donate-section', {
+        duration: 200,
+        smooth: true,
+      });
+    }, 300);
   }, []);
 
   const copyETH = () => {
