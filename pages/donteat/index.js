@@ -1,10 +1,18 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
 import Head from 'next/head';
-import { Anchor, Box, Button, Heading, Layer, Paragraph, Text } from 'grommet';
+import {
+  Anchor,
+  Box,
+  Button,
+  Heading,
+  Layer,
+  List,
+  Paragraph,
+  Text,
+} from 'grommet';
 import { Close, CircleInformation } from 'grommet-icons';
 import copy from 'copy-to-clipboard';
 import Iframe from 'react-iframe';
-import { scroller, Element } from 'react-scroll';
 
 import Layout from '../../components/Layout';
 import { accountAddresses } from '../../config/constants';
@@ -16,6 +24,15 @@ const paragraphs = [
   `Circles is an open source project with an ambitious roadmap, and we need your help to make basic income a reality worldwide!`,
   `Our goal is to have 2,000 recurring donations that support bringing Circles to full thriving life. Your donation supports the creation of a basic income for all people, and the creation of sustainable, local economies worldwide.
 Please support the work ahead of us!`,
+];
+
+const goals2021 = [
+  `Develop Circles to be an alternative for every basic income
+  advocate`,
+  `Global Support Centre (for support and research, knowledge
+  centre)`,
+  `Flagship pilot in every continent`,
+  `Strong network between Hubs and communities`,
 ];
 
 const boxProps = {
@@ -82,97 +99,94 @@ export default function Donteat() {
       <Layout>
         {(large) => (
           <Fragment>
-            <Element name="donate-section">
-              <Box
-                pad="large"
-                width="xxlarge"
-                alignSelf="center"
-                elevation="medium"
-                className="page-wrapper"
-                background={{
-                  image: "url('/images/donate-image.jpg')",
-                  position: 'center',
-                  repeat: 'no-repeat',
-                  size: 'cover',
-                }}
-                direction={large ? 'row' : 'column'}
-                justify="between"
-                align="center"
-                gap="xlarge"
-              >
-                <Box {...boxProps} basis={large ? 'large' : 'full'}>
-                  <Heading {...headingProps}>Support Circles</Heading>
-                  {large ? (
-                    <Box>
-                      {paragraphs.map((p) => (
-                        <Paragraph key={p.substring(0, 10)}>{p}</Paragraph>
-                      ))}
-                    </Box>
-                  ) : (
-                    <Fragment>
-                      <Button
-                        icon={<CircleInformation size="large" />}
-                        onClick={() => setModal(true)}
-                        alignSelf="center"
-                      />
-                      {modal && (
-                        <Layer
-                          onEsc={() => setModal(false)}
-                          onClickOutside={() => setModal(false)}
-                          full
-                        >
-                          <Box pad="large" background="light-1">
-                            <Box direction="row" justify="between">
-                              <Heading level={2} margin="none">
-                                Support Circles
-                              </Heading>
-                              <Button
-                                icon={<Close />}
-                                onClick={() => setModal(false)}
-                                margin={{ top: '-24px' }}
-                              />
-                            </Box>
-                            <Box>
-                              {paragraphs.map((p) => (
-                                <Paragraph key={p.substring(0, 10)}>
-                                  {p}
-                                </Paragraph>
-                              ))}
-                            </Box>
+            <Box
+              pad="large"
+              width="xxlarge"
+              alignSelf="center"
+              elevation="medium"
+              className="page-wrapper"
+              background={{
+                image: "url('/images/donate-image.jpg')",
+                position: 'center',
+                repeat: 'no-repeat',
+                size: 'cover',
+              }}
+              direction={large ? 'row' : 'column'}
+              justify="between"
+              align="center"
+              gap="xlarge"
+            >
+              <Box {...boxProps} basis={large ? 'large' : 'full'}>
+                <Heading {...headingProps}>Support Circles</Heading>
+                {large ? (
+                  <Box>
+                    {paragraphs.map((p) => (
+                      <Paragraph key={p.substring(0, 10)}>{p}</Paragraph>
+                    ))}
+                  </Box>
+                ) : (
+                  <Fragment>
+                    <Button
+                      icon={<CircleInformation size="large" />}
+                      onClick={() => setModal(true)}
+                      alignSelf="center"
+                    />
+                    {modal && (
+                      <Layer
+                        onEsc={() => setModal(false)}
+                        onClickOutside={() => setModal(false)}
+                        full
+                      >
+                        <Box pad="large" background="light-1">
+                          <Box direction="row" justify="between">
+                            <Heading level={2} margin="none">
+                              Support Circles
+                            </Heading>
+                            <Button
+                              icon={<Close />}
+                              onClick={() => setModal(false)}
+                              margin={{ top: '-24px' }}
+                            />
                           </Box>
-                        </Layer>
-                      )}
-                    </Fragment>
-                  )}
-                </Box>
+                          <Box>
+                            {paragraphs.map((p) => (
+                              <Paragraph key={p.substring(0, 10)}>
+                                {p}
+                              </Paragraph>
+                            ))}
+                          </Box>
+                        </Box>
+                      </Layer>
+                    )}
+                  </Fragment>
+                )}
+              </Box>
 
-                <Box {...boxProps} basis={large ? 'large' : 'full'}>
-                  <Heading {...headingProps}>
-                    Give once. or Give Monthly
-                  </Heading>
+              <Box {...boxProps} basis={large ? 'large' : 'full'}>
+                <Heading {...headingProps}>Give Monthly. or Give Once</Heading>
 
-                  <Box direction="row" justify="center">
-                    <Box background="dark-1">
-                      <Iframe
-                        allowpaymentrequest=""
-                        frameBorder="0"
-                        height="900px"
-                        name="donorbox"
-                        scrolling="no"
-                        seamless="seamless"
-                        src="https://donorbox.org/embed/circlesubi"
-                        style={{
-                          maxWidth: 500,
-                          minWidth: 250,
-                          maxHeight: 'none !important',
-                        }}
-                        width={large ? 400 : 320}
-                      />
-                    </Box>
+                <Box direction="row" justify="center">
+                  <Box background="dark-1">
+                    <Iframe
+                      allowpaymentrequest=""
+                      frameBorder="0"
+                      height="900px"
+                      name="donorbox"
+                      scrolling="no"
+                      seamless="seamless"
+                      src="https://donorbox.org/embed/circlesubi"
+                      style={{
+                        maxWidth: 500,
+                        minWidth: 250,
+                        maxHeight: 'none !important',
+                      }}
+                      width={large ? 400 : 320}
+                    />
                   </Box>
                 </Box>
               </Box>
-            </Element>
+            </Box>
+
             <Box direction="row" justify="center">
               <Box width="large" pad="large">
                 <Heading {...headingProps} color="dark-1">
@@ -192,11 +206,10 @@ export default function Donteat() {
                   elevation="small"
                 >
                   <AddressSection
-                    title="EURO"
-                    subtitle="Circles Coop eG. at GLS BANK"
-                    address={EuroADDRESS}
-                    action={() => copyEuro()}
-                    copied={euroCopied}
+                    title="BITCOIN"
+                    address={BTCADDRESS}
+                    action={() => copyBTC()}
+                    copied={btcCopied}
                   />
 
                   <AddressSection
@@ -204,13 +217,6 @@ export default function Donteat() {
                     address={ETHADDRESS}
                     action={() => copyETH()}
                     copied={ethCopied}
-                  />
-
-                  <AddressSection
-                    title="BITCOIN"
-                    address={BTCADDRESS}
-                    action={() => copyBTC()}
-                    copied={btcCopied}
                   />
                 </Box>
 
@@ -238,25 +244,26 @@ export default function Donteat() {
                 </Box>
               </Box>
             </Box>
+
+            <Box direction="row" justify="center" margin={{ bottom: 'large' }}>
+              <Box width="large" pad="large">
+                <Heading {...headingProps} color="dark-1">
+                  GOALS FOR 2021
+                </Heading>
+                <List data={goals2021}>
+                  {(datum) => (
+                    <Text margin="small" weight="bold">
+                      {datum}
+                    </Text>
+                  )}
+                </List>
+              </Box>
+            </Box>
           </Fragment>
         )}
       </Layout>
     </div>
   );
-
-  // const buttonStyle = {
-  //   borderRadius: 8,
-  //   borderColor: '#D12D5F',
-  //   borderWidth: 1,
-  // };
-
-  // const addressStyle = {
-  //   fontFamily: 'monospace',
-  //   background: '#eee',
-  //   padding: 4,
-  //   borderRadius: 4,
-  //   wordBreak: 'break-all',
-  // };
 
   function AddressSection({ title, subtitle, address, action, copied }) {
     return (
