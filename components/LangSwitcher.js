@@ -2,7 +2,7 @@ import { Box, Menu } from 'grommet';
 import { i18n } from '../i18n';
 import { FormDown } from 'grommet-icons';
 
-const activeLanguages = ['en', 'de', 'es'];
+export const activeLanguages = ['en', 'de', 'es'];
 
 const LangSwitcher = () => {
   if (!i18n || !i18n.language) {
