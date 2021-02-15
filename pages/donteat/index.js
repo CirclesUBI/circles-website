@@ -110,7 +110,7 @@ export default function Donteat() {
                     pad="large"
                     basis={large ? 'large' : 'full'}
                   >
-                    <Heading {...headingProps}>Support Circles</Heading>
+                    <Heading {...headingProps}>Circles need you!</Heading>
                     {large ? (
                       <Box>
                         {paragraphs.map((p) => (
@@ -133,7 +133,7 @@ export default function Donteat() {
                             <Box pad="large" background="light-1">
                               <Box direction="row" justify="between">
                                 <Heading level={2} margin="none">
-                                  Support Circles
+                                  Circles need you!
                                 </Heading>
                                 <Button
                                   icon={<Close />}
@@ -256,15 +256,15 @@ export default function Donteat() {
                   <Heading {...headingProps} color="dark-1">
                     GOALS FOR 2021
                   </Heading>
-                  <Box>
+                  <ul>
                     {goals2021.map((datum) => (
-                      <Box pad="medium" key={datum.substr(0, 20)}>
-                        <Text>
-                          <em>{datum}</em>
-                        </Text>
-                      </Box>
+                      <li key={datum.substr(0, 20)}>
+                        <Box pad="small">
+                          <Text>{datum}</Text>
+                        </Box>
+                      </li>
                     ))}
-                  </Box>
+                  </ul>
                 </Box>
               </Box>
             </Box>
