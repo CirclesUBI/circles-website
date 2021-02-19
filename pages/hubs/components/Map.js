@@ -14,7 +14,7 @@ import CityInfo from './CityInfo';
 import CITIES from '../cities.json';
 
 const TOKEN =
-  'pk.eyJ1IjoiZW1pbngiLCJhIjoiY2trNGV0aG03MDFwbDJvbHdiYmUwemV5MSJ9.GvsqD3RuaFJz2W9rG_JoRA';
+  'pk.eyJ1IjoiZW1pbngiLCJhIjoiY2tsYzU5YXZ6MDkyNDJ5bWcxZDZmZXFjMyJ9.w6xYaaz5NOslpqcFHsNGsQ';
 
 const geolocateStyle = {
   position: 'absolute',

@@ -1,39 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
-import { scroller, Element, Link as ScrollLink } from 'react-scroll';
-import renderHTML from 'react-render-html';
-import Slider from 'react-slick';
-import ReactPlayer from 'react-player/vimeo';
+import { scroller, Link as ScrollLink } from 'react-scroll';
 
-import {
-  Accordion,
-  AccordionPanel,
-  Box,
-  Button,
-  FormField,
-  Image,
-  Grommet,
-  Layer,
-  TextInput,
-  Text,
-  Paragraph,
-} from 'grommet';
-import { Up, Down, Close } from 'grommet-icons';
+import { Box, FormField, Image, TextInput, Text } from 'grommet';
 import { Row } from 'react-grid-system';
 
 import Map from './components/Map';
 import Layout from '../../components/Layout';
-import { withTranslation } from '../../i18n';
+const hubs = require('./cities.json');
 
-const textFieldTheme = {
-  global: {
-    focus: {
-      border: {
-        color: '#CC1E66',
-      },
-    },
-  },
-};
+// import { withTranslation } from '../../i18n';
 
 function Hubs({ t }) {
   const [inputValue, setInputValue] = useState('');
@@ -49,31 +25,29 @@ function Hubs({ t }) {
 
   const inputRef = useRef();
 
-  const items = t('items', { returnObjects: true });
-
-  let suggestions = [];
-  if (inputValue.length > 3) {
-    items.forEach((item, index) => {
-      if (item.question.toLowerCase().includes(inputValue.toLowerCase())) {
-        suggestions.push({
-          label: (
-            <ScrollLink
-              onClick={() => handleSelect(index)}
-              to={item.question}
-              smooth
-              duration={300}
-              offset={-50}
-            >
-              <Box pad="small">{item.question}</Box>
-            </ScrollLink>
-          ),
-          value: item.question,
-          topic: item.topic,
-          index,
-        });
-      }
-    });
-  }
+  // let suggestions = [];
+  // if (inputValue.length > 3) {
+  //   hubs.forEach((item, index) => {
+  //     if (item.question.toLowerCase().includes(inputValue.toLowerCase())) {
+  //       suggestions.push({
+  //         label: (
+  //           <ScrollLink
+  //             onClick={() => handleSelect(index)}
+  //             to={item.question}
+  //             smooth
+  //             duration={300}
+  //             offset={-50}
+  //           >
+  //             <Box pad="small">{item.question}</Box>
+  //           </ScrollLink>
+  //         ),
+  //         value: item.question,
+  //         topic: item.topic,
+  //         index,
+  //       });
+  //     }
+  //   });
+  // }
 
   const handleSelect = (index) => {
     setSelectedIndex(index);
@@ -88,14 +62,6 @@ function Hubs({ t }) {
       offset: -50,
       smooth: true,
     });
-  };
-
-  const handlePanelSelect = (index) => {
-    if (index === selectedIndex) {
-      setSelectedIndex(null);
-      return;
-    }
-    setSelectedIndex(index);
   };
 
   const isClient = typeof window !== 'undefined';
@@ -149,26 +115,28 @@ function Hubs({ t }) {
                   textAlign="center"
                   margin={{ bottom: 'medium' }}
                 >
-                  {t('title')}
+                  Search for Hubs
                 </Text>
-                <Box pad={{ horizontal: 'medium' }}>
-                  <Grommet theme={textFieldTheme}>
-                    <FormField>
-                      <TextInput
-                        ref={inputRef}
-                        value={inputValue}
-                        onChange={(event) => {
-                          setSelectedIndex(null);
-                          setInputValue(event.target.value);
-                        }}
-                        onSelect={onSelect}
-                        suggestions={suggestions}
-                        placeholder={t('placeholder')}
-                        type="search"
-                        dropProps={{ pad: { horizontal: 'medium' } }}
-                      />
-                    </FormField>
-                  </Grommet>
+                <Box
+                  pad={{ horizontal: 'medium', top: 'small' }}
+                  background="light-1"
+                  margin={{ bottom: 'small' }}
+                >
+                  <FormField>
+                    <TextInput
+                      ref={inputRef}
+                      value={inputValue}
+                      onChange={(event) => {
+                        setSelectedIndex(null);
+                        setInputValue(event.target.value);
+                      }}
+                      // onSelect={onSelect}
+                      // suggestions={suggestions}
+                      placeholder="Berlin"
+                      // type="search"
+                      dropProps={{ pad: { horizontal: 'medium' } }}
+                    />
+                  </FormField>
                 </Box>
               </Box>
             </Box>
@@ -191,8 +159,8 @@ function Hubs({ t }) {
   );
 }
 
-Hubs.getInitialProps = async () => ({
-  namespacesRequired: ['faq'],
-});
+// Hubs.getInitialProps = async () => ({
+//   namespacesRequired: ['faq'],
+// });
 
-export default withTranslation('faq')(Hubs);
+export default Hubs;
