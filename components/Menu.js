@@ -5,6 +5,7 @@ import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
 
 import { withTranslation } from '../i18n';
+import { activeLanguages } from './LangSwitcher';
 
 const pageLinks = [
   { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
@@ -172,9 +173,9 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
     pathname = location.pathname;
   }
 
-  // const menu = pathname && pathname === '/' ? homeMenuLinks : notHomeMenuLinks;
+  const langPaths = [...activeLanguages.map((lang) => '/' + lang), '/'];
   const menu = notHomeMenuLinks;
-  const isHome = pathname && pathname === '/';
+  const isHome = pathname && langPaths.includes(pathname);
 
   return (
     <Box direction={large ? 'row' : 'column'} justify="center" pad="small">

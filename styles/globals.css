@@ -57,3 +57,12 @@ a {
   font-family: OstrichSansHeavy;
   src: url(/fonts/OstrichSansHeavy.woff);
 }
+
+.donate-payment-holder {
+  padding: 24px;
+}
+@media screen and (max-width: 380px) {
+  .donate-payment-holder {
+    padding: 24px 0;
+  }
+}

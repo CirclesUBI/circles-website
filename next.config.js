@@ -6,7 +6,15 @@ const localeSubpaths = {
 };
 
 const langs = ['', '/de', '/es'];
-const pages = ['/', '/faq', '/donate', '/contact', '/terms', '/privacy-policy'];
+const pages = [
+  '/',
+  '/faq',
+  '/donate',
+  '/contact',
+  '/terms',
+  '/privacy-policy',
+  '/donteat',
+];
 
 const pathMap = {};
 langs.forEach((lang) => {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Anchor, Box, Button, Heading, Paragraph, Text } from 'grommet';
 import copy from 'copy-to-clipboard';
+import Iframe from 'react-iframe';
 
 import Layout from '../../components/Layout';
 import { accountAddresses } from '../../config/constants';
@@ -36,6 +37,10 @@ export default function Donate() {
     <div className="page">
       <Head>
         <title>CirclesUBI | Donate to Our Cause</title>
+        <script
+          src="https://donorbox.org/widget.js"
+          paypalexpress="false"
+        ></script>
       </Head>
 
       <Layout>

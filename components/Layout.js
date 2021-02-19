@@ -1,11 +1,7 @@
 import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
-import { Grommet, Box } from 'grommet';
-import {
-  Container,
-  ScreenClassRender,
-  setConfiguration,
-} from 'react-grid-system';
+import { Grommet, Box, ResponsiveContext } from 'grommet';
+import { Container, setConfiguration } from 'react-grid-system';
 
 import theme from '../config/theme';
 import Header from './Header';
@@ -22,7 +18,7 @@ const fixedHeaderStyle = {
   paddingRight: 0,
 };
 
-const Layout = (props) => {
+function Layout(props) {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = (event) => {
@@ -57,9 +53,9 @@ const Layout = (props) => {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="theme-color" content="#660F33" />
       </Head>
-      <ScreenClassRender
-        render={(screenClass) => {
-          const large = ['xxl', 'xl', 'lg'].includes(screenClass);
+      <ResponsiveContext.Consumer>
+        {(size) => {
+          const large = ['large', 'medium'].includes(size);
           return (
             <Container style={{ maxWidth: 1280 }}>
               <Box style={{ paddingTop: 12 }}>
@@ -78,15 +74,14 @@ const Layout = (props) => {
                   </Box>
                 </Box>
               )}
-
-              {props.children(large, screenClass)}
+              <Box margin={{ top: '-36px' }}>{props.children(large, size)}</Box>
               <Footer />
             </Container>
           );
         }}
-      />
+      </ResponsiveContext.Consumer>
     </Grommet>
   );
-};
+}
 
 export default Layout;
