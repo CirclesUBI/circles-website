@@ -14,7 +14,7 @@ const { ETHADDRESS, BTCADDRESS } = accountAddresses;
 const paragraphs = [
   `Since launching in October 2020 the Circles community has grown to 200k users around the globe. Interest in the project led to rapid scaling, which overloaded our servers, and after overhauling our infrastructure we are at the end of our budget.`,
   `Circles is an open source project with an ambitious roadmap, and we need your help to make basic income a reality worldwide!`,
-  `Our goal is to have 2,000 recurring donations that support bringing Circles to full thriving life. Your donation supports the creation of a basic income for all people, and the creation of sustainable, local economies worldwide.
+  `Our goal is to have 2,000 regular donors who support bringing Circles to full thriving life. Your donation supports the creation of a basic income for all people, and the creation of sustainable, local economies worldwide.
 Please support the work ahead of us!`,
 ];
 
