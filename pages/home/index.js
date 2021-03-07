@@ -51,6 +51,7 @@ const contributors = [
   'Javier Alaves',
   'Justyna Trivedi',
   'Karenina Schröder',
+  'Malthus John',
   'Martin Lundfall',
   'Ronit Kory',
   'Wouter Kampmann',
