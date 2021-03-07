@@ -9,6 +9,7 @@ const colors = {
   brand2: '#D12D5F',
   brand3: '#E36567',
   brand4: '#7E133F',
+  brand5: '#44c1c9',
   gradient:
     'linear-gradient(135deg, rgba(102,15,51,1) 0%, rgba(204,30,102,1) 100%)',
   active: {

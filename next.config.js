@@ -15,6 +15,7 @@ const pages = [
   '/privacy-policy',
   '/donteat',
   '/hubs',
+  '/home',
 ];
 
 const pathMap = {};
