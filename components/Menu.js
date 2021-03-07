@@ -9,7 +9,7 @@ import { activeLanguages } from './LangSwitcher';
 
 const pageLinks = [
   { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
-  { label: 'Donate', value: '/donate', isExternal: false, isRoute: true },
+  // { label: 'Donate', value: '/donate', isExternal: false, isRoute: true },
 ];
 
 const homeMenuLinks = [
@@ -178,7 +178,12 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
   const isHome = pathname && langPaths.includes(pathname);
 
   return (
-    <Box direction={large ? 'row' : 'column'} justify="center" pad="small">
+    <Box
+      direction={large ? 'row' : 'column'}
+      justify="center"
+      pad="small"
+      align={large ? 'center' : 'start'}
+    >
       {menu.map((item, index) =>
         item.value === '/' ? (
           <HomeMenu
@@ -232,6 +237,23 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           </ScrollLink>
         )
       )}
+      <Link href="/donate">
+        <Button
+          primary
+          as="span"
+          alignSelf="center"
+          label={
+            <span style={{ color: '#fff', fontSize: 16 }}>
+              <b>Donate</b>
+            </span>
+          }
+          margin={{
+            horizontal: '28px',
+            vertical: large ? 'none' : 'medium',
+          }}
+          color="brand5"
+        />
+      </Link>
     </Box>
   );
 });
