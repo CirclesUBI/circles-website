@@ -1,19 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="1393px" height="4668px" viewBox="0 0 1393 4668" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>home-background-clear</title>
+    <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="0.11182" width="1366" height="4667.89"></rect>
-        <linearGradient x1="100%" y1="99.9995465%" x2="-18.0263526%" y2="72.1053204%" id="linearGradient-3">
+        <linearGradient x1="100%" y1="97.2679673%" x2="-18.0263526%" y2="70.8976608%" id="linearGradient-3">
             <stop stop-color="#660F33" offset="0%"></stop>
             <stop stop-color="#CC1E66" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="100%" y1="99.9995908%" x2="-18.0265124%" y2="72.1059383%" id="linearGradient-4">
+        <linearGradient x1="100%" y1="97.2671012%" x2="-18.0265124%" y2="70.8978435%" id="linearGradient-4">
             <stop stop-color="#660F33" offset="0%"></stop>
             <stop stop-color="#CC1E66" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="19.5583632%" y1="13.9357664%" x2="109.032258%" y2="67.3903445%" id="linearGradient-5">
+        <linearGradient x1="19.5583632%" y1="16.5968299%" x2="109.032258%" y2="66.107167%" id="linearGradient-5">
             <stop stop-color="#FF8E00" offset="0%"></stop>
             <stop stop-color="#D12D5F" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="7.6775441%" y1="21.8395801%" x2="91.151289%" y2="78.5384076%" id="linearGradient-6">
+        <linearGradient x1="7.6775441%" y1="23.3755661%" x2="91.151289%" y2="76.9818045%" id="linearGradient-6">
             <stop stop-color="#22A7AD" offset="0%"></stop>
             <stop stop-color="#05E48E" offset="100%"></stop>
         </linearGradient>
@@ -29,36 +33,38 @@
             <stop stop-color="#FFFFFF" stop-opacity="0.08" offset="0%"></stop>
             <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="48.8846182%" y1="5.31031168%" x2="48.7874774%" y2="-100.106412%" id="linearGradient-10">
+        <linearGradient x1="49.9504022%" y1="5.31031168%" x2="49.9460826%" y2="-100.106412%" id="linearGradient-10">
             <stop stop-color="#FFFFFF" stop-opacity="0.08" offset="0%"></stop>
             <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="49.8958265%" y1="105.030493%" x2="49.7983364%" y2="1.55665622%" id="linearGradient-11">
+        <linearGradient x1="49.9951575%" y1="105.030493%" x2="49.9906256%" y2="1.55665622%" id="linearGradient-11">
             <stop stop-color="#FFFFFF" stop-opacity="0.08" offset="0%"></stop>
             <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="home-background">
+        <g id="home-background-clear">
             <g id="Clipped" transform="translate(8.000000, 0.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="Rectangle-path"></g>
-                <g id="Group" mask="url(#mask-2)" fill-rule="nonzero">
-                    <g transform="translate(-801.000000, -420.000000)" id="Oval">
-                        <ellipse fill="url(#linearGradient-3)" transform="translate(1447.000000, 2074.200000) rotate(-180.000000) translate(-1447.000000, -2074.200000) " cx="1447" cy="2074.2" rx="1072" ry="1102.54"></ellipse>
-                        <ellipse fill="url(#linearGradient-4)" transform="translate(1428.500000, 4750.350000) rotate(-180.000000) translate(-1428.500000, -4750.350000) " cx="1428.5" cy="4750.35" rx="950.5" ry="977.588"></ellipse>
-                        <ellipse fill="url(#linearGradient-5)" transform="translate(1473.000000, 870.375000) rotate(-180.000000) translate(-1473.000000, -870.375000) " cx="1473" cy="870.375" rx="837" ry="869.701"></ellipse>
-                        <ellipse fill="url(#linearGradient-6)" transform="translate(1478.000000, 2077.500000) rotate(-180.000000) translate(-1478.000000, -2077.500000) " cx="1478" cy="2077.5" rx="737" ry="757.961"></ellipse>
-                        <ellipse fill="url(#linearGradient-7)" transform="translate(1465.500000, 2815.420000) rotate(-180.000000) translate(-1465.500000, -2815.420000) " cx="1465.5" cy="2815.42" rx="1465.5" ry="1522.98"></ellipse>
+                <g id="Group-Clipped">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="path-1"></g>
+                    <g id="Group" mask="url(#mask-2)">
+                        <g transform="translate(-801.000000, -420.000000)" id="Oval">
+                            <g>
+                                <ellipse fill="url(#linearGradient-3)" fill-rule="nonzero" transform="translate(1447.000000, 2074.200000) rotate(-180.000000) translate(-1447.000000, -2074.200000) " cx="1447" cy="2074.2" rx="1072" ry="1102.54"></ellipse>
+                                <ellipse fill="url(#linearGradient-4)" fill-rule="nonzero" transform="translate(1428.500000, 4750.350000) rotate(-180.000000) translate(-1428.500000, -4750.350000) " cx="1428.5" cy="4750.35" rx="950.5" ry="977.588"></ellipse>
+                                <ellipse fill="url(#linearGradient-5)" fill-rule="nonzero" transform="translate(1473.000000, 870.375000) rotate(-180.000000) translate(-1473.000000, -870.375000) " cx="1473" cy="870.375" rx="837" ry="869.701"></ellipse>
+                                <ellipse fill="url(#linearGradient-6)" fill-rule="nonzero" transform="translate(1478.000000, 2077.500000) rotate(-180.000000) translate(-1478.000000, -2077.500000) " cx="1478" cy="2077.5" rx="737" ry="757.961"></ellipse>
+                                <ellipse fill="url(#linearGradient-7)" fill-rule="nonzero" transform="translate(1465.500000, 2815.420000) rotate(-180.000000) translate(-1465.500000, -2815.420000) " cx="1465.5" cy="2815.42" rx="1465.5" ry="1522.98"></ellipse>
+                            </g>
+                        </g>
                     </g>
                 </g>
             </g>
-            <path d="M827,805.932 L827,805.932 C857.617,792.678 893.309,801.298 914.503,827.064 L925.608,840.563 L939.26,824.776 C959.089,801.845 993.59,798.917 1017,818.18 L1017,818.18" id="Shape" stroke-opacity="0.8" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
-            <path d="M865,899.163 L865,899.163 C903.176,882.603 947.705,893.363 974.107,925.528 L988,942.453 L1005.04,922.701 C1029.76,894.064 1072.82,890.41 1102,914.473 L1102,914.473" id="Shape" stroke-opacity="0.8" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
             <path d="M1117,832.219 L1117,832.219 C1140.39,822.147 1167.61,828.713 1183.84,848.338 L1192.25,858.513 L1202.65,846.554 C1217.82,829.103 1244.11,826.872 1262,841.518 L1262,841.518" id="Shape" stroke-opacity="0.8" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
-            <path d="M897,736.403 L897,736.403 C916.158,728.066 938.522,733.474 951.753,749.644 L958.759,758.208 L967.33,748.244 C979.72,733.841 1001.36,732.004 1016,744.114 L1016,744.114" id="Shape" stroke-opacity="0.6" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
+            <path d="M981,775.403 L981,775.403 C1000.158,767.066 1022.522,772.474 1035.753,788.644 L1042.759,797.208 L1051.33,787.244 C1063.72,772.841 1085.36,771.004 1100,783.114 L1100,783.114" id="Shape" stroke-opacity="0.6" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
             <path d="M1035,706.691 L1035,706.691 C1049.65,700.315 1066.75,704.451 1076.87,716.817 L1082.23,723.365 L1088.78,715.746 C1098.26,704.731 1114.8,703.327 1126,712.588 L1126,712.588" id="Shape" stroke-opacity="0.6" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"></path>
             <path d="M1102,638.061 L1102,638.061 C1117.03,631.661 1134.48,635.855 1144.96,648.386 L1150.27,654.735 L1156.9,647.189 C1166.68,636.067 1183.49,634.641 1195,643.958 L1195,643.958" id="Shape" stroke-opacity="0.6" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"></path>
             <path d="M1189,580.67 L1189,580.67 C1200.46,575.753 1213.79,578.964 1221.75,588.559 L1225.85,593.496 L1230.93,587.672 C1238.37,579.145 1251.23,578.054 1260,585.206 L1260,585.206" id="Shape" stroke-opacity="0.4" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"></path>

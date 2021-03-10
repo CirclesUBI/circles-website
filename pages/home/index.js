@@ -162,6 +162,7 @@ function Home2({ t }) {
                     }
                     margin="medium"
                     color="brand5"
+                    size="large"
                     style={{
                       padding: '10px 24px',
                       borderRadius: 8,
