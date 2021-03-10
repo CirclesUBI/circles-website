@@ -224,7 +224,7 @@ function Home2({ t }) {
                     {t('more-info')}
                   </Anchor>
                 </ScrollLink>
-                <Image src="/images/arrows-down.svg" />
+                <Image src="/images/arrows-down-dark.svg" />
               </Box>
 
               <Box
