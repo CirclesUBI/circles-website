@@ -142,14 +142,14 @@ function Home2({ t }) {
               <Text
                 size="large"
                 color="light-1"
-                margin={{ bottom: 'large' }}
+                margin={{ bottom: 'medium' }}
                 textAlign="center"
               >
                 <b>
                   <em>{t('slogan')}</em>
                 </b>
               </Text>
-              <Box margin={{ top: 'xlarge' }}>
+              <Box margin={{ top: 'large' }}>
                 <Link href="/donate">
                   <Button
                     primary
@@ -160,11 +160,10 @@ function Home2({ t }) {
                         <b>Circles Need You</b>
                       </span>
                     }
-                    size="large"
                     margin="medium"
                     color="brand5"
                     style={{
-                      padding: '14px 52px',
+                      padding: '10px 24px',
                       borderRadius: 8,
                     }}
                   />
@@ -172,20 +171,20 @@ function Home2({ t }) {
               </Box>
 
               <Box
-                width="large"
-                margin={{ top: 'large', bottom: 'xlarge' }}
+                width="medium"
+                margin={{ top: 'medium', bottom: 'xlarge' }}
                 alignSelf="center"
                 pad="medium"
-                style={{ backgroundColor: 'rgba(255, 255, 255, 0.6)' }}
+                // style={{ backgroundColor: 'rgba(255, 255, 255, 0.6)' }}
               >
-                <Text margin={{ bottom: 'medium' }}>
+                <Text margin={{ bottom: 'medium' }} color="#fff">
                   Since launching in October 2020 the Circles community has
                   grown to 200k users around the globe. Interest in the project
                   led to rapid scaling, which overloaded our servers, and after
                   overhauling our infrastructure we are at the end of our
                   budget.
                 </Text>
-                <Text weight="bold" margin={{ bottom: 'medium' }}>
+                <Text weight="bold" margin={{ bottom: 'medium' }} color="#fff">
                   <em>
                     Circles big dream needs you to realize end the world
                     poverty, make basic income reality!
@@ -221,7 +220,9 @@ function Home2({ t }) {
                   style={{ marginBottom: 20 }}
                   offset={-50}
                 >
-                  <Anchor as="span">{t('more-info')}</Anchor>
+                  <Anchor as="span" color="dark-1">
+                    {t('more-info')}
+                  </Anchor>
                 </ScrollLink>
                 <Image src="/images/arrows-down.svg" />
               </Box>
