@@ -41,7 +41,7 @@
 
 <br/>
 
-Official website of the [`Circles UBI`](https://joincircles.net) project generated via [`Next.js`](https://nextjs.org/).
+Official website of the [`Circles UBI`](https://joincircles.net) project generated as a statically hosted GitHub page using [`Next.js`](https://nextjs.org/).
 
 ## Development
 
