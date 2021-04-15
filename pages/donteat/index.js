@@ -60,7 +60,7 @@ export default function Donteat() {
   const [modal, setModal] = useState(false);
   const [ethCopied, setEthCopied] = useState(false);
   const [btcCopied, setBtcCopied] = useState(false);
-  const [iframeSrc, setIframeSrc] = useState('EUR');
+  const [currency, setCurrency] = useState('EUR');
 
   const copyETH = () => {
     setBtcCopied(false);
@@ -168,8 +168,8 @@ export default function Donteat() {
                       <Select
                         size="large"
                         options={['EUR', 'USD']}
-                        value={iframeSrc}
-                        onChange={({ value }) => setIframeSrc(value)}
+                        value={currency}
+                        onChange={({ value }) => setCurrency(value)}
                       />
                     </Box>
 
@@ -181,7 +181,7 @@ export default function Donteat() {
                         name="donorbox"
                         scrolling="no"
                         seamless="seamless"
-                        src={iframeSrc === 'USD' ? dollarSrc : euroSrc}
+                        src={currency === 'USD' ? dollarSrc : euroSrc}
                         style={{
                           maxWidth: 500,
                           minWidth: 250,
