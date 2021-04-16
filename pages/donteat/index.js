@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { Anchor, Box, Button, Heading, Layer, Paragraph, Text } from 'grommet';
+import {
+  Anchor,
+  Box,
+  Button,
+  Heading,
+  Layer,
+  Paragraph,
+  Select,
+  Text,
+} from 'grommet';
 import { Close, CircleInformation } from 'grommet-icons';
 import copy from 'copy-to-clipboard';
 import Iframe from 'react-iframe';
@@ -44,10 +53,14 @@ const headingProps = {
   },
 };
 
+const dollarSrc = 'https://donorbox.org/embed/circlesubi';
+const euroSrc = 'https://donorbox.org/embed/circlesubi-2';
+
 export default function Donteat() {
   const [modal, setModal] = useState(false);
   const [ethCopied, setEthCopied] = useState(false);
   const [btcCopied, setBtcCopied] = useState(false);
+  const [currency, setCurrency] = useState('EUR');
 
   const copyETH = () => {
     setBtcCopied(false);
@@ -74,23 +87,6 @@ export default function Donteat() {
         {(large) => {
           return (
             <Box pad={{ vertical: 'xlarge' }}>
-              {/* <Box
-                pad="large"
-                width="xxlarge"
-                alignSelf="center"
-                elevation="medium"
-                className="page-wrapper"
-                background={{
-                  image: "url('/images/donate-image.jpg')",
-                  position: 'center',
-                  repeat: 'no-repeat',
-                  size: 'cover',
-                }}
-                direction={large ? 'row' : 'column'}
-                justify="between"
-                align="center"
-                gap="xlarge"
-              > */}
               <Row
                 style={{
                   backgroundImage: `url('/images/donate-image.jpg')`,
@@ -168,6 +164,15 @@ export default function Donteat() {
                       Give Monthly. or Give Once
                     </Heading>
 
+                    <Box margin={{ horizontal: 'medium' }} background="dark-1">
+                      <Select
+                        size="large"
+                        options={['EUR', 'USD']}
+                        value={currency}
+                        onChange={({ value }) => setCurrency(value)}
+                      />
+                    </Box>
+
                     <Box alignSelf="center" background="dark-1">
                       <Iframe
                         allowpaymentrequest=""
@@ -176,7 +181,7 @@ export default function Donteat() {
                         name="donorbox"
                         scrolling="no"
                         seamless="seamless"
-                        src="https://donorbox.org/embed/circlesubi"
+                        src={currency === 'USD' ? dollarSrc : euroSrc}
                         style={{
                           maxWidth: 500,
                           minWidth: 250,
@@ -188,7 +193,6 @@ export default function Donteat() {
                   </Box>
                 </Col>
               </Row>
-              {/* </Box> */}
 
               <Box direction="row" justify="center">
                 <Box width="large" pad="large">
