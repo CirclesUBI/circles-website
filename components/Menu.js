@@ -104,7 +104,7 @@ const SubMenuItems = ({ t, large }) => (
         smooth
         duration={500}
         offset={-50}
-        style={{ marginTop: 8, marginBottom: 8 }}
+        style={{ marginTop: 6, marginBottom: 6 }}
       >
         <Anchor
           as="span"
@@ -136,7 +136,7 @@ const HomeMenu = ({ item, t, large, isCurrentPage }) => {
             color={large ? 'white' : 'brand4'}
             margin={{
               horizontal: '28px',
-              vertical: !isCurrentPage && !large ? 'medium' : 'none',
+              vertical: !isCurrentPage && !large ? 'xsmall' : 'none',
             }}
             style={{
               fontSize: 16,
@@ -202,7 +202,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             color={large ? 'white' : 'brand4'}
             margin={{
               horizontal: '28px',
-              vertical: large ? 'none' : 'medium',
+              vertical: large ? 'none' : 'small',
             }}
           />
         ) : item.isRoute ? (
@@ -213,7 +213,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
               color={large ? 'white' : 'brand4'}
               margin={{
                 horizontal: '28px',
-                vertical: large ? 'none' : 'medium',
+                vertical: large ? 'none' : 'small',
               }}
             />
           </Link>
@@ -249,7 +249,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           }
           margin={{
             horizontal: '28px',
-            vertical: large ? 'none' : 'medium',
+            vertical: large ? 'none' : 'small',
           }}
           color="brand5"
         />
@@ -312,7 +312,7 @@ const MainMenu = ({ t, large, fixed, ...otherProps }) => {
           onEsc={onClose}
           responsive={false}
         >
-          <Box pad="medium" justify="between" height="100vh">
+          <Box pad="small" justify="around" height="100vh">
             {fixed ? (
               <div />
             ) : (
@@ -322,7 +322,7 @@ const MainMenu = ({ t, large, fixed, ...otherProps }) => {
                 icon={<CloseIcon color="brand4" />}
               />
             )}
-            <Box pad={{ top: 'large' }}>
+            <Box pad={{ top: 'medium' }}>
               <MenuContent t={t} large={false} />
             </Box>
             <Box>
