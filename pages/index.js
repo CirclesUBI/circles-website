@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Link } from '../i18n';
 import { Anchor, Box, Heading, Image, Text, Button } from 'grommet';
 import { Row, Col } from 'react-grid-system';
 import { Link as ScrollLink } from 'react-scroll';
@@ -141,14 +142,58 @@ function Home({ t }) {
               <Text
                 size="large"
                 color="light-1"
-                margin={{ bottom: 'large' }}
+                margin={{ bottom: 'medium' }}
                 textAlign="center"
               >
                 <b>
                   <em>{t('slogan')}</em>
                 </b>
               </Text>
-              <Box margin={{ vertical: 'large' }} alignSelf="center">
+              <Box margin={{ top: 'large' }}>
+                <Link href="/donate">
+                  <Button
+                    primary
+                    as="span"
+                    alignSelf="center"
+                    label={
+                      <span style={{ color: '#fff' }}>
+                        <b>Circles Need You</b>
+                      </span>
+                    }
+                    margin="medium"
+                    color="brand5"
+                    size="large"
+                    style={{
+                      padding: '10px 24px',
+                      borderRadius: 8,
+                    }}
+                  />
+                </Link>
+              </Box>
+
+              <Box
+                width="medium"
+                margin={{ top: 'medium', bottom: 'xlarge' }}
+                alignSelf="center"
+                pad="medium"
+                // style={{ backgroundColor: 'rgba(255, 255, 255, 0.6)' }}
+              >
+                <Text margin={{ bottom: 'medium' }} color="#fff">
+                  Since launching in October 2020 the Circles community has
+                  grown to 200k users around the globe. Interest in the project
+                  led to rapid scaling, which overloaded our servers, and after
+                  overhauling our infrastructure we are at the end of our
+                  budget.
+                </Text>
+                <Text weight="bold" margin={{ bottom: 'medium' }} color="#fff">
+                  <em>
+                    Circles big dream needs you to realize end the world
+                    poverty, make basic income reality!
+                  </em>
+                </Text>
+              </Box>
+
+              <Box margin={{ top: 'large' }} alignSelf="center">
                 <Button
                   color="dark-2"
                   plain
@@ -168,7 +213,7 @@ function Home({ t }) {
                   }}
                 />
               </Box>
-              <Box margin={{ bottom: 'xlarge' }} align="center">
+              <Box margin={{ vertical: 'large' }} align="center">
                 <ScrollLink
                   to="about"
                   smooth
@@ -176,17 +221,17 @@ function Home({ t }) {
                   style={{ marginBottom: 20 }}
                   offset={-50}
                 >
-                  <Anchor as="span" color="light-1">
+                  <Anchor as="span" color="dark-1">
                     {t('more-info')}
                   </Anchor>
                 </ScrollLink>
-                <Image src="/images/arrows-down.svg" />
+                <Image src="/images/arrows-down-dark.svg" />
               </Box>
 
               <Box
                 width="medium"
                 alignSelf="center"
-                pad={{ top: 'xlarge', bottom: 'medium' }}
+                pad="medium"
                 id="about"
                 margin={{ top: getAboutImageTopMargin(screenClass) }}
               >
