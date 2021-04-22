@@ -136,7 +136,7 @@ const HomeMenu = ({ item, t, large, isCurrentPage }) => {
             color={large ? 'white' : 'brand4'}
             margin={{
               horizontal: '28px',
-              vertical: !isCurrentPage && !large ? 'xsmall' : 'none',
+              vertical: !isCurrentPage && !large ? 'small' : 'none',
             }}
             style={{
               fontSize: 16,
