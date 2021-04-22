@@ -13,9 +13,7 @@ const pages = [
   '/contact',
   '/terms',
   '/privacy-policy',
-  '/donteat',
   '/hubs',
-  '/home',
 ];
 
 const pathMap = {};
