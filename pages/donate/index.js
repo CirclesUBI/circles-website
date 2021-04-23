@@ -106,7 +106,7 @@ export default function Donate() {
                     pad="large"
                     basis={large ? 'large' : 'full'}
                   >
-                    <Heading {...headingProps}>Circles need you!</Heading>
+                    <Heading {...headingProps}>Circles needs you!</Heading>
                     {large ? (
                       <Box>
                         {paragraphs.map((p) => (
@@ -129,7 +129,7 @@ export default function Donate() {
                             <Box pad="large" background="light-1">
                               <Box direction="row" justify="between">
                                 <Heading level={2} margin="none">
-                                  Circles need you!
+                                  Circles needs you!
                                 </Heading>
                                 <Button
                                   icon={<Close />}
