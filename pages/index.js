@@ -157,7 +157,7 @@ function Home({ t }) {
                     alignSelf="center"
                     label={
                       <span style={{ color: '#fff' }}>
-                        <b>Circles Need You</b>
+                        <b>Circles Needs You</b>
                       </span>
                     }
                     margin="medium"
