@@ -152,7 +152,7 @@ const HomeMenu = ({ item, t, large, isCurrentPage }) => {
               align={{ top: 'bottom', left: 'left' }}
               target={targetRef.current}
               elevation="xsmall"
-              background="none"
+              background="white"
               style={{ zIndex: 120 }}
             >
               <SubMenuItems t={t} large={large} />
