@@ -152,10 +152,13 @@ function Home({ t }) {
 
               <Box
                 width="medium"
-                margin={{ top: 'medium', bottom: 'medium' }}
+                margin={{ top: 'medium' }}
                 alignSelf="center"
                 pad="medium"
               >
+                <Text weight="bold" margin={{ bottom: 'medium' }} color="#fff">
+                  Circles needs you!
+                </Text>
                 <Text margin={{ bottom: 'medium' }} color="#fff">
                   Since launching in October 2020 the Circles community has
                   grown to 200k users around the globe. Interest in the project
@@ -213,6 +216,7 @@ function Home({ t }) {
                   }}
                 />
               </Box>
+
               <Box margin={{ vertical: 'large' }} align="center">
                 <ScrollLink
                   to="about"
