@@ -60,7 +60,7 @@ export default function Donate() {
   const [modal, setModal] = useState(false);
   const [ethCopied, setEthCopied] = useState(false);
   const [btcCopied, setBtcCopied] = useState(false);
-  const [currency, setCurrency] = useState('EUR');
+  const [currency, setCurrency] = useState('USD');
 
   const copyETH = () => {
     setBtcCopied(false);
