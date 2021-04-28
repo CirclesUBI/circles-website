@@ -80,6 +80,9 @@ function Layout(props) {
           );
         }}
       </ResponsiveContext.Consumer>
+      <!-- Cloudflare Web Analytics -->
+      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e7e584e1f91f431da5a98e7e138fc758"}'></script>
+      <!-- End Cloudflare Web Analytics -->
     </Grommet>
   );
 }
