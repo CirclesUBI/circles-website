@@ -149,34 +149,12 @@ function Home({ t }) {
                   <em>{t('slogan')}</em>
                 </b>
               </Text>
-              <Box margin={{ top: 'large' }}>
-                <Link href="/donate">
-                  <Button
-                    primary
-                    as="span"
-                    alignSelf="center"
-                    label={
-                      <span style={{ color: '#fff' }}>
-                        <b>Circles Needs You</b>
-                      </span>
-                    }
-                    margin="medium"
-                    color="brand5"
-                    size="large"
-                    style={{
-                      padding: '10px 24px',
-                      borderRadius: 8,
-                    }}
-                  />
-                </Link>
-              </Box>
 
               <Box
                 width="medium"
-                margin={{ top: 'medium', bottom: 'xlarge' }}
+                margin={{ top: 'medium', bottom: 'medium' }}
                 alignSelf="center"
                 pad="medium"
-                // style={{ backgroundColor: 'rgba(255, 255, 255, 0.6)' }}
               >
                 <Text margin={{ bottom: 'medium' }} color="#fff">
                   Since launching in October 2020 the Circles community has
@@ -191,6 +169,28 @@ function Home({ t }) {
                     poverty, make basic income reality!
                   </em>
                 </Text>
+              </Box>
+
+              <Box margin={{ top: 'medium', bottom: 'xlarge' }}>
+                <Link href="/donate">
+                  <Button
+                    primary
+                    as="span"
+                    alignSelf="center"
+                    label={
+                      <span style={{ color: '#fff' }}>
+                        <b>Donate now</b>
+                      </span>
+                    }
+                    margin="medium"
+                    color="brand5"
+                    size="large"
+                    style={{
+                      padding: '10px 24px',
+                      borderRadius: 8,
+                    }}
+                  />
+                </Link>
               </Box>
 
               <Box margin={{ top: 'large' }} alignSelf="center">
