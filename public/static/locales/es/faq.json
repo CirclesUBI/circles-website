@@ -103,7 +103,7 @@
         "Cuando confías en alguien, también puedes enviar Circles a personas en su Red de confianza: ¿qué significa la confianza en Circles?, sin confiar directamente en esas personas. Esto se denomina confianza transitiva y permite que la red de Circles crezca más fácilmente.",
         "Ejemplo: es posible que la persona no confíe en ti, pero resulta que tienes la ficha de otra persona además de la tuya. Aún puede pagarle a esa persona con el token de esta persona. <em> Ejemplo: A quiere enviar 10 Circles a B, B no confía en A pero B confía en C, A posee 10 tokens C y, por lo tanto, puede enviar estos 10 tokens C a B </em> ",
         "Puede poseer varios tokens de Circles diferentes. No necesariamente está enviando sus propios tokens a alguien cuando envía Circles. Estás enviando los que tienes un saldo lo suficientemente alto de + que tiene un límite de confianza lo suficientemente grande ",
-        "Lea el <a href='https://handbook.joincircles.net/about/whitepaper.html' target='_blank'> documento técnico de los Circles </a> para obtener más información sobre las transacciones transitivas."
+        "Lea el <a href='https://handbook.joincircles.net/docs/developers/whitepaper' target='_blank'> documento técnico de los Circles </a> para obtener más información sobre las transacciones transitivas."
       ]
     },
     {
