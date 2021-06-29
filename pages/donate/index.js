@@ -27,17 +27,17 @@ const paragraphs = [
   'We need your help to make basic income a reality worldwide!',
   'We are looking for committed, regular donors who support bringing Circles to a fully thriving life.',
   'Your donation is crucial!',
-  'Supports the creation of a basic income for all people, and make sustainable, local economies worldwide.',
+  'Support the creation of a basic income for all people, and make sustainable, local economies worldwide.',
 ];
 
 const paragraphs2 = [
-  'Your Donation supports the IT development, the European and Asian pilots, the tests, the research, the community building, the mentoring for the pilot community, and many other works.',
-  'Your contribution is crucial, please be a part of Partons of Circles!',
+  'Your donation supports the IT development, the European and Asian pilots, the tests, the research, the community building, the mentoring for the pilot community, and many other works.',
+  'Your contribution is crucial, please be a part of Patrons of Circles!',
   'Let\'s create together a new world for ourselves!',
 ];
 
 const paragraphs3 = [
-  'Our legal entity is a cooperative: The Circles Coop eG (in Gründung). It is founded by the team who have been most busy during the last years working on implementing varying features that compose Circles ecosystem.',
+  'Our legal entity is a cooperative: The Circles Coop eG (in Gründung). It is founded by the team who have been most busy during the last years working on implementing varying features that comprise the Circles ecosystem.',
   'We are dedicated to continually improving Circles; with motivations to provide access to a community-based basic income for many, around the entire globe.',
   'Therefore this huge and long work needs your support too.',
 ];
@@ -48,7 +48,7 @@ const goals2021 = [
   `Global Support Centre (for support and research, knowledge
   centre)`,
   `Flagship pilot in every continent`,
-  `Strong network between Hubs and communities`,
+  `Strong network between Hubs and Communities`,
 ];
 
 const boxProps = {
@@ -256,7 +256,7 @@ export default function Donate() {
                     </Heading>
                     <Text size="medium" margin="small">
                       Your donation supports the creation of a basic income for
-                      all people, and the creation of sustainable, local economis
+                      all people, and the creation of sustainable, local economies
                       worldwide.
                     </Text>
 
