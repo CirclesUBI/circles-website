@@ -37,28 +37,38 @@ const textFieldTheme = {
 
 function FAQ({ t }) {
   const [inputValue, setInputValue] = useState('');
-  const { query, push } = useRouter();
+  const { pathname, query, push } = useRouter();
 
   const selectedIndex = query.open && Number(query.open);
 
   const setSelectedIndex = (itemIndex) => {
-    push({ query: { open: itemIndex } }, undefined, {
+    push({ pathname, query: { open: itemIndex } }, undefined, {
       shallow: true,
       scroll: false,
     });
   };
 
+  const items = t('items', { returnObjects: true });
+
   useEffect(() => {
-    scroller.scrollTo('page-wrapper', {
-      duration: 200,
-      smooth: true,
-    });
-    inputRef.current.focus();
+    if (selectedIndex) {
+      const openItem =
+        items && items.find((item, index) => index === selectedIndex);
+      scroller.scrollTo(openItem.question, {
+        duration: 200,
+        smooth: true,
+        offset: -90,
+      });
+    } else {
+      scroller.scrollTo('page-wrapper', {
+        duration: 200,
+        smooth: true,
+      });
+      inputRef.current.focus();
+    }
   }, []);
 
   const inputRef = useRef();
-
-  const items = t('items', { returnObjects: true });
 
   let suggestions = [];
   if (inputValue.length > 3) {
@@ -88,7 +98,7 @@ function FAQ({ t }) {
     const suggestion = event.suggestion;
     setSelectedIndex(suggestion.index);
     setInputValue('');
-    scroller.scrollTo(suggestion.value, {
+    scroller.scrollTo(openItem.question, {
       duration: 300,
       offset: -80,
       smooth: true,
