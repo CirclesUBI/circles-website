@@ -180,6 +180,13 @@
       ]
     },
     {
+      "topic": "Shared Wallet",
+      "question": "What is a Shared Wallet?",
+      "answer": [
+        "A shared wallet is a wallet that you can open for any group or organization that you're part of. Every person who has a validated trusted accounted in Circles can create a shared wallet and add people to it. Shared wallets do not issue a basic income. To fund your shared wallet you must deposit a small amount of CRC to start. You can later send more CRC to it and receive CRC from others as well. Shared wallets can issue payments to others as well as receive payments. In order to receive CRC from others directly, shared wallets must first trust other accounts in order to receive their CRC. Shared wallets do not have a native CRC token of their own but can hold CRC from others. Because of this reason, shared wallets cannot receive trust, they can only give it."
+      ]
+    },
+    {
       "topic": "Security and Technical Background",
       "question": "How are my Circles Produced?",
       "answer": [
