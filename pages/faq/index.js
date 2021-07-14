@@ -38,9 +38,10 @@ const textFieldTheme = {
 function FAQ({ t }) {
   const [inputValue, setInputValue] = useState('');
   const { pathname, query, push } = useRouter();
+  const inputRef = useRef();
 
   const selectedIndex = query.open && Number(query.open);
-
+  const items = t('items', { returnObjects: true });
   const setSelectedIndex = (itemIndex) => {
     push({ pathname, query: { open: itemIndex } }, undefined, {
       shallow: true,
@@ -48,14 +49,11 @@ function FAQ({ t }) {
     });
   };
 
-  const items = t('items', { returnObjects: true });
-
   useEffect(() => {
     if (selectedIndex) {
-      const openItem =
-        items && items.find((item, index) => index === selectedIndex);
+      const openItem = items && items[selectedIndex];
       scroller.scrollTo(openItem.question, {
-        duration: 200,
+        duration: 300,
         smooth: true,
         offset: -90,
       });
@@ -66,9 +64,7 @@ function FAQ({ t }) {
       });
       inputRef.current.focus();
     }
-  }, []);
-
-  const inputRef = useRef();
+  }, [selectedIndex, items]);
 
   let suggestions = [];
   if (inputValue.length > 3) {
@@ -98,7 +94,7 @@ function FAQ({ t }) {
     const suggestion = event.suggestion;
     setSelectedIndex(suggestion.index);
     setInputValue('');
-    scroller.scrollTo(openItem.question, {
+    scroller.scrollTo(suggestion.question, {
       duration: 300,
       offset: -80,
       smooth: true,
