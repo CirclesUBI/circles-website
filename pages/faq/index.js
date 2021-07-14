@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { scroller, Element, Link as ScrollLink } from 'react-scroll';
 import renderHTML from 'react-render-html';
 import Slider from 'react-slick';
@@ -36,7 +37,16 @@ const textFieldTheme = {
 
 function FAQ({ t }) {
   const [inputValue, setInputValue] = useState('');
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const { query, push } = useRouter();
+
+  const selectedIndex = query.open && Number(query.open);
+
+  const setSelectedIndex = (itemIndex) => {
+    push({ query: { open: itemIndex } }, undefined, {
+      shallow: true,
+      scroll: false,
+    });
+  };
 
   useEffect(() => {
     scroller.scrollTo('page-wrapper', {
@@ -57,11 +67,11 @@ function FAQ({ t }) {
         suggestions.push({
           label: (
             <ScrollLink
-              onClick={() => handleSelect(index)}
+              onClick={() => setSelectedIndex(index)}
               to={item.question}
               smooth
               duration={300}
-              offset={-50}
+              offset={-80}
             >
               <Box pad="small">{item.question}</Box>
             </ScrollLink>
@@ -74,17 +84,13 @@ function FAQ({ t }) {
     });
   }
 
-  const handleSelect = (index) => {
-    setSelectedIndex(index);
-    setInputValue('');
-  };
-
   const onSelect = (event) => {
     const suggestion = event.suggestion;
-    handleSelect(suggestion.index);
+    setSelectedIndex(suggestion.index);
+    setInputValue('');
     scroller.scrollTo(suggestion.value, {
       duration: 300,
-      offset: -50,
+      offset: -80,
       smooth: true,
     });
   };
@@ -163,7 +169,8 @@ function FAQ({ t }) {
                           ref={inputRef}
                           value={inputValue}
                           onChange={(event) => {
-                            setSelectedIndex(null);
+                            // setSelectedIndex(null);
+                            push({ query: {} });
                             setInputValue(event.target.value);
                           }}
                           onSelect={onSelect}
