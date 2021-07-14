@@ -1,11 +1,11 @@
 {
-  "Wallet": "Wallet",
-  "About": "About",
-  "How It Works": "How It Works",
-  "Community": "Community",
+  "Wallet": "Portefeuille",
+  "About": "A Propos",
+  "How It Works": "Comment ça marche ",
+  "Community": "Communauté",
   "FAQ": "FAQ",
-  "Donate": "Donate",
-  "Home": "Home",
-  "Team": "Team",
-  "News": "News"
+  "Donate": "Faire un don",
+  "Home": "Accueil",
+  "Team": "Equipe",
+  "News": "Actualités"
 }

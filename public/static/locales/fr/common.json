@@ -1,7 +1,7 @@
 {
-  "h1": "A simple example",
-  "change-locale": "Change locale",
-  "to-second-page": "To second page",
-  "error-with-status": "A {{statusCode}} error occurred on server",
-  "error-without-status": "An error occurred on the server"
+  "h1": "Un exemple simple",
+  "change-locale": "Changer langue",
+  "to-second-page": "Vers la deuxième page",
+  "error-with-status": "l'erreur {{statusCode}} s'est produite sur le serveur",
+  "error-without-status": "Une erreur s'est produite sur le serveur"
 }
