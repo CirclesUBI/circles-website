@@ -34,4 +34,5 @@ module.exports = {
   ) {
     return pathMap;
   },
+  target: 'serverless',
 };
