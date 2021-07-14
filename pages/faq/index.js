@@ -175,7 +175,6 @@ function FAQ({ t }) {
                           ref={inputRef}
                           value={inputValue}
                           onChange={(event) => {
-                            // setSelectedIndex(null);
                             push({ query: {} });
                             setInputValue(event.target.value);
                           }}
