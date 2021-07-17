@@ -198,10 +198,11 @@ function Home({ t }) {
               </Box>
 
               <Heading
-                level={1}
-                textAlign="center"
+                alignSelf="center"
                 color="dark-1"
+                level={1}
                 margin={{ top: 'large', bottom: 'small' }}
+                textAlign="center"
               >
                 {t('about-title')}
               </Heading>
@@ -251,10 +252,11 @@ function Home({ t }) {
               id="how-it-works"
             >
               <Heading
-                level={1}
-                textAlign="center"
+                alignSelf="center"
                 color="dark-1"
+                level={1}
                 margin={{ top: 'large', bottom: 'small' }}
+                textAlign="center"
               >
                 {t('hiw-title')}
               </Heading>
@@ -267,10 +269,11 @@ function Home({ t }) {
 
             <Box id="community" margin={{ top: 'large', bottom: 'large' }}>
               <Heading
-                level={1}
-                textAlign="center"
+                alignSelf="center"
                 color="dark-1"
+                level={1}
                 margin={{ top: 'large', bottom: 'small' }}
+                textAlign="center"
               >
                 {t('community-title')}
               </Heading>

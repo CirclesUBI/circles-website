@@ -153,7 +153,7 @@ const Footer = ({ t }) => {
             {t('links-wallet')}
           </Anchor>
           <Anchor
-            href="https://handbook.joincircles.net/about/whitepaper.html"
+            href="https://handbook.joincircles.net/docs/developers/whitepaper"
             color="light-1"
           >
             {t('links-whitepaper')}
