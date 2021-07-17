@@ -101,7 +101,7 @@
       "topic": "Réseau de confiance - Que signifie la “Confiance“ dans Circles?",
       "question": "Comment fonctionne la confiance dans Circles?",
       "answer": [
-        "Si une personne vous fait confiance, vous pouvez lui envoyer des cercles. Cela signifie que l'envoi de cercles se fait dans le sens inverse de celui de faire confiance à quelqu'un. On pourrait aussi dire : “Parce que je  vous fais confiance, j'accepte vos cercles“ ou “Parce que vous me faites confiance, je peux  vous envoyer mes cercles“.",
+        "Si une personne vous fait confiance, vous pouvez lui envoyer des Circles. Cela signifie que l'envoi de Circles se fait dans le sens inverse de celui de faire confiance à quelqu'un. On pourrait aussi dire : “Parce que je  vous fais confiance, j'accepte vos Circles“ ou “Parce que vous me faites confiance, je peux  vous envoyer mes Circles“.",
         "Lorsque vous faites confiance à quelqu'un, vous pouvez également envoyer des Circles à des personnes de son réseau de confiance, sans faire vous-même directement confiance à ces personnes. C'est ce qu'on appelle la confiance transitive, et permet au réseau Circles de se développer plus facilement.",
         "Exemple: La personne peut ne pas vous faire confiance, mais vous possédez le jeton de quelqu'un d'autre en plus du vôtre. Vous pouvez toujours payer cette personne avec le jeton de cette personne. <em>Exemple : A veut envoyer 10 Circles à B, B ne fait pas confiance à A mais B fait confiance à C, A possède 10 C Tokens et peut donc envoyer ces 10 C Tokens à B.</em>",
         "Vous pouvez posséder plusieurs jetons Circles différents. Vous n'envoyez pas nécessairement uniquement vos propres jetons à quelqu'un lorsque vous envoyez des Circles. Vous envoyez ceux pour lesquels vous avez un solde suffisamment élevé de + qui a une limite de confiance suffisamment grande.",
@@ -179,10 +179,10 @@
         "Vous pouvez accéder au profil de l’utilisateur concerné, appuyer sur l'icône de confiance à côté de son nom et révoquer la confiance. Nous vous recommandons de le faire dès que possible pour éviter de perdre vos jetons sur son compte."
       ]
     },
-    "topic": "Shared Wallet",
-      "question": "What is a Shared Wallet?",
+    "topic": "Portefeuille partagé",
+      "question": "Qu'est-ce que c'est un portefeuille partagé?",
       "answer": [
-        "A shared wallet is a wallet that you can open for any group or organization that you're part of. Every person who has a validated trusted accounted in Circles can create a shared wallet and add people to it. Shared wallets do not issue a basic income. To fund your shared wallet you must deposit a small amount of CRC to start. You can later send more CRC to it and receive CRC from others as well. Shared wallets can issue payments to others as well as receive payments. In order to receive CRC from others directly, shared wallets must first trust other accounts in order to receive their CRC. Shared wallets do not have a native CRC token of their own but can hold CRC from others. Because of this reason, shared wallets cannot receive trust, they can only give it."
+        "Un portefeuille partagé est un portefeuille que vous pouvez ouvrir pour n'importe quel groupe ou organisation auquel vous appartenez. Toute personne disposant d'un compte de confiance validé dans Circles peut créer un portefeuille partagé et y ajouter des personnes. Les portefeuilles partagés n'accordent pas de revenu de base. Pour financer un portefeuille partagé, il faut payer au départ une petite somme de CRC. Plus tard, vous pouvez y envoyer plus de CRC et également obtenir des CRC d'autres personnes. Les portefeuilles partagés peuvent à la fois émettre et recevoir des paiements à d'autres. Afin de pouvoir recevoir le CRC de quelqu'un directement, il est nécessaire de faire confiance au compte du destinataire afin d'obtenir son CRC. Les portefeuilles partagés n'ont pas leur propre jeton CRC, mais peuvent contenir le CRC d'autres personnes. Pour cette raison, les portefeuilles partagés ne peuvent pas recevoir la confiance, seulement la donner.  "
       ]
     },
     {
