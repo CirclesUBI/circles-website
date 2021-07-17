@@ -177,7 +177,13 @@
         "Du kannst auf das Profil dieses Nutzers gehen, das Vertrauen-Symbol neben dem Namen anklicken und dein Vertrauen widerrufen. Um zu verhindern, dass du deine Token an dieses Konto verlierst, empfehlen wir dir, das so schnell wie möglich zu tun."
       ]
     },
-
+    {
+      "topic": "Shared Wallet",
+      "question": "Was ist eine Shared Wallet?",
+      "answer": [
+        "Eine Shared Wallet -Geteilte Wallet- ist eine Wallet, die Sie für jede Gruppe oder Organisation, der Sie angehören, öffnen können. Jede Person, die einen validierten vertrauenswürdigen Account in Circles hat, kann eine Shared Wallet erstellen und Leute dazu hinzufügen. Shared Wallet gewähren kein Grundeinkommen. Um eine Shared Wallet zu finanzieren, musst Du zu Beginn einen kleinen Betrag an CRC einzahlen. Später kannst du mehr CRC dorthin senden und auch CRC von anderen erhalten. Shared Wallets können sowohl Zahlungen an andere ausgeben als auch Zahlungen empfangen. Um CRC von jemandem direkt empfangen zu können, ist es notwendig, dem Konto des Empfängers zu vertrauen, um dessen CRC zu erhalten. Shared Wallets haben keinen eigenen CRC-Token, können aber CRC von anderen halten. Aus diesem Grund können Shared Wallets kein Vertrauen empfangen, sondern nur geben."
+      ]
+    },
     {
       "topic": "Sicherheit und technischer Hintergrund",
       "question": "Wie werden meine Circles geschöpft?",

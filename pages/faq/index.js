@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { scroller, Element, Link as ScrollLink } from 'react-scroll';
 import renderHTML from 'react-render-html';
 import Slider from 'react-slick';
@@ -36,19 +37,34 @@ const textFieldTheme = {
 
 function FAQ({ t }) {
   const [inputValue, setInputValue] = useState('');
-  const [selectedIndex, setSelectedIndex] = useState(null);
-
-  useEffect(() => {
-    scroller.scrollTo('page-wrapper', {
-      duration: 200,
-      smooth: true,
-    });
-    inputRef.current.focus();
-  }, []);
-
+  const { pathname, query, push } = useRouter();
   const inputRef = useRef();
 
+  const selectedIndex = query.open && Number(query.open);
   const items = t('items', { returnObjects: true });
+  const setSelectedIndex = (itemIndex) => {
+    push({ pathname, query: { open: itemIndex } }, undefined, {
+      shallow: true,
+      scroll: false,
+    });
+  };
+
+  useEffect(() => {
+    if (selectedIndex) {
+      const openItem = items && items[selectedIndex];
+      scroller.scrollTo(openItem.question, {
+        duration: 300,
+        smooth: true,
+        offset: -90,
+      });
+    } else {
+      scroller.scrollTo('page-wrapper', {
+        duration: 200,
+        smooth: true,
+      });
+      inputRef.current.focus();
+    }
+  }, [selectedIndex, items]);
 
   let suggestions = [];
   if (inputValue.length > 3) {
@@ -57,11 +73,11 @@ function FAQ({ t }) {
         suggestions.push({
           label: (
             <ScrollLink
-              onClick={() => handleSelect(index)}
+              onClick={() => setSelectedIndex(index)}
               to={item.question}
               smooth
               duration={300}
-              offset={-50}
+              offset={-80}
             >
               <Box pad="small">{item.question}</Box>
             </ScrollLink>
@@ -74,17 +90,13 @@ function FAQ({ t }) {
     });
   }
 
-  const handleSelect = (index) => {
-    setSelectedIndex(index);
-    setInputValue('');
-  };
-
   const onSelect = (event) => {
     const suggestion = event.suggestion;
-    handleSelect(suggestion.index);
-    scroller.scrollTo(suggestion.value, {
+    setSelectedIndex(suggestion.index);
+    setInputValue('');
+    scroller.scrollTo(suggestion.question, {
       duration: 300,
-      offset: -50,
+      offset: -80,
       smooth: true,
     });
   };
@@ -163,7 +175,6 @@ function FAQ({ t }) {
                           ref={inputRef}
                           value={inputValue}
                           onChange={(event) => {
-                            setSelectedIndex(null);
                             setInputValue(event.target.value);
                           }}
                           onSelect={onSelect}

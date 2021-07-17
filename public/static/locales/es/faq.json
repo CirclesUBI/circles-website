@@ -178,6 +178,13 @@
       ]
     },
     {
+      "topic": "Shared Wallet",
+      "question": "¿Qué es un Shared Wallet?",
+      "answer": [
+        "Un Shared Wallet o Billetera Compartida es una billetera que puedes abrir para cualquier grupo u organización de la que formes parte. Toda persona que tenga un monedero de confianza validado en Circles puede crear un una Shared Wallet y añadir gente a ella. Las Shared Wallets no emiten un ingreso básico. Para financiar tu Shared Wallet debes depositar una pequeña cantidad de CRC para empezar. Más tarde puedes enviar más CRC a él y recibir CRC de otros usuarios también. Las Shared Wallets pueden emitir pagos a otros así como recibir pagos.Para poder recibir CRC de otros directamente, las Shared Wallets deben confiar primero en esas cuentas. Las Shared Wallets no tienen un token CRC nativo propio, pero pueden utilizar los CRC de otros. Por esta razón, los monederos compartidos no pueden recibir confianza, sólo pueden darla."
+      ]
+    },
+    {
       "topic": "Seguridad y antecedentes técnicos",
       "question": "¿Cómo se producen mis Circles?",
       "answer": [
