@@ -83,7 +83,7 @@
     },
     {
       "topic": "Comprendre les Circles - Que se passe-t-il?",
-      "question": "Je dois  payer des impôts sur les Circles?",
+      "question": "Est-ce que je dois  payer des impôts sur les Circles?",
       "answer": [
         "Si vous êtes une entreprise ou si vous acceptez les Circles pour des biens ou des services, vous devez payer des impôts en euros comme vous le feriez pour tout autre type de revenu : bitcoin, euros, dollar, etc.",
         "La fiscalité est relative à votre juridiction et doit être traitée en conséquence. Nous n'offrons pas de conseils fiscaux et vous recommandons de parler à un spécialiste de votre pays."
@@ -177,6 +177,12 @@
       "question": "Que se passe-t-il si j'ai fait confiance à un compte par erreur ou si je ne fais plus confiance à quelqu'un dans le système?",
       "answer": [
         "Vous pouvez accéder au profil de l’utilisateur concerné, appuyer sur l'icône de confiance à côté de son nom et révoquer la confiance. Nous vous recommandons de le faire dès que possible pour éviter de perdre vos jetons sur son compte."
+      ]
+    },
+    "topic": "Shared Wallet",
+      "question": "What is a Shared Wallet?",
+      "answer": [
+        "A shared wallet is a wallet that you can open for any group or organization that you're part of. Every person who has a validated trusted accounted in Circles can create a shared wallet and add people to it. Shared wallets do not issue a basic income. To fund your shared wallet you must deposit a small amount of CRC to start. You can later send more CRC to it and receive CRC from others as well. Shared wallets can issue payments to others as well as receive payments. In order to receive CRC from others directly, shared wallets must first trust other accounts in order to receive their CRC. Shared wallets do not have a native CRC token of their own but can hold CRC from others. Because of this reason, shared wallets cannot receive trust, they can only give it."
       ]
     },
     {
