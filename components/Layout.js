@@ -13,7 +13,6 @@ const fixedHeaderStyle = {
   position: 'fixed',
   top: 0,
   width: '100%',
-  maxWidth: 1280,
   zIndex: 99,
   paddingRight: 0,
 };
@@ -57,7 +56,7 @@ function Layout(props) {
         {(size) => {
           const large = ['large', 'medium'].includes(size);
           return (
-            <Container style={{ maxWidth: 1280 }}>
+            <Container style={{ maxWidth: 'none' }}>
               <Box style={{ paddingTop: 12 }}>
                 <Header large={large} />
               </Box>
@@ -80,7 +79,11 @@ function Layout(props) {
           );
         }}
       </ResponsiveContext.Consumer>
-      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e7e584e1f91f431da5a98e7e138fc758"}'></script>
+      <script
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "e7e584e1f91f431da5a98e7e138fc758"}'
+      ></script>
     </Grommet>
   );
 }
