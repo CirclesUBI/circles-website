@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Text, Image } from 'grommet';
+import { Row, Col } from 'react-grid-system';
 
 const Widget = ({
   imageLink,
@@ -7,7 +8,7 @@ const Widget = ({
   content,
   imageWidth = 'small',
   imageHeight = '100px',
-  onClick = null
+  onClick = null,
 }) => {
   return (
     <Box
@@ -21,14 +22,16 @@ const Widget = ({
       hoverIndicator="light-1"
       onClick={onClick}
     >
-      <Box margin={{ bottom: 'large' }}>
-        <Image
-          src={imageLink}
-          width={imageWidth}
-          height={imageHeight}
-          alignSelf="center"
-        />
-      </Box>
+      {imageLink && (
+        <Box margin={{ bottom: 'large' }}>
+          <Image
+            src={imageLink}
+            width={imageWidth}
+            height={imageHeight}
+            alignSelf="center"
+          />
+        </Box>
+      )}
       <Text weight="bold" margin={{ bottom: 'medium' }}>
         {title}
       </Text>
