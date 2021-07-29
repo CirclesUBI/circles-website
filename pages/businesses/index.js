@@ -51,8 +51,8 @@ function Businesses({ t }) {
       <Layout>
         {(large, screenClass) => (
           <Box>
-            <Box width="100%" pad="large" margin={{ top: 'medium' }}>
-              <Box alignSelf="center">
+            <Box width="100%" pad="large" margin={{ vertical: 'medium' }}>
+              <Box alignSelf="center" margin={{ bottom: 'medium' }}>
                 <Heading
                   alignSelf="center"
                   color="light-1"
@@ -178,6 +178,16 @@ function Businesses({ t }) {
                 >
                   {t('vs-bitcoin-title')}
                 </Heading>
+
+                <Box alignSelf="center">
+                  <Paragraph>{t('vs-bitcoin-text')}</Paragraph>
+                </Box>
+                <Box width="large">
+                  <Image
+                    src="/images/businesses/colored-map.png"
+                    width="100%"
+                  />
+                </Box>
               </Box>
 
               <Box alignSelf="center">
@@ -190,6 +200,17 @@ function Businesses({ t }) {
                 >
                   {t('set-prices-title')}
                 </Heading>
+
+                <Box width="small" pad="medium" alignSelf="center">
+                  <Image src="/images/businesses/set-prices.png" width="100%" />
+                </Box>
+
+                <Box alignSelf="center">
+                  <Paragraph>{t('set-prices-text-1')}</Paragraph>
+                  <Paragraph>
+                    <b>{t('set-prices-text-2')}</b>
+                  </Paragraph>
+                </Box>
               </Box>
 
               <Box alignSelf="center">
@@ -202,6 +223,22 @@ function Businesses({ t }) {
                 >
                   {t('role-coop-title')}
                 </Heading>
+
+                <Box width="xlarge" alignSelf="center">
+                  <Row>
+                    <Col md={8}>
+                      <Image
+                        src="/images/businesses/role-coop.png"
+                        width="100%"
+                      />
+                    </Col>
+                    <Col md={4}></Col>
+                  </Row>
+
+                  <Box alignSelf="center">
+                    <Paragraph>{t('role-coop-links-text')}</Paragraph>
+                  </Box>
+                </Box>
               </Box>
 
               <Box alignSelf="center">
@@ -214,6 +251,13 @@ function Businesses({ t }) {
                 >
                   {t('access-to-credit-title')}
                 </Heading>
+
+                <Box width="medium" alignSelf="center">
+                  <Image
+                    src="/images/businesses/access-to-credit.png"
+                    width="100%"
+                  />
+                </Box>
               </Box>
 
               <Box alignSelf="center">
@@ -226,6 +270,12 @@ function Businesses({ t }) {
                 >
                   {t('tax-bookkeeping-title')}
                 </Heading>
+
+                <Box alignSelf="center">
+                  <Paragraph>{t('tax-bookkeeping-text-1')}</Paragraph>
+                  <Paragraph>{t('tax-bookkeeping-text-2')}</Paragraph>
+                  <Paragraph>{t('tax-bookkeeping-text-3')}</Paragraph>
+                </Box>
               </Box>
             </Box>
           </Box>
