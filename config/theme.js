@@ -126,6 +126,7 @@ const theme = deepFreeze(
       },
       extend: {
         maxWidth: 1280,
+        marginTop: '2em',
       },
     },
     icon: {
