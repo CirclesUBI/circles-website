@@ -14,6 +14,7 @@ const pages = [
   '/terms',
   '/privacy-policy',
   '/hubs',
+  '/businesses',
 ];
 
 const pathMap = {};
