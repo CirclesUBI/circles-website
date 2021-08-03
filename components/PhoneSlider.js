@@ -12,7 +12,7 @@ const SliderImage = ({ imageLink, count, caption }) => (
       height="72px"
       margin={{ bottom: 'medium' }}
     >
-      <Heading margin="none" textAlign="center">
+      <Heading textAlign="center" style={{ marginTop: 0 }}>
         {count}
       </Heading>
     </Box>
