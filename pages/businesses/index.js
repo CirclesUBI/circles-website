@@ -143,19 +143,21 @@ function Businesses({ t }) {
                   {t('with-circles-title')}
                 </Heading>
 
-                <Row>
-                  {withCirclesWidgets
-                    .filter((item, i) => i < 3)
-                    .map((widget, i) => (
-                      <Col lg={4} md={6}>
-                        <Widget
-                          imageLink={widget.imageLink}
-                          title={widget.title}
-                          content={widget.text}
-                        />
-                      </Col>
-                    ))}
-                </Row>
+                <Box alignSelf="center">
+                  <Row>
+                    {withCirclesWidgets
+                      .filter((item, i) => i < 3)
+                      .map((widget, i) => (
+                        <Col lg={4} md={6}>
+                          <Widget
+                            imageLink={widget.imageLink}
+                            title={widget.title}
+                            content={widget.text}
+                          />
+                        </Col>
+                      ))}
+                  </Row>
+                </Box>
               </Section>
 
               <Section>
