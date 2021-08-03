@@ -1,20 +1,19 @@
 import React from 'react';
 import { Box, Text, Image } from 'grommet';
-import { Row, Col } from 'react-grid-system';
 
-const Widget = ({
+function Widget({
   imageLink,
   title,
   content,
   imageWidth = 'small',
   imageHeight = '100px',
   onClick = null,
-}) => {
+}) {
   return (
     <Box
       pad="large"
       elevation="small"
-      align="start"
+      align="center"
       margin="large"
       style={{ borderRadius: 8, maxWidth: '360px' }}
       alignSelf="center"
@@ -38,6 +37,6 @@ const Widget = ({
       <Text size="small">{content}</Text>
     </Box>
   );
-};
+}
 
 export default Widget;

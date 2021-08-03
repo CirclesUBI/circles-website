@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import { Box, Heading, Image, Paragraph, Text } from 'grommet';
+import { Box, Button, Heading, Image, Paragraph, Text } from 'grommet';
 import ReactPlayer from 'react-player/vimeo';
 import { Row, Col } from 'react-grid-system';
 
-import styles from '../../styles/Home.module.css';
+import styles from '../../styles/Generic.module.css';
 import Layout from '../../components/Layout';
 import { withTranslation } from '../../i18n';
 import Widget from '../../components/Widget';
@@ -54,7 +54,7 @@ function Businesses({ t }) {
   };
 
   return (
-    <div className={styles.home}>
+    <div className={styles.businesses}>
       <Head>
         <title>{t('meta')}</title>
         <meta
@@ -72,8 +72,12 @@ function Businesses({ t }) {
       <Layout>
         {(large, screenClass) => (
           <Box>
-            <Box width="100%" pad="large" margin={{ vertical: 'medium' }}>
-              <Box alignSelf="center" margin={{ bottom: 'medium' }}>
+            <Box width="100%" margin={{ vertical: 'medium' }}>
+              <Box
+                alignSelf="center"
+                margin={{ bottom: 'medium' }}
+                pad="medium"
+              >
                 <Heading
                   alignSelf="center"
                   color="light-1"
@@ -96,7 +100,7 @@ function Businesses({ t }) {
                 width="large"
                 height="medium"
                 pad="xsmall"
-                background="light-1"
+                background="dark-1"
                 alignSelf="center"
               >
                 <ReactPlayer
@@ -108,7 +112,7 @@ function Businesses({ t }) {
                 />
               </Box>
 
-              <Box alignSelf="center">
+              <Section>
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -119,27 +123,16 @@ function Businesses({ t }) {
                   {t('why-accept-title')}
                 </Heading>
 
-                <Row>
-                  {acceptWidgets
-                    .filter((item, i) => i < 3)
-                    .map((widget, i) => (
-                      <Col lg={4} md={6}>
-                        <Widget title={widget.title} content={widget.text} />
-                      </Col>
-                    ))}
-                </Row>
-                <Row>
-                  {acceptWidgets
-                    .filter((item, i) => i > 2 && i < 6)
-                    .map((widget, i) => (
-                      <Col lg={4} md={6}>
-                        <Widget title={widget.title} content={widget.text} />
-                      </Col>
-                    ))}
-                </Row>
-              </Box>
+                <Box direction="row" justify="center" wrap>
+                  {acceptWidgets.map((widget, i) => (
+                    <Box flex={{ basis: '280px' }}>
+                      <Widget title={widget.title} content={widget.text} />
+                    </Box>
+                  ))}
+                </Box>
+              </Section>
 
-              <Box alignSelf="center">
+              <Section>
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -163,9 +156,9 @@ function Businesses({ t }) {
                       </Col>
                     ))}
                 </Row>
-              </Box>
+              </Section>
 
-              <Box alignSelf="center">
+              <Section>
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -177,6 +170,7 @@ function Businesses({ t }) {
                 </Heading>
 
                 <Box
+                  alignSelf="center"
                   direction={large ? 'row' : 'column'}
                   justify="between"
                   background={{
@@ -187,7 +181,8 @@ function Businesses({ t }) {
                     position: large ? 'center 84px' : 'center',
                     size: 'contain',
                   }}
-                  pad={{ top: 'large' }}
+                  width="large"
+                  margin={{ top: 'large' }}
                 >
                   {trustSystemWidgets.map((item, index) => (
                     <Box
@@ -209,7 +204,7 @@ function Businesses({ t }) {
                           alignSelf="center"
                           fill={false}
                           fit="contain"
-                          margin="large"
+                          margin={index === 2 ? 'large' : 'medium'}
                           src={item.imageLink}
                         />
                       </Box>
@@ -217,9 +212,9 @@ function Businesses({ t }) {
                     </Box>
                   ))}
                 </Box>
-              </Box>
+              </Section>
 
-              <Box alignSelf="center">
+              <Section pad={{ horizontal: 'xlarge' }}>
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -262,9 +257,15 @@ function Businesses({ t }) {
                       .map((p) => p.text)}
                   />
                 </Box>
-              </Box>
+              </Section>
 
-              <Box alignSelf="center">
+              <Section
+                background={{
+                  color: 'white',
+                  // image: 'url(/images/businesses/vs-bitcoin-back.svg)',
+                  size: 'contain',
+                }}
+              >
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -278,15 +279,15 @@ function Businesses({ t }) {
                 <Box alignSelf="center">
                   <Paragraph>{t('vs-bitcoin-text')}</Paragraph>
                 </Box>
-                <Box width="large">
+                <Box width="large" alignSelf="center">
                   <Image
                     src="/images/businesses/colored-map.png"
                     width="100%"
                   />
                 </Box>
-              </Box>
+              </Section>
 
-              <Box alignSelf="center">
+              <Section>
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -307,9 +308,24 @@ function Businesses({ t }) {
                     <b>{t('set-prices-text-2')}</b>
                   </Paragraph>
                 </Box>
-              </Box>
+              </Section>
 
-              <Box alignSelf="center">
+              <Section>
+                <Heading
+                  alignSelf="center"
+                  color="dark-1"
+                  level={1}
+                  textAlign="center"
+                  margin={{ top: 'xlarge', bottom: 'small' }}
+                >
+                  {t('shared-wallet-title')}
+                </Heading>
+                <Box alignSelf="center">
+                  <Paragraph>{t('shared-wallet-text')}</Paragraph>
+                </Box>
+              </Section>
+
+              <Section>
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -321,27 +337,43 @@ function Businesses({ t }) {
                 </Heading>
 
                 <Box width="xlarge" alignSelf="center">
-                  <Row>
+                  <Row align="center">
                     <Col md={8}>
                       <Image
                         src="/images/businesses/role-coop.png"
                         width="100%"
                       />
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} alignSelf="center">
                       <ParagraphsGreenLeft
+                        size="medium"
                         paragraphs={roleCoopWidgets.map((p) => p.text)}
                       />
                     </Col>
                   </Row>
 
-                  <Box alignSelf="center">
+                  <Box alignSelf="center" margin="large">
                     <Paragraph>{t('role-coop-links-text')}</Paragraph>
+                    <Box
+                      direction="row"
+                      justify="evenly"
+                      margin={{ top: 'medium' }}
+                    >
+                      <LinkButton label="FAQ" href="/faq" />
+                      <LinkButton
+                        label="Handbook"
+                        href="https://handbook.joincircles.net"
+                      />
+                      <LinkButton
+                        label="Telegram Chat"
+                        href="https://t.me/CirclesUBI"
+                      />
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
+              </Section>
 
-              <Box alignSelf="center">
+              <Section>
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -358,9 +390,16 @@ function Businesses({ t }) {
                     width="100%"
                   />
                 </Box>
-              </Box>
+              </Section>
 
-              <Box alignSelf="center">
+              <Section
+                background={{
+                  image: 'url(/images/businesses/tax-boy.svg)',
+                  position: 'bottom right',
+                  size: '262px 369px',
+                }}
+                pad={{ bottom: '320px', horizontal: 'medium' }}
+              >
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -376,12 +415,26 @@ function Businesses({ t }) {
                   <Paragraph>{t('tax-bookkeeping-text-2')}</Paragraph>
                   <Paragraph>{t('tax-bookkeeping-text-3')}</Paragraph>
                 </Box>
-              </Box>
+              </Section>
             </Box>
           </Box>
         )}
       </Layout>
     </div>
+  );
+}
+
+function Section({ children, ...otherProps }) {
+  return (
+    <Box
+      alignSelf="center"
+      pad="medium"
+      width="100%"
+      // className={styles.section}
+      {...otherProps}
+    >
+      {children}
+    </Box>
   );
 }
 
@@ -418,6 +471,19 @@ function ParagraphsGreenLeft({ paragraphs, size = 'small' }) {
         </Box>
       ))}
     </Box>
+  );
+}
+
+function LinkButton({ label, href, ...otherProps }) {
+  return (
+    <Button
+      as="a"
+      color="brand"
+      href={href}
+      label={<Text color="brand">{label}</Text>}
+      style={{ border: '1px #CC1E66 solid' }}
+      {...otherProps}
+    />
   );
 }
 
