@@ -125,7 +125,7 @@ function Businesses({ t }) {
 
                 <Box direction="row" justify="center" wrap>
                   {acceptWidgets.map((widget, i) => (
-                    <Box flex={{ basis: '280px' }}>
+                    <Box basis="medium">
                       <Widget title={widget.title} content={widget.text} />
                     </Box>
                   ))}
