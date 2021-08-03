@@ -93,16 +93,16 @@
   "role-coop-title": "The role of the Circles Cooperative",
   "role-coop-widgets": [
     {
-      "title": "Access to credit "
+      "text": "Access to credit "
     },
     {
-      "title": "Community networking"
+      "text": "Community networking"
     },
     {
-      "title": "Documentation of business transactions"
+      "text": "Documentation of business transactions"
     },
     {
-      "title": "Knowledge sharing (with a focus on building local economies)"
+      "text": "Knowledge sharing (with a focus on building local economies)"
     }
   ],
   "role-coop-links-text": "To have a better understanding about Circles here are some sources:",

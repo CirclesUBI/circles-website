@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Anchor, Box, Heading, Image, Paragraph, Text } from 'grommet';
+import { Box, Heading, Image, Paragraph, Text } from 'grommet';
 import ReactPlayer from 'react-player/vimeo';
 import { Row, Col } from 'react-grid-system';
 
@@ -14,6 +14,12 @@ const withCirclesWidgetsImageLinks = [
   '/images/businesses/trust.png',
 ];
 
+const trustSystemWidgetsImageLinks = [
+  '/images/businesses/trust-customer-comes.png',
+  '/images/businesses/trust-on-boarding.png',
+  '/images/businesses/trust-make-payment.png',
+];
+
 function Businesses({ t }) {
   const isClient = typeof window !== 'undefined';
 
@@ -24,6 +30,21 @@ function Businesses({ t }) {
     ...item,
     imageLink: withCirclesWidgetsImageLinks[i],
   }));
+
+  const trustSystemWidgets = t('trust-system-widgets', {
+    returnObjects: true,
+  }).map((item, i) => ({
+    ...item,
+    imageLink: trustSystemWidgetsImageLinks[i],
+  }));
+
+  const howFunctionsWidgets = t('how-functions-widgets', {
+    returnObjects: true,
+  });
+
+  const roleCoopWidgets = t('role-coop-widgets', {
+    returnObjects: true,
+  });
 
   const handleRoute = (e, href) => {
     e.preventDefault();
@@ -81,7 +102,7 @@ function Businesses({ t }) {
                 <ReactPlayer
                   width="100%"
                   height="100%"
-                  url="https://player.vimeo.com/video/522476899"
+                  url="https://player.vimeo.com/video/469130953"
                   controls
                   playerOptions={{ fullscreen: false }}
                 />
@@ -154,6 +175,48 @@ function Businesses({ t }) {
                 >
                   {t('trust-system-title')}
                 </Heading>
+
+                <Box
+                  direction={large ? 'row' : 'column'}
+                  justify="between"
+                  background={{
+                    image: large
+                      ? 'url(/images/businesses/background-line.svg)'
+                      : 'none',
+                    repeat: 'no-repeat',
+                    position: large ? 'center 84px' : 'center',
+                    size: 'contain',
+                  }}
+                  pad={{ top: 'large' }}
+                >
+                  {trustSystemWidgets.map((item, index) => (
+                    <Box
+                      key={item.title}
+                      align="center"
+                      margin={{ bottom: 'xlarge' }}
+                    >
+                      <Box
+                        width="180px"
+                        height="180px"
+                        background={{
+                          image:
+                            'url(/images/businesses/background-green-circle.svg)',
+                          size: 'contain',
+                        }}
+                        margin={{ bottom: 'medium' }}
+                      >
+                        <Image
+                          alignSelf="center"
+                          fill={false}
+                          fit="contain"
+                          margin="large"
+                          src={item.imageLink}
+                        />
+                      </Box>
+                      <Text weight="bold">{item.title}</Text>
+                    </Box>
+                  ))}
+                </Box>
               </Box>
 
               <Box alignSelf="center">
@@ -162,10 +225,43 @@ function Businesses({ t }) {
                   color="dark-1"
                   level={1}
                   textAlign="center"
-                  margin={{ top: 'xlarge', bottom: 'small' }}
+                  margin={{ top: 'xlarge', bottom: 'large' }}
                 >
                   {t('how-functions-title')}
                 </Heading>
+
+                <Box
+                  direction={large ? 'row' : 'column'}
+                  pad="medium"
+                  justify="around"
+                >
+                  <ParagraphsGreenLeft
+                    paragraphs={howFunctionsWidgets
+                      .filter((p, i) => i < 5)
+                      .map((p) => p.text)}
+                  />
+                  <Image
+                    src="/images/businesses/how-functions-truck.svg"
+                    margin="large"
+                  />
+                </Box>
+
+                <Box
+                  direction={large ? 'row' : 'column'}
+                  pad="medium"
+                  justify="around"
+                  align="center"
+                >
+                  <Image
+                    src="/images/businesses/how-functions-woman.svg"
+                    margin="large"
+                  />
+                  <ParagraphsGreenLeft
+                    paragraphs={howFunctionsWidgets
+                      .filter((p, i) => i > 4)
+                      .map((p) => p.text)}
+                  />
+                </Box>
               </Box>
 
               <Box alignSelf="center">
@@ -232,7 +328,11 @@ function Businesses({ t }) {
                         width="100%"
                       />
                     </Col>
-                    <Col md={4}></Col>
+                    <Col md={4}>
+                      <ParagraphsGreenLeft
+                        paragraphs={roleCoopWidgets.map((p) => p.text)}
+                      />
+                    </Col>
                   </Row>
 
                   <Box alignSelf="center">
@@ -282,6 +382,42 @@ function Businesses({ t }) {
         )}
       </Layout>
     </div>
+  );
+}
+
+const paragraphsGreenLeftStyle = (size) => {
+  const large = size !== 'small';
+  return {
+    marginBottom: 0,
+    marginTop: 0,
+    paddingBottom: large ? 36 : 24,
+    paddingLeft: 12,
+    borderLeft: '#08ED95 dashed 3px',
+    fontWeight: 'bold',
+    lineHeight: large ? '24px' : '20px',
+  };
+};
+
+function ParagraphsGreenLeft({ paragraphs, size = 'small' }) {
+  return (
+    <Box pad={{ left: 'small' }} width="medium">
+      {paragraphs.map((p, i) => (
+        <Box
+          key={p.substr(0, 20)}
+          background={{
+            image: 'url(/images/businesses/tiny-dot.svg)',
+            repeat: 'no-repeat',
+            position: '1px 0',
+            size: '12px 12px',
+          }}
+          pad={{ left: '6px' }}
+        >
+          <Paragraph size={size} style={paragraphsGreenLeftStyle(size)}>
+            {p}
+          </Paragraph>
+        </Box>
+      ))}
+    </Box>
   );
 }
 
