@@ -4,7 +4,7 @@
   "main-heading": "Circles for Business Users",
   "main-text-paragraph1": "Circles is a means of payment. Exchange with Circles happens upon agreement between two trusted parties about the price and the quantity provided. Here are the trusted businesses that use Circles for their business operations.",
   "main-text-paragraph2": "Listen to their testimonials!",
-  "why-accept-title": "Why Accept Circles (CRCS) in your Business?",
+  "why-accept-title": "Why Accept Circles (CRC) in your Business?",
   "why-accept-widgets": [
     {
       "title": "Access to Credit",
@@ -12,38 +12,38 @@
     },
     {
       "title": "Access to Resource Network",
-      "text": "By accepting CRCs you get to access a pool of resources provided by the different partners in the Trust Network. Using CRCs, you can fulfill your supply needs by claiming resources from fellow members within the circular economic ring."
+      "text": "By accepting CRC you get to access a pool of resources provided by the different partners in the Trust Network. Using CRC, you can fulfill your supply needs by claiming resources from fellow members within the circular economic ring."
     },
     {
       "title": "Community Basic Income",
-      "text": "By accepting CRCs, you give meaning to a basic income system. By selling and buying in CRCs, you create the value which powers communities to claim the resources they need to live."
+      "text": "By accepting CRC, you give meaning to a basic income system. By selling and buying in CRC, you create the value which powers communities to claim the resources they need to live."
     },
     {
       "title": "Lower Costs",
-      "text": "By accepting CRC, you lower your Euro cost of doing business. You can use CRCs to turn any surplus or idle inventory that would otherwise go to waste into additional liquidity. By selling in CRC you can access the things your business needs, thereby lowering your cost of production. For example, you can give CRCs to your workers as a payment option, which they can use to access resources within the Trust Network. You can also pay for services that you would otherwise have to pay in national money."
+      "text": "By accepting CRC, you lower your Euro cost of doing business. You can use CRC to turn any surplus or idle inventory that would otherwise go to waste into additional liquidity. By selling in CRC you can access the things your business needs, thereby lowering your cost of production. For example, you can give CRC to your workers as a payment option, which they can use to access resources within the Trust Network. You can also pay for services that you would otherwise have to pay in national money."
     },
     {
       "title": "Cooperative Infrastructures",
-      "text": "By accepting CRCs, you commit to the development of a nascent cooperative infrastructure in your respective industry. Circles strengthens the infrastructure needed to build more resilient localized and complementary supply chains which allow people to access their basic needs at affordable prices, using CRCs."
+      "text": "By accepting CRC, you commit to the development of a nascent cooperative infrastructure in your respective industry. Circles strengthens the infrastructure needed to build more resilient localized and complementary supply chains which allow people to access their basic needs at affordable prices, using CRC."
     },
     {
       "title": "Strong Network Benefits",
-      "text": "In order to grow your share of the market and attract new people to your business, you can spend your Circles in marketing services and local forms of advertisement. Similarly, when you sell in CRCs, you are growing a loyal customer base and potentially increasing your revenues, both in CRCs and in fiat money. CRCs help you create a stronger link to your customers, based on trust and common values. Early pioneer - innovator - branding opportunity."
+      "text": "In order to grow your share of the market and attract new people to your business, you can spend your Circles in marketing services and local forms of advertisement. Similarly, when you sell in CRC, you are growing a loyal customer base and potentially increasing your revenues, both in CRC and in fiat money. CRC help you create a stronger link to your customers, based on trust and common values. Early pioneer - innovator - branding opportunity."
     }
   ],
   "with-circles-title": "What can you do with Circles?",
   "with-circles-widgets": [
     {
       "title": "Buying with Circles",
-      "text": "You can spend your CRCs with the partners that can provide the resources that fulfill your supply needs: distribution/logistics support, marketing, raw materials, food, drinks, etc."
+      "text": "You can spend your CRC with the partners that can provide the resources that fulfill your supply needs: distribution/logistics support, marketing, raw materials, food, drinks, etc."
     },
     {
       "title": "Selling with Circles",
-      "text": "You can provide products and services in the network that fulfill someone else's needs and earn more CRCs. You can, for example, increase your sales by offering CRCs in low business times. "
+      "text": "You can provide products and services in the network that fulfill someone else's needs and earn more CRC. You can, for example, increase your sales by offering CRC in low business times. "
     },
     {
       "title": "Crowdfunding",
-      "text": "You can pull people's CRCs together as donations or contributions and add them to your shared business wallet. "
+      "text": "You can pull people's CRC together as donations or contributions and add them to your shared business wallet. "
     }
   ],
   "trust-system-title": "Trust System for Groups and Businesses",
@@ -73,7 +73,7 @@
       "text": "Shared wallets can issue payments to other wallets via the trust network of individual wallets. "
     },
     {
-      "text": "Shared wallets can receive CRCs from accounts it trusts"
+      "text": "Shared wallets can receive CRC from accounts it trusts"
     },
     {
       "text": "If you cannot issue a payment to another person or group using your shared wallet, make sure to trust them as an individual and try again."
@@ -86,11 +86,11 @@
     }
   ],
   "vs-bitcoin-title": "Circles vs Bitcoin",
-  "vs-bitcoin-text": "CRCs are designed to be a means of exchange for communities and economic circles. Here is an overview of characteristics that might help you to better understand Circles in comparison to Bitcoin:",
+  "vs-bitcoin-text": "CRC are designed to be a means of exchange for communities and economic circles. Here is an overview of characteristics that might help you to better understand Circles in comparison to Bitcoin:",
   "shared-wallet-title": "Shared Wallet",
   "shared-wallet-text": "A shared wallet is a wallet that you can open for any group or organization that you're part of. Every person who has a validated trusted accounted in Circles can create a shared wallet and add people to it. Shared wallets do not issue a basic income. To fund your shared wallet you must deposit a small amount of CRC to start. You can later send more CRC to it and receive CRC from others as well. Shared wallets can issue payments to others as well as receive payments. In order to receive CRC from others directly, shared wallets must first trust other accounts in order to receive their CRC. Shared wallets do not have a native CRC token of their own but can hold CRC from others. Because of this reason, shared wallets cannot receive trust, they can only give it.",
   "set-prices-title": "How to set prices in Circles?",
-  "set-prices-text-1": "We maintain 1 to 1 exchange rate between CRCs and Euros. Maintaining this parity will allow you to set prices easier.",
+  "set-prices-text-1": "We maintain 1 to 1 exchange rate between CRC and Euros. Maintaining this parity will allow you to set prices easier.",
   "set-prices-text-2": "But at the end of the day it’s up to you.",
   "role-coop-title": "The role of the Circles Cooperative",
   "role-coop-widgets": [
