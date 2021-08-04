@@ -87,6 +87,26 @@
   ],
   "vs-bitcoin-title": "Circles vs Bitcoin",
   "vs-bitcoin-text": "CRC are designed to be a means of exchange for communities and economic circles. Here is an overview of characteristics that might help you to better understand Circles in comparison to Bitcoin:",
+  "vs-bitcoin-widgets": [
+    {
+      "text": "Bitcoin's design is made for investment and speculation, making it impersonal. Circles is made for strengthening local economies by building trust between people."
+    },
+    {
+      "text": "Bitcoin is a digital asset. Circles is a form of credit money used to fulfill debt obligations between different parties."
+    },
+    {
+      "text": "While the design of Bitcoin encourages hoarding, Circle encourages spending."
+    },
+    {
+      "text": "Bitcoin needs a lot of electricity to be produced. The Circles system does not. Read more about the Proof of Authority (POA) xDAI blockchain where CRC are made. "
+    },
+    {
+      "text": "One needs fiat money in order to buy Bitcoin, while Circles can only be issued via trusted parties giving you trust."
+    },
+    {
+      "text": "Bitcoin has a limited token supply of 21 million Bitcoins. Circles is designed in a way where everybody issues personal tokens constantly at a rate of 8 CRC per day. These personal tokens  can be swapped as payment to other people, based on the trust relations in the network. This is part of how CRC users can make sure that fake users don't manipulate the system and the obligations between people remain valid."
+    }
+  ],
   "shared-wallet-title": "Shared Wallet",
   "shared-wallet-text": "A shared wallet is a wallet that you can open for any group or organization that you're part of. Every person who has a validated trusted accounted in Circles can create a shared wallet and add people to it. Shared wallets do not issue a basic income. To fund your shared wallet you must deposit a small amount of CRC to start. You can later send more CRC to it and receive CRC from others as well. Shared wallets can issue payments to others as well as receive payments. In order to receive CRC from others directly, shared wallets must first trust other accounts in order to receive their CRC. Shared wallets do not have a native CRC token of their own but can hold CRC from others. Because of this reason, shared wallets cannot receive trust, they can only give it.",
   "set-prices-title": "How to set prices in Circles?",

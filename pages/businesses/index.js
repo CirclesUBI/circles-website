@@ -8,6 +8,7 @@ import Layout from '../../components/Layout';
 import { withTranslation } from '../../i18n';
 import Widget from '../../components/Widget';
 import AccordionWidget from '../../components/AccordionWidget';
+import TooltipPurple from '../../components/TooltipPurple';
 
 const withCirclesWidgetsImageLinks = [
   '/images/businesses/buy.png',
@@ -19,6 +20,33 @@ const trustSystemWidgetsImageLinks = [
   '/images/businesses/trust-customer-comes.png',
   '/images/businesses/trust-on-boarding.png',
   '/images/businesses/trust-make-payment.png',
+];
+
+const vsBitcoinWidgetsPositions = [
+  {
+    top: '10%',
+    left: '67%',
+  },
+  {
+    top: '19%',
+    left: '44%',
+  },
+  {
+    top: '40%',
+    left: '58%',
+  },
+  {
+    top: '49%',
+    left: '27%',
+  },
+  {
+    top: '61%',
+    left: '34%',
+  },
+  {
+    top: '85%',
+    left: '48%',
+  },
 ];
 
 function Businesses({ t }) {
@@ -48,6 +76,10 @@ function Businesses({ t }) {
   });
 
   const accessToCreditWidgets = t('access-to-credit-widgets', {
+    returnObjects: true,
+  });
+
+  const vsBitcoinWidgets = t('vs-bitcoin-widgets', {
     returnObjects: true,
   });
 
@@ -224,41 +256,51 @@ function Businesses({ t }) {
                 <Box
                   direction={large ? 'row' : 'column'}
                   pad="medium"
-                  justify="around"
+                  justify="evenly"
+                  align="center"
                 >
-                  <ParagraphsGreenLeft
-                    paragraphs={howFunctionsWidgets
-                      .filter((p, i) => i < 5)
-                      .map((p) => p.text)}
-                  />
-                  <Image
-                    src="/images/businesses/how-functions-truck.svg"
-                    margin="large"
-                  />
+                  <Box basis="1/2">
+                    <ParagraphsGreenLeft
+                      paragraphs={howFunctionsWidgets
+                        .filter((p, i) => i < 5)
+                        .map((p) => p.text)}
+                    />
+                  </Box>
+                  <Box basis="1/2" pad="medium">
+                    <Image
+                      src="/images/businesses/how-functions-truck.svg"
+                      fit="contain"
+                      fill
+                    />
+                  </Box>
                 </Box>
 
                 <Box
-                  direction={large ? 'row' : 'column'}
+                  direction={large ? 'row' : 'column-reverse'}
                   pad="medium"
-                  justify="around"
+                  justify="evenly"
                   align="center"
                 >
-                  <Image
-                    src="/images/businesses/how-functions-woman.svg"
-                    margin="large"
-                  />
-                  <ParagraphsGreenLeft
-                    paragraphs={howFunctionsWidgets
-                      .filter((p, i) => i > 4)
-                      .map((p) => p.text)}
-                  />
+                  <Box basis="1/2" pad="medium">
+                    <Image
+                      src="/images/businesses/how-functions-woman.svg"
+                      fit="contain"
+                      fill
+                    />
+                  </Box>
+                  <Box basis="1/2">
+                    <ParagraphsGreenLeft
+                      paragraphs={howFunctionsWidgets
+                        .filter((p, i) => i > 4)
+                        .map((p) => p.text)}
+                    />
+                  </Box>
                 </Box>
               </Section>
 
               <Section
                 background={{
                   color: 'white',
-                  // image: 'url(/images/businesses/vs-bitcoin-back.svg)',
                   size: 'contain',
                 }}
               >
@@ -275,11 +317,30 @@ function Businesses({ t }) {
                 <Box alignSelf="center">
                   <Paragraph>{t('vs-bitcoin-text')}</Paragraph>
                 </Box>
-                <Box width="large" alignSelf="center">
+                <Box
+                  width="large"
+                  alignSelf="center"
+                  style={{ position: 'relative' }}
+                >
                   <Image
-                    src="/images/businesses/colored-map.png"
+                    src="/images/businesses/vs-bitcoin-colored-map.png"
                     width="100%"
+                    fit="contain"
                   />
+                  {vsBitcoinWidgets.map((w, i) => (
+                    <TooltipPurple
+                      label={
+                        <Image
+                          width={24}
+                          height={24}
+                          src="/images/businesses/green-plus-icon.svg"
+                        />
+                      }
+                      content={w}
+                      position={vsBitcoinWidgetsPositions[i]}
+                      large={large}
+                    />
+                  ))}
                 </Box>
               </Section>
 
@@ -332,39 +393,39 @@ function Businesses({ t }) {
                   {t('role-coop-title')}
                 </Heading>
 
-                <Box width="xlarge" alignSelf="center">
-                  <Row align="center">
-                    <Col md={8}>
-                      <Image
-                        src="/images/businesses/role-coop.png"
-                        width="100%"
-                      />
-                    </Col>
-                    <Col md={4} alignSelf="center">
-                      <ParagraphsGreenLeft
-                        size="medium"
-                        paragraphs={roleCoopWidgets.map((p) => p.text)}
-                      />
-                    </Col>
-                  </Row>
+                <Box direction="row" justify="center" align="center" wrap>
+                  <Box basis="medium" alignSelf="center">
+                    <Image
+                      src="/images/businesses/role-coop.png"
+                      width="100%"
+                      fill
+                    />
+                  </Box>
+                  <Box basis="small" alignSelf="center">
+                    <ParagraphsGreenLeft
+                      paragraphs={roleCoopWidgets.map((p) => p.text)}
+                      size="medium"
+                    />
+                  </Box>
+                </Box>
 
-                  <Box alignSelf="center" margin="large">
-                    <Paragraph>{t('role-coop-links-text')}</Paragraph>
-                    <Box
-                      direction="row"
-                      justify="evenly"
-                      margin={{ top: 'medium' }}
-                    >
-                      <LinkButton label="FAQ" href="/faq" />
-                      <LinkButton
-                        label="Handbook"
-                        href="https://handbook.joincircles.net"
-                      />
-                      <LinkButton
-                        label="Telegram Chat"
-                        href="https://t.me/CirclesUBI"
-                      />
-                    </Box>
+                <Box alignSelf="center" margin="large">
+                  <Paragraph>{t('role-coop-links-text')}</Paragraph>
+                  <Box
+                    direction="row"
+                    justify="evenly"
+                    margin={{ top: 'medium' }}
+                    wrap
+                  >
+                    <LinkButton label="FAQ" href="/faq" />
+                    <LinkButton
+                      label="Handbook"
+                      href="https://handbook.joincircles.net"
+                    />
+                    <LinkButton
+                      label="Telegram Chat"
+                      href="https://t.me/CirclesUBI"
+                    />
                   </Box>
                 </Box>
               </Section>
@@ -455,9 +516,9 @@ const paragraphsGreenLeftStyle = (size) => {
   };
 };
 
-function ParagraphsGreenLeft({ paragraphs, size = 'small' }) {
+function ParagraphsGreenLeft({ paragraphs, size }) {
   return (
-    <Box pad={{ left: 'small' }} width="medium">
+    <Box pad={{ left: 'small' }}>
       {paragraphs.map((p, i) => (
         <Box
           key={p.substr(0, 20)}
@@ -469,9 +530,7 @@ function ParagraphsGreenLeft({ paragraphs, size = 'small' }) {
           }}
           pad={{ left: '6px' }}
         >
-          <Paragraph size={size} style={paragraphsGreenLeftStyle(size)}>
-            {p}
-          </Paragraph>
+          <Paragraph style={paragraphsGreenLeftStyle(size)}>{p}</Paragraph>
         </Box>
       ))}
     </Box>
@@ -482,10 +541,12 @@ function LinkButton({ label, href, ...otherProps }) {
   return (
     <Button
       as="a"
+      alignSelf="center"
       color="brand"
       href={href}
       label={<Text color="brand">{label}</Text>}
       style={{ border: '1px #CC1E66 solid' }}
+      margin="small"
       {...otherProps}
     />
   );
