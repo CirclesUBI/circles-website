@@ -38,8 +38,8 @@
       "topic": "Understanding Circles - What’s Going on Here?",
       "question": "Why do Circles have value?",
       "answer": [
-        "Money is a sort of language. We agree on its meaning and that agreement is why it has value. It may not seem like it, but it works the same way with euros or with Bitcoin.",
-        "Circles’s value is based on the value that people put into it and offer in the community. If you sell your bike for circles, or translate for someone in the jobcentre, and they pay you with circles, this value comes in the system and stays in the community and circulates. We believe this is as real a ‘value’ behind our currency as the gold reserves behind euros, a value we have never seen and never will see."
+        "Money is a sort of language. We agree on its meaning and that agreement is why it has value. It may not seem like it, but it works the same way with Euros or with Bitcoin.",
+        "Circles’s value is based on the value that people put into it and offer in the community. If you sell your bike for circles, or translate for someone in the jobcentre, and they pay you with circles, this value comes in the system and stays in the community and circulates. We believe this is as real a ‘value’ behind our currency as the gold reserves behind Euros, a value we have never seen and never will see."
       ]
     },
     {
@@ -69,14 +69,14 @@
       "topic": "Understanding Circles - What’s Going on Here?",
       "question": "You say the Euro is not democratic or participatory. Why?",
       "answer": [
-        "The decisions about the Euro are made in closed groups with central planning, private banks and state entities and the people have no overview and no control above them. Those entities make decisions to issue euros and at what rate, without direct regard or even knowledge of you, your care work, or what you need to live a fearless life."
+        "The decisions about the Euro are made in closed groups with central planning, private banks and state entities and the people have no overview and no control above them. Those entities make decisions to issue Euros and at what rate, without direct regard or even knowledge of you, your care work, or what you need to live a fearless life."
       ]
     },
     {
       "topic": "Understanding Circles - What’s Going on Here?",
       "question": "And how is Circles democratic, participatory? I see how running a hiking club could be democratic and participatory, but a currency? What are the decision points?",
       "answer": [
-        "Using euros as payment is a kind of vacuum cleaner. There is debt on the machines of the farmers, on the trucks of the drivers, on the fridges in the supermarkets, and if we pay with euros for the strawberry that results, a huge part of the value of what we produce ends up at the banks who gave those lines of credit. In other words, this value leaves the real, local economy. If we use circles and participate in a local economy, the money and the value stays close to us and comes back faster. This is one of the most important advantages of complementary currencies.",
+        "Using Euros as payment is a kind of vacuum cleaner. There is debt on the machines of the farmers, on the trucks of the drivers, on the fridges in the supermarkets, and if we pay with Euros for the strawberry that results, a huge part of the value of what we produce ends up at the banks who gave those lines of credit. In other words, this value leaves the real, local economy. If we use circles and participate in a local economy, the money and the value stays close to us and comes back faster. This is one of the most important advantages of complementary currencies.",
         "In the reverse of the euro vacuum cleaner, a top-down money system which sucks up value created locally, circles is a bottom-up money system."
       ]
     },
@@ -84,7 +84,7 @@
       "topic": "Understanding Circles - What’s Going on Here?",
       "question": "Do I have to pay taxes on Circles?",
       "answer": [
-        "If you are a business, or you accept Circles for some kind of goods or services, you should pay taxes in euros just like you would for any other kind of income: bitcoin, euros, dollar, etc.",
+        "If you are a business, or you accept Circles for some kind of goods or services, you should pay taxes in Euros just like you would for any other kind of income: Bitcoin, Euros, Dollar, etc.",
         "Taxation is relative to your jurisdiction and must be handled accordingly. We do not offer tax advice, and recommend that you speak with an expert from your area.",
         "<a href='https://docs.google.com/document/d/1LJnMub2U53AOYXi7HIe_YfrnA3H6ySVf9yUS_iHLRIM/' target='_blank'>Here are sample tax assessments</a> of concrete economic consumptions of Circles, based on German laws."
       ]
@@ -123,7 +123,7 @@
       "question": "Whom should I trust?",
       "answer": [
         "In order to build a living, stable, basic income system with Circles, you should mainly trust people who bring value into the system. Ideally, you should trust people who will sell cupcakes or their bike for Circles, who will help their friends move and get paid for that with Circles, etc. If we have enough of this type of energy in the system, it will take off and fly, and once that happens, we will be able to better support those who truly need this kind of basic income, but are not in the position to give anything in return.",
-        "Don’t forget: Circles is about giving each other a basic income. We need here givers too."
+        "Don’t forget: Circles is about giving each other a basic income. We need benefactors too."
       ]
     },
     {
@@ -183,7 +183,7 @@
       "topic": "Shared Wallet",
       "question": "What is a Shared Wallet?",
       "answer": [
-        "A shared wallet is a wallet that you can open for any group or organization that you're part of. Every person who has a validated trusted accounted in Circles can create a shared wallet and add people to it. Shared wallets do not issue a basic income. To fund your shared wallet you must deposit a small amount of CRC to start. You can later send more CRC to it and receive CRC from others as well. Shared wallets can issue payments to others as well as receive payments. In order to receive CRC from others directly, shared wallets must first trust other accounts in order to receive their CRC. Shared wallets do not have a native CRC token of their own but can hold CRC from others. Because of this reason, shared wallets cannot receive trust, they can only give it."
+        "A shared wallet is a wallet that you can open for any group or organization that you're part of. Every person who has a validated trusted account in Circles can create a shared wallet and add people to it. Shared wallets do not issue a basic income. To fund your shared wallet you must deposit a small amount of CRC to start. You can later send more CRC to it and receive CRC from others as well. Shared wallets can issue payments to others as well as receive payments. In order to receive CRC from others directly, shared wallets must first trust other accounts in order to receive their CRC. Shared wallets do not have a native CRC token of their own but can hold CRC from others. Because of this reason, shared wallets cannot receive trust, they can only give it."
       ]
     },
     {
@@ -224,7 +224,7 @@
       "topic": "Security and Technical Background",
       "question": "What information does Circles collect about me?",
       "answer": [
-        "The only data we store is your email address and username - and we will never share it with anyone. Your wallet’s private key lives offline on your device browser, and is not shared with us.",
+        "The only data we store is your email address and user name - and we will never share it with anyone. Your wallet’s private key lives offline on your device browser, and is not shared with us.",
         "The data recorded by blockchains is publicly accessible, and includes the trust network and your transaction history, but it is not associated publicly with your username or email address."
       ]
     },
