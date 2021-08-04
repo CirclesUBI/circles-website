@@ -108,7 +108,21 @@
     }
   ],
   "role-coop-links-text": "To have a better understanding about Circles here are some sources:",
-  "access-to-credit-title": "Acces to Credit",
+  "access-to-credit-title": "Access to Credit",
+  "access-to-credit-widgets": [
+    {
+      "title": "Community Networking",
+      "text": "The coop organizes regular assemblies and encourages committees and workgroups among members. The goal is to build a living resource of knowledge and strategic approaches towards business transactions and creating local economy patterns. The community can get in touch via telegram channels, moderated Jitsi calls in English, Mandarin and Spanish…"
+    },
+    {
+      "title": "Knowledge Sharing",
+      "text": "Since Circles is engaging in pioneering work we will make sure to document the emerging community knowledge around the creation of local economy. For example: farm, mobility service, Supercoop, restaurants and cafés, coworking space → how does value creation work? What’s the design of the Wirtschaftskreis/ economic circle?"
+    },
+    {
+      "title": "Documentation",
+      "text": "We document business transactions with the goal to build concrete showcases that can serve as best practice and learning examples for other groups."
+    }
+  ],
   "tax-bookkeeping-title": "What does it mean to your taxing and bookkeeping?",
   "tax-bookkeeping-text-1": "If you are a business, or you accept Circles for some kind of goods or services, you should pay taxes in euros just like you would for any other kind of income: bitcoin, euros, dollar, etc.",
   "tax-bookkeeping-text-2": "Taxation is relative to your jurisdiction and must be handled accordingly. We do not offer tax advice, and recommend that you speak with an expert from your area.",

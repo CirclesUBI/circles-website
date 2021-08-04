@@ -86,6 +86,9 @@ const theme = deepFreeze(
     },
     icon: {
       focus: 'none',
+      size: {
+        xsmall: '14px',
+      },
     },
     text: {
       xsmall: { size: '10px', height: 1.5 },
@@ -127,11 +130,6 @@ const theme = deepFreeze(
       extend: {
         maxWidth: 1280,
         marginTop: '2em',
-      },
-    },
-    icon: {
-      size: {
-        xsmall: '14px',
       },
     },
     button: {

@@ -7,6 +7,7 @@ import styles from '../../styles/Generic.module.css';
 import Layout from '../../components/Layout';
 import { withTranslation } from '../../i18n';
 import Widget from '../../components/Widget';
+import AccordionWidget from '../../components/AccordionWidget';
 
 const withCirclesWidgetsImageLinks = [
   '/images/businesses/buy.png',
@@ -46,12 +47,9 @@ function Businesses({ t }) {
     returnObjects: true,
   });
 
-  const handleRoute = (e, href) => {
-    e.preventDefault();
-    if (isClient) {
-      window.location.href = href;
-    }
-  };
+  const accessToCreditWidgets = t('access-to-credit-widgets', {
+    returnObjects: true,
+  });
 
   return (
     <div className={styles.businesses}>
@@ -388,6 +386,20 @@ function Businesses({ t }) {
                     width="100%"
                   />
                 </Box>
+
+                <Box
+                  direction="row"
+                  justify="center"
+                  gap="medium"
+                  wrap
+                  height="medium"
+                >
+                  {accessToCreditWidgets.map((w, i) => (
+                    <Box key={w.title} basis="medium">
+                      <AccordionWidget content={w} />
+                    </Box>
+                  ))}
+                </Box>
               </Section>
 
               <Section
@@ -424,13 +436,7 @@ function Businesses({ t }) {
 
 function Section({ children, ...otherProps }) {
   return (
-    <Box
-      alignSelf="center"
-      pad="medium"
-      width="100%"
-      // className={styles.section}
-      {...otherProps}
-    >
+    <Box alignSelf="center" pad="medium" width="100%" {...otherProps}>
       {children}
     </Box>
   );
