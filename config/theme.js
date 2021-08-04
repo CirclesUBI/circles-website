@@ -1,8 +1,6 @@
 import { deepFreeze, deepMerge } from 'grommet/utils';
 import { base } from 'grommet';
 
-const mainColor = '#660F33';
-
 const colors = {
   background: 'hsla(88, 62%, 90%, 0.1)',
   brand: '#CC1E66',
@@ -52,6 +50,9 @@ const theme = deepFreeze(
             large: baseSpacing + 'px',
             xlarge: baseSpacing * 2 + 'px',
           },
+        },
+        medium: {
+          value: 1100,
         },
       },
       colors: colors,

@@ -54,7 +54,7 @@ function Layout(props) {
       </Head>
       <ResponsiveContext.Consumer>
         {(size) => {
-          const large = ['large', 'medium'].includes(size);
+          const large = ['large'].includes(size);
           return (
             <Container style={{ maxWidth: 'none' }}>
               <Box style={{ paddingTop: 12 }}>
