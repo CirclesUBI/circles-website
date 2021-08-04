@@ -7,17 +7,6 @@ import { Link as ScrollLink, Events } from 'react-scroll';
 import { withTranslation } from '../i18n';
 import { activeLanguages } from './LangSwitcher';
 
-const pageLinks = [
-  { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
-  {
-    label: 'Businesses',
-    value: '/businesses',
-    isExternal: false,
-    isRoute: true,
-  },
-  // { label: 'Donate', value: '/donate', isExternal: false, isRoute: true },
-];
-
 const homeMenuLinks = [
   {
     label: 'About',
@@ -45,7 +34,7 @@ const homeMenuLinks = [
   },
 ];
 
-const notHomeMenuLinks = [
+const menuLinks = [
   {
     label: 'Home',
     value: '/',
@@ -59,7 +48,7 @@ const notHomeMenuLinks = [
     isRoute: false,
     href: 'https://circles.garden',
   },
-  pageLinks[0],
+  { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
   {
     label: 'News',
     value: 'news',
@@ -67,7 +56,12 @@ const notHomeMenuLinks = [
     isRoute: false,
     href: 'https://medium.com/circles-ubi',
   },
-  pageLinks[1],
+  {
+    label: 'Businesses',
+    value: '/businesses',
+    isExternal: false,
+    isRoute: true,
+  },
 ];
 
 const socialMenuLinks = [
@@ -186,7 +180,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
   }
 
   const langPaths = [...activeLanguages.map((lang) => '/' + lang), '/'];
-  const menu = notHomeMenuLinks;
+  const menu = menuLinks;
   const isHome = pathname && langPaths.includes(pathname);
 
   return (
