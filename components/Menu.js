@@ -71,6 +71,11 @@ const notHomeMenuLinks = [
 
 const socialMenuLinks = [
   {
+    icon: '/images/ig.svg',
+    iconp: '/images/ig-p.svg',
+    link: 'https://www.instagram.com/circles_ubi_official/',
+  },
+  {
     icon: '/images/tg.svg',
     iconp: '/images/tg-p.svg',
     link: 'https://t.me/CirclesUBI',
