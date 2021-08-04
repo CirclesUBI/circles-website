@@ -59,7 +59,7 @@ const notHomeMenuLinks = [
     isRoute: false,
     href: 'https://circles.garden',
   },
-  ...pageLinks,
+  pageLinks[0],
   {
     label: 'News',
     value: 'news',
@@ -67,6 +67,7 @@ const notHomeMenuLinks = [
     isRoute: false,
     href: 'https://medium.com/circles-ubi',
   },
+  pageLinks[1],
 ];
 
 const socialMenuLinks = [
