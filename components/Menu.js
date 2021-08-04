@@ -9,6 +9,12 @@ import { activeLanguages } from './LangSwitcher';
 
 const pageLinks = [
   { label: 'FAQ', value: '/faq', isExternal: false, isRoute: true },
+  {
+    label: 'Businesses',
+    value: '/businesses',
+    isExternal: false,
+    isRoute: true,
+  },
   // { label: 'Donate', value: '/donate', isExternal: false, isRoute: true },
 ];
 
