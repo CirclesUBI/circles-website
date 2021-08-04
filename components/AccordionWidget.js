@@ -20,16 +20,7 @@ const customAccordionTheme = {
     },
   },
   accordion: {
-    icons: {
-      collapse: null,
-      expand: null,
-    },
-    panel: {
-      border: {
-        size: 0,
-        style: 'hidden',
-      },
-    },
+    border: undefined,
   },
   heading: {
     weight: 800,
@@ -72,7 +63,7 @@ export default function AccordionWidget({ content }) {
             </Box>
           }
         >
-          <Box background="brand2" width="medium">
+          <Box width="medium">
             <Text size="small">{content.text}</Text>
             <Box
               onClick={() => setOpen(!open)}
