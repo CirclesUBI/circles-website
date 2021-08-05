@@ -73,7 +73,11 @@ function Layout(props) {
                   </Box>
                 </Box>
               )}
-              <Box margin={{ top: '-36px' }}>{props.children(large, size)}</Box>
+              <main>
+                <Box margin={{ top: '-36px' }}>
+                  {props.children(large, size)}
+                </Box>
+              </main>
               <Footer />
             </Container>
           );

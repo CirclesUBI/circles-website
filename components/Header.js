@@ -19,35 +19,37 @@ const Header = ({ large, fixed }) => {
   };
 
   return (
-    <Row
-      style={{
-        alignItems: 'center',
-      }}
-    >
-      <Col xs={large ? 3 : 5} md={2}>
-        <Box pad={{ left: 'large' }} direction="row" align="center">
-          <Link href="/">
-            <Image
-              style={fixed ? fixedStyle : large ? regularStyle : fixedStyle}
-              src="/images/logo.svg"
-            />
-          </Link>
-          <Box>
-            <LangSwitcher />
+    <header>
+      <Row
+        style={{
+          alignItems: 'center',
+        }}
+      >
+        <Col xs={large ? 3 : 5} md={2}>
+          <Box pad={{ left: 'large' }} direction="row" align="center">
+            <Link href="/">
+              <Image
+                style={fixed ? fixedStyle : large ? regularStyle : fixedStyle}
+                src="/images/logo.svg"
+              />
+            </Link>
+            <Box>
+              <LangSwitcher />
+            </Box>
           </Box>
-        </Box>
-      </Col>
-      <Col xs={large ? 6 : 4} md={8}>
-        {large && <Menu large />}
-      </Col>
-      <Col xs={3} md={2}>
-        {large ? (
-          <SocialMenu fixed={fixed} />
-        ) : (
-          <Menu fixed={fixed} large={false} />
-        )}
-      </Col>
-    </Row>
+        </Col>
+        <Col xs={large ? 6 : 4} md={8}>
+          {large && <Menu large />}
+        </Col>
+        <Col xs={3} md={2}>
+          {large ? (
+            <SocialMenu fixed={fixed} />
+          ) : (
+            <Menu fixed={fixed} large={false} />
+          )}
+        </Col>
+      </Row>
+    </header>
   );
 };
 

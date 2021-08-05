@@ -303,54 +303,60 @@ const MainMenu = ({ t, large, fixed, ...otherProps }) => {
   });
 
   if (large) {
-    return <MenuContent large />;
+    return (
+      <nav>
+        <MenuContent large />
+      </nav>
+    );
   }
 
   const onOpen = () => setOpen(true);
   const onClose = () => setOpen(false);
 
   return (
-    <Box width="100%" align="center" {...otherProps}>
-      {open && (
-        <Layer
-          position="right"
-          full="vertical"
-          onClickOutside={onClose}
-          onEsc={onClose}
-          responsive={false}
-        >
-          <Box pad="small" justify="around" height="100vh">
-            {fixed ? (
-              <div />
-            ) : (
-              <Button
-                alignSelf="end"
-                onClick={onClose}
-                icon={<CloseIcon color="brand4" />}
-              />
-            )}
-            <Box pad={{ top: 'medium' }}>
-              <MenuContent t={t} large={false} />
-            </Box>
-            <Box>
-              <Box justify="center" direction="row">
-                <SocialMenu
-                  fixed={fixed}
-                  mobileMenu={!large}
-                  margin={{ top: 'medium' }}
+    <nav>
+      <Box width="100%" align="center" {...otherProps}>
+        {open && (
+          <Layer
+            position="right"
+            full="vertical"
+            onClickOutside={onClose}
+            onEsc={onClose}
+            responsive={false}
+          >
+            <Box pad="small" justify="around" height="100vh">
+              {fixed ? (
+                <div />
+              ) : (
+                <Button
+                  alignSelf="end"
+                  onClick={onClose}
+                  icon={<CloseIcon color="brand4" />}
                 />
+              )}
+              <Box pad={{ top: 'medium' }}>
+                <MenuContent t={t} large={false} />
+              </Box>
+              <Box>
+                <Box justify="center" direction="row">
+                  <SocialMenu
+                    fixed={fixed}
+                    mobileMenu={!large}
+                    margin={{ top: 'medium' }}
+                  />
+                </Box>
               </Box>
             </Box>
-          </Box>
-        </Layer>
-      )}
-      <Button
-        alignSelf="end"
-        onClick={open ? onClose : onOpen}
-        icon={open ? <CloseIcon color="white" /> : <MenuIcon color="white" />}
-        margin={{ right: 'medium' }}
-      />
-    </Box>
+          </Layer>
+        )}
+        <Button
+          alignSelf="end"
+          onClick={open ? onClose : onOpen}
+          icon={open ? <CloseIcon color="white" /> : <MenuIcon color="white" />}
+          margin={{ right: 'medium' }}
+        />
+      </Box>
+    </nav>
   );
 };
 

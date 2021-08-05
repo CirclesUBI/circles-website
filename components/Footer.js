@@ -63,134 +63,136 @@ const footerTheme = {
 
 const Footer = ({ t }) => {
   return (
-    <Row
-      style={{
-        background: 'rgb(102,15,51)',
-        background:
-          'linear-gradient(135deg, rgba(102,15,51,1) 0%, rgba(204,30,102,1) 100%)',
-      }}
-    >
-      <Col lg={3}>
-        <Box pad="xlarge" gap="medium">
-          <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
-            {t('follow-us')}
-          </Text>
-          {footerLinks.map((link) => (
-            <Link key={link.label} href={link.value}>
-              <Anchor
-                as="span"
-                key={link.value}
-                target={link.blank ? '_blank' : '_self'}
-                color="light-1"
-                style={{ display: 'flex', alignItems: 'center' }}
-              >
-                <Image
-                  width="24px"
-                  src={link.imageLink}
-                  margin={{ right: 'small' }}
+    <footer>
+      <Row
+        style={{
+          background: 'rgb(102,15,51)',
+          background:
+            'linear-gradient(135deg, rgba(102,15,51,1) 0%, rgba(204,30,102,1) 100%)',
+        }}
+      >
+        <Col lg={3}>
+          <Box pad="xlarge" gap="medium">
+            <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
+              {t('follow-us')}
+            </Text>
+            {footerLinks.map((link) => (
+              <Link key={link.label} href={link.value}>
+                <Anchor
+                  as="span"
+                  key={link.value}
+                  target={link.blank ? '_blank' : '_self'}
+                  color="light-1"
+                  style={{ display: 'flex', alignItems: 'center' }}
+                >
+                  <Image
+                    width="24px"
+                    src={link.imageLink}
+                    margin={{ right: 'small' }}
+                  />
+                  <Text size="small">{link.label}</Text>
+                </Anchor>
+              </Link>
+            ))}
+          </Box>
+        </Col>
+        <Col lg={6}>
+          <Box pad="xlarge" gap="medium">
+            <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
+              {t('newsletter-title')}
+            </Text>
+            <Text color="light-1">‍{t('newsletter-text')}</Text>
+            <form action="https://joincircles.us10.list-manage.com/subscribe/post">
+              <input
+                type="hidden"
+                name="u"
+                value="ce7ac2789abf7ce01f739a2b6"
+              ></input>
+              <input type="hidden" name="id" value="35899a122a"></input>
+              <Grommet theme={footerTheme}>
+                <FormField color="light-1" name="email">
+                  <TextInput
+                    id="MERGE0"
+                    name="MERGE0"
+                    placeholder={t('newsletter-input-placeholder')}
+                    style={{ color: '#fff' }}
+                  />
+                </FormField>
+              </Grommet>
+              <Box margin={{ bottom: 'medium' }}>
+                <CheckBox
+                  id="gdpr_45553"
+                  name="gdpr[45553]"
+                  value="Y"
+                  label={
+                    <Text color="white" size="small">
+                      {t('newsletter-gdpr-check')}
+                    </Text>
+                  }
                 />
-                <Text size="small">{link.label}</Text>
+              </Box>
+
+              <Button
+                primary
+                color="light-1"
+                type="submit"
+                label={t('newsletter-signup-button-label')}
+                style={{
+                  borderRadius: 8,
+                  marginTop: 12,
+                }}
+              />
+            </form>
+          </Box>
+        </Col>
+        <Col lg={3}>
+          <Box pad="xlarge" gap="medium">
+            <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
+              {t('links-title')}
+            </Text>
+            <Anchor href="https://circles.garden" color="light-1">
+              {t('links-wallet')}
+            </Anchor>
+            <Anchor
+              href="https://handbook.joincircles.net/docs/developers/whitepaper"
+              color="light-1"
+            >
+              {t('links-whitepaper')}
+            </Anchor>
+
+            <Link href="/contact">
+              <Anchor as="span" color="light-1">
+                {t('links-contact')}
               </Anchor>
             </Link>
-          ))}
-        </Box>
-      </Col>
-      <Col lg={6}>
-        <Box pad="xlarge" gap="medium">
-          <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
-            {t('newsletter-title')}
-          </Text>
-          <Text color="light-1">‍{t('newsletter-text')}</Text>
-          <form action="https://joincircles.us10.list-manage.com/subscribe/post">
-            <input
-              type="hidden"
-              name="u"
-              value="ce7ac2789abf7ce01f739a2b6"
-            ></input>
-            <input type="hidden" name="id" value="35899a122a"></input>
-            <Grommet theme={footerTheme}>
-              <FormField color="light-1" name="email">
-                <TextInput
-                  id="MERGE0"
-                  name="MERGE0"
-                  placeholder={t('newsletter-input-placeholder')}
-                  style={{ color: '#fff' }}
-                />
-              </FormField>
-            </Grommet>
-            <Box margin={{ bottom: 'medium' }}>
-              <CheckBox
-                id="gdpr_45553"
-                name="gdpr[45553]"
-                value="Y"
-                label={
-                  <Text color="white" size="small">
-                    {t('newsletter-gdpr-check')}
-                  </Text>
-                }
-              />
-            </Box>
 
-            <Button
-              primary
-              color="light-1"
-              type="submit"
-              label={t('newsletter-signup-button-label')}
-              style={{
-                borderRadius: 8,
-                marginTop: 12,
-              }}
-            />
-          </form>
-        </Box>
-      </Col>
-      <Col lg={3}>
-        <Box pad="xlarge" gap="medium">
-          <Text color="light-1" size="large" margin={{ bottom: 'small' }}>
-            {t('links-title')}
-          </Text>
-          <Anchor href="https://circles.garden" color="light-1">
-            {t('links-wallet')}
-          </Anchor>
-          <Anchor
-            href="https://handbook.joincircles.net/docs/developers/whitepaper"
-            color="light-1"
-          >
-            {t('links-whitepaper')}
-          </Anchor>
+            <Link href="/donate">
+              <Anchor as="span" color="light-1">
+                {t('links-donate')}
+              </Anchor>
+            </Link>
 
-          <Link href="/contact">
-            <Anchor as="span" color="light-1">
-              {t('links-contact')}
-            </Anchor>
-          </Link>
+            <Link href="/faq">
+              <Anchor as="span" color="light-1">
+                {t('links-faq')}
+              </Anchor>
+            </Link>
 
-          <Link href="/donate">
-            <Anchor as="span" color="light-1">
-              {t('links-donate')}
-            </Anchor>
-          </Link>
+            <Link href="/privacy-policy">
+              <Anchor as="span" color="light-1">
+                {t('links-privacy-policy')}
+              </Anchor>
+            </Link>
 
-          <Link href="/faq">
-            <Anchor as="span" color="light-1">
-              {t('links-faq')}
-            </Anchor>
-          </Link>
-
-          <Link href="/privacy-policy">
-            <Anchor as="span" color="light-1">
-              {t('links-privacy-policy')}
-            </Anchor>
-          </Link>
-
-          <Link href="/terms">
-            <Anchor as="span" color="light-1">
-              {t('links-terms')}
-            </Anchor>
-          </Link>
-        </Box>
-      </Col>
-    </Row>
+            <Link href="/terms">
+              <Anchor as="span" color="light-1">
+                {t('links-terms')}
+              </Anchor>
+            </Link>
+          </Box>
+        </Col>
+      </Row>
+    </footer>
   );
 };
 

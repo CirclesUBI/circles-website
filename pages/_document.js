@@ -1,5 +1,6 @@
-import Document from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { i18n } from '../i18n';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -26,5 +27,19 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    const lang = i18n && i18n.language && i18n.language.toUpperCase();
+
+    return (
+      <Html lang={lang}>
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
