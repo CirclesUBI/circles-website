@@ -27,22 +27,22 @@ function Home({ t }) {
     {
       count: '1',
       caption: t('hiw-slide-1'),
-      imageLink: '/images/slider-1.png',
+      imageLink: '/images/slider-1.webp',
     },
     {
       count: '2',
       caption: t('hiw-slide-2'),
-      imageLink: '/images/slider-2.png',
+      imageLink: '/images/slider-2.webp',
     },
     {
       count: '3',
       caption: t('hiw-slide-3'),
-      imageLink: '/images/slider-3.png',
+      imageLink: '/images/slider-3.webp',
     },
     {
       count: '4',
       caption: t('hiw-slide-4'),
-      imageLink: '/images/slider-4.png',
+      imageLink: '/images/slider-4.webp',
     },
   ];
 
@@ -160,6 +160,7 @@ function Home({ t }) {
                   label={t('get-circles-button-label')}
                   href="https://circles.garden"
                   target="_blank"
+                  rel="noreferrer"
                   style={{
                     padding: '14px 52px',
                     borderRadius: 8,

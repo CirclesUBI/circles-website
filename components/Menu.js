@@ -204,6 +204,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
             key={item.value}
             label={t(item.label)}
             href={item.href}
+            rel="noreferrer"
             target="_blank"
             color={large ? 'white' : 'brand4'}
             margin={{
