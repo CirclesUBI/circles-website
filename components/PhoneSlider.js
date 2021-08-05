@@ -23,8 +23,12 @@ const SliderImage = ({ imageLink, count, caption }) => (
         {caption}
       </Text>
     </Box>
-    <Box pad={{ horizontal: 'large' }} margin={{ bottom: 'medium' }}>
-      <Image src={imageLink} alt={caption} fit="contain" />
+    <Box
+      pad={{ horizontal: 'large' }}
+      margin={{ bottom: 'medium' }}
+      height="medium"
+    >
+      <Image src={imageLink} alt={caption} height="100%" fit="contain" />
     </Box>
   </Box>
 );
