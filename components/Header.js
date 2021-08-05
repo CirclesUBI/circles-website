@@ -17,7 +17,7 @@ const Header = ({ large, fixed = false }) => {
     height: 60,
     cursor: 'pointer',
   };
-  console.log(large, fixed);
+
   return (
     <Row
       style={{
