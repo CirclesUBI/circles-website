@@ -216,10 +216,12 @@ function Businesses({ t }) {
                   }}
                   width="large"
                   margin={{ top: 'large' }}
+                  wrap
                 >
                   {trustSystemWidgets.map((item, index) => (
                     <Box
                       key={item.title}
+                      basis="medium"
                       align="center"
                       margin={{ bottom: 'xlarge' }}
                     >
@@ -263,15 +265,16 @@ function Businesses({ t }) {
                   pad="medium"
                   justify="evenly"
                   align="center"
+                  wrap
                 >
-                  <Box basis="1/2">
+                  <Box basis="medium">
                     <ParagraphsGreenLeft
                       paragraphs={howFunctionsWidgets
                         .filter((p, i) => i < 5)
                         .map((p) => p.text)}
                     />
                   </Box>
-                  <Box basis="1/2" pad="medium">
+                  <Box basis="medium" pad="medium">
                     <Image
                       src="/images/businesses/how-functions-truck-new-xx.svg"
                       fit="contain"
@@ -285,15 +288,16 @@ function Businesses({ t }) {
                   pad="medium"
                   justify="evenly"
                   align="center"
+                  wrap
                 >
-                  <Box basis="1/2" pad="medium">
+                  <Box basis="medium" pad="medium">
                     <Image
                       src="/images/businesses/how-functions-woman.svg"
                       fit="contain"
                       fill
                     />
                   </Box>
-                  <Box basis="1/2">
+                  <Box basis="medium">
                     <ParagraphsGreenLeft
                       paragraphs={howFunctionsWidgets
                         .filter((p, i) => i > 4)
