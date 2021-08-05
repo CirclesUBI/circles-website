@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { Box, Button, Heading, Image, Paragraph, Text } from 'grommet';
 import ReactPlayer from 'react-player/vimeo';
-import { Row, Col } from 'react-grid-system';
 
 import styles from '../../styles/Generic.module.css';
 import Layout from '../../components/Layout';
@@ -24,27 +23,27 @@ const trustSystemWidgetsImageLinks = [
 
 const vsBitcoinWidgetsPositions = [
   {
-    top: '10%',
-    left: '67%',
+    top: '16.5%',
+    left: '64%',
   },
   {
-    top: '19%',
-    left: '44%',
+    top: '24%',
+    left: '43%',
   },
   {
-    top: '40%',
-    left: '58%',
+    top: '42%',
+    left: '55%',
   },
   {
     top: '49%',
-    left: '27%',
+    left: '28%',
   },
   {
-    top: '61%',
-    left: '34%',
+    top: '60%',
+    left: '35%',
   },
   {
-    top: '85%',
+    top: '82%',
     left: '48%',
   },
 ];
@@ -127,10 +126,9 @@ function Businesses({ t }) {
               </Box>
 
               <Box
-                width="large"
-                height="medium"
+                width={large ? 'xlarge' : 'large'}
+                height={large ? 'large' : 'medium'}
                 pad="xsmall"
-                background="dark-1"
                 alignSelf="center"
               >
                 <ReactPlayer
@@ -153,7 +151,13 @@ function Businesses({ t }) {
                   {t('why-accept-title')}
                 </Heading>
 
-                <Box direction="row" justify="center" wrap>
+                <Box
+                  alignSelf="center"
+                  width="xlarge"
+                  direction="row"
+                  justify="center"
+                  wrap
+                >
                   {acceptWidgets.map((widget, i) => (
                     <Box basis="medium">
                       <Widget title={widget.title} content={widget.text} />
@@ -298,12 +302,7 @@ function Businesses({ t }) {
                 </Box>
               </Section>
 
-              <Section
-                background={{
-                  color: 'white',
-                  size: 'contain',
-                }}
-              >
+              <Section>
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -323,7 +322,7 @@ function Businesses({ t }) {
                   style={{ position: 'relative' }}
                 >
                   <Image
-                    src="/images/businesses/vs-bitcoin-colored-map.png"
+                    src="/images/businesses/colored-map-circle.png"
                     width="100%"
                     fit="contain"
                   />
@@ -331,8 +330,8 @@ function Businesses({ t }) {
                     <TooltipPurple
                       label={
                         <Image
-                          width={24}
-                          height={24}
+                          width={36}
+                          height={36}
                           src="/images/businesses/green-plus-icon.svg"
                         />
                       }
@@ -394,14 +393,14 @@ function Businesses({ t }) {
                 </Heading>
 
                 <Box direction="row" justify="center" align="center" wrap>
-                  <Box basis="medium" alignSelf="center">
+                  <Box basis="large" alignSelf="center">
                     <Image
-                      src="/images/businesses/role-coop.png"
+                      src="/images/businesses/role-coop-share-wealth.png"
                       width="100%"
                       fill
                     />
                   </Box>
-                  <Box basis="small" alignSelf="center">
+                  <Box basis="medium" alignSelf="center">
                     <ParagraphsGreenLeft
                       paragraphs={roleCoopWidgets.map((p) => p.text)}
                       size="medium"
@@ -451,12 +450,11 @@ function Businesses({ t }) {
                 <Box
                   direction="row"
                   justify="center"
-                  gap="medium"
                   wrap
-                  height="medium"
+                  pad={{ bottom: 'xlarge' }}
                 >
                   {accessToCreditWidgets.map((w, i) => (
-                    <Box key={w.title} basis="medium">
+                    <Box key={w.title} basis="medium" margin="medium">
                       <AccordionWidget content={w} />
                     </Box>
                   ))}
