@@ -137,7 +137,7 @@ function Businesses({ t }) {
                   height="100%"
                   url="https://player.vimeo.com/video/469130953"
                   controls
-                  playerOptions={{ fullscreen: false }}
+                  // playerOptions={{ fullscreen: false }}
                 />
               </Box>
 
@@ -468,7 +468,7 @@ function Businesses({ t }) {
                 background={{
                   image: 'url(/images/businesses/tax-boy.svg)',
                   position: 'bottom right',
-                  size: '400px',
+                  size: '400px 350px',
                 }}
                 pad={{ bottom: '320px', horizontal: 'medium' }}
               >
