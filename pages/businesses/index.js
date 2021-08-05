@@ -459,6 +459,7 @@ function Businesses({ t }) {
                   justify="center"
                   wrap
                   pad={{ bottom: 'xlarge' }}
+                  width="100%"
                 >
                   {accessToCreditWidgets.map((w, i) => (
                     <Box key={w.title} basis="medium" margin="medium">
