@@ -221,7 +221,7 @@ function Businesses({ t }) {
                   {trustSystemWidgets.map((item, index) => (
                     <Box
                       key={item.title}
-                      // basis="medium"
+                      basis="180px"
                       align="center"
                       margin={{ bottom: 'xlarge' }}
                     >
@@ -243,7 +243,9 @@ function Businesses({ t }) {
                           src={item.imageLink}
                         />
                       </Box>
-                      <Text weight="bold">{item.title}</Text>
+                      <Text textAlign="center" weight="bold">
+                        {item.title}
+                      </Text>
                     </Box>
                   ))}
                 </Box>
