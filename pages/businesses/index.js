@@ -12,7 +12,7 @@ import TooltipPurple from '../../components/TooltipPurple';
 const withCirclesWidgetsImageLinks = [
   '/images/businesses/buy.png',
   '/images/businesses/sell.png',
-  '/images/businesses/trust.png',
+  '/images/businesses/trust-new.svg',
 ];
 
 const trustSystemWidgetsImageLinks = [
@@ -116,13 +116,14 @@ function Businesses({ t }) {
                 >
                   {t('main-heading')}
                 </Heading>
-
-                <Paragraph color="light-1">
-                  {t('main-text-paragraph1')}
-                </Paragraph>
-                <Paragraph color="light-1">
-                  <b>{t('main-text-paragraph2')}</b>
-                </Paragraph>
+                <Box pad="medium">
+                  <Paragraph color="light-1">
+                    {t('main-text-paragraph1')}
+                  </Paragraph>
+                  <Paragraph color="light-1">
+                    <b>{t('main-text-paragraph2')}</b>
+                  </Paragraph>
+                </Box>
               </Box>
 
               <Box
@@ -272,7 +273,7 @@ function Businesses({ t }) {
                   </Box>
                   <Box basis="1/2" pad="medium">
                     <Image
-                      src="/images/businesses/how-functions-truck.svg"
+                      src="/images/businesses/how-functions-truck-new-xx.svg"
                       fit="contain"
                       fill
                     />
@@ -313,7 +314,7 @@ function Businesses({ t }) {
                   {t('vs-bitcoin-title')}
                 </Heading>
 
-                <Box alignSelf="center">
+                <Box alignSelf="center" pad="medium">
                   <Paragraph>{t('vs-bitcoin-text')}</Paragraph>
                 </Box>
                 <Box
@@ -358,7 +359,7 @@ function Businesses({ t }) {
                   <Image src="/images/businesses/set-prices.png" width="100%" />
                 </Box>
 
-                <Box alignSelf="center">
+                <Box alignSelf="center" pad="medium">
                   <Paragraph>{t('set-prices-text-1')}</Paragraph>
                   <Paragraph>
                     <b>{t('set-prices-text-2')}</b>
@@ -376,7 +377,7 @@ function Businesses({ t }) {
                 >
                   {t('shared-wallet-title')}
                 </Heading>
-                <Box alignSelf="center">
+                <Box alignSelf="center" pad="medium">
                   <Paragraph>{t('shared-wallet-text')}</Paragraph>
                 </Box>
               </Section>
@@ -395,12 +396,12 @@ function Businesses({ t }) {
                 <Box direction="row" justify="center" align="center" wrap>
                   <Box basis="large" alignSelf="center">
                     <Image
-                      src="/images/businesses/role-coop-share-wealth.png"
+                      src="/images/businesses/role-coop-share-wealth.svg"
                       width="100%"
                       fill
                     />
                   </Box>
-                  <Box basis="medium" alignSelf="center">
+                  <Box basis="medium" alignSelf="center" pad="medium">
                     <ParagraphsGreenLeft
                       paragraphs={roleCoopWidgets.map((p) => p.text)}
                       size="medium"
@@ -440,14 +441,16 @@ function Businesses({ t }) {
                   {t('access-to-credit-title')}
                 </Heading>
 
-                <Box width="medium" alignSelf="center">
+                <Box width="large" alignSelf="center" pad="large">
                   <Image
-                    src="/images/businesses/access-to-credit.png"
+                    src="/images/businesses/access-to-credit-new.svg"
                     width="100%"
+                    size="contain"
                   />
                 </Box>
 
                 <Box
+                  alignSelf="center"
                   direction="row"
                   justify="center"
                   wrap
@@ -465,7 +468,7 @@ function Businesses({ t }) {
                 background={{
                   image: 'url(/images/businesses/tax-boy.svg)',
                   position: 'bottom right',
-                  size: '262px 369px',
+                  size: '400px',
                 }}
                 pad={{ bottom: '320px', horizontal: 'medium' }}
               >
@@ -479,7 +482,7 @@ function Businesses({ t }) {
                   {t('tax-bookkeeping-title')}
                 </Heading>
 
-                <Box alignSelf="center">
+                <Box alignSelf="center" pad="medium">
                   <Paragraph>{t('tax-bookkeeping-text-1')}</Paragraph>
                   <Paragraph>{t('tax-bookkeeping-text-2')}</Paragraph>
                   <Paragraph>{t('tax-bookkeeping-text-3')}</Paragraph>
