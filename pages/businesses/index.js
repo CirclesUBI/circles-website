@@ -214,14 +214,14 @@ function Businesses({ t }) {
                     position: large ? 'center 84px' : 'center',
                     size: 'contain',
                   }}
-                  width="large"
+                  width="xlarge"
                   margin={{ top: 'large' }}
                   wrap
                 >
                   {trustSystemWidgets.map((item, index) => (
                     <Box
                       key={item.title}
-                      basis="medium"
+                      // basis="medium"
                       align="center"
                       margin={{ bottom: 'xlarge' }}
                     >

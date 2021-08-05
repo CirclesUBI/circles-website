@@ -30,7 +30,7 @@ function Layout(props) {
 
   const screenClass = useScreenClass();
   const large = ['xl', 'xxl'].includes(screenClass);
-
+  console.log(large, screenClass);
   return (
     <Grommet theme={theme} {...props}>
       <Head>
