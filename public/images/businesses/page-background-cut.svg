@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1360px" height="13023px" viewBox="0 0 1360 13023" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1360px" height="13015px" viewBox="0 0 1360 13015" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
     <title>page-background</title>
     <desc>Created with Sketch.</desc>
@@ -48,8 +48,8 @@
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="page-background">
-            <rect id="Rectangle-path" fill="#FFFCFE" fill-rule="nonzero" x="0.993652" y="23" width="1357.02" height="13000"></rect>
-            <g id="Clipped" transform="translate(0.000000, 8.000000)">
+            <rect id="Rectangle-path" fill="#FFFCFE" fill-rule="nonzero" x="0.993652" y="15" width="1357.02" height="13000"></rect>
+            <g id="Clipped">
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>
@@ -69,7 +69,7 @@
                 </g>
             </g>
             <path d="M0,870 L0.993426,846.5 L0.993426,0 L1360,0 L1306.72,68.2955 C1263.13,124.178 1193.22,152.816 1122.95,143.573 L1107.04,141.481 C1033.83,131.851 961.268,163.346 918.302,223.401 L897.891,251.93 C873.381,286.189 830.029,301.415 789.479,290.007 L662.899,254.394 C629.084,244.881 593.079,246.748 560.429,259.708 C507.642,280.661 469.899,328.002 461.231,384.131 L450.15,455.886 C442.621,504.643 400.657,540.624 351.322,540.624 L221.005,540.624 C182.544,540.624 147.491,562.681 130.85,597.356 L0,870 Z" id="Shape" fill="url(#linearGradient-11)" fill-rule="nonzero"></path>
-            <path d="M148.222,261.773 L0.993652,278 L0.993652,8 L1352.05,14.88271 L1115.82,37.0102 C1096.92,38.7803 1078.92,45.8921 1063.91,57.5145 L1026.66,86.3696 C1005.38,102.8489 978.359,110.0567 951.702,106.3638 L910.156,100.6084 C879.646,96.3818 848.572,99.2592 819.356,109.0164 L735.641,136.975 L678.501,148.916 L549.648,159.531 L325.824,159.531 C300.341,159.531 275.818,169.26 257.266,186.731 L205.825,235.175 C190.02,250.059 169.801,259.395 148.222,261.773 Z" id="Shape" fill="url(#linearGradient-12)" fill-rule="nonzero"></path>
+            <path d="M154.222,253.773 L6.993652,270 L6.993652,0 L1358.57715,0 L1121.82,29.0102 C1102.92,30.7803 1084.92,37.8921 1069.91,49.5145 L1032.66,78.3696 C1011.38,94.8489 984.359,102.0567 957.702,98.3638 L916.156,92.6084 C885.646,88.3818 854.572,91.2592 825.356,101.0164 L741.641,128.975 L684.501,140.916 L555.648,151.531 L331.824,151.531 C306.341,151.531 281.818,161.26 263.266,178.731 L211.825,227.175 C196.02,242.059 175.801,251.395 154.222,253.773 Z" id="Shape" fill="url(#linearGradient-12)" fill-rule="nonzero"></path>
         </g>
     </g>
 </svg>
