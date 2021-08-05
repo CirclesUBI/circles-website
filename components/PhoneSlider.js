@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { Box, Heading, Text } from 'grommet';
+import { Box, Heading, Image, Text } from 'grommet';
 import Slider from 'react-slick';
 
 const SliderImage = ({ imageLink, count, caption }) => (
@@ -25,7 +24,7 @@ const SliderImage = ({ imageLink, count, caption }) => (
       </Text>
     </Box>
     <Box pad={{ horizontal: 'large' }} margin={{ bottom: 'medium' }}>
-      <Image src={imageLink} alt={caption} width={480} height={888} />
+      <Image src={imageLink} alt={caption} fit="contain" />
     </Box>
   </Box>
 );
