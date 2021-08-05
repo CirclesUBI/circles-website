@@ -29,7 +29,7 @@ const Header = ({ large, fixed }) => {
           <Box pad={{ left: 'large' }} direction="row" align="center">
             <Link href="/">
               <Image
-                style={fixed ? fixedStyle : large ? regularStyle : fixedStyle}
+                style={large ? regularStyle : fixedStyle}
                 src="/images/logo.svg"
               />
             </Link>
