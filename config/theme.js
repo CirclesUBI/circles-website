@@ -28,9 +28,6 @@ const colors = {
   'neutral-3': '#607D8B',
   'neutral-4': '#9cb6d7',
   'neutral-5': '#FF9800',
-  // 'dark-1': 'rgba(0, 0, 0, .8)',
-  // 'dark-2': 'rgba(20, 20, 20, .8)',
-  // 'dark-3': 'rgba(50, 50, 50, .8)',
 };
 
 var baseSpacing = 16;
@@ -50,9 +47,6 @@ const theme = deepFreeze(
             large: baseSpacing + 'px',
             xlarge: baseSpacing * 2 + 'px',
           },
-        },
-        medium: {
-          value: 1100,
         },
       },
       colors: colors,
