@@ -244,7 +244,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           </ScrollLink>
         )
       )}
-      <Link href="/donate">
+      {/* <Link href="/donate">
         <Button
           primary
           as="span"
@@ -260,7 +260,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           }}
           color="brand5"
         />
-      </Link>
+      </Link> */}
     </Box>
   );
 });

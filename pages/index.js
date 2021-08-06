@@ -14,11 +14,11 @@ import { withTranslation } from '../i18n';
 
 const getAboutImageTopMargin = (screenClass) => {
   if (['xs', 'sm'].includes(screenClass)) {
-    return '280px';
+    return '980px';
   } else if (['md', 'lg', 'xl'].includes(screenClass)) {
-    return '120px';
+    return '320px';
   } else {
-    return '120px';
+    return '320px';
   }
 };
 
@@ -111,47 +111,15 @@ function Home({ t }) {
                 alignSelf="center"
                 pad="medium"
               >
-                <Text weight="bold" margin={{ bottom: 'medium' }} color="#fff">
-                  Circles needs you!
+                <Text margin={{ bottom: 'medium' }} color="white">
+                  {t('main-paragraph-1')}
                 </Text>
-                <Text margin={{ bottom: 'medium' }} color="#fff">
-                  Since launching in October 2020 the Circles community has
-                  grown to 200k users around the globe. Interest in the project
-                  led to rapid scaling, which overloaded our servers, and after
-                  overhauling our infrastructure we are at the end of our
-                  budget.
-                </Text>
-                <Text weight="bold" margin={{ bottom: 'medium' }} color="#fff">
-                  <em>
-                    Circles big dream needs you to realize end the world
-                    poverty, make basic income reality!
-                  </em>
+                <Text weight="bold" margin={{ bottom: 'medium' }} color="white">
+                  {t('main-paragraph-2')}
                 </Text>
               </Box>
 
-              <Box margin={{ top: 'medium', bottom: 'xlarge' }}>
-                <Link href="/donate">
-                  <Button
-                    primary
-                    as="span"
-                    alignSelf="center"
-                    label={
-                      <span style={{ color: '#fff' }}>
-                        <b>Donate now</b>
-                      </span>
-                    }
-                    margin="medium"
-                    color="brand5"
-                    size="large"
-                    style={{
-                      padding: '10px 24px',
-                      borderRadius: 8,
-                    }}
-                  />
-                </Link>
-              </Box>
-
-              <Box margin={{ top: 'large' }} alignSelf="center">
+              <Box alignSelf="center">
                 <Button
                   color="dark-2"
                   plain
@@ -173,7 +141,7 @@ function Home({ t }) {
                 />
               </Box>
 
-              <Box margin={{ vertical: 'large' }} align="center">
+              <Box pad={{ vertical: 'large' }} align="center">
                 <ScrollLink
                   to="about"
                   smooth
