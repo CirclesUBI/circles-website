@@ -142,16 +142,18 @@ function Businesses({ t }) {
                 />
               </Box>
 
-              <Section>
-                <Heading
-                  alignSelf="center"
-                  color="dark-1"
-                  level={1}
-                  textAlign="center"
-                  margin={{ top: 'xlarge', bottom: 'small' }}
-                >
-                  {t('why-accept-title')}
-                </Heading>
+              <Section pad={{ top: 'xlarge' }}>
+                <Box width="large" alignSelf="center">
+                  <Heading
+                    alignSelf="center"
+                    color="dark-1"
+                    level={1}
+                    textAlign="center"
+                    margin={{ top: 'xlarge', bottom: 'small' }}
+                  >
+                    {t('why-accept-title')}
+                  </Heading>
+                </Box>
 
                 <Box
                   alignSelf="center"
@@ -448,7 +450,6 @@ function Businesses({ t }) {
                 background={{
                   image:
                     'linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 1) 100%), url(/images/businesses/access-back.svg)',
-                  // size: 'contain',
                 }}
               >
                 <Heading
@@ -478,7 +479,7 @@ function Businesses({ t }) {
                   width="100%"
                 >
                   {accessToCreditWidgets.map((w, i) => (
-                    <Box key={w.title} basis="medium" margin="medium">
+                    <Box key={w.title} basis="medium">
                       <AccordionWidget content={w} />
                     </Box>
                   ))}

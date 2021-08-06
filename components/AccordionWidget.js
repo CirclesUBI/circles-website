@@ -32,6 +32,7 @@ const customAccordionTheme = {
 
 const accordionStyle = {
   padding: '14px 52px',
+  margin: 6,
   borderRadius: 8,
   color: '#fff',
   background: 'rgb(102,15,51)',
