@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import { Box, Button, Heading, Image, Paragraph, Text } from 'grommet';
 import ReactPlayer from 'react-player/vimeo';
+import { Row, Col } from 'react-grid-system';
 
-import styles from '../../styles/Generic.module.css';
+import styles from '../../styles/businesses.module.css';
 import Layout from '../../components/Layout';
 import { withTranslation } from '../../i18n';
 import Widget from '../../components/Widget';
@@ -84,7 +85,7 @@ function Businesses({ t }) {
   });
 
   return (
-    <div className={styles.businesses}>
+    <div className={styles.page}>
       <Head>
         <title>{t('meta')}</title>
         <meta
@@ -138,7 +139,6 @@ function Businesses({ t }) {
                   height="100%"
                   url="https://player.vimeo.com/video/469130953"
                   controls
-                  // playerOptions={{ fullscreen: false }}
                 />
               </Box>
 
@@ -205,113 +205,155 @@ function Businesses({ t }) {
 
                 <Box
                   alignSelf="center"
-                  direction={large ? 'row' : 'column'}
-                  justify="between"
-                  background={{
-                    image: large
-                      ? 'url(/images/businesses/background-line.svg)'
-                      : 'none',
-                    repeat: 'no-repeat',
-                    position: large ? 'center 84px' : 'center',
-                    size: 'contain',
-                  }}
-                  width="xlarge"
                   margin={{ top: 'large' }}
-                  wrap
+                  width="xlarge"
                 >
-                  {trustSystemWidgets.map((item, index) => (
-                    <Box
-                      key={item.title}
-                      basis="180px"
-                      align="center"
-                      margin={{ bottom: 'xlarge' }}
-                    >
+                  <div className={styles.trustSystemContainer}>
+                    {trustSystemWidgets.map((item, index) => (
                       <Box
-                        width="180px"
-                        height="180px"
-                        background={{
-                          image:
-                            'url(/images/businesses/background-green-circle.svg)',
-                          size: 'contain',
-                        }}
-                        margin={{ bottom: 'medium' }}
+                        key={item.title}
+                        align="center"
+                        margin={{ bottom: 'xlarge' }}
+                        className={styles.trustSystemItem}
                       >
-                        <Image
-                          alignSelf="center"
-                          fill={false}
-                          fit="contain"
-                          margin={index === 2 ? 'large' : 'medium'}
-                          src={item.imageLink}
-                        />
+                        <Box
+                          width="180px"
+                          height="180px"
+                          background={{
+                            image:
+                              'url(/images/businesses/background-green-circle.svg)',
+                            size: 'contain',
+                          }}
+                          margin={{ bottom: 'medium' }}
+                        >
+                          <Image
+                            alignSelf="center"
+                            fill={false}
+                            fit="contain"
+                            margin={index === 2 ? 'large' : 'medium'}
+                            src={item.imageLink}
+                          />
+                        </Box>
+                        <Text textAlign="center" weight="bold">
+                          {item.title}
+                        </Text>
                       </Box>
-                      <Text textAlign="center" weight="bold">
-                        {item.title}
-                      </Text>
+                    ))}
+                  </div>
+                </Box>
+              </Section>
+
+              <Box
+                background={{
+                  image:
+                    'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(204, 30, 102, 0.5) 50%, rgba(255, 255, 255, 1) 100%)',
+                }}
+              >
+                <Section pad={{ horizontal: 'xlarge' }}>
+                  <Heading
+                    alignSelf="center"
+                    color="dark-1"
+                    level={1}
+                    textAlign="center"
+                    margin={{ top: 'xlarge', bottom: 'large' }}
+                  >
+                    {t('how-functions-title')}
+                  </Heading>
+
+                  <Box
+                    direction={large ? 'row' : 'column'}
+                    pad="medium"
+                    justify="evenly"
+                    align="center"
+                    wrap
+                  >
+                    <Box basis={large ? 'medium' : 'auto'}>
+                      <ParagraphsGreenLeft
+                        paragraphs={howFunctionsWidgets
+                          .filter((p, i) => i < 5)
+                          .map((p) => p.text)}
+                      />
                     </Box>
-                  ))}
-                </Box>
-              </Section>
-
-              <Section pad={{ horizontal: 'xlarge' }}>
-                <Heading
-                  alignSelf="center"
-                  color="dark-1"
-                  level={1}
-                  textAlign="center"
-                  margin={{ top: 'xlarge', bottom: 'large' }}
-                >
-                  {t('how-functions-title')}
-                </Heading>
-
-                <Box
-                  direction={large ? 'row' : 'column'}
-                  pad="medium"
-                  justify="evenly"
-                  align="center"
-                  wrap
-                >
-                  <Box basis={large ? 'medium' : 'auto'}>
-                    <ParagraphsGreenLeft
-                      paragraphs={howFunctionsWidgets
-                        .filter((p, i) => i < 5)
-                        .map((p) => p.text)}
-                    />
+                    <Box basis={large ? 'medium' : 'auto'} pad="medium">
+                      <Image
+                        src="/images/businesses/how-functions-truck-new-xx.svg"
+                        fit="contain"
+                        fill
+                      />
+                    </Box>
                   </Box>
-                  <Box basis={large ? 'medium' : 'auto'} pad="medium">
-                    <Image
-                      src="/images/businesses/how-functions-truck-new-xx.svg"
-                      fit="contain"
-                      fill
-                    />
-                  </Box>
-                </Box>
 
-                <Box
-                  direction={large ? 'row' : 'column-reverse'}
-                  pad="medium"
-                  justify="evenly"
-                  align="center"
-                  wrap
-                >
-                  <Box basis={large ? 'medium' : 'auto'} pad="medium">
-                    <Image
-                      src="/images/businesses/how-functions-woman.svg"
-                      fit="contain"
-                      fill
-                    />
+                  <Box
+                    direction={large ? 'row' : 'column-reverse'}
+                    pad="medium"
+                    justify="evenly"
+                    align="center"
+                    wrap
+                  >
+                    <Box basis={large ? 'medium' : 'auto'} pad="medium">
+                      <Image
+                        src="/images/businesses/how-functions-woman.svg"
+                        fit="contain"
+                        fill
+                      />
+                    </Box>
+                    <Box basis={large ? 'medium' : 'auto'}>
+                      <ParagraphsGreenLeft
+                        paragraphs={howFunctionsWidgets
+                          .filter((p, i) => i > 4)
+                          .map((p) => p.text)}
+                      />
+                    </Box>
                   </Box>
-                  <Box basis={large ? 'medium' : 'auto'}>
-                    <ParagraphsGreenLeft
-                      paragraphs={howFunctionsWidgets
-                        .filter((p, i) => i > 4)
-                        .map((p) => p.text)}
-                    />
-                  </Box>
-                </Box>
-              </Section>
+                </Section>
 
-              <Section pad="none">
-                <CurvyBackground>
+                <Section pad="none">
+                  <CurvyBackground>
+                    <Box alignSelf="center" pad={{ horizontal: 'large' }}>
+                      <Heading
+                        alignSelf="center"
+                        color="dark-1"
+                        level={1}
+                        textAlign="center"
+                        margin={{ top: 'xlarge', bottom: 'small' }}
+                      >
+                        {t('vs-bitcoin-title')}
+                      </Heading>
+
+                      <Paragraph alignSelf="center" textAlign="center">
+                        {t('vs-bitcoin-text')}
+                      </Paragraph>
+                    </Box>
+                    <Box
+                      width="large"
+                      alignSelf="center"
+                      style={{ position: 'relative', margin: '0 auto' }}
+                    >
+                      <Image
+                        src="/images/businesses/colored-map-circle.png"
+                        width="100%"
+                        fit="contain"
+                      />
+                      {vsBitcoinWidgets.map((widget, i) => (
+                        <TooltipPurple
+                          key={widget.text.substr(0, 20)}
+                          label={
+                            <Image
+                              width={36}
+                              height={36}
+                              src="/images/businesses/green-plus-icon.svg"
+                            />
+                          }
+                          content={widget}
+                          position={vsBitcoinWidgetsPositions[i]}
+                          large={large}
+                        />
+                      ))}
+                    </Box>
+                  </CurvyBackground>
+                </Section>
+
+                <Section>
                   <Heading
                     alignSelf="center"
                     color="dark-1"
@@ -319,80 +361,39 @@ function Businesses({ t }) {
                     textAlign="center"
                     margin={{ top: 'xlarge', bottom: 'small' }}
                   >
-                    {t('vs-bitcoin-title')}
+                    {t('set-prices-title')}
                   </Heading>
 
+                  <Box width="small" pad="medium" alignSelf="center">
+                    <Image
+                      src="/images/businesses/set-prices.png"
+                      width="100%"
+                    />
+                  </Box>
+
                   <Box alignSelf="center" pad="medium">
-                    <Paragraph alignSelf="center">
-                      {t('vs-bitcoin-text')}
+                    <Paragraph>{t('set-prices-text-1')}</Paragraph>
+                    <Paragraph>
+                      <b>{t('set-prices-text-2')}</b>
                     </Paragraph>
                   </Box>
-                  <Box
-                    width="large"
+                </Section>
+
+                <Section>
+                  <Heading
                     alignSelf="center"
-                    style={{ position: 'relative', margin: '0 auto' }}
+                    color="dark-1"
+                    level={1}
+                    textAlign="center"
+                    margin={{ top: 'xlarge', bottom: 'small' }}
                   >
-                    <Image
-                      src="/images/businesses/colored-map-circle.png"
-                      width="100%"
-                      fit="contain"
-                    />
-                    {vsBitcoinWidgets.map((widget, i) => (
-                      <TooltipPurple
-                        key={widget.text.substr(0, 20)}
-                        label={
-                          <Image
-                            width={36}
-                            height={36}
-                            src="/images/businesses/green-plus-icon.svg"
-                          />
-                        }
-                        content={widget}
-                        position={vsBitcoinWidgetsPositions[i]}
-                        large={large}
-                      />
-                    ))}
+                    {t('shared-wallet-title')}
+                  </Heading>
+                  <Box alignSelf="center" pad="medium">
+                    <Paragraph>{t('shared-wallet-text')}</Paragraph>
                   </Box>
-                </CurvyBackground>
-              </Section>
-
-              <Section>
-                <Heading
-                  alignSelf="center"
-                  color="dark-1"
-                  level={1}
-                  textAlign="center"
-                  margin={{ top: 'xlarge', bottom: 'small' }}
-                >
-                  {t('set-prices-title')}
-                </Heading>
-
-                <Box width="small" pad="medium" alignSelf="center">
-                  <Image src="/images/businesses/set-prices.png" width="100%" />
-                </Box>
-
-                <Box alignSelf="center" pad="medium">
-                  <Paragraph>{t('set-prices-text-1')}</Paragraph>
-                  <Paragraph>
-                    <b>{t('set-prices-text-2')}</b>
-                  </Paragraph>
-                </Box>
-              </Section>
-
-              <Section>
-                <Heading
-                  alignSelf="center"
-                  color="dark-1"
-                  level={1}
-                  textAlign="center"
-                  margin={{ top: 'xlarge', bottom: 'small' }}
-                >
-                  {t('shared-wallet-title')}
-                </Heading>
-                <Box alignSelf="center" pad="medium">
-                  <Paragraph>{t('shared-wallet-text')}</Paragraph>
-                </Box>
-              </Section>
+                </Section>
+              </Box>
 
               <Section>
                 <Heading
