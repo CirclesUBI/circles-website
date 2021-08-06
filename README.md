@@ -51,7 +51,7 @@ First, run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -62,4 +62,4 @@ To learn more about Next.js, take a look at the following resources:
 
 GNU Affero General Public License v3.0 [`AGPL-3.0`]
 
-[`AGPL-3.0`]: https://github.com/CirclesUBI/circles-website/blob/main/LICENSE
+[`agpl-3.0`]: https://github.com/CirclesUBI/circles-website/blob/main/LICENSE
