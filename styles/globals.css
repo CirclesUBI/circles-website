@@ -67,3 +67,22 @@ a {
     padding: 24px 0;
   }
 }
+
+.curvy-background-container {
+  overflow: hidden;
+}
+
+.curvy-background-top {
+  width: 100%;
+  height: 120px;
+  border-radius: 100% 100% 0 0;
+  background-color: white;
+}
+
+.curvy-background-bottom {
+  width: 100%;
+  height: 120px;
+  border-radius: 0 0 100% 100%;
+  background-color: white;
+  margin-top: -70px;
+}
