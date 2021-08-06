@@ -248,7 +248,7 @@ function Businesses({ t }) {
               <Box
                 background={{
                   image:
-                    'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(204, 30, 102, 0.7) 60%, rgba(255, 255, 255, 1) 100%)',
+                    'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(204, 30, 102, 0.6) 60%, rgba(255, 255, 255, 1) 100%)',
                 }}
               >
                 <Section pad={{ horizontal: 'xlarge' }}>
