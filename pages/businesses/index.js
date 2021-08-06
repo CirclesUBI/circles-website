@@ -103,7 +103,7 @@ function Businesses({ t }) {
       <Layout>
         {(large, screenClass) => (
           <Box>
-            <Box width="100%" margin={{ vertical: 'medium' }}>
+            <Box width="100%" margin={{ top: 'medium' }}>
               <Box
                 alignSelf="center"
                 margin={{ bottom: 'medium' }}
@@ -246,7 +246,7 @@ function Businesses({ t }) {
               <Box
                 background={{
                   image:
-                    'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(204, 30, 102, 0.5) 50%, rgba(255, 255, 255, 1) 100%)',
+                    'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(204, 30, 102, 0.7) 60%, rgba(255, 255, 255, 1) 100%)',
                 }}
               >
                 <Section pad={{ horizontal: 'xlarge' }}>
@@ -443,7 +443,14 @@ function Businesses({ t }) {
                 </Box>
               </Section>
 
-              <Section>
+              <Section
+                width="100%"
+                background={{
+                  image:
+                    'linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 1) 100%), url(/images/businesses/access-back.svg)',
+                  // size: 'contain',
+                }}
+              >
                 <Heading
                   alignSelf="center"
                   color="dark-1"
@@ -480,11 +487,10 @@ function Businesses({ t }) {
 
               <Section
                 background={{
-                  image: 'url(/images/businesses/tax-boy.svg)',
-                  position: 'bottom right',
-                  size: '400px 350px',
+                  image:
+                    'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 193, 126, 0.6) 100%)',
                 }}
-                pad={{ bottom: '320px', horizontal: 'medium' }}
+                pad={{ horizontal: 'medium' }}
               >
                 <Heading
                   alignSelf="center"
@@ -501,6 +507,15 @@ function Businesses({ t }) {
                   <Paragraph>{t('tax-bookkeeping-text-2')}</Paragraph>
                   <Paragraph>{t('tax-bookkeeping-text-3')}</Paragraph>
                 </Box>
+                <Box
+                  width="100%"
+                  height="300px"
+                  background={{
+                    image: 'url(/images/businesses/tax-boy.svg)',
+                    position: 'bottom right',
+                    size: 'contain',
+                  }}
+                ></Box>
               </Section>
             </Box>
           </Box>
