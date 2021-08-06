@@ -8,6 +8,7 @@ import { withTranslation } from '../../i18n';
 import Widget from '../../components/Widget';
 import AccordionWidget from '../../components/AccordionWidget';
 import TooltipPurple from '../../components/TooltipPurple';
+import CurvyBackground from '../../components/CurvyBackground';
 
 const withCirclesWidgetsImageLinks = [
   '/images/businesses/buy.png',
@@ -160,7 +161,7 @@ function Businesses({ t }) {
                   wrap
                 >
                   {acceptWidgets.map((widget, i) => (
-                    <Box basis="medium">
+                    <Box key={widget.title} basis="medium">
                       <Widget title={widget.title} content={widget.text} />
                     </Box>
                   ))}
@@ -180,7 +181,7 @@ function Businesses({ t }) {
 
                 <Box alignSelf="center" direction="row" justify="center" wrap>
                   {withCirclesWidgets.map((widget, i) => (
-                    <Box basis="medium">
+                    <Box key={widget.title} basis="medium">
                       <Widget
                         imageLink={widget.imageLink}
                         title={widget.title}
@@ -269,14 +270,14 @@ function Businesses({ t }) {
                   align="center"
                   wrap
                 >
-                  <Box basis="medium">
+                  <Box basis={large ? 'medium' : 'auto'}>
                     <ParagraphsGreenLeft
                       paragraphs={howFunctionsWidgets
                         .filter((p, i) => i < 5)
                         .map((p) => p.text)}
                     />
                   </Box>
-                  <Box basis="medium" pad="medium">
+                  <Box basis={large ? 'medium' : 'auto'} pad="medium">
                     <Image
                       src="/images/businesses/how-functions-truck-new-xx.svg"
                       fit="contain"
@@ -292,14 +293,14 @@ function Businesses({ t }) {
                   align="center"
                   wrap
                 >
-                  <Box basis="medium" pad="medium">
+                  <Box basis={large ? 'medium' : 'auto'} pad="medium">
                     <Image
                       src="/images/businesses/how-functions-woman.svg"
                       fit="contain"
                       fill
                     />
                   </Box>
-                  <Box basis="medium">
+                  <Box basis={large ? 'medium' : 'auto'}>
                     <ParagraphsGreenLeft
                       paragraphs={howFunctionsWidgets
                         .filter((p, i) => i > 4)
@@ -309,45 +310,50 @@ function Businesses({ t }) {
                 </Box>
               </Section>
 
-              <Section>
-                <Heading
-                  alignSelf="center"
-                  color="dark-1"
-                  level={1}
-                  textAlign="center"
-                  margin={{ top: 'xlarge', bottom: 'small' }}
-                >
-                  {t('vs-bitcoin-title')}
-                </Heading>
+              <Section pad="none">
+                <CurvyBackground>
+                  <Heading
+                    alignSelf="center"
+                    color="dark-1"
+                    level={1}
+                    textAlign="center"
+                    margin={{ top: 'xlarge', bottom: 'small' }}
+                  >
+                    {t('vs-bitcoin-title')}
+                  </Heading>
 
-                <Box alignSelf="center" pad="medium">
-                  <Paragraph>{t('vs-bitcoin-text')}</Paragraph>
-                </Box>
-                <Box
-                  width="large"
-                  alignSelf="center"
-                  style={{ position: 'relative' }}
-                >
-                  <Image
-                    src="/images/businesses/colored-map-circle.png"
-                    width="100%"
-                    fit="contain"
-                  />
-                  {vsBitcoinWidgets.map((w, i) => (
-                    <TooltipPurple
-                      label={
-                        <Image
-                          width={36}
-                          height={36}
-                          src="/images/businesses/green-plus-icon.svg"
-                        />
-                      }
-                      content={w}
-                      position={vsBitcoinWidgetsPositions[i]}
-                      large={large}
+                  <Box alignSelf="center" pad="medium">
+                    <Paragraph alignSelf="center">
+                      {t('vs-bitcoin-text')}
+                    </Paragraph>
+                  </Box>
+                  <Box
+                    width="large"
+                    alignSelf="center"
+                    style={{ position: 'relative', margin: '0 auto' }}
+                  >
+                    <Image
+                      src="/images/businesses/colored-map-circle.png"
+                      width="100%"
+                      fit="contain"
                     />
-                  ))}
-                </Box>
+                    {vsBitcoinWidgets.map((widget, i) => (
+                      <TooltipPurple
+                        key={widget.text.substr(0, 20)}
+                        label={
+                          <Image
+                            width={36}
+                            height={36}
+                            src="/images/businesses/green-plus-icon.svg"
+                          />
+                        }
+                        content={widget}
+                        position={vsBitcoinWidgetsPositions[i]}
+                        large={large}
+                      />
+                    ))}
+                  </Box>
+                </CurvyBackground>
               </Section>
 
               <Section>
