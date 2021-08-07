@@ -1,13 +1,13 @@
 import { useState, useRef } from 'react';
+import { useRouter } from 'next/router';
 import { Link } from '../i18n';
-import { Anchor, Box, Button, Drop, Image, Layer, Menu } from 'grommet';
+import { Anchor, Box, Button, Drop, Image, Layer } from 'grommet';
 import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
 
-import { withTranslation, i18n } from '../i18n';
-import { activeLanguages } from './LangSwitcher';
+import { withTranslation } from '../i18n';
 
-const homeMenuLinks = [
+const homeMenu = [
   {
     label: 'About',
     value: 'about',
@@ -34,7 +34,7 @@ const homeMenuLinks = [
   },
 ];
 
-const menuLinks = [
+const menu = [
   {
     label: 'Home',
     value: '/',
@@ -64,7 +64,7 @@ const menuLinks = [
   },
 ];
 
-const socialMenuLinks = [
+const socialMenu = [
   {
     icon: '/images/ig.svg',
     iconp: '/images/ig-p.svg',
@@ -101,7 +101,7 @@ const SubMenuItems = ({ t, large }) => (
       right: 'small',
     }}
   >
-    {homeMenuLinks.map((subItem) => (
+    {homeMenu.map((subItem) => (
       <ScrollLink
         key={subItem.value}
         to={subItem.value}
@@ -175,19 +175,9 @@ const HomeMenu = ({ item, t, large, isCurrentPage }) => {
 };
 
 const MenuContent = withTranslation('header')(({ t, large }) => {
-  let pathname;
-  if (process.browser) {
-    pathname = location.pathname;
-  }
+  const { pathname } = useRouter();
 
-  const langPaths = [...activeLanguages.map((lang) => '/' + lang), '/'];
-  const menu = menuLinks;
-  const isHome = pathname && langPaths.includes(pathname);
-
-  let pathnameWithoutLang = pathname;
-  if (pathname && i18n.language !== 'en') {
-    pathnameWithoutLang = pathname.substring(3, pathname.index);
-  }
+  const isHome = pathname === '/';
 
   return (
     <Box
@@ -224,9 +214,7 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
               as="span"
               label={t(item.label)}
               color={large ? 'white' : 'brand4'}
-              className={
-                pathnameWithoutLang === item.value ? 'current-page' : ''
-              }
+              className={pathname === item.value ? 'current-page' : ''}
               margin={{
                 horizontal: '28px',
                 vertical: large ? 'none' : 'small',
@@ -275,7 +263,7 @@ export const SocialMenu = ({ mobileMenu, fixed, ...otherProps }) => {
         basis="auto"
         style={menuStyle}
       >
-        {socialMenuLinks.map((item) => (
+        {socialMenu.map((item) => (
           <Link key={item.icon} href={item.link}>
             <Anchor as="span" key={item.link} style={{ height: 24 }}>
               <Image width="28px" src={mobileMenu ? item.iconp : item.icon} />

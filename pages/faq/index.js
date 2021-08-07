@@ -43,6 +43,7 @@ function FAQ({ t }) {
   const selectedIndex = query.open && Number(query.open);
   const items = t('items', { returnObjects: true });
   const setSelectedIndex = (itemIndex) => {
+    console.log(pathname);
     push({ pathname, query: { open: itemIndex } }, undefined, {
       shallow: true,
       scroll: false,
