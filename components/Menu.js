@@ -4,7 +4,7 @@ import { Anchor, Box, Button, Drop, Image, Layer, Menu } from 'grommet';
 import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
 import { Link as ScrollLink, Events } from 'react-scroll';
 
-import { withTranslation } from '../i18n';
+import { withTranslation, i18n } from '../i18n';
 import { activeLanguages } from './LangSwitcher';
 
 const homeMenuLinks = [
@@ -147,6 +147,7 @@ const HomeMenu = ({ item, t, large, isCurrentPage }) => {
             style={{
               fontSize: 16,
             }}
+            className={isCurrentPage ? 'current-page' : ''}
           />
         </Link>
       </Box>
@@ -183,6 +184,11 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
   const menu = menuLinks;
   const isHome = pathname && langPaths.includes(pathname);
 
+  let pathnameWithoutLang = pathname;
+  if (pathname && i18n.language !== 'en') {
+    pathnameWithoutLang = pathname.substring(3, pathname.index);
+  }
+
   return (
     <Box
       direction={large ? 'row' : 'column'}
@@ -218,6 +224,9 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
               as="span"
               label={t(item.label)}
               color={large ? 'white' : 'brand4'}
+              className={
+                pathnameWithoutLang === item.value ? 'current-page' : ''
+              }
               margin={{
                 horizontal: '28px',
                 vertical: large ? 'none' : 'small',
@@ -244,23 +253,6 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           </ScrollLink>
         )
       )}
-      {/* <Link href="/donate">
-        <Button
-          primary
-          as="span"
-          alignSelf="center"
-          label={
-            <span style={{ color: '#fff', fontSize: 16 }}>
-              <b>Donate</b>
-            </span>
-          }
-          margin={{
-            horizontal: '28px',
-            vertical: large ? 'none' : 'small',
-          }}
-          color="brand5"
-        />
-      </Link> */}
     </Box>
   );
 });

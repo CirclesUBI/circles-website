@@ -65,6 +65,10 @@ a {
   }
 }
 
+.current-page {
+  border-bottom: 2px solid white;
+}
+
 .curvy-background-container {
   overflow: hidden;
 }
