@@ -8,7 +8,7 @@
   "why-accept-widgets": [
     {
       "title": "Access to Credit",
-      "text": "We can offer a Euro loan from the Circles Coop and you can pay it back in Circles.  This helps to subsidize the development of a new economy. If you are interested, contact us at business@joincircles.net"
+      "text": "We can offer a Euro loan from the Circles Coop and you can pay it back in Circles.  This helps to subsidize the development of a new economy. If you are interested, contact us at <a href='mailto:business@joincircles.net'>business@joincircles.net</a>"
     },
     {
       "title": "Access to Resource Network",
@@ -146,5 +146,5 @@
   "tax-bookkeeping-title": "What does it mean to your taxing and bookkeeping?",
   "tax-bookkeeping-text-1": "If you are a business, or you accept Circles for some kind of goods or services, you should pay taxes in euros just like you would for any other kind of income: bitcoin, euros, dollar, etc.",
   "tax-bookkeeping-text-2": "Taxation is relative to your jurisdiction and must be handled accordingly. We do not offer tax advice, and recommend that you speak with an expert from your area.",
-  "tax-bookkeeping-text-3": "Here are sample tax assessments of concrete economic consumptions of Circles, based on German laws."
+  "tax-bookkeeping-text-3": "<a href='https://docs.google.com/document/d/1LJnMub2U53AOYXi7HIe_YfrnA3H6ySVf9yUS_iHLRIM/' target='_blank'>Here are sample tax assessments</a> of concrete economic consumptions of Circles, based on German laws."
 }

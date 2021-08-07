@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Box, Button, Heading, Image, Paragraph, Text } from 'grommet';
 import ReactPlayer from 'react-player/vimeo';
-import { Row, Col } from 'react-grid-system';
+import renderHtml from 'react-render-html';
 
 import styles from '../../styles/businesses.module.css';
 import Layout from '../../components/Layout';
@@ -164,7 +164,10 @@ function Businesses({ t }) {
                 >
                   {acceptWidgets.map((widget, i) => (
                     <Box key={widget.title} basis="medium">
-                      <Widget title={widget.title} content={widget.text} />
+                      <Widget
+                        title={widget.title}
+                        content={renderHtml(widget.text)}
+                      />
                     </Box>
                   ))}
                 </Box>
@@ -506,7 +509,10 @@ function Businesses({ t }) {
                 <Box alignSelf="center" pad="medium">
                   <Paragraph>{t('tax-bookkeeping-text-1')}</Paragraph>
                   <Paragraph>{t('tax-bookkeeping-text-2')}</Paragraph>
-                  <Paragraph>{t('tax-bookkeeping-text-3')}</Paragraph>
+                  <Paragraph>
+                    {' '}
+                    {renderHtml(t('tax-bookkeeping-text-3'))}
+                  </Paragraph>
                 </Box>
                 <Box
                   width="100%"
