@@ -23,7 +23,7 @@ import { Up, Down, Close } from 'grommet-icons';
 import { Row } from 'react-grid-system';
 
 import Layout from '../../components/Layout';
-import { withTranslation } from '../../i18n';
+import { withTranslation, i18n } from '../../i18n';
 
 const textFieldTheme = {
   global: {
@@ -42,13 +42,6 @@ function FAQ({ t }) {
 
   const selectedIndex = query.open && Number(query.open);
   const items = t('items', { returnObjects: true });
-  const setSelectedIndex = (itemIndex) => {
-    console.log(pathname);
-    push({ pathname, query: { open: itemIndex } }, undefined, {
-      shallow: true,
-      scroll: false,
-    });
-  };
 
   useEffect(() => {
     if (selectedIndex) {
@@ -66,6 +59,26 @@ function FAQ({ t }) {
       inputRef.current.focus();
     }
   }, [selectedIndex, items]);
+
+  const getPathnameWithLang = () => {
+    let pathnameWithLang = pathname;
+    if (i18n.language !== 'en') {
+      pathnameWithLang = '/' + i18n.language + pathname;
+    }
+    return pathnameWithLang;
+  };
+
+  const setSelectedIndex = (itemIndex) => {
+    const pathnameWithLang = getPathnameWithLang();
+    push(
+      { pathname: pathnameWithLang, query: { open: itemIndex } },
+      undefined,
+      {
+        shallow: true,
+        scroll: false,
+      }
+    );
+  };
 
   let suggestions = [];
   if (inputValue.length > 3) {
@@ -108,6 +121,14 @@ function FAQ({ t }) {
       return;
     }
     setSelectedIndex(index);
+  };
+
+  const onFilterFocus = () => {
+    const pathnameWithLang = getPathnameWithLang();
+    push({ pathname: pathnameWithLang, query: {} }, undefined, {
+      shallow: true,
+      scroll: false,
+    });
   };
 
   const isClient = typeof window !== 'undefined';
@@ -175,14 +196,15 @@ function FAQ({ t }) {
                         <TextInput
                           ref={inputRef}
                           value={inputValue}
-                          onChange={(event) => {
-                            setInputValue(event.target.value);
-                          }}
-                          onSelect={onSelect}
                           suggestions={suggestions}
                           placeholder={t('placeholder')}
                           type="search"
                           dropProps={{ pad: { horizontal: 'medium' } }}
+                          onChange={(event) => {
+                            setInputValue(event.target.value);
+                          }}
+                          onFocus={onFilterFocus}
+                          onSelect={onSelect}
                         />
                       </FormField>
                     </Grommet>
