@@ -51,14 +51,18 @@ function FAQ({ t }) {
         smooth: true,
         offset: -90,
       });
-    } else {
+    }
+  }, [selectedIndex]);
+
+  useEffect(() => {
+    if (!selectedIndex) {
       scroller.scrollTo('page-wrapper', {
         duration: 200,
         smooth: true,
       });
       inputRef.current.focus();
     }
-  }, [selectedIndex, items]);
+  }, []);
 
   const getPathnameWithLang = () => {
     let pathnameWithLang = pathname;
@@ -78,6 +82,7 @@ function FAQ({ t }) {
         scroll: false,
       }
     );
+    setInputValue('');
   };
 
   let suggestions = [];
