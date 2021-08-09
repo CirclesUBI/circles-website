@@ -128,12 +128,7 @@ function Businesses({ t }) {
                 </Box>
               </Box>
 
-              <Box
-                width={large ? 'xlarge' : 'large'}
-                height={large ? 'large' : 'medium'}
-                pad="xsmall"
-                alignSelf="center"
-              >
+              <Box alignSelf="center" className="video-container">
                 <ReactPlayer
                   width="100%"
                   height="100%"
