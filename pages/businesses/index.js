@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Box, Button, Heading, Image, Paragraph, Spinner, Text } from 'grommet';
+import { Box, Button, Heading, Image, Paragraph, Text } from 'grommet';
 import ReactPlayer from 'react-player/vimeo';
 import renderHtml from 'react-render-html';
 
@@ -128,25 +128,12 @@ function Businesses({ t }) {
                 </Box>
               </Box>
 
-              <Box
-                alignSelf="center"
-                className={styles.videoContainer}
-                style={{ position: 'relative', margin: '0 auto' }}
-              >
-                <Box
-                  alignSelf="center"
-                  width="100%"
-                  height="100%"
-                  style={{ position: 'absolute', zIndex: 1 }}
-                >
-                  <Spinner alignSelf="center" size="xlarge" color="brand4" />
-                </Box>
+              <Box alignSelf="center" className={styles.videoContainer}>
                 <ReactPlayer
                   width="100%"
                   height="100%"
                   url="https://player.vimeo.com/video/469130953"
                   controls
-                  style={{ zIndex: 2 }}
                 />
               </Box>
 
