@@ -128,7 +128,7 @@ function Businesses({ t }) {
                 </Box>
               </Box>
 
-              <Box alignSelf="center" className="video-container">
+              <Box alignSelf="center" className={styles.videoContainer}>
                 <ReactPlayer
                   width="100%"
                   height="100%"
