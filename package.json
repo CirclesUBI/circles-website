@@ -11,13 +11,13 @@
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.1",
-    "grommet": "^2.15.0",
-    "grommet-icons": "^4.4.0",
+    "grommet": "^2.17.4",
+    "grommet-icons": "^4.6.0",
     "next": "^10.0.2",
     "next-i18next": "^6.0.2",
     "next-on-netlify": "^3.0.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-grid-system": "^7.0.3",
     "react-iframe": "^1.8.0",
     "react-map-gl": "^6.0.3",
@@ -26,7 +26,7 @@
     "react-render-html": "^0.6.0",
     "react-scroll": "^1.8.0",
     "react-slick": "^0.27.4",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.3.0"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.11.1"
