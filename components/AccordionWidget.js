@@ -34,10 +34,6 @@ const accordionStyle = {
   padding: '14px 52px',
   margin: 6,
   borderRadius: 8,
-  color: '#fff',
-  background: 'rgb(102,15,51)',
-  background:
-    'linear-gradient(135deg,  rgba(204,30,102,1) 0%, rgba(102,15,51,1) 100%)',
 };
 
 export default function AccordionWidget({ content }) {
@@ -48,6 +44,7 @@ export default function AccordionWidget({ content }) {
       <Accordion
         activeIndex={open ? 0 : null}
         alignSelf="center"
+        className="dark-purple-gradient-background"
         style={accordionStyle}
       >
         <AccordionPanel

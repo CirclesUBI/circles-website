@@ -87,3 +87,13 @@ a {
   background-color: white;
   margin-top: -70px;
 }
+
+.dark-purple-gradient-background {
+  color: #fff;
+  background: rgb(102, 15, 51);
+  background: linear-gradient(
+    135deg,
+    rgba(204, 30, 102, 1) 0%,
+    rgba(102, 15, 51, 1) 100%
+  );
+}
