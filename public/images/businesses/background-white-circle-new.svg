@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1359px" height="2021px" viewBox="0 0 1359 2021" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Clipped Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0.993652" y="0" width="1357.02" height="2021"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="yyy" transform="translate(-3746.000000, -5938.000000)">
+            <g id="Clipped-Copy" transform="translate(3746.000000, 5938.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Rectangle-path"></g>
+                <g id="Group" mask="url(#mask-2)" fill-rule="nonzero" fill="#FFFDFD">
+                    <g transform="translate(-386.000000, 0.000000)" id="Oval">
+                        <ellipse transform="translate(1074.941000, 1010.500000) rotate(-180.000000) translate(-1074.941000, -1010.500000) " cx="1074.941" cy="1010.5" rx="1074.39" ry="1010.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

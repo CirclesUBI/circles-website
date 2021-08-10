@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
-import { Grommet, Box, ResponsiveContext } from 'grommet';
-import { Container, setConfiguration } from 'react-grid-system';
+import { Grommet, Box } from 'grommet';
+import { Container, setConfiguration, useScreenClass } from 'react-grid-system';
 
 import theme from '../config/theme';
 import Header from './Header';
@@ -28,6 +28,8 @@ function Layout(props) {
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
+  const screenClass = useScreenClass();
+  const large = ['xl', 'xxl'].includes(screenClass);
   return (
     <Grommet theme={theme} {...props}>
       <Head>
@@ -52,33 +54,30 @@ function Layout(props) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="theme-color" content="#660F33" />
       </Head>
-      <ResponsiveContext.Consumer>
-        {(size) => {
-          const large = ['large', 'medium'].includes(size);
-          return (
-            <Container style={{ maxWidth: 'none' }}>
-              <Box style={{ paddingTop: 12 }}>
-                <Header large={large} />
-              </Box>
-              {scrollPosition > 400 && (
-                <Box>
-                  <Box
-                    style={fixedHeaderStyle}
-                    animation="fadeIn"
-                    pad="small"
-                    background="brand3"
-                    elevation="small"
-                  >
-                    <Header large={large} fixed />
-                  </Box>
-                </Box>
-              )}
-              <Box margin={{ top: '-36px' }}>{props.children(large, size)}</Box>
-              <Footer />
-            </Container>
-          );
-        }}
-      </ResponsiveContext.Consumer>
+
+      <Container style={{ maxWidth: 'none' }}>
+        <Box style={{ paddingTop: 12 }}>
+          <Header large={large} />
+        </Box>
+        {scrollPosition > 400 && (
+          <Box>
+            <Box
+              style={fixedHeaderStyle}
+              animation="fadeIn"
+              pad="small"
+              background="brand3"
+              elevation="small"
+            >
+              <Header large={large} fixed />
+            </Box>
+          </Box>
+        )}
+        <Box as="main" margin={{ top: '-36px' }}>
+          {props.children(large, screenClass)}
+        </Box>
+        <Footer />
+      </Container>
+
       <script
         defer
         src="https://static.cloudflareinsights.com/beacon.min.js"

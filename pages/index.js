@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { Link } from '../i18n';
 import { Anchor, Box, Heading, Image, Text, Button } from 'grommet';
 import { Row, Col } from 'react-grid-system';
 import { Link as ScrollLink } from 'react-scroll';
@@ -14,11 +13,11 @@ import { withTranslation } from '../i18n';
 
 const getAboutImageTopMargin = (screenClass) => {
   if (['xs', 'sm'].includes(screenClass)) {
-    return '280px';
+    return '980px';
   } else if (['md', 'lg', 'xl'].includes(screenClass)) {
-    return '120px';
+    return '320px';
   } else {
-    return '120px';
+    return '320px';
   }
 };
 
@@ -27,22 +26,22 @@ function Home({ t }) {
     {
       count: '1',
       caption: t('hiw-slide-1'),
-      imageLink: '/images/slider-1.png',
+      imageLink: '/images/slider-1.webp',
     },
     {
       count: '2',
       caption: t('hiw-slide-2'),
-      imageLink: '/images/slider-2.png',
+      imageLink: '/images/slider-2.webp',
     },
     {
       count: '3',
       caption: t('hiw-slide-3'),
-      imageLink: '/images/slider-3.png',
+      imageLink: '/images/slider-3.webp',
     },
     {
       count: '4',
       caption: t('hiw-slide-4'),
-      imageLink: '/images/slider-4.png',
+      imageLink: '/images/slider-4.webp',
     },
   ];
 
@@ -111,47 +110,15 @@ function Home({ t }) {
                 alignSelf="center"
                 pad="medium"
               >
-                <Text weight="bold" margin={{ bottom: 'medium' }} color="#fff">
-                  Circles needs you!
+                <Text margin={{ bottom: 'medium' }} color="white">
+                  {t('main-paragraph-1')}
                 </Text>
-                <Text margin={{ bottom: 'medium' }} color="#fff">
-                  Since launching in October 2020 the Circles community has
-                  grown to 200k users around the globe. Interest in the project
-                  led to rapid scaling, which overloaded our servers, and after
-                  overhauling our infrastructure we are at the end of our
-                  budget.
-                </Text>
-                <Text weight="bold" margin={{ bottom: 'medium' }} color="#fff">
-                  <em>
-                    Circles big dream needs you to realize end the world
-                    poverty, make basic income reality!
-                  </em>
+                <Text weight="bold" margin={{ bottom: 'medium' }} color="white">
+                  {t('main-paragraph-2')}
                 </Text>
               </Box>
 
-              <Box margin={{ top: 'medium', bottom: 'xlarge' }}>
-                <Link href="/donate">
-                  <Button
-                    primary
-                    as="span"
-                    alignSelf="center"
-                    label={
-                      <span style={{ color: '#fff' }}>
-                        <b>Donate now</b>
-                      </span>
-                    }
-                    margin="medium"
-                    color="brand5"
-                    size="large"
-                    style={{
-                      padding: '10px 24px',
-                      borderRadius: 8,
-                    }}
-                  />
-                </Link>
-              </Box>
-
-              <Box margin={{ top: 'large' }} alignSelf="center">
+              <Box alignSelf="center">
                 <Button
                   color="dark-2"
                   plain
@@ -160,6 +127,7 @@ function Home({ t }) {
                   label={t('get-circles-button-label')}
                   href="https://circles.garden"
                   target="_blank"
+                  rel="noreferrer"
                   style={{
                     padding: '14px 52px',
                     borderRadius: 8,
@@ -172,7 +140,7 @@ function Home({ t }) {
                 />
               </Box>
 
-              <Box margin={{ vertical: 'large' }} align="center">
+              <Box pad={{ vertical: 'large' }} align="center">
                 <ScrollLink
                   to="about"
                   smooth

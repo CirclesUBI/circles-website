@@ -17,6 +17,12 @@ import { withTranslation } from '../i18n';
 
 const footerLinks = [
   {
+    label: 'Instagram',
+    value: 'https://www.instagram.com/circles_ubi_official',
+    imageLink: '/images/ig.svg',
+    blank: true,
+  },
+  {
     label: 'Telegram',
     value: 'https://t.me/CirclesUBI',
     imageLink: '/images/tg.svg',

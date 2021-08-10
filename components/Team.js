@@ -1,22 +1,7 @@
-import {
-  Anchor,
-  Heading,
-  Box,
-  Text,
-  Button,
-  Drop,
-  Image,
-  Layer,
-  Menu,
-} from 'grommet';
-import { Link as ScrollLink, Events } from 'react-scroll';
-import { Link } from '../i18n';
-import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
+import { Heading, Box, Text, Image } from 'grommet';
 import { Row, Col } from 'react-grid-system';
-import { useState, useRef } from 'react';
 
 import { withTranslation } from '../i18n';
-import { activeLanguages } from './LangSwitcher';
 
 const teamMembers = [
   {
