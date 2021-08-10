@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#48B2B7" offset="0%"></stop>
+            <stop stop-color="#06FC9D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero">
+            <circle id="Oval" fill="url(#linearGradient-1)" cx="28.5" cy="28.5" r="28.5"></circle>
+            <path d="M31.86,20.1600027 C31.86,18.9600027 30.9,18 29.7,18 L27.96,18 C26.82,18 25.86,18.9600027 25.86,20.1600027 L25.86,25.8600027 L20.16,25.8600027 C18.96,25.8600027 18,26.8200027 18,27.9600027 L18,29.7000027 C18,30.9000027 18.96,31.8600027 20.16,31.8600027 L25.86,31.8600027 L25.86,37.5000027 C25.86,38.7000027 26.82,39.6600027 27.96,39.6600027 L29.7,39.6600027 C30.9,39.6600027 31.86,38.7000027 31.86,37.5000027 L31.86,31.8600027 L37.56,31.8600027 C38.7,31.8600027 39.66,30.9000027 39.66,29.7000027 L39.66,27.9600027 C39.66,26.8200027 38.7,25.8600027 37.56,25.8600027 L31.86,25.8600027 L31.86,20.1600027 Z" id="Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

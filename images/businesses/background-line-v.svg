@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="653px" viewBox="0 0 13 653" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 43</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#48B2B7" offset="0%"></stop>
+            <stop stop-color="#06FC9D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-43" transform="translate(6.500000, 326.500000) rotate(90.000000) translate(-6.500000, -326.500000) translate(-320.000000, 320.000000)" fill-rule="nonzero" fill="url(#linearGradient-1)">
+            <rect id="Rectangle-path" x="0" y="0" width="653" height="13"></rect>
+        </g>
+    </g>
+</svg>
