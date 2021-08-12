@@ -1,8 +1,6 @@
 import { deepFreeze, deepMerge } from 'grommet/utils';
 import { base } from 'grommet';
 
-const mainColor = '#660F33';
-
 const colors = {
   background: 'hsla(88, 62%, 90%, 0.1)',
   brand: '#CC1E66',
@@ -30,9 +28,6 @@ const colors = {
   'neutral-3': '#607D8B',
   'neutral-4': '#9cb6d7',
   'neutral-5': '#FF9800',
-  // 'dark-1': 'rgba(0, 0, 0, .8)',
-  // 'dark-2': 'rgba(20, 20, 20, .8)',
-  // 'dark-3': 'rgba(50, 50, 50, .8)',
 };
 
 var baseSpacing = 16;
@@ -86,6 +81,9 @@ const theme = deepFreeze(
     },
     icon: {
       focus: 'none',
+      size: {
+        xsmall: '14px',
+      },
     },
     text: {
       xsmall: { size: '10px', height: 1.5 },
@@ -126,11 +124,7 @@ const theme = deepFreeze(
       },
       extend: {
         maxWidth: 1280,
-      },
-    },
-    icon: {
-      size: {
-        xsmall: '14px',
+        marginTop: '2em',
       },
     },
     button: {

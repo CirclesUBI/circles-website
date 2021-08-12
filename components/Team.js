@@ -1,12 +1,7 @@
-import { Anchor, Heading, Box, Text, Button, Drop, Image, Layer, Menu } from 'grommet';
-import { Link as ScrollLink, Events } from 'react-scroll';
-import { Link } from '../i18n';
-import { Menu as MenuIcon, Close as CloseIcon } from 'grommet-icons';
+import { Heading, Box, Text, Image } from 'grommet';
 import { Row, Col } from 'react-grid-system';
-import { useState, useRef } from 'react';
 
 import { withTranslation } from '../i18n';
-import { activeLanguages } from './LangSwitcher';
 
 const teamMembers = [
   {
@@ -64,12 +59,12 @@ const Team = ({ t }) => {
         position: 'relative',
       }}
     >
-      {/* <div style={{width: '100%', height: 20, background: '#fff'}} /> */}
       <Heading
-        level={1}
-        textAlign="center"
+        alignSelf="center"
         color="dark-1"
         margin={{ top: 'large', bottom: 'small' }}
+        level={1}
+        textAlign="center"
       >
         {t('team-title')}
       </Heading>
@@ -80,18 +75,9 @@ const Team = ({ t }) => {
         <Row>
           {teamMembers.map((member) => (
             <Col md={4} key={member.name}>
-              <Box
-                pad="medium"
-                gap="small"
-                align="center"
-                alignSelf="center"
-              >
+              <Box pad="medium" gap="small" align="center" alignSelf="center">
                 <Box>
-                  <Image
-                    width="220px"
-                    src={member.image}
-                    alt={member.name}
-                  />
+                  <Image width="220px" src={member.image} alt={member.name} />
                 </Box>
                 <Box alignSelf="center">
                   <Text textAlign="center">{member.name}</Text>
@@ -115,10 +101,7 @@ const Team = ({ t }) => {
           backgroundSize: '50% 50%',
         }}
       >
-        <Text
-          textAlign="center"
-          margin={{ top: 'xlarge', bottom: 'large' }}
-        >
+        <Text textAlign="center" margin={{ top: 'xlarge', bottom: 'large' }}>
           <em>{t('team-extra-subtitle')}</em>
         </Text>
 
@@ -130,22 +113,22 @@ const Team = ({ t }) => {
         >
           <Box pad={{ horizontal: 'large' }} gap="small">
             {contributors
-                .filter((c, i) => i < contributors.length / 2)
-                .map((c) => (
-                  <Text key={c}>{c}</Text>
-                ))}
+              .filter((c, i) => i < contributors.length / 2)
+              .map((c) => (
+                <Text key={c}>{c}</Text>
+              ))}
           </Box>
           <Box pad={{ horizontal: 'large' }} gap="small">
             {contributors
-                .filter((c, i) => i >= contributors.length / 2)
-                .map((c) => (
-                  <Text key={c}>{c}</Text>
-                ))}
+              .filter((c, i) => i >= contributors.length / 2)
+              .map((c) => (
+                <Text key={c}>{c}</Text>
+              ))}
           </Box>
         </Box>
       </Box>
     </Box>
   );
-}
+};
 
 export default withTranslation('team')(Team);

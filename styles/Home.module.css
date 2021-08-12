@@ -9,9 +9,10 @@
 
 .home {
   position: relative;
-  background-image: url('/images/home-background-clear.svg');
+  background-image: url('/images/home-background-clear-cut.svg');
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: cover;
   min-height: 300vh;
   width: 100%;
 }

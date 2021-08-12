@@ -1,5 +1,4 @@
-import React from 'react';
-import { Box, Heading, Text, Image } from 'grommet';
+import { Box, Heading, Image, Text } from 'grommet';
 import Slider from 'react-slick';
 
 const SliderImage = ({ imageLink, count, caption }) => (
@@ -10,9 +9,9 @@ const SliderImage = ({ imageLink, count, caption }) => (
       pad="14px"
       width="72px"
       height="72px"
-      margin={{ bottom: 'medium' }}
+      margin={{ bottom: 'small' }}
     >
-      <Heading margin="none" textAlign="center">
+      <Heading textAlign="center" style={{ marginTop: 0 }}>
         {count}
       </Heading>
     </Box>
@@ -24,8 +23,12 @@ const SliderImage = ({ imageLink, count, caption }) => (
         {caption}
       </Text>
     </Box>
-    <Box margin={{ bottom: 'medium' }} height="medium">
-      <Image src={imageLink} height="100%" fit="contain" />
+    <Box
+      pad={{ horizontal: 'large' }}
+      margin={{ bottom: 'medium' }}
+      height="medium"
+    >
+      <Image src={imageLink} alt={caption} height="100%" fit="contain" />
     </Box>
   </Box>
 );
