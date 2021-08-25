@@ -1,0 +1,150 @@
+{
+  "circles": "Circles",
+  "meta": "Circles UBI for Businesses | Basic Income on the Blockchain",
+  "main-heading": "Circles for Business Users",
+  "main-text-paragraph1": "Circles is a means of payment. Exchange with Circles happens upon agreement between two trusted parties about the price and the quantity provided. Here are the trusted businesses that use Circles for their business operations.",
+  "main-text-paragraph2": "Listen to their testimonials!",
+  "why-accept-title": "Why Accept Circles (CRC) in your Business?",
+  "why-accept-widgets": [
+    {
+      "title": "Access to Credit",
+      "text": "We can offer a Euro loan from the Circles Coop and you can pay it back in Circles.  This helps to subsidize the development of a new economy. If you are interested, contact us at <a href='mailto:business@joincircles.net'>business@joincircles.net</a>"
+    },
+    {
+      "title": "Access to Resource Network",
+      "text": "By accepting CRC you get to access a pool of resources provided by the different partners in the Trust Network. Using CRC, you can fulfill your supply needs by claiming resources from fellow members within the circular economic ring."
+    },
+    {
+      "title": "Community Basic Income",
+      "text": "By accepting CRC, you give meaning to a basic income system. By selling and buying in CRC, you create the value which powers communities to claim the resources they need to live."
+    },
+    {
+      "title": "Lower Costs",
+      "text": "By accepting CRC, you lower your Euro cost of doing business. You can use CRC to turn any surplus or idle inventory that would otherwise go to waste into additional liquidity. By selling in CRC you can access the things your business needs, thereby lowering your cost of production. For example, you can give CRC to your workers as a payment option, which they can use to access resources within the Trust Network. You can also pay for services that you would otherwise have to pay in national money."
+    },
+    {
+      "title": "Cooperative Infrastructures",
+      "text": "By accepting CRC, you commit to the development of a nascent cooperative infrastructure in your respective industry. Circles strengthens the infrastructure needed to build more resilient localized and complementary supply chains which allow people to access their basic needs at affordable prices, using CRC."
+    },
+    {
+      "title": "Strong Network Benefits",
+      "text": "In order to grow your share of the market and attract new people to your business, you can spend your Circles in marketing services and local forms of advertisement. Similarly, when you sell in CRC, you are growing a loyal customer base and potentially increasing your revenues, both in CRC and in fiat money. CRC help you create a stronger link to your customers, based on trust and common values. Early pioneer - innovator - branding opportunity."
+    }
+  ],
+  "with-circles-title": "What can you do with Circles?",
+  "with-circles-widgets": [
+    {
+      "title": "Buying with Circles",
+      "text": "You can spend your CRC with the partners that can provide the resources that fulfill your supply needs: distribution/logistics support, marketing, raw materials, food, drinks, etc."
+    },
+    {
+      "title": "Selling with Circles",
+      "text": "You can provide products and services in the network that fulfill someone else's needs and earn more CRC. You can, for example, increase your sales by offering CRC in low business times. "
+    },
+    {
+      "title": "Crowdfunding",
+      "text": "You can pull people's CRC together as donations or contributions and add them to your shared business wallet. "
+    }
+  ],
+  "trust-system-title": "Trust System for Groups and Businesses",
+  "trust-system-widgets": [
+    {
+      "title": "Customer comes"
+    },
+    {
+      "title": "Onboarding onto the wallet"
+    },
+    {
+      "title": "Makes payment!"
+    }
+  ],
+  "how-functions-title": "How do Circles function in your business?",
+  "how-functions-widgets": [
+    {
+      "text": "Anyone with a Circles wallet can create a shared wallet. By creating a shared wallet, you can onboard your business onto the Circles system."
+    },
+    {
+      "text": "You can then begin adding people in your group or business to be part of the shared wallet!"
+    },
+    {
+      "text": "When you create a shared wallet, it will automatically trust your individual account. For now, permissions are all given equally to everybody. This means that once you add somebody to the shared wallet, they have the power to take you out of it. Make sure you only add trusted individuals to your shared wallet. "
+    },
+    {
+      "text": "Shared wallets can issue payments to other wallets via the trust network of individual wallets. "
+    },
+    {
+      "text": "Shared wallets can receive CRC from accounts it trusts"
+    },
+    {
+      "text": "If you cannot issue a payment to another person or group using your shared wallet, make sure to trust them as an individual and try again."
+    },
+    {
+      "text": "Shared wallets do not issue a basic income. Shared wallets can only give trust. Shared wallets cannot receive trust. "
+    },
+    {
+      "text": "Make sure to trust those partners who you want to receive payment from. If somebody cannot send you money to your shared wallet, it is because there is not a trust path between you and them. Try trusting them and ask them to try again. "
+    }
+  ],
+  "vs-bitcoin-title": "Circles vs Bitcoin",
+  "vs-bitcoin-text": "CRC are designed to be a means of exchange for communities and economic circles. Here is an overview of characteristics that might help you to better understand Circles in comparison to Bitcoin:",
+  "vs-bitcoin-widgets": [
+    {
+      "text": "Bitcoin's design is made for investment and speculation, making it impersonal. Circles is made for strengthening local economies by building trust between people."
+    },
+    {
+      "text": "Bitcoin is a digital asset. Circles is a form of credit money used to fulfill debt obligations between different parties."
+    },
+    {
+      "text": "While the design of Bitcoin encourages hoarding, Circle encourages spending."
+    },
+    {
+      "text": "Bitcoin needs a lot of electricity to be produced. The Circles system does not. Read more about the Proof of Authority (POA) xDAI blockchain where CRC are made. "
+    },
+    {
+      "text": "One needs fiat money in order to buy Bitcoin, while Circles can only be issued via trusted parties giving you trust."
+    },
+    {
+      "text": "Bitcoin has a limited token supply of 21 million Bitcoins. Circles is designed in a way where everybody issues personal tokens constantly at a rate of 8 CRC per day. These personal tokens  can be swapped as payment to other people, based on the trust relations in the network. This is part of how CRC users can make sure that fake users don't manipulate the system and the obligations between people remain valid."
+    }
+  ],
+  "shared-wallet-title": "Shared Wallet",
+  "shared-wallet-text": "A shared wallet is a wallet that you can open for any group or organization that you're part of. Every person who has a validated trusted accounted in Circles can create a shared wallet and add people to it. Shared wallets do not issue a basic income. To fund your shared wallet you must deposit a small amount of CRC to start. You can later send more CRC to it and receive CRC from others as well. Shared wallets can issue payments to others as well as receive payments. In order to receive CRC from others directly, shared wallets must first trust other accounts in order to receive their CRC. Shared wallets do not have a native CRC token of their own but can hold CRC from others. Because of this reason, shared wallets cannot receive trust, they can only give it.",
+  "set-prices-title": "How to set prices in Circles?",
+  "set-prices-text-1": "We maintain 1 to 1 exchange rate between CRC and Euros. Maintaining this parity will allow you to set prices easier.",
+  "set-prices-text-2": "But at the end of the day it’s up to you.",
+  "role-coop-title": "The role of the Circles Cooperative",
+  "role-coop-widgets": [
+    {
+      "text": "Access to credit "
+    },
+    {
+      "text": "Community networking"
+    },
+    {
+      "text": "Documentation of business transactions"
+    },
+    {
+      "text": "Knowledge sharing (with a focus on building local economies)"
+    }
+  ],
+  "role-coop-links-text": "To have a better understanding about Circles here are some sources:",
+  "access-to-credit-title": "Access to Credit",
+  "access-to-credit-widgets": [
+    {
+      "title": "Community Networking",
+      "text": "The coop organizes regular assemblies and encourages committees and workgroups among members. The goal is to build a living resource of knowledge and strategic approaches towards business transactions and creating local economy patterns. The community can get in touch via telegram channels, moderated Jitsi calls in English, Mandarin and Spanish…"
+    },
+    {
+      "title": "Knowledge Sharing",
+      "text": "Since Circles is engaging in pioneering work we will make sure to document the emerging community knowledge around the creation of local economy. For example: farm, mobility service, Supercoop, restaurants and cafés, coworking space → how does value creation work? What’s the design of the Wirtschaftskreis/ economic circle?"
+    },
+    {
+      "title": "Documentation",
+      "text": "We document business transactions with the goal to build concrete showcases that can serve as best practice and learning examples for other groups."
+    }
+  ],
+  "tax-bookkeeping-title": "What does it mean to your taxing and bookkeeping?",
+  "tax-bookkeeping-text-1": "If you are a business, or you accept Circles for some kind of goods or services, you should pay taxes in euros just like you would for any other kind of income: bitcoin, euros, dollar, etc.",
+  "tax-bookkeeping-text-2": "Taxation is relative to your jurisdiction and must be handled accordingly. We do not offer tax advice, and recommend that you speak with an expert from your area.",
+  "tax-bookkeeping-text-3": "<a href='https://docs.google.com/document/d/1LJnMub2U53AOYXi7HIe_YfrnA3H6ySVf9yUS_iHLRIM/' target='_blank'>Here are sample tax assessments</a> of concrete economic consumptions of Circles, based on German laws."
+}
