@@ -62,6 +62,12 @@ const menu = [
     isExternal: false,
     isRoute: true,
   },
+  {
+    label: 'Donate',
+    value: '/donate',
+    isExternal: false,
+    isRoute: true,
+  },
 ];
 
 const socialMenu = [
