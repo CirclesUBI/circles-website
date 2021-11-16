@@ -62,12 +62,6 @@ const menu = [
     isExternal: false,
     isRoute: true,
   },
-  {
-    label: 'Donate',
-    value: '/donate',
-    isExternal: false,
-    isRoute: true,
-  },
 ];
 
 const socialMenu = [
@@ -247,6 +241,23 @@ const MenuContent = withTranslation('header')(({ t, large }) => {
           </ScrollLink>
         )
       )}
+      <Link href="/donate">
+        <Button
+          primary
+          as="span"
+          alignSelf="center"
+          label={
+            <span style={{ color: '#fff', fontSize: 16 }}>
+              <b>Donate</b>
+            </span>
+          }
+          margin={{
+            horizontal: '28px',
+            vertical: large ? 'none' : 'small',
+          }}
+          color="brand5"
+        />
+      </Link>
     </Box>
   );
 });
