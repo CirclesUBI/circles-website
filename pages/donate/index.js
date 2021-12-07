@@ -14,12 +14,15 @@ import { Close, CircleInformation } from 'grommet-icons';
 import copy from 'copy-to-clipboard';
 import Iframe from 'react-iframe';
 import { Row, Col } from 'react-grid-system';
+import Snowfall from 'react-snowfall'
 
 import Layout from '../../components/Layout';
 import Team from '../../components/Team';
 import { accountAddresses } from '../../config/constants';
 
 const { ETHADDRESS, BTCADDRESS } = accountAddresses;
+
+const heading1 = 'The Holidays are here and Circles needs you!';
 
 const paragraphs = [
   // 'Since launching last year the Circles community has grown to 200k users around the globe. Interest in the project led to rapid scaling, which overloaded our servers, and after overhauling our infrastructure we are at the end of our budget.',
@@ -28,7 +31,6 @@ const paragraphs = [
   // 'We are looking for committed, regular donors who support bringing Circles to a fully thriving life.',
   // 'Your donation is crucial!',
   // 'Support the creation of a basic income for all people, and make sustainable, local economies worldwide.',
-  'The Holidays are here. And Circles needs you!',
   'With your support, we could spread some much-needed Holiday cheer for our Circles Family.',
   'Circles was launched 13 months ago by six stubborn dreamers. We were growing super-fast, but our system was unprepared for such huge success and collapsed. We’ve rebuilt everything from the ground up. Now we are twelve stubborn dreamers working on strengthening our system. And we are very close to growing even bigger, and creating many more communities that will benefit from our basic income systems worldwide.',
   'That’s why we need your support. ',
@@ -150,7 +152,7 @@ export default function Donate() {
                       pad="large"
                       basis={large ? 'large' : 'full'}
                     >
-                      <Heading {...headingProps}>Circles needs you!</Heading>
+                      <Heading {...headingProps}>{heading1}</Heading>
                       {large ? (
                         <Box>
                           {paragraphs.map((p) => (
@@ -350,6 +352,7 @@ export default function Donate() {
           );
         }}
       </Layout>
+      <Snowfall />
     </div>
   );
 
