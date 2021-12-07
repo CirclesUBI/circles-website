@@ -14,6 +14,7 @@ import { Close, CircleInformation } from 'grommet-icons';
 import copy from 'copy-to-clipboard';
 import Iframe from 'react-iframe';
 import { Row, Col } from 'react-grid-system';
+import Snowfall from 'react-snowfall'
 
 import Layout from '../../components/Layout';
 import Team from '../../components/Team';
@@ -21,13 +22,25 @@ import { accountAddresses } from '../../config/constants';
 
 const { ETHADDRESS, BTCADDRESS } = accountAddresses;
 
+const heading1 = 'The Holidays are here and Circles needs you!';
+
 const paragraphs = [
-  'Since launching last year the Circles community has grown to 200k users around the globe. Interest in the project led to rapid scaling, which overloaded our servers, and after overhauling our infrastructure we are at the end of our budget.',
-  'We need your support to continue!',
-  'We need your help to make basic income a reality worldwide!',
-  'We are looking for committed, regular donors who support bringing Circles to a fully thriving life.',
-  'Your donation is crucial!',
-  'Support the creation of a basic income for all people, and make sustainable, local economies worldwide.',
+  // 'Since launching last year the Circles community has grown to 200k users around the globe. Interest in the project led to rapid scaling, which overloaded our servers, and after overhauling our infrastructure we are at the end of our budget.',
+  // 'We need your support to continue!',
+  // 'We need your help to make basic income a reality worldwide!',
+  // 'We are looking for committed, regular donors who support bringing Circles to a fully thriving life.',
+  // 'Your donation is crucial!',
+  // 'Support the creation of a basic income for all people, and make sustainable, local economies worldwide.',
+  'With your support, we could spread some much-needed Holiday cheer for our Circles Family.',
+  'Circles was launched 13 months ago by six stubborn dreamers. We were growing super-fast, but our system was unprepared for such huge success and collapsed. We’ve rebuilt everything from the ground up. Now we are twelve stubborn dreamers working on strengthening our system. And we are very close to growing even bigger, and creating many more communities that will benefit from our basic income systems worldwide.',
+  'That’s why we need your support. ',
+  'We believe everyone deserves a fair chance to thrive.',
+  'Especially this Holiday season.',
+  'And we’re determined to keep giving our Circles Family the most meaningful gift of all: a system for Universal Basic Income. ',
+  'Your support is crucial! ',
+  'And it goes to the right place.',
+  'And in return, we’ll award you our very first Circles Holiday cheer badge!',
+  'Will you join us in making basic income a reality for all, and make sustainable, local, and cheerful communities worldwide?',
 ];
 
 const paragraphs2 = [
@@ -42,13 +55,24 @@ const paragraphs3 = [
   'Therefore this huge and long work needs your support too.',
 ];
 
-const goals2021 = [
-  `Develop Circles to be an alternative for every basic income
-  advocate`,
-  `Global Support Centre (for support and research, knowledge
-  centre)`,
-  `Flagship pilot in every continent`,
-  `Strong network between Hubs and Communities`,
+const goalsHeading = 'Here’s what your support means to us:';
+ 
+const goalsEnding = 'Please join us in spreading some love and Holiday cheer for our Circles Family this season!';
+
+const goals = [
+  // `Develop Circles to be an alternative for every basic income
+  // advocate`,
+  // `Global Support Centre (for support and research, knowledge
+  // centre)`,
+  // `Flagship pilot in every continent`,
+  // `Strong network between Hubs and Communities`,
+  `we could maintain our pilot project in Berlin`,
+  `develop our technical team`,
+  `support new pilots around the world`,
+  `run new tests and research`,
+  `grow our Circles Families and build new communities`,
+  `mentor for other pilots`,
+  `and we could do so much more!`,
 ];
 
 const boxProps = {
@@ -128,7 +152,7 @@ export default function Donate() {
                       pad="large"
                       basis={large ? 'large' : 'full'}
                     >
-                      <Heading {...headingProps}>Circles needs you!</Heading>
+                      <Heading {...headingProps}>{heading1}</Heading>
                       {large ? (
                         <Box>
                           {paragraphs.map((p) => (
@@ -235,10 +259,10 @@ export default function Donate() {
                 >
                   <Box width="large" pad="large">
                     <Heading {...headingProps} color="dark-1">
-                      GOALS FOR 2021
+                      {goalsHeading}
                     </Heading>
                     <ul>
-                      {goals2021.map((datum) => (
+                      {goals.map((datum) => (
                         <li key={datum.substr(0, 20)}>
                           <Box pad="small">
                             <Text>{datum}</Text>
@@ -246,6 +270,11 @@ export default function Donate() {
                         </li>
                       ))}
                     </ul>
+                    <Box margin={{ vertical: 'medium' }}>
+                      <Text textAlign="center">
+                        {goalsEnding}
+                      </Text>
+                    </Box>
                   </Box>
                 </Box>
 
@@ -323,6 +352,9 @@ export default function Donate() {
           );
         }}
       </Layout>
+      <div>
+        <Snowfall />
+      </div>
     </div>
   );
 
