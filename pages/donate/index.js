@@ -352,7 +352,9 @@ export default function Donate() {
           );
         }}
       </Layout>
-      <Snowfall />
+      <div>
+        <Snowfall />
+      </div>
     </div>
   );
 
