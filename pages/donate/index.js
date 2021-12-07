@@ -53,13 +53,24 @@ const paragraphs3 = [
   'Therefore this huge and long work needs your support too.',
 ];
 
-const goals2021 = [
-  `Develop Circles to be an alternative for every basic income
-  advocate`,
-  `Global Support Centre (for support and research, knowledge
-  centre)`,
-  `Flagship pilot in every continent`,
-  `Strong network between Hubs and Communities`,
+const goalsHeading = 'Here’s what your support means to us:';
+ 
+const goalsEnding = 'Please join us in spreading some love and Holiday cheer for our Circles Family this season!';
+
+const goals = [
+  // `Develop Circles to be an alternative for every basic income
+  // advocate`,
+  // `Global Support Centre (for support and research, knowledge
+  // centre)`,
+  // `Flagship pilot in every continent`,
+  // `Strong network between Hubs and Communities`,
+  `we could maintain our pilot project in Berlin`,
+  `develop our technical team`,
+  `support new pilots around the world`,
+  `run new tests and research`,
+  `grow our Circles Families and build new communities`,
+  `mentor for other pilots`,
+  `and we could do so much more!`,
 ];
 
 const boxProps = {
@@ -246,10 +257,10 @@ export default function Donate() {
                 >
                   <Box width="large" pad="large">
                     <Heading {...headingProps} color="dark-1">
-                      GOALS FOR 2021
+                      {goalsHeading}
                     </Heading>
                     <ul>
-                      {goals2021.map((datum) => (
+                      {goals.map((datum) => (
                         <li key={datum.substr(0, 20)}>
                           <Box pad="small">
                             <Text>{datum}</Text>
@@ -257,6 +268,11 @@ export default function Donate() {
                         </li>
                       ))}
                     </ul>
+                    <Box margin={{ vertical: 'medium' }}>
+                      <Text textAlign="center">
+                        {goalsEnding}
+                      </Text>
+                    </Box>
                   </Box>
                 </Box>
 
