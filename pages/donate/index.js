@@ -14,7 +14,6 @@ import { Close, CircleInformation } from 'grommet-icons';
 import copy from 'copy-to-clipboard';
 import Iframe from 'react-iframe';
 import { Row, Col } from 'react-grid-system';
-import Snowfall from 'react-snowfall'
 
 import Layout from '../../components/Layout';
 import Team from '../../components/Team';
@@ -352,9 +351,6 @@ export default function Donate() {
           );
         }}
       </Layout>
-      <div>
-        <Snowfall />
-      </div>
     </div>
   );
 
