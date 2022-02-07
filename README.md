@@ -41,7 +41,9 @@
 
 <br/>
 
-Official website of the [`Circles UBI`](https://joincircles.net) project generated as a statically hosted GitHub page using [`Next.js`](https://nextjs.org/).
+Previously official website of the [`Circles UBI`](https://joincircles.net) project generated as a statically hosted GitHub page using [`Next.js`](https://nextjs.org/).
+
+This repo has been archived as it has been replaced by a wordpress website.
 
 ## Development
 
